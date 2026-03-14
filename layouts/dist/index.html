@@ -55,18 +55,24 @@
                     <div class="min-[900px]:hidden flex items-center gap-3 shrink-0">
                         <button type="button" id="searchToggleHeaderMobile" aria-label="Open search"
                             class="hover:text-primary transition-all">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
-                                fill="none" class="search-icon-mobile">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                fill="none" class="search-icon-mobile sm:size-5 size-4.5">
                                 <path
                                     d="M14.5537 14.5534L18.1981 18.1979M1.7981 9.08674C1.7981 11.0199 2.56603 12.8738 3.93296 14.2408C5.29989 15.6077 7.15385 16.3756 9.08698 16.3756C11.0201 16.3756 12.8741 15.6077 14.241 14.2408C15.6079 12.8738 16.3759 11.0199 16.3759 9.08674C16.3759 7.15361 15.6079 5.29965 14.241 3.93272C12.8741 2.56579 11.0201 1.79785 9.08698 1.79785C7.15385 1.79785 5.29989 2.56579 3.93296 3.93272C2.56603 5.29965 1.7981 7.15361 1.7981 9.08674Z"
                                     stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
-                                fill="none" class="close-icon-mobile hidden">
+                            </svg> -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="search-icon-mobile">
+                                <path d="M14.5537 14.5534L18.1981 18.1979M1.7981 9.08674C1.7981 11.0199 2.56603 12.8738 3.93296 14.2408C5.29989 15.6077 7.15385 16.3756 9.08698 16.3756C11.0201 16.3756 12.8741 15.6077 14.241 14.2408C15.6079 12.8738 16.3759 11.0199 16.3759 9.08674C16.3759 7.15361 15.6079 5.29965 14.241 3.93272C12.8741 2.56579 11.0201 1.79785 9.08698 1.79785C7.15385 1.79785 5.29989 2.56579 3.93296 3.93272C2.56603 5.29965 1.7981 7.15361 1.7981 9.08674Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                fill="none" class="close-icon-mobile hidden md:size-5 size-4">
                                 <path
                                     d="M9.99942 8.94063L3.78731 2.72852L2.72705 3.78878L8.93916 10.0009L2.72705 16.213L3.78731 17.2733L9.99942 11.0611L16.2115 17.2733L17.2718 16.213L11.0597 10.0009L17.2718 3.78878L16.2115 2.72852L9.99942 8.94063Z"
                                     fill="#353535" />
-                            </svg>
+                            </svg> -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none" class="close-icon-mobile hidden">
+                                <path d="M7.27237 6.21211L1.06026 0L0 1.06026L6.21211 7.27237L0 13.4845L1.06026 14.5447L7.27237 8.33263L13.4845 14.5447L14.5447 13.4845L8.33263 7.27237L14.5447 1.06026L13.4845 0L7.27237 6.21211Z" fill="#353535"/>
+                                </svg>
                         </button>
                         <button aria-label="Open menu" id="burgerBtn" class="block">
                             <span id="burger-icon">
@@ -504,7 +510,7 @@
                                 </h1>
                                 <div class="flex items-start gap-[15px] xl:mb-[45px] md:mb-[35px] mb-[25px]"
                                     data-aos="zoom-in-right">
-                                    <span class="dash border-white md:mt-3.5 mt-[13px] sm:block hidden"></span>
+                                    <span class="dash border-white md:mt-3.5 mt-3 sm:block hidden"></span>
                                     <p class="p2 text-white">We help
                                         companies streamline
                                         operations, elevate customer experiences, and unlock
