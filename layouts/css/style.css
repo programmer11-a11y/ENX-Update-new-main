@@ -759,8 +759,4 @@
   .nav-links.hidden {
     @apply block! transform translate-x-full opacity-0 pointer-events-none transition-all ease-in-out;
   }
-
-  .nav-links.block {
-    @apply transform translate-x-0 opacity-100 pointer-events-auto;
-  }
 }
