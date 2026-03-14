@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- style.css -->
+    <link rel="stylesheet" href="../css/output.css" />
+    <link rel="icon" type="image/x-icon" href="../image/favicon.svg" />
+    <!-- AOS ANIMATION -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>ENX - Career</title>
+</head>
+
+<body>
+    <div class="relative overflow-hidden">
+
+        <!-- Header -->
+        <header class="fixed w-full h-auto nav-section z-50">
+            <div
+                class="2xl:h-[96px] xl:h-[85px] lg:h-20 md:h-[75px] sm:h-[60px] h-[55px] lg:px-10 min-[900px]:px-5 bg-white border-b border-gray-100 min-[900px]:flex min-[900px]:items-center min-[900px]:justify-between relative z-50">
+                <div class="min-[900px]:p-0 px-4 flex justify-between items-center h-full">
+                    <a href="./index.html">
+                        <img loading="lazy"
+                            class="2xl:w-[106px] xl:w-[100px] lg:w-[90px] sm:w-20 w-18 h-full object-cover"
+                            src="../image/Logo.svg" alt="Logo" />
+                    </a>
+
+                    <!-- Burger Button -->
+                    <button aria-label="Open menu" id="burgerBtn"
+                        class="min-[900px]:hidden block sm:w-6 sm:h-6 w-5 h-5">
+                        <span id="burger-icon">
+                            <!-- Burger Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                class="w-full h-full">
+                                <rect x="1" y="1" width="22" height="2" fill="#353535" />
+                                <rect x="1" y="8" width="22" height="2" fill="#353535" />
+                                <rect x="1" y="15" width="22" height="2" fill="#353535" />
+                            </svg>
+                        </span>
+                        <span id="close-icon" class="hidden">
+                            <!-- Close Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                                <path d="M5.5 5.5L18.5 18.5M5.5 18.5L18.5 5.5" stroke="#353535" stroke-width="1.5" />
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+
+                <!-- Navigation Links -->
+                <ul id="nav-links"
+                    class="nav-links hidden min-[900px]:static fixed left-0 min-[900px]:w-auto w-full h-full min-[900px]:divide-y-0 divide-y divide-gray-100 min-[900px]:flex min-[900px]:items-stretch align-start bg-white 3xl:gap-10 2xl:gap-9 1xl:gap-6 gap-4 min-[900px]:py-0 pt-[5px] pb-4 transition-all duration-300 min-[900px]:m-0 m-px">
+                    <li class="min-[900px]:relative">
+                        <button aria-label="Open menu" onclick="toggleDropdown(this)"
+                            class="dropdown-btn border-b border-transparent hover:text-primary min-[900px]:px-0 px-4 p2 focus-visible:none">
+                            Home
+                            <svg class="w-4 h-4 transform transition-transform duration-300 ease-in-out" fill="none"
+                                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+
+                        <!-- Centered dropdown menu -->
+                        <div
+                            class="dropdown-menu min-[900px]:h-fit! h-full! bg-white hidden overflow-auto min-[900px]:overflow-hidden min-[900px]:w-[130px]! min-[900px]:border-t border-gray-100 min-[900px]:absolute min-[900px]:left-1/2 min-[900px]:transform min-[900px]:-translate-x-[25%] z-50 transition-all ease-in-out">
+
+                            <div class="flex flex-col items-start justify-center w-full">
+                                <div
+                                    class="flex min-[900px]:hidden items-center justify-between min-[900px]:border-0 border border-gray-100 h-[55px] px-4 dropdown-title w-webkit-fill">
+                                    <div class="flex items-center gap-[15px] ">
+                                        <svg onclick="closeDropdown(this)" width="23" height="23" viewBox="0 0 28 28"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg" class="cursor-pointer">
+                                            <path d="M22.75 14H5.25M5.25 14L11.8125 7M5.25 14L11.8125 21"
+                                                stroke="#353535" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                        <span>HOME</span>
+                                    </div>
+                                    <svg onclick="closeDropdown(this)" xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none" class="cursor-pointer">
+                                        <path d="M5.5 5.5L18.5 18.5M5.5 18.5L18.5 5.5" stroke="#353535"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+
+
+                                <ul class="space-y-3 p-5">
+                                    <li class="p2 lg:text-lg text-[17px]">
+                                        <a href="./index.html">Home-1</a>
+                                    </li>
+                                    <li class="p2 lg:text-lg text-[17px]">
+                                        <a href="./index-2.html">Home-2</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <button aria-label="Open menu" onclick="toggleDropdown(this)"
+                            class="dropdown-btn border-b border-transparent hover:text-primary min-[900px]:px-0 px-4 p2">
+                            Why ENX?
+                            <svg class="w-4 h-4 transform transition-transform duration-300 ease-in-out" fill="none"
+                                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu bg-white hidden overflow-auto min-[900px]:overflow-hidden">
+                            <div
+                                class="flex min-[900px]:flex-row flex-col-reverse 3xl:gap-[120px] xl:gap-20 lg:gap-12.5 md:gap-10 gap-4">
+                                <div class="dropdown-menu-banner">
+                                    <img loading="lazy" src="../image/enx.webp" alt="Why ENX?"
+                                        class="w-full h-full object-cover" />
+                                </div>
+                                <div class="flex flex-col items-start w-full 2xl:py-[70px] xl:py-10 lg:py-5">
+                                    <span class="dropdown-title min-[900px]:block hidden">WHY ENX?</span>
+                                    <div
+                                        class="flex min-[900px]:hidden items-center justify-between min-[900px]:border-0 border border-gray-100 h-[55px] px-4 dropdown-title w-webkit-fill">
+                                        <div class="flex items-center gap-[15px] ">
+                                            <svg onclick="closeDropdown(this)" width="23" height="23"
+                                                viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                class="cursor-pointer">
+                                                <path d="M22.75 14H5.25M5.25 14L11.8125 7M5.25 14L11.8125 21"
+                                                    stroke="#353535" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            <span>WHY ENX?</span>
+                                        </div>
+                                        <svg onclick="closeDropdown(this)" xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none" class="cursor-pointer">
+                                            <path d="M5.5 5.5L18.5 18.5M5.5 18.5L18.5 5.5" stroke="#353535"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <ul
+                                        class="grid grid-cols-1 3xl:gap-7 2xl:gap-6 1xl:gap-5 lg:gap-4 sm:gap-2 gap-1 min-[900px]:p-0 min-[900px]:pr-5 p-5">
+                                        <li>
+                                            <h6> <a href="./aboutUs.html">About ENX</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6> <a href="./whyEnx.html">Why ENX?</a></h6>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <button aria-label="Open menu" onclick="toggleDropdown(this)"
+                            class="dropdown-btn border-b border-transparent hover:text-primary min-[900px]:px-0 px-4">
+                            Services
+                            <svg class="w-4 h-4 transform transition-transform duration-300 ease-in-out" fill="none"
+                                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu bg-white hidden min-[900px]:overflow-hidden overflow-auto">
+                            <div
+                                class="flex min-[900px]:flex-row flex-col-reverse 3xl:gap-[120px] xl:gap-20 lg:gap-12.5 md:gap-10 gap-4">
+                                <div class="dropdown-menu-banner">
+                                    <img loading="lazy" src="../image/solution.webp" alt="Services"
+                                        class="w-full h-full object-cover" />
+                                </div>
+                                <div class="flex flex-col items-start w-full 2xl:py-[70px] xl:py-10 lg:py-5">
+                                    <span class="dropdown-title min-[900px]:block hidden">Services</span>
+                                    <div
+                                        class="flex min-[900px]:hidden items-center justify-between min-[900px]:border-0 border border-gray-100 h-[55px] px-4 dropdown-title w-webkit-fill">
+                                        <div class="flex items-center gap-[15px]">
+                                            <svg onclick="closeDropdown(this)" width="23" height="23"
+                                                viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                class="cursor-pointer">
+                                                <path d="M22.75 14H5.25M5.25 14L11.8125 7M5.25 14L11.8125 21"
+                                                    stroke="#353535" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            <span>TOp SERVICES</span>
+                                        </div>
+                                        <svg onclick="closeDropdown(this)" xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none" class="cursor-pointer">
+                                            <path d="M5.5 5.5L18.5 18.5M5.5 18.5L18.5 5.5" stroke="#353535"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <ul
+                                        class="grid w-full justify-between sm:grid-cols-2 grid-cols-1 3xl:gap-y-7 2xl:gap-y-6 1xl:gap-y-5 lg:gap-y-4 sm:gap-y-2 gap-y-1 min-[900px]:p-0 min-[900px]:pr-5 p-5">
+                                        <li>
+                                            <h6><a href="javascript:;">Aerospace & Defense</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="javascript:;">Financial Services</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="javascript::">Manufacturing & Industrial</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="javascript:;">Media & Entertainment</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="javascript:;">Healthcare & Life Sciences</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="javascript:;">Retail & E-Commerce</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="javascript:;">Transportation & Logistics</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="javascript:;">Construction & Infrastructure</a></h6>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <button aria-label="Open menu" onclick="toggleDropdown(this)"
+                            class="dropdown-btn border-b border-transparent hover:text-primary min-[900px]:px-0 px-4">
+                            Resources
+                            <svg class="w-4 h-4 transform transition-transform duration-300 ease-in-out" fill="none"
+                                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu bg-white hidden overflow-auto min-[900px]:overflow-hidden">
+                            <div
+                                class="flex min-[900px]:flex-row flex-col-reverse 3xl:gap-[120px] xl:gap-20 lg:gap-12.5 md:gap-10 gap-4">
+                                <div class="dropdown-menu-banner">
+                                    <img loading="lazy" src="../image/resources.webp" alt="Resources"
+                                        class="w-full h-full object-cover" />
+                                </div>
+                                <div class="flex flex-col items-start w-full 1xl:py-10 lg:py-5">
+                                    <span class="dropdown-title min-[900px]:block hidden">RESOURCES</span>
+                                    <div
+                                        class="flex min-[900px]:hidden items-center justify-between min-[900px]:border-0 border border-gray-100 h-[55px] px-4 dropdown-title w-webkit-fill">
+                                        <div class="flex items-center gap-[15px]">
+                                            <svg onclick="closeDropdown(this)" width="23" height="23"
+                                                viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                class="cursor-pointer">
+                                                <path d="M22.75 14H5.25M5.25 14L11.8125 7M5.25 14L11.8125 21"
+                                                    stroke="#353535" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            <span>RESOURCES</span>
+                                        </div>
+                                        <svg onclick="closeDropdown(this)" xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none" class="cursor-pointer">
+                                            <path d="M5.5 5.5L18.5 18.5M5.5 18.5L18.5 5.5" stroke="#353535"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <ul
+                                        class="w-full justify-between grid sm:grid-cols-3 grid-cols-1 sm:grid-flow-col sm:grid-rows-7 3xl:gap-y-7 2xl:gap-y-6 1xl:gap-y-5 lg:gap-4 sm:gap-y-2 gap-y-1 min-[900px]:p-0 min-[900px]:pr-5 p-5">
+                                        <li>
+                                            <h6><a href="./caseStudy-1.html">Case Studies 01</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./caseStudy-2.html">Case Studies 02</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./single-case-study-1.html">Single Case Studies</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./team-1.html">Our Team 01</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./team-2.html">Our Team 02</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./singleteam-1.html">Single Team</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./offices.html">Our Offices</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./contactUs.html">Contact Us</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./testimonials.html">Testimonial </a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./faq.html">FAQ’s</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./404.html">404</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./career.html">Careers</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./contactUs.html">Support</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./clients.html">Our Clients</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./privacyPolicy.html">Privacy Policy</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./terms.html">Terms & Conditions</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./cookiePolicy.html">Cookie Policy</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./licensing.html">Licensing</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./dataProtection.html">Data Protection</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./sitemap.html">Site Map</a></h6>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <button aria-label="Open menu" onclick="toggleDropdown(this)"
+                            class="dropdown-btn border-b border-transparent hover:text-primary min-[900px]:px-0 px-4">
+                            Insights
+                            <svg class="w-4 h-4 transform transition-transform duration-300 ease-in-out" fill="none"
+                                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu bg-white hidden overflow-auto min-[900px]:overflow-hidden">
+                            <div
+                                class="flex min-[900px]:flex-row flex-col-reverse 3xl:gap-[120px] xl:gap-20 lg:gap-12.5 md:gap-10 gap-4">
+                                <div class="dropdown-menu-banner">
+                                    <img loading="lazy" src="../image/Insights.webp" alt="Insights"
+                                        class="w-full h-full object-cover" />
+                                </div>
+                                <div class="flex flex-col items-start w-full 2xl:py-[70px] xl:py-10 lg:py-5">
+                                    <span class="dropdown-title min-[900px]:block hidden">INSIGHTS</span>
+                                    <div
+                                        class="flex min-[900px]:hidden items-center justify-between min-[900px]:border-0 border border-gray-100 h-[55px] px-4 dropdown-title w-webkit-fill">
+                                        <div class="flex items-center gap-[15px]">
+                                            <svg onclick="closeDropdown(this)" width="23" height="23"
+                                                viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                class="cursor-pointer">
+                                                <path d="M22.75 14H5.25M5.25 14L11.8125 7M5.25 14L11.8125 21"
+                                                    stroke="#353535" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            <span>INSIGHTS</span>
+                                        </div>
+                                        <svg onclick="closeDropdown(this)" xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none" class="cursor-pointer">
+                                            <path d="M5.5 5.5L18.5 18.5M5.5 18.5L18.5 5.5" stroke="#353535"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <ul
+                                        class="grid grid-cols-1 3xl:gap-7 2xl:gap-6 1xl:gap-5 lg:gap-4 sm:gap-2 gap-1 min-[900px]:p-0 min-[900px]:pr-5 p-5">
+                                        <li>
+                                            <h6><a href="./insights.html">Latest Insights 01</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./insights.html">Latest Insights 02</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./singleInsight.html">Latest Insights 03</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./singleInsight.html">Single Insights</a></h6>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="./contactUs.html"
+                            class="p2 h-full flex items-center min-[900px]:justify-center min-[900px]:p-0 md:py-4 py-[14px] min-[900px]:px-0 px-4">
+                            Contact us</a>
+                    </li>
+
+                    <li class="min-[900px]:hidden py-[18px] min-[900px]:px-0 px-4">
+                        <a href="./contactUs.html" class="btn btn-primary p-1 ps-3 gap-2 rounded-full group w-fit">
+                            Get started
+                            <span class="btn btn-arrow rounded-full w-9 h-9 ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                    fill="none" class="1w-[17px] h-[17px]">
+                                    <g clip-path="url(#clip0_421_92)">
+                                        <path
+                                            d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                            fill="currentColor" />
+                                    </g>
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <a href="./contactUs.html" aria-label="Open Page"
+                    class="btn btn-primary all-btn rounded-full group min-[900px]:flex hidden w-fit">
+                    Get started
+                    <span class="btn btn-arrow rounded-full all-btn-arrow">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M-2.02496e-05 12.4396L11.1557 1.28395L1.59365 1.28395L1.51169 -9.34181e-05L13.3504 -9.30945e-05L13.3504 11.8386L12.0663 11.7566L12.0663 2.19462L0.910647 13.3503L-2.02496e-05 12.4396Z"
+                                fill="currentColor" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </header>
+        <!--/ End Header -->
+
+        <!-- HERO -->
+        <section class="relative w-full lg:min-h-[calc(100vh-90px)] h-full">
+            <div class="bg-[url('../image/career-banner.webp')] bg-cover bg-center z-0">
+
+                <!-- Content area -->
+                <div class="bg-black-gradient z-10">
+                    <div class="container md:h-screen 2xl:pt-[90px] xl:pt-[85px] lg:pt-20 sm:pt-[60px] py-[55px]">
+                        <div class="flex 2xl:pt-[90px] 1xl:pt-20 pt-16">
+                            <div class="relative z-20 w-[1020px] max-w-full h-fit">
+                                <div class="flex items-center gap-3 3xl:mb-12.5 1xl:mb-[45px] md:mb-10 mb-[35px]"
+                                    data-aos="fade-right">
+                                    <span class="p2 text-white opacity-60">Home</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <g opacity="0.6">
+                                            <path d="M5 14L12 8L5 2" stroke="#ffffff" stroke-linecap="square" />
+                                        </g>
+                                    </svg>
+                                    <span class="p2 text-white">Career</span>
+                                </div>
+                                <h1 class="2xl:mb-[55px] xl:mb-12.5 lg:mb-10 sm:mb-[30px] mb-5 text-white"
+                                    data-aos="fade-right">Career</h1>
+                                <div class="flex items-start gap-[25px] 2xl:mb-[72px] xl:mb-[62px] md:mb-[52px] sm:mb-[42px] mb-[32px]"
+                                    data-aos="fade-right">
+                                    <span class="dash border-primary 1xl:mt-4 mt-3.5 sm:block hidden"></span>
+                                    <p class="2xl:max-w-[57%] sm:max-w-[55%] w-full text-white">
+                                        Vivamus vel risus sit amet dolor blandit tincidunt vitae a est. Phasellus
+                                        consectetur, purus ut accumsan dapibus, sapien urna sodales lorem.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- CARDS -->
+        <section>
+            <div class="container">
+                <div class="3xl:py-25 2xl:py-[90px] xl:py-20 lg:py-17 sm:py-12 pt-9 border-b border-gray-100">
+                    <div
+                        class="flex items-center justify-between md:flex-row flex-col 2xl:gap-[165px] 1xl:gap-[112px] xl:gap-20 lg:gap-12 md:gap-4 md:divide-y-0 divide-y divide-gray-100">
+                        <div class="md:w-1/3 w-full md:p-0 pb-7">
+                            <h4 data-aos="fade-up">Open Positions</h4>
+                            <span data-aos="fade-up"
+                                class="border border-primary 2xl:my-[45px] sm:my-7 my-[22px] 2xl:w-[120px] lg:w-[100px] w-[60px] block"></span>
+                            <p class="xl:pr-5 pr-0" data-aos="fade-up">
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                nulla pariatur.
+                            </p>
+                        </div>
+                        <div class="md:w-1/3 w-full md:p-0 py-7">
+                            <h4 data-aos="fade-up">Company Culture</h4>
+                            <span data-aos="fade-up"
+                                class="border border-primary 2xl:my-[45px] sm:my-7 my-[22px] 2xl:w-[120px] lg:w-[100px] w-[60px] block"></span>
+                            <p class="xl:pr-5 pr-0" data-aos="fade-up">
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                nulla pariatur.
+                            </p>
+                        </div>
+                        <div class="md:w-1/3 w-full md:p-0 py-7">
+                            <h4 data-aos="fade-up">Employee Benefits</h4>
+                            <span data-aos="fade-up"
+                                class="border border-primary 2xl:my-[45px] sm:my-7 my-[22px] 2xl:w-[120px] lg:w-[100px] w-[60px] block"></span>
+                            <p class="xl:pr-5 pr-0" data-aos="fade-up">
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                nulla pariatur.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- JOIN OUR TEAM -->
+        <section class="relative overflow-hidden">
+            <div class="container">
+                <div class="3xl:py-25 2xl:py-[90px] xl:py-20 lg:py-17 sm:py-12 py-9 border-b border-gray-100">
+                    <div class="flex justify-between md:flex-row flex-col-reverse md:gap-10">
+                        <div
+                            class="3xl:max-w-[640px] 2xl:max-w-[581px] 1xl:max-w-[540px] xl:max-w-[495px] md:max-w-[450px] w-full md:py-[30px] pt-[30px] my-auto">
+                            <h2 class="xl:mb-[35px] sm:2xl:mb-[25px] md:mb-5 mb-4 sm:w-[80%]" data-aos="fade-up">Why you
+                                will Join Our <span class="text-primary">Team</span>
+                            </h2>
+                            <p class="2xl:mb-10 sm:mb-6 mb-[18px]" data-aos="fade-up">
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                                laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                                architecto beatae vitae dicta sunt explicabo. Nemo enim sed quia consequuntur magni
+                                dolores eos qui ratione voluptatem sequi nesciunt.
+                            </p>
+                            <p class="1xl:mb-[55px] sm:mb-9 mb-7" data-aos="fade-up">
+                                Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+                                velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam
+                                aliquam quaerat voluptatem.
+                            </p>
+                            <a href="javascript:;" data-aos="fade-up"
+                                class="btn btn-primary p-1 1xl:ps-[27px] xl:ps-5 ps-3.5 1xl:gap-3 gap-2 rounded-full group w-fit">
+                                Get started
+                                <span
+                                    class="btn btn-arrow rounded-full 3xl:w-[52px] 3xl:h-[52px] 1xl:w-12 1xl:h-12 xl:w-11 xl:h-11 w-9 h-9">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                        fill="none"
+                                        class="1xl:w-[22px] 1xl:h-[22px] xl:w-[19px] xl:h-[19px] w-[17px] h-[17px]">
+                                        <g clip-path="url(#clip0_421_92)">
+                                            <path
+                                                d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                                fill="currentColor" />
+                                        </g>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="2xl:max-w-[845px] xl:max-w-[730px] md:max-w-[57%] w-full xl:-mr-[188px] lg:-mr-[105px] -mr-[128px]"
+                            data-aos="fade-left">
+                            <img loading="lazy" src="../image/join-team.webp" alt="join team"
+                                class="w-full h-full object-cover" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- NUMBERS -->
+        <section class="relative overflow-hidden">
+            <div class="container">
+                <div class="3xl:py-25 2xl:py-[90px] xl:py-20 lg:py-17 sm:py-12 py-9 border-b border-gray-100">
+                    <div class="flex items-center justify-between w-full flex-wrap md:gap-10 gap-5">
+                        <div>
+                            <h3 data-start="0" data-end="25" data-duration="2000" data-suffix="+"
+                                class="count-up 2xl:text-7xl xl:text-[64px] lg:text-[58px] md:text-5xl text-3xl xl:mb-5 sm:mb-4 mb-3 text-primary">
+                                25+</h3>
+                            <p>Year of Experience</p>
+                        </div>
+                        <div>
+                            <h3 data-start="0" data-end="960" data-duration="2000" data-suffix="+"
+                                class="count-up 2xl:text-7xl xl:text-[64px] lg:text-[58px] md:text-5xl text-3xl xl:mb-5 sm:mb-4 mb-3 text-primary">
+                                960+</h3>
+                            <p>Completed Projects</p>
+                        </div>
+                        <div>
+                            <h3 data-start="0" data-end="85" data-duration="2000" data-suffix="+"
+                                class="count-up 2xl:text-7xl xl:text-[64px] lg:text-[58px] md:text-5xl text-3xl xl:mb-5 sm:mb-4 mb-3 text-primary">
+                                85+</h3>
+                            <p>Wining Awards</p>
+                        </div>
+                        <div>
+                            <h3 data-start="0" data-end="500" data-duration="2000" data-suffix="K"
+                                class="count-up 2xl:text-7xl xl:text-[64px] lg:text-[58px] md:text-5xl text-3xl xl:mb-5 sm:mb-4 mb-3 text-primary">
+                                500K</h3>
+                            <p>Happy Customers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- HIRING NOW -->
+        <section class="relative overflow-hidden">
+            <div class="container">
+                <div class="3xl:py-25 2xl:py-[90px] xl:py-20 lg:py-17 sm:py-12 py-9">
+                    <div class="flex items-center gap-[18px] xl:mb-12.5 lg:mb-10 md:mb-7 mb-5" data-aos="fade-right">
+                        <span class="dash border border-primary"></span>
+                        <p>HIRING NOW</p>
+                    </div>
+                    <H2 data-aos="fade-right">Hiring Process Overview</H2>
+                    <div
+                        class="lg:pt-[70px] md:pt-14 pt-10 2xl:space-y-20 xl:space-y-16 md:space-y-14 space-y-10 overflow-hidden">
+
+                        <div
+                            class="absolute 3xl:h-[1035px] 1xl:h-[950px] xl:h-[880px] h-[760px] w-[2px] bg-primary z-0 mt-[100px] 2xl:ml-[70px] 1xl:ml-[60px] xl:ml-[54px] ml-12.5 lg:block hidden">
+                        </div>
+
+                        <div
+                            class="flex lg:items-center items-start lg:flex-row flex-col 2xl:gap-[74px] xl:gap-[45px] lg:gap-[30px] sm:gap-0 gap-6 relative z-1">
+                            <div class="h-full lg:block hidden">
+                                <div class="2xl:w-[140px] 2xl:h-[140px] 1xl:w-[120px] 1xl:h-[120px] xl:w-[110px] xl:h-[110px] lg:w-[100px] 
+                                    lg:h-[100px] rounded-full flex items-center justify-center bg-primary">
+                                    <h6 class="2xl:text-6xl 1xl:text-[55px] xl:text-12.5 lg:text-[47px] text-white">
+                                        01</h6>
+                                </div>
+                            </div>
+                            <div
+                                class="flex lg:items-center justify-between sm:gap-[30px] gap-[22px] sm:flex-row flex-col">
+                                <div class="md:w-1/2 sm:w-[63%] w-full">
+                                    <div class="sm:mb-6 mb-4 lg:hidden block">
+                                        <div
+                                            class="md:w-20 md:h-20 w-18 h-18 rounded-full flex items-center justify-center bg-primary">
+                                            <h6 class="md:text-4xl text-3xl text-white">
+                                                01</h6>
+                                        </div>
+                                    </div>
+                                    <h4 class="2xl:mb-[25px] md:mb-5 mb-4" data-aos="fade-up">
+                                        Application Submission</h4>
+                                    <p data-aos="fade-up">Candidates submit resumes and cover
+                                        letters via the company’s website or job
+                                        portal.</p>
+                                </div>
+                                <div class="2xl:w-[26%] lg:w-[31%] sm:w-[38%] w-full">
+                                    <img data-aos="fade-up" loading="lazy" src="../image/application-form.webp"
+                                        alt="application form" class="w-full h-full object-cover" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="flex lg:items-center items-start lg:flex-row flex-col 2xl:gap-[74px] xl:gap-[45px] lg:gap-[30px] sm:gap-0 gap-6 relative z-1">
+                            <div class="h-full lg:block hidden">
+                                <div class="2xl:w-[140px] 2xl:h-[140px] 1xl:w-[120px] 1xl:h-[120px] xl:w-[110px] xl:h-[110px] lg:w-[100px] 
+                                    lg:h-[100px] rounded-full flex items-center justify-center bg-primary">
+                                    <h6 class="2xl:text-6xl 1xl:text-[55px] xl:text-12.5 lg:text-[47px] text-white">
+                                        02</h6>
+                                </div>
+                            </div>
+                            <div
+                                class="flex lg:items-center justify-between sm:gap-[30px] gap-[22px] sm:flex-row flex-col">
+                                <div class="md:w-1/2 sm:w-[63%] w-full">
+                                    <div class="sm:mb-6 mb-4 lg:hidden block">
+                                        <div
+                                            class="md:w-20 md:h-20 w-18 h-18 rounded-full flex items-center justify-center bg-primary">
+                                            <h6 class="md:text-4xl text-3xl text-white">
+                                                02</h6>
+                                        </div>
+                                    </div>
+                                    <h4 class="2xl:mb-[25px] md:mb-5 mb-4" data-aos="fade-up">
+                                        Interviews</h4>
+                                    <p data-aos="fade-up">Shortlisted candidates are invited for
+                                        one or more interviews (phone, virtual, or
+                                        in-person).</p>
+                                </div>
+                                <div class="2xl:w-[26%] lg:w-[31%] sm:w-[38%] w-full">
+                                    <img data-aos="fade-up" loading="lazy" src="../image/interview.webp"
+                                        alt="interviews" class="w-full h-full object-cover" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="flex lg:items-center items-start lg:flex-row flex-col 2xl:gap-[74px] xl:gap-[45px] lg:gap-[30px] sm:gap-0 gap-6 relative z-1">
+                            <div class="h-full lg:block hidden">
+                                <div class="2xl:w-[140px] 2xl:h-[140px] 1xl:w-[120px] 1xl:h-[120px] xl:w-[110px] xl:h-[110px] lg:w-[100px] 
+                                    lg:h-[100px] rounded-full flex items-center justify-center bg-primary">
+                                    <h6 class="2xl:text-6xl 1xl:text-[55px] xl:text-12.5 lg:text-[47px] text-white">
+                                        03</h6>
+                                </div>
+                            </div>
+                            <div
+                                class="flex lg:items-center justify-between sm:gap-[30px] gap-[22px] sm:flex-row flex-col">
+                                <div class="md:w-1/2 sm:w-[63%] w-full">
+                                    <div class="sm:mb-6 mb-4 lg:hidden block">
+                                        <div
+                                            class="md:w-20 md:h-20 w-18 h-18 rounded-full flex items-center justify-center bg-primary">
+                                            <h6 class="md:text-4xl text-3xl text-white">
+                                                03</h6>
+                                        </div>
+                                    </div>
+                                    <h4 class="2xl:mb-[25px] md:mb-5 mb-4" data-aos="fade-up">
+                                        Assessment & Decision</h4>
+                                    <p data-aos="fade-up">Some roles require skills assessments or
+                                        case studies. Final interview, followed
+                                        by a hiring decision and offer negotiation.</p>
+                                </div>
+                                <div class="2xl:w-[26%] lg:w-[31%] sm:w-[38%] w-full">
+                                    <img data-aos="fade-up" loading="lazy" src="../image/assesment.webp" alt="assesment"
+                                        class="w-full h-full object-cover" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="flex lg:items-center items-start lg:flex-row flex-col 2xl:gap-[74px] xl:gap-[45px] lg:gap-[30px] sm:gap-0 gap-6 relative z-1">
+                            <div class="h-full lg:block hidden">
+                                <div class="2xl:w-[140px] 2xl:h-[140px] 1xl:w-[120px] 1xl:h-[120px] xl:w-[110px] xl:h-[110px] lg:w-[100px] 
+                                    lg:h-[100px] rounded-full flex items-center justify-center bg-primary">
+                                    <h6 class="2xl:text-6xl 1xl:text-[55px] xl:text-12.5 lg:text-[47px] text-white">
+                                        04</h6>
+                                </div>
+                            </div>
+                            <div
+                                class="flex lg:items-center justify-between sm:gap-[30px] gap-[22px] sm:flex-row flex-col">
+                                <div class="md:w-1/2 sm:w-[63%] w-full">
+                                    <div class="sm:mb-6 mb-4 lg:hidden block">
+                                        <div
+                                            class="md:w-20 md:h-20 w-18 h-18 rounded-full flex items-center justify-center bg-primary">
+                                            <h6 class="md:text-4xl text-3xl text-white">
+                                                04</h6>
+                                        </div>
+                                    </div>
+                                    <h4 class="2xl:mb-[25px] md:mb-5 mb-4" data-aos="fade-up">
+                                        Onboarding</h4>
+                                    <p data-aos="fade-up">Onboarding is the structured process
+                                        through which new employees are integrated
+                                        into a company and its culture.</p>
+                                </div>
+                                <div class="2xl:w-[26%] lg:w-[31%] sm:w-[38%] w-full">
+                                    <img data-aos="fade-up" loading="lazy" src="../image/onboarding.webp"
+                                        alt="obnboarding" class="w-full h-full object-cover" />
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- HIRING NOW -->
+        <section class="relative overflow-hidden bg-purple-100">
+            <div class="container">
+                <div class="3xl:py-25 2xl:py-[90px] xl:py-20 lg:py-17 sm:py-12 py-9">
+                    <div class="flex items-center gap-[18px] 2xl:mb-12.5 lg:mb-10 md:mb-7 mb-5" data-aos="fade-right">
+                        <span class="dash border border-primary"></span>
+                        <p>HIRING NOW</p>
+                    </div>
+                    <div class="flex items-center justify-between w-full lg:mb-[70PX] md:mb-14 mb-10">
+
+                        <H2 data-aos="fade-right">Open Positions</H2>
+                        <a href="./career.html" data-aos="fade-left"
+                            class="btn btn-primary p-1 1xl:ps-[27px] xl:ps-5 ps-3.5 1xl:gap-3 gap-2 rounded-full group md:block hidden">
+                            Apply Now
+                            <span
+                                class="btn btn-arrow rounded-full 3xl:w-[52px] 3xl:h-[52px] 1xl:w-12 1xl:h-12 xl:w-11 xl:h-11 w-9 h-9 ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                    fill="none"
+                                    class="1xl:w-[22px] 1xl:h-[22px] xl:w-[19px] xl:h-[19px] w-[17px] h-[17px]">
+                                    <g clip-path="url(#clip0_421_92)">
+                                        <path
+                                            d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                            fill="currentColor" />
+                                    </g>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="grid md:grid-cols-2 grid-cols-1 xl:gap-10 sm:gap-7 gap-5">
+                        <a href="#" data-aos="fade-up"
+                            class="border-l-2 border-primary 2xl:p-[54px] 1xl:p-11 lg:p-9 md:p-8 sm:p-11 py-7 px-[22px] bg-white group">
+                            <h4 class="2xl:mb-[38px] xl:mb-[22px] mb-4">Data Integration Specialist</h4>
+                            <p>
+                                Responsible for integrating external business systems with ENX's platform. Requires
+                                knowledge of ERP systems such as Oracle, SAP, and NetSuite, along with API development
+                                and middleware tools
+                            </p>
+                            <div
+                                class="flex items-center justify-between w-full 2xl:mt-[40px] xl:mt-8 sm:mt-6 mt-[22px]">
+                                <div class="flex items-center 1xl:gap-[18px] gap-3 flex-wrap">
+                                    <div
+                                        class="border-2 border-[#FAF0EB] 2xl:px-5 xl:px-[18px] sm:px-4 px-3 1xl:py-[6px] py-1 rounded-[5px]">
+                                        <span class="p2 text-neutral-700 font-normal">Full-time</span>
+                                    </div>
+                                    <div
+                                        class="border-2 border-[#FAF0EB] 2xl:px-5 xl:px-[18px] sm:px-4 px-3 1xl:py-[6px] py-1 rounded-[5px]">
+                                        <span class="p2 text-neutral-700 font-normal">Hybrid - Panama</span>
+                                    </div>
+                                </div>
+                                <button aria-label="Open Page"
+                                    class="btn btn-primary p-1 group rounded-full 3xl:w-[52px] 3xl:h-[52px] xl:w-12 xl:h-12 sm:w-11 sm:h-11 w-9 h-9">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                        fill="none"
+                                        class="1xl:w-[22px] 1xl:h-[22px] xl:w-[19px] xl:h-[19px] w-[17px] h-[17px]">
+                                        <g clip-path="url(#clip0_421_92)">
+                                            <path
+                                                d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                                fill="currentColor" />
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                        </a>
+
+                        <a href="#" data-aos="fade-up"
+                            class="border-l-2 border-primary 2xl:p-[54px] 1xl:p-11 lg:p-9 md:p-8 sm:p-11 py-7 px-[22px] bg-white group">
+                            <h4 class="2xl:mb-[38px] xl:mb-[22px] mb-4">Technology Intern</h4>
+                            <p>
+                                Responsible for integrating external business systems with ENX's platform. Requires
+                                knowledge of ERP systems such as Oracle, SAP, and NetSuite, along with API development
+                                and middleware tools
+                            </p>
+                            <div
+                                class="flex items-center justify-between w-full 2xl:mt-[40px] xl:mt-8 sm:mt-6 mt-[22px]">
+                                <div class="flex items-center 1xl:gap-[18px] gap-3 flex-wrap">
+                                    <div
+                                        class="border-2 border-[#FAF0EB] 2xl:px-5 xl:px-[18px] sm:px-4 px-3 1xl:py-[6px] py-1 rounded-[5px]">
+                                        <span class="p2 text-neutral-700 font-normal">Internship</span>
+                                    </div>
+                                    <div
+                                        class="border-2 border-[#FAF0EB] 2xl:px-5 xl:px-[18px] sm:px-4 px-3 1xl:py-[6px] py-1 rounded-[5px]">
+                                        <span class="p2 text-neutral-700 font-normal">Remote - New York</span>
+                                    </div>
+                                </div>
+                                <button aria-label="Open Page"
+                                    class="btn btn-primary p-1 group rounded-full 3xl:w-[52px] 3xl:h-[52px] xl:w-12 xl:h-12 sm:w-11 sm:h-11 w-9 h-9">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                        fill="none"
+                                        class="1xl:w-[22px] 1xl:h-[22px] xl:w-[19px] xl:h-[19px] w-[17px] h-[17px]">
+                                        <g clip-path="url(#clip0_421_92)">
+                                            <path
+                                                d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                                fill="currentColor" />
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                        </a>
+
+                        <a href="#" data-aos="fade-up"
+                            class="border-l-2 border-primary 2xl:p-[54px] 1xl:p-11 lg:p-9 md:p-8 sm:p-11 py-7 px-[22px] bg-white group">
+                            <h4 class="2xl:mb-[38px] xl:mb-[22px] mb-4">WMS Implementation Specialist</h4>
+                            <p>
+                                Responsible for integrating external business systems with ENX's platform. Requires
+                                knowledge of ERP systems such as Oracle, SAP, and NetSuite, along with API development
+                                and middleware tools
+                            </p>
+                            <div
+                                class="flex items-center justify-between w-full 2xl:mt-[40px] xl:mt-8 sm:mt-6 mt-[22px]">
+                                <div class="flex items-center 1xl:gap-[18px] gap-3 flex-wrap">
+                                    <div
+                                        class="border-2 border-[#FAF0EB] 2xl:px-5 xl:px-[18px] sm:px-4 px-3 1xl:py-[6px] py-1 rounded-[5px]">
+                                        <span class="p2 text-neutral-700 font-normal">Full-time</span>
+                                    </div>
+                                    <div
+                                        class="border-2 border-[#FAF0EB] 2xl:px-5 xl:px-[18px] sm:px-4 px-3 1xl:py-[6px] py-1 rounded-[5px]">
+                                        <span class="p2 text-neutral-700 font-normal">Hybrid - Panama</span>
+                                    </div>
+                                </div>
+                                <button aria-label="Open Page"
+                                    class="btn btn-primary p-1 group rounded-full 3xl:w-[52px] 3xl:h-[52px] xl:w-12 xl:h-12 sm:w-11 sm:h-11 w-9 h-9">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                        fill="none"
+                                        class="1xl:w-[22px] 1xl:h-[22px] xl:w-[19px] xl:h-[19px] w-[17px] h-[17px]">
+                                        <g clip-path="url(#clip0_421_92)">
+                                            <path
+                                                d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                                fill="currentColor" />
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                        </a>
+
+                        <a href="#" data-aos="fade-up"
+                            class="border-l-2 border-primary 2xl:p-[54px] 1xl:p-11 lg:p-9 md:p-8 sm:p-11 py-7 px-[22px] bg-white group">
+                            <h4 class="2xl:mb-[38px] xl:mb-[22px] mb-4">Customer Experience Coordinator</h4>
+                            <p>
+                                Responsible for integrating external business systems with ENX's platform. Requires
+                                knowledge of ERP systems such as Oracle, SAP, and NetSuite, along with API development
+                                and middleware tools
+                            </p>
+                            <div
+                                class="flex items-center justify-between w-full 2xl:mt-[40px] xl:mt-8 sm:mt-6 mt-[22px]">
+                                <div class="flex items-center 1xl:gap-[18px] gap-3 flex-wrap">
+                                    <div
+                                        class="border-2 border-[#FAF0EB] 2xl:px-5 xl:px-[18px] sm:px-4 px-3 1xl:py-[6px] py-1 rounded-[5px]">
+                                        <span class="p2 text-neutral-700 font-normal">Internship</span>
+                                    </div>
+                                    <div
+                                        class="border-2 border-[#FAF0EB] 2xl:px-5 xl:px-[18px] sm:px-4 px-3 1xl:py-[6px] py-1 rounded-[5px]">
+                                        <span class="p2 text-neutral-700 font-normal">Remote - New York</span>
+                                    </div>
+                                </div>
+                                <button aria-label="Open Page"
+                                    class="btn btn-primary p-1 group rounded-full 3xl:w-[52px] 3xl:h-[52px] xl:w-12 xl:h-12 sm:w-11 sm:h-11 w-9 h-9">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                        fill="none"
+                                        class="1xl:w-[22px] 1xl:h-[22px] xl:w-[19px] xl:h-[19px] w-[17px] h-[17px]">
+                                        <g clip-path="url(#clip0_421_92)">
+                                            <path
+                                                d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                                fill="currentColor" />
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                        </a>
+
+                    </div>
+                    <a href="./career.html" data-aos="fade-left"
+                        class="btn btn-primary p-1 1xl:ps-[27px] xl:ps-5 ps-3.5 1xl:gap-3 gap-2 rounded-full inline-flex group md:hidden mt-5">
+                        Apply Now
+                        <span
+                            class="btn btn-arrow rounded-full 3xl:w-[52px] 3xl:h-[52px] 1xl:w-12 1xl:h-12 xl:w-11 xl:h-11 w-9 h-9 ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                fill="none" class="1xl:w-[22px] 1xl:h-[22px] xl:w-[19px] xl:h-[19px] w-[17px] h-[17px]">
+                                <g clip-path="url(#clip0_421_92)">
+                                    <path
+                                        d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                        fill="currentColor" />
+                                </g>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- BUSINESS PLAN -->
+        <section class="relative">
+            <div class="2xl:h-[550px] xl:h-[440px] lg:h-[415px] md:h-[350px] sm:h-[300px] h-[270px]">
+                <div class="absolute inset-0 bg-[url('../image/about-us-bg.svg')] bg-cover bg-center z-0"></div>
+                <div class="container">
+                    <div class="business-plan-outer-box ">
+                        <div class="business-plan-inner-box">
+                            <h4 class="mb-4">Let's make your business mate a new plan</h4>
+                            <a href="./contactUs.html"
+                                class="btn btn-primary p-1 1xl:ps-[27px] xl:ps-5 ps-3.5 1xl:gap-3 gap-2 rounded-full group">
+                                Learn More
+                                <span
+                                    class="btn btn-arrow rounded-full 3xl:w-[52px] 3xl:h-[52px] 1xl:w-12 1xl:h-12 xl:w-11 xl:h-11 w-9 h-9 ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                        fill="none"
+                                        class="1xl:w-[22px] 1xl:h-[22px] xl:w-[19px] xl:h-[19px] w-[17px] h-[17px]">
+                                        <g clip-path="url(#clip0_421_92)">
+                                            <path
+                                                d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                                fill="currentColor" />
+                                        </g>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- FOOTER -->
+        <section class="bg-black">
+            <footer>
+                <div class="container">
+                    <div class="divide-y divide-white/15">
+                        <div
+                            class="flex items-start flex-wrap gap-6 justify-between w-full 3xl:pb-[60px] 2xl:pb-12.5 xl:pb-10 lg:pb-7 sm:pb-6 pb-5 3xl:pt-[90px] 2xl:pt-20 1xl:pt-[70px] xl:pt-[60px] lg:pt-12.5 md:pt-10 pt-[30px]">
+                            <h3 class="text-white">Want to start a project?</h3>
+                            <a href="./contactUs.html" class="btn btn-primary all-btn rounded-full group">
+                                Start a Project
+                                <span class="btn btn-arrow rounded-full all-btn-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                        fill="none"
+                                        class="1xl:w-[22px] 1xl:h-[22px] xl:w-[19px] xl:h-[19px] w-[17px] h-[17px]">
+                                        <g clip-path="url(#clip0_421_92)">
+                                            <path
+                                                d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                                fill="currentColor" />
+                                        </g>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+
+                        <div class="3xl:py-12.5 2xl:py-[45px] lg:py-10 py-[30px]">
+                            <div class="footer-list">
+                                <div class="list">
+                                    <h5 class="p2 list-title">Navigation</h5>
+                                    <span class="dash block border border-primary"></span>
+                                    <p class="p2 list-link"><a href="./aboutUs.html" class="text-white">About
+                                            us</a></p>
+                                    <p class="p2 list-link"><a href="./whyEnx.html" class="text-white">Why ENX?</a>
+                                    </p>
+                                    <p class="p2 list-link"><a href="./singleInsight.html"
+                                            class="text-white">Solutions</a>
+                                    </p>
+                                    <p class="p2 list-link"><a href="./career.html" class="text-white">Careers</a>
+                                    </p>
+                                </div>
+                                <div class="list">
+                                    <h5 class="p2 list-title">Why ENX?</h5>
+                                        <span class="dash block border border-primary"></span>
+                                        <p class="p2 list-link"><a href="javascript:;" class="text-white">Our
+                                                Mission</a></p>
+                                        <p class="p2 list-link"><a href="javascript:;" class="text-white">Vision &
+                                                Values</a></p>
+                                        <p class="p2 list-link"><a href="./whyEnx.html" class="text-white">Why Choose
+                                                Us?</a></p>
+                                        <p class="p2 list-link"><a href="javascript:;" class="text-white">Success
+                                                Stories</a></p>
+                                        <p class="p2 list-link"><a href="javascript:;" class="text-white">Social
+                                                Impact</a>
+                                        </p>
+                                </div>
+                                <div class="list">
+                                    <h5 class="p2 list-title">Solutions</h5>
+                                    <span class="dash block border border-primary"></span>
+                                    <p class="p2 list-link"><a href="javascript:;" class="text-white">Cloud
+                                            Computing</a></p>
+                                    <p class="p2 list-link"><a href="./cyberSecurity.html"
+                                            class="text-white">Cybersecurity</a></p>
+                                    <p class="p2 list-link"><a href="javascript:;" class="text-white">Managed IT
+                                            Services</a></p>
+                                    <p class="p2 list-link"><a href="./softwareDevelopment.html"
+                                            class="text-white">Software Development</a></p>
+                                    <p class="p2 list-link"><a href="javascript:;" class="text-white">IT
+                                            Consulting</a>
+                                    </p>
+                                </div>
+                                <div class="list">
+                                    <h5 class="p2 list-title">Support</h5>
+                                    <span class="dash block border border-primary"></span>
+                                    <p class="p2 list-link"><a href="./support.html" class="text-white">Help
+                                            center</a>
+                                    </p>
+                                    <p class="p2 list-link"><a href="./contactUs.html" class="text-white">Contact</a>
+                                    </p>
+                                    <p class="p2 list-link"><a href="./privacyPolicy.html" class="text-white">Privacy
+                                            Policy</a></p>
+                                    <p class="p2 list-link"><a href="terms.html" class="text-white">Terms of
+                                            Use</a>
+                                    </p>
+                                    <p class="p2 list-link"><a href="./faq.html" class="text-white">FAQ’s</a></p>
+                                </div>
+                                <div class="list">
+                                    <h5 class="p2 list-title">Social Media</h5>
+                                    <span class="dash block border border-primary"></span>
+                                    <p class="p2 list-link"><a href="https://in.linkedin.com/"
+                                            class="text-white">LinkedIn</a></p>
+                                    <p class="p2 list-link"><a href="https://x.com/?lang=en"
+                                            class="text-white">Twitter</a></p>
+                                    <p class="p2 list-link"><a href="https://dribbble.com/"
+                                            class="text-white">Dribble</a></p>
+                                    <p class="p2 list-link"><a href="https://www.instagram.com/"
+                                            class="text-white">Instagram</a></p>
+                                    <p class="p2 list-link"><a href="https://medium.com/" class="text-white">Medium</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="newsletter-box">
+                                <h4 class="text-white md:w-1/2 w-full text-start">Sign up for our
+                                    newsletter</h4>
+                                <div class="newsletter-input-box md:w-1/2 w-full">
+                                    <input type="text" name="newsletter" placeholder="Enter email..."
+                                        class="newsletter-input p2">
+                                    <button aria-label="Open Page" class="btn btn-primary all-btn rounded-full group">
+                                        Subscribe
+                                        <span
+                                            class="btn btn-arrow rounded-full 3xl:w-[52px] 3xl:h-[52px] 1xl:w-12 1xl:h-12 xl:w-11 xl:h-11 w-9 h-9">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                                                viewBox="0 0 22 22" fill="none"
+                                                class="1xl:w-[22px] 1xl:h-[22px] xl:w-[19px] xl:h-[19px] w-[17px] h-[17px]">
+                                                <g clip-path="url(#clip0_421_92)">
+                                                    <path
+                                                        d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                                        fill="currentColor" />
+                                                </g>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="copyright">
+                            <img loading="lazy" src="../image/logo-white.svg" alt="main logo"
+                                class="2xl:w-[106px] xl:w-[100px] lg:w-[90px] sm:w-20 w-18 h-full object-cover" />
+                            <p class="p2 text-white">Copyright © 2024 <span class="text-primary">ENX</span>. All rights
+                                reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </section>
+    </div>
+
+    <!-- Swiper JS -->
+    <script async src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- AOS ANIMATION -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 60,
+        });
+    </script>
+
+    <!-- Your Custom JS -->
+    <script defer src="../js/custom.js"></script>
+</body>
+
+</html>

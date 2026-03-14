@@ -1,0 +1,20 @@
+{
+  "name": "enx",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx @tailwindcss/cli -i ./layouts/css/style.css -o ./layouts/css/output.css --watch",
+    "build": "npx tailwindcss -i ./layouts/css/style.css -o ./layouts/css/output.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.10",
+    "@tailwindcss/postcss": "^4.1.18",
+    "postcss": "^8.5.6",
+    "swiper": "^11.2.8",
+    "tailwindcss": "^4.1.18"
+  }
+}

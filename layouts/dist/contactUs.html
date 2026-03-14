@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- style.css -->
+    <link rel="stylesheet" href="../css/output.css" />
+    <link rel="icon" type="image/x-icon" href="../image/favicon.svg" />
+    <!-- AOS ANIMATION -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>ENX - Contact Us</title>
+</head>
+
+<body>
+    <div class="relative overflow-hidden">
+
+        <!-- Header -->
+        <header class="fixed w-full h-auto nav-section z-50">
+            <div
+                class="2xl:h-[96px] xl:h-[85px] lg:h-20 md:h-[75px] sm:h-[60px] h-[55px] lg:px-10 min-[900px]:px-5 bg-white border-b border-gray-100 min-[900px]:flex min-[900px]:items-center min-[900px]:justify-between relative z-50">
+                <div class="min-[900px]:p-0 px-4 flex justify-between items-center h-full">
+                    <a href="./index.html">
+                        <img loading="lazy"
+                            class="2xl:w-[106px] xl:w-[100px] lg:w-[90px] sm:w-20 w-18 h-full object-cover"
+                            src="../image/Logo.svg" alt="Logo" />
+                    </a>
+
+                    <!-- Burger Button -->
+                    <button aria-label="Open menu" id="burgerBtn"
+                        class="min-[900px]:hidden block sm:w-6 sm:h-6 w-5 h-5">
+                        <span id="burger-icon">
+                            <!-- Burger Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                class="w-full h-full">
+                                <rect x="1" y="1" width="22" height="2" fill="#353535" />
+                                <rect x="1" y="8" width="22" height="2" fill="#353535" />
+                                <rect x="1" y="15" width="22" height="2" fill="#353535" />
+                            </svg>
+                        </span>
+                        <span id="close-icon" class="hidden">
+                            <!-- Close Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                                <path d="M5.5 5.5L18.5 18.5M5.5 18.5L18.5 5.5" stroke="#353535" stroke-width="1.5" />
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+
+                <!-- Navigation Links -->
+                <ul id="nav-links"
+                    class="nav-links hidden min-[900px]:static fixed left-0 min-[900px]:w-auto w-full h-full min-[900px]:divide-y-0 divide-y divide-gray-100 min-[900px]:flex min-[900px]:items-stretch align-start bg-white 3xl:gap-10 2xl:gap-9 1xl:gap-6 gap-4 min-[900px]:py-0 pt-[5px] pb-4 transition-all duration-300 min-[900px]:m-0 m-px">
+                    <li class="min-[900px]:relative">
+                        <button aria-label="Open menu" onclick="toggleDropdown(this)"
+                            class="dropdown-btn border-b border-transparent hover:text-primary min-[900px]:px-0 px-4 p2 focus-visible:none">
+                            Home
+                            <svg class="w-4 h-4 transform transition-transform duration-300 ease-in-out" fill="none"
+                                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+
+                        <!-- Centered dropdown menu -->
+                        <div
+                            class="dropdown-menu min-[900px]:h-fit! h-full! bg-white hidden overflow-auto min-[900px]:overflow-hidden min-[900px]:w-[130px]! min-[900px]:border-t border-gray-100 min-[900px]:absolute min-[900px]:left-1/2 min-[900px]:transform min-[900px]:-translate-x-[25%] z-50 transition-all ease-in-out">
+
+                            <div class="flex flex-col items-start justify-center w-full">
+                                <div
+                                    class="flex min-[900px]:hidden items-center justify-between min-[900px]:border-0 border border-gray-100 h-[55px] px-4 dropdown-title w-webkit-fill">
+                                    <div class="flex items-center gap-[15px] ">
+                                        <svg onclick="closeDropdown(this)" width="23" height="23" viewBox="0 0 28 28"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg" class="cursor-pointer">
+                                            <path d="M22.75 14H5.25M5.25 14L11.8125 7M5.25 14L11.8125 21"
+                                                stroke="#353535" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                        <span>HOME</span>
+                                    </div>
+                                    <svg onclick="closeDropdown(this)" xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none" class="cursor-pointer">
+                                        <path d="M5.5 5.5L18.5 18.5M5.5 18.5L18.5 5.5" stroke="#353535"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+
+
+                                <ul class="space-y-3 p-5">
+                                    <li class="p2 lg:text-lg text-[17px]">
+                                        <a href="./index.html">Home-1</a>
+                                    </li>
+                                    <li class="p2 lg:text-lg text-[17px]">
+                                        <a href="./index-2.html">Home-2</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <button aria-label="Open menu" onclick="toggleDropdown(this)"
+                            class="dropdown-btn border-b border-transparent hover:text-primary min-[900px]:px-0 px-4 p2">
+                            Why ENX?
+                            <svg class="w-4 h-4 transform transition-transform duration-300 ease-in-out" fill="none"
+                                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu bg-white hidden overflow-auto min-[900px]:overflow-hidden">
+                            <div
+                                class="flex min-[900px]:flex-row flex-col-reverse 3xl:gap-[120px] xl:gap-20 lg:gap-12.5 md:gap-10 gap-4">
+                                <div class="dropdown-menu-banner">
+                                    <img loading="lazy" src="../image/enx.webp" alt="Why ENX?"
+                                        class="w-full h-full object-cover" />
+                                </div>
+                                <div class="flex flex-col items-start w-full 2xl:py-[70px] xl:py-10 lg:py-5">
+                                    <span class="dropdown-title min-[900px]:block hidden">WHY ENX?</span>
+                                    <div
+                                        class="flex min-[900px]:hidden items-center justify-between min-[900px]:border-0 border border-gray-100 h-[55px] px-4 dropdown-title w-webkit-fill">
+                                        <div class="flex items-center gap-[15px] ">
+                                            <svg onclick="closeDropdown(this)" width="23" height="23"
+                                                viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                class="cursor-pointer">
+                                                <path d="M22.75 14H5.25M5.25 14L11.8125 7M5.25 14L11.8125 21"
+                                                    stroke="#353535" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            <span>WHY ENX?</span>
+                                        </div>
+                                        <svg onclick="closeDropdown(this)" xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none" class="cursor-pointer">
+                                            <path d="M5.5 5.5L18.5 18.5M5.5 18.5L18.5 5.5" stroke="#353535"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <ul
+                                        class="grid grid-cols-1 3xl:gap-7 2xl:gap-6 1xl:gap-5 lg:gap-4 sm:gap-2 gap-1 min-[900px]:p-0 min-[900px]:pr-5 p-5">
+                                        <li>
+                                            <h6> <a href="./aboutUs.html">About ENX</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6> <a href="./whyEnx.html">Why ENX?</a></h6>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <button aria-label="Open menu" onclick="toggleDropdown(this)"
+                            class="dropdown-btn border-b border-transparent hover:text-primary min-[900px]:px-0 px-4">
+                            Services
+                            <svg class="w-4 h-4 transform transition-transform duration-300 ease-in-out" fill="none"
+                                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu bg-white hidden min-[900px]:overflow-hidden overflow-auto">
+                            <div
+                                class="flex min-[900px]:flex-row flex-col-reverse 3xl:gap-[120px] xl:gap-20 lg:gap-12.5 md:gap-10 gap-4">
+                                <div class="dropdown-menu-banner">
+                                    <img loading="lazy" src="../image/solution.webp" alt="Services"
+                                        class="w-full h-full object-cover" />
+                                </div>
+                                <div class="flex flex-col items-start w-full 2xl:py-[70px] xl:py-10 lg:py-5">
+                                    <span class="dropdown-title min-[900px]:block hidden">Services</span>
+                                    <div
+                                        class="flex min-[900px]:hidden items-center justify-between min-[900px]:border-0 border border-gray-100 h-[55px] px-4 dropdown-title w-webkit-fill">
+                                        <div class="flex items-center gap-[15px]">
+                                            <svg onclick="closeDropdown(this)" width="23" height="23"
+                                                viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                class="cursor-pointer">
+                                                <path d="M22.75 14H5.25M5.25 14L11.8125 7M5.25 14L11.8125 21"
+                                                    stroke="#353535" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            <span>TOp SERVICES</span>
+                                        </div>
+                                        <svg onclick="closeDropdown(this)" xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none" class="cursor-pointer">
+                                            <path d="M5.5 5.5L18.5 18.5M5.5 18.5L18.5 5.5" stroke="#353535"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <ul
+                                        class="grid w-full justify-between sm:grid-cols-2 grid-cols-1 3xl:gap-y-7 2xl:gap-y-6 1xl:gap-y-5 lg:gap-y-4 sm:gap-y-2 gap-y-1 min-[900px]:p-0 min-[900px]:pr-5 p-5">
+                                        <li>
+                                            <h6><a href="javascript:;">Aerospace & Defense</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="javascript:;">Financial Services</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="javascript::">Manufacturing & Industrial</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="javascript:;">Media & Entertainment</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="javascript:;">Healthcare & Life Sciences</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="javascript:;">Retail & E-Commerce</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="javascript:;">Transportation & Logistics</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="javascript:;">Construction & Infrastructure</a></h6>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <button aria-label="Open menu" onclick="toggleDropdown(this)"
+                            class="dropdown-btn border-b border-transparent hover:text-primary min-[900px]:px-0 px-4">
+                            Resources
+                            <svg class="w-4 h-4 transform transition-transform duration-300 ease-in-out" fill="none"
+                                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu bg-white hidden overflow-auto min-[900px]:overflow-hidden">
+                            <div
+                                class="flex min-[900px]:flex-row flex-col-reverse 3xl:gap-[120px] xl:gap-20 lg:gap-12.5 md:gap-10 gap-4">
+                                <div class="dropdown-menu-banner">
+                                    <img loading="lazy" src="../image/resources.webp" alt="Resources"
+                                        class="w-full h-full object-cover" />
+                                </div>
+                                <div class="flex flex-col items-start w-full 1xl:py-10 lg:py-5">
+                                    <span class="dropdown-title min-[900px]:block hidden">RESOURCES</span>
+                                    <div
+                                        class="flex min-[900px]:hidden items-center justify-between min-[900px]:border-0 border border-gray-100 h-[55px] px-4 dropdown-title w-webkit-fill">
+                                        <div class="flex items-center gap-[15px]">
+                                            <svg onclick="closeDropdown(this)" width="23" height="23"
+                                                viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                class="cursor-pointer">
+                                                <path d="M22.75 14H5.25M5.25 14L11.8125 7M5.25 14L11.8125 21"
+                                                    stroke="#353535" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            <span>RESOURCES</span>
+                                        </div>
+                                        <svg onclick="closeDropdown(this)" xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none" class="cursor-pointer">
+                                            <path d="M5.5 5.5L18.5 18.5M5.5 18.5L18.5 5.5" stroke="#353535"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <ul
+                                        class="w-full justify-between grid sm:grid-cols-3 grid-cols-1 sm:grid-flow-col sm:grid-rows-7 3xl:gap-y-7 2xl:gap-y-6 1xl:gap-y-5 lg:gap-4 sm:gap-y-2 gap-y-1 min-[900px]:p-0 min-[900px]:pr-5 p-5">
+                                        <li>
+                                            <h6><a href="./caseStudy-1.html">Case Studies 01</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./caseStudy-2.html">Case Studies 02</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./single-case-study-1.html">Single Case Studies</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./team-1.html">Our Team 01</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./team-2.html">Our Team 02</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./singleteam-1.html">Single Team</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./offices.html">Our Offices</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./contactUs.html">Contact Us</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./testimonials.html">Testimonial </a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./faq.html">FAQ’s</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./404.html">404</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./career.html">Careers</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./contactUs.html">Support</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./clients.html">Our Clients</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./privacyPolicy.html">Privacy Policy</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./terms.html">Terms & Conditions</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./cookiePolicy.html">Cookie Policy</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./licensing.html">Licensing</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./dataProtection.html">Data Protection</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./sitemap.html">Site Map</a></h6>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <button aria-label="Open menu" onclick="toggleDropdown(this)"
+                            class="dropdown-btn border-b border-transparent hover:text-primary min-[900px]:px-0 px-4">
+                            Insights
+                            <svg class="w-4 h-4 transform transition-transform duration-300 ease-in-out" fill="none"
+                                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu bg-white hidden overflow-auto min-[900px]:overflow-hidden">
+                            <div
+                                class="flex min-[900px]:flex-row flex-col-reverse 3xl:gap-[120px] xl:gap-20 lg:gap-12.5 md:gap-10 gap-4">
+                                <div class="dropdown-menu-banner">
+                                    <img loading="lazy" src="../image/Insights.webp" alt="Insights"
+                                        class="w-full h-full object-cover" />
+                                </div>
+                                <div class="flex flex-col items-start w-full 2xl:py-[70px] xl:py-10 lg:py-5">
+                                    <span class="dropdown-title min-[900px]:block hidden">INSIGHTS</span>
+                                    <div
+                                        class="flex min-[900px]:hidden items-center justify-between min-[900px]:border-0 border border-gray-100 h-[55px] px-4 dropdown-title w-webkit-fill">
+                                        <div class="flex items-center gap-[15px]">
+                                            <svg onclick="closeDropdown(this)" width="23" height="23"
+                                                viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                class="cursor-pointer">
+                                                <path d="M22.75 14H5.25M5.25 14L11.8125 7M5.25 14L11.8125 21"
+                                                    stroke="#353535" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            <span>INSIGHTS</span>
+                                        </div>
+                                        <svg onclick="closeDropdown(this)" xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none" class="cursor-pointer">
+                                            <path d="M5.5 5.5L18.5 18.5M5.5 18.5L18.5 5.5" stroke="#353535"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <ul
+                                        class="grid grid-cols-1 3xl:gap-7 2xl:gap-6 1xl:gap-5 lg:gap-4 sm:gap-2 gap-1 min-[900px]:p-0 min-[900px]:pr-5 p-5">
+                                        <li>
+                                            <h6><a href="./insights.html">Latest Insights 01</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./insights.html">Latest Insights 02</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./singleInsight.html">Latest Insights 03</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./singleInsight.html">Single Insights</a></h6>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="./contactUs.html"
+                            class="p2 h-full flex items-center min-[900px]:justify-center min-[900px]:p-0 md:py-4 py-[14px] min-[900px]:px-0 px-4">
+                            Contact us</a>
+                    </li>
+
+                    <li class="min-[900px]:hidden py-[18px] min-[900px]:px-0 px-4">
+                        <a href="./contactUs.html" class="btn btn-primary p-1 ps-3 gap-2 rounded-full group w-fit">
+                            Get started
+                            <span class="btn btn-arrow rounded-full w-9 h-9 ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                    fill="none" class="1w-[17px] h-[17px]">
+                                    <g clip-path="url(#clip0_421_92)">
+                                        <path
+                                            d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                            fill="currentColor" />
+                                    </g>
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <a href="./contactUs.html" aria-label="Open Page"
+                    class="btn btn-primary all-btn rounded-full group min-[900px]:flex hidden w-fit">
+                    Get started
+                    <span class="btn btn-arrow rounded-full all-btn-arrow">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M-2.02496e-05 12.4396L11.1557 1.28395L1.59365 1.28395L1.51169 -9.34181e-05L13.3504 -9.30945e-05L13.3504 11.8386L12.0663 11.7566L12.0663 2.19462L0.910647 13.3503L-2.02496e-05 12.4396Z"
+                                fill="currentColor" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </header>
+        <!--/ End Header -->
+
+
+        <!-- HERO -->
+        <section class="relative w-full lg:min-h-[calc(100vh-90px)] lg:h-full 2xl:pt-24 xl:pt-[85px] lg:pt-20 md:pt-18/.5 sm:pt-[59px] pt-13.5 3xl:pb-25 2xl:pb-22.5 xl:pb-20 lg:pb-17 pb-12.5">
+            <div class="bg-[url('../image/contact-us-banner.webp')] bg-cover bg-center z-0">
+
+                <!-- Content area -->
+                <div class="bg-black-gradient z-10">
+                    <div
+                        class="container lg:h-screen min-h-[450px] 2xl:pt-[90px] xl:pt-[85px] lg:pt-20 sm:pt-[60px] pt-[55px]">
+                        <div class="flex 2xl:pt-[90px] 1xl:pt-20 pt-16">
+                            <div class="relative z-20 w-[1020px] max-w-full h-fit">
+                                <div class="flex items-center gap-3 3xl:mb-12.5 1xl:mb-[45px] md:mb-10 mb-[35px]"
+                                    data-aos="fade-right" >
+                                    <span class="p2 text-white opacity-60">Home</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <g opacity="0.6">
+                                            <path d="M5 14L12 8L5 2" stroke="#ffffff" stroke-linecap="square" />
+                                        </g>
+                                    </svg>
+                                    <span class="p2 text-white">Contact Us</span>
+                                </div>
+                                <h1 class="2xl:mb-[55px] xl:mb-12.5 lg:mb-10 sm:mb-[30px] mb-5 text-white"
+                                    data-aos="fade-right" >Contact Us</h1>
+                                <div data-aos="fade-right" 
+                                    class="flex items-start gap-[25px] 2xl:mb-[72px] xl:mb-[62px] md:mb-[52px] sm:mb-[42px] mb-[32px]">
+                                    <span class="dash border-primary 1xl:mt-4 mt-3.5 sm:block hidden"></span>
+                                    <p
+                                        class="2xl:max-w-[70%] lg:max-w-[64%] md:max-w-[84%] sm:max-w-[90%] w-full text-white">
+                                        Nor again is there anyone who loves or pursues or desires to obtain pain of
+                                        itself, because it is pain, but because occasionally circumstances occur in
+                                        which toil and pain can procure.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- CONTACT US FORM -->
+        <section class="relative">
+            <div>
+                <img loading="lazy" loading="lazy" src="../image/bg-map.webp" alt="map"
+                    class="w-full h-full object-cover absolute">
+                <div class="w-full h-full relative 3xl:py-25 2xl:py-[90px] xl:py-18 lg:py-17 sm:py-12 py-9">
+                    <div class="container">
+                        <div class="flex justify-between md:flex-row flex-col">
+                            <div class="2xl:max-w-[1035px] xl:max-w-[950px] lg:max-w-[800px] md:max-w-[660px] w-full ">
+                                <div class="flex items-center gap-[18px] 2xl:mb-[46px] sm:mb-[30px] mb-[22px]">
+                                    <span class="dash border border-primary"></span>
+                                    <p data-aos="fade-right" >Get in touch</p>
+                                </div>
+                                <h2 data-aos="fade-right" 
+                                    class="2xl:max-w-[600px] lg:max-w-[550px] sm:max-w-[400px] max-w-[320px] w-full">
+                                    Get in touch with us. We're here to assist you.
+                                </h2>
+                                <div class="2xl:mt-[75px] xl:mt-[40px] sm:mt-10 mt-7">
+                                    <form action="" method="get" data-aos="fade-up" >
+                                        <div
+                                            class="grid sm:grid-cols-2 grid-cols-1 1xl:gap-[35px] sm:gap-7 gap-[22px] md:mb-[40px] mb-7">
+                                            <div class="flex flex-col 2xl:gap-[15px] gap-[10px]">
+                                                <label for="first-name" class="p">First name <span
+                                                        class="text-[#ED3636]">*</span></label>
+                                                <input type="text" name="first-name" placeholder="Type your first name"
+                                                    class="3xl:h-[62px] 2xl:h-[60px] xl:h-[55px] h-12.5 xl:px-[25px] lg:px-5 px-[15px] rounded-full border border-gray-100 outline-none p2 placeholder:text-[#35353599] tracking-normal focus:border-primary" />
+                                            </div>
+                                            <div class="flex flex-col 2xl:gap-[15px] gap-[10px]">
+                                                <label for="first-name" class="p">Last name <span
+                                                        class="text-[#ED3636]">*</span></label>
+                                                <input type="text" name="first-name" placeholder="Type your last name"
+                                                    class="3xl:h-[62px] 2xl:h-[60px] xl:h-[55px] h-12.5 xl:px-[25px] lg:px-5 px-[15px] rounded-full border border-gray-100 outline-none p2 placeholder:text-[#35353599] tracking-normal focus:border-primary" />
+                                            </div>
+                                            <div class="flex flex-col 2xl:gap-[15px] gap-[10px]">
+                                                <label for="first-name" class="p">Email address <span
+                                                        class="text-[#ED3636]">*</span></label>
+                                                <input type="email" name="first-name"
+                                                    placeholder="Type your email address"
+                                                    class="3xl:h-[62px] 2xl:h-[60px] xl:h-[55px] h-12.5 xl:px-[25px] lg:px-5 px-[15px] rounded-full border border-gray-100 outline-none p2 placeholder:text-[#35353599] tracking-normal focus:border-primary" />
+                                            </div>
+                                            <div class="flex flex-col 2xl:gap-[15px] gap-[10px]">
+                                                <label for="first-name" class="p">Phone number <span
+                                                        class="text-[#ED3636]">*</span></label>
+                                                <input type="text" name="first-name"
+                                                    placeholder="Type your phone number"
+                                                    class="3xl:h-[62px] 2xl:h-[60px] xl:h-[55px] h-12.5 xl:px-[25px] lg:px-5 px-[15px] rounded-full border border-gray-100 outline-none p2 placeholder:text-[#35353599] tracking-normal focus:border-primary" />
+                                            </div>
+                                            <div
+                                                class="flex flex-col 2xl:gap-[15px] gap-[10px] sm:col-span-2 col-span-1">
+                                                <label for="first-name" class="p">Message <span
+                                                        class="text-[#ED3636]">*</span></label>
+                                                <textarea name="first-name" placeholder="Type your message here..."
+                                                    class="min-h-[150px] h-full lg:px-[25px] px-[15px] xl:py-[19px] md:py-[15px] py-3 lg:rounded-[40px] md:rounded-[30px] rounded-[18px] border border-gray-100 outline-none p2 placeholder:text-[#35353599] focus:border-primary"></textarea>
+                                            </div>
+                                        </div>
+
+                                        <button aria-label="Submit"
+                                            class="btn btn-primary p-1 1xl:ps-[27px] xl:ps-5 ps-3.5 1xl:gap-3 gap-2 rounded-full group">
+                                            Submit
+                                            <span
+                                                class="btn btn-arrow rounded-full 3xl:w-[52px] 3xl:h-[52px] 1xl:w-12 1xl:h-12 xl:w-11 xl:h-11 w-9 h-9 ">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                                                    viewBox="0 0 22 22" fill="none"
+                                                    class="1xl:w-[22px] 1xl:h-[22px] xl:w-[19px] xl:h-[19px] w-[17px] h-[17px]">
+                                                    <g clip-path="url(#clip0_421_92)">
+                                                        <path
+                                                            d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                                            fill="currentColor" />
+                                                    </g>
+                                                </svg>
+
+                                                <!-- loading icon -->
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                                    viewBox="0 0 30 30" fill="none" class="hidden">
+                                                    <g clip-path="url(#clip0_296_2520)">
+                                                        <path
+                                                            d="M15 1V6.6M20.88 9.12L24.94 5.06M23.4 15H29M20.88 20.88L24.94 24.94M15 23.4V29M5.06 24.94L9.12 20.88M1 15H6.6M5.06 5.06L9.12 9.12"
+                                                            stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </g>
+                                                </svg>
+                                            </span>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="flex md:flex-col flex-row gap-6 md:pt-[150px] pt-10">
+                                <!-- facebook -->
+                                <a href="https://www.facebook.com/" data-aos="fade-left" 
+                                    class="flex items-center justify-center border border-gray-100 rounded-full 2xl:w-[60px] 2xl:h-[60px] w-[55px] h-[55px] hover:bg-primary transition-all ease-in-out">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="18" viewBox="0 0 11 18"
+                                        fill="none">
+                                        <path
+                                            d="M3.4537 17.5509L3.42913 9.99458H0.214844V6.75615H3.42913V4.5972C3.42913 1.68348 5.22003 0.279297 7.79989 0.279297C9.03567 0.279297 10.0978 0.371991 10.4073 0.413422V3.45843L8.61801 3.45925C7.21495 3.45925 6.94328 4.13098 6.94328 5.11669V6.75615H10.9291L9.8577 9.99458H6.94326V17.5509H3.4537Z"
+                                            fill="#1E2532" />
+                                    </svg>
+                                </a>
+                                <!-- instagram -->
+                                <a href="https://www.instagram.com/" data-aos="fade-left" 
+                                    class="flex items-center justify-center border border-gray-100 rounded-full 2xl:w-[60px] 2xl:h-[60px] w-[55px] h-[55px] hover:bg-primary transition-all ease-in-out">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="23" viewBox="0 0 22 23"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_387_267)">
+                                            <path
+                                                d="M15.5117 2.68518H6.51172C4.02644 2.68518 2.01172 4.6999 2.01172 7.18518V16.1852C2.01172 18.6705 4.02644 20.6852 6.51172 20.6852H15.5117C17.997 20.6852 20.0117 18.6705 20.0117 16.1852V7.18518C20.0117 4.6999 17.997 2.68518 15.5117 2.68518Z"
+                                                stroke="#1E2532" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M14.6103 11.1189C14.7214 11.868 14.5934 12.6329 14.2447 13.3051C13.8959 13.9772 13.3441 14.5222 12.6677 14.8626C11.9914 15.2031 11.2249 15.3216 10.4773 15.2013C9.7297 15.081 9.03907 14.728 8.50364 14.1926C7.96821 13.6572 7.61524 12.9665 7.49494 12.2189C7.37465 11.4713 7.49314 10.7048 7.83358 10.0285C8.17401 9.35211 8.71905 8.80031 9.39117 8.45156C10.0633 8.10281 10.8283 7.97487 11.5773 8.08594C12.3413 8.19924 13.0487 8.55526 13.5948 9.10142C14.141 9.64758 14.497 10.3549 14.6103 11.1189Z"
+                                                stroke="#1E2532" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <ellipse cx="15.9597" cy="6.73257" rx="1.35032" ry="1.35" fill="#1E2532" />
+                                        </g>
+                                    </svg>
+                                </a>
+                                <!-- twitter -->
+                                <a href="https://www.instagram.com/" data-aos="fade-left" 
+                                    class="flex items-center justify-center border border-gray-100 rounded-full 2xl:w-[60px] 2xl:h-[60px] w-[55px] h-[55px] hover:bg-primary transition-all ease-in-out">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15" viewBox="0 0 18 15"
+                                        fill="none">
+                                        <path
+                                            d="M17.7522 2.10103C17.1094 2.42487 16.4665 2.53282 15.7165 2.64076C16.4665 2.20897 17.0022 1.56129 17.2165 0.697707C16.5737 1.1295 15.8237 1.34539 14.9665 1.56129C14.3237 0.913602 13.3594 0.481812 12.3951 0.481812C10.5737 0.481812 8.96652 2.10103 8.96652 4.04408C8.96652 4.36793 8.96652 4.58382 9.07366 4.79972C6.1808 4.69177 3.50223 3.28845 1.78795 1.1295C1.46652 1.66924 1.35937 2.20897 1.35937 2.96461C1.35937 4.15203 2.00223 5.23151 2.96652 5.87919C2.4308 5.87919 1.89509 5.6633 1.35937 5.4474C1.35937 7.17456 2.53795 8.57788 4.14509 8.90172C3.82366 9.00967 3.50223 9.00967 3.1808 9.00967C2.96652 9.00967 2.75223 9.00967 2.53795 8.90172C2.96652 10.305 4.25223 11.3845 5.85937 11.3845C4.6808 12.356 3.1808 12.8958 1.46652 12.8958C1.14509 12.8958 0.930804 12.8958 0.609375 12.8958C2.21652 13.8673 4.03795 14.515 5.96652 14.515C12.3951 14.515 15.9308 9.11762 15.9308 4.47587C15.9308 4.36793 15.9308 4.15203 15.9308 4.04408C16.6808 3.50434 17.3237 2.85666 17.7522 2.10103Z"
+                                            fill="#1E2532" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- LOCATION -->
+        <section class="relative">
+            <div class="">
+                <img loading="lazy" loading="lazy" src="../image/about-us-banner.webp" alt="map"
+                    class="w-full h-full object-cover absolute" / />
+                <div class="bg-black/60 relative">
+                    <div class="container">
+                        <div
+                            class="grid lg:grid-cols-3 grid-cols-1 lg:w-full lg:max-w-full m-auto max-w-[480px] lg:divide-x divide-x-0 lg:divide-y-0 divide-y divide-gray-100 3xl:pt-[120px] 2xl:pt-[100px] 1xl:pt-[90px] xl:pt-20 lg:pt-16 pt-12 relative">
+                            <div
+                                class="bg-white 3xl:py-[90px] 2xl:py-20 xl:py-17 lg:py-14 py-9 2xl:px-[60px] 1xl:px-10 xl:px-[18px] lg:px-4 sm:px-15 px-6 flex items-start justify-start sm:flex-row flex-col 3xl:gap-[30px] xl:gap-[23px] lg:gap-[14px] sm:gap-7 gap-[18px]">
+                                <div
+                                    class="rounded-full flex items-center justify-center bg-[#FAF0EB] overflow-hidden 2xl:w-[70px] 2xl:h-[70px] xl:w-[65px] xl:h-[65px] w-[55px] h-[55px] p-2 shrink-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36"
+                                        class="xl:w-[36px] xl:h-[36px] lg:w-[25px] lg:h-[25px] w-[30px] h-[30px]"
+                                        fill="none">
+                                        <path
+                                            d="M25.7734 5.25H10.0234C6.70973 5.25 4.02344 7.93629 4.02344 11.25V24.75C4.02344 28.0637 6.70973 30.75 10.0234 30.75H25.7734C29.0871 30.75 31.7734 28.0637 31.7734 24.75V11.25C31.7734 7.93629 29.0871 5.25 25.7734 5.25Z"
+                                            stroke="#FF8343" stroke-width="2" />
+                                        <path
+                                            d="M4.09375 11.385L14.9012 17.58C15.8069 18.1055 16.8354 18.3823 17.8825 18.3823C18.9296 18.3823 19.9581 18.1055 20.8638 17.58L31.7013 11.385"
+                                            stroke="#FF8343" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <div class="">
+                                    <h5 class="xl:mb-[18px] mb-2">Email Address</h5>
+                                    <p class="mb-1 break-all"><a
+                                            href="mailto:contact@enxcompany.com">contact@enxcompany.com</a></p>
+                                    <p class="break-all"><a href="mailto:help@enxcompany.com">help@enxcompany.com</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-white 3xl:py-[90px] 2xl:py-20 xl:py-17 lg:py-14 py-9 2xl:px-[60px] 1xl:px-10 xl:px-[18px] lg:px-4 sm:px-15 px-6 flex items-start justify-start sm:flex-row flex-col 3xl:gap-[30px] xl:gap-[23px] lg:gap-[14px] sm:gap-7 gap-[18px]">
+                                <div
+                                    class="rounded-full flex items-center justify-center bg-[#FAF0EB] overflow-hidden 2xl:w-[70px] 2xl:h-[70px] xl:w-[65px] xl:h-[65px] w-[55px] h-[55px] p-2 shrink-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36"
+                                        class="xl:w-[36px] xl:h-[36px] lg:w-[25px] lg:h-[25px] w-[30px] h-[30px]"
+                                        fill="none">
+                                        <path
+                                            d="M32.6235 23.0469L25.2422 19.7391C24.9078 19.5958 24.5429 19.5381 24.1806 19.5714C23.8182 19.6047 23.4699 19.7279 23.1672 19.9297C23.1365 19.9495 23.1073 19.9714 23.0797 19.9953L19.2219 23.2766C19.1819 23.2984 19.1373 23.3106 19.0917 23.3122C19.0462 23.3138 19.0009 23.3048 18.9594 23.2859C16.4797 22.0891 13.911 19.5359 12.7094 17.0906C12.6894 17.0498 12.679 17.0049 12.679 16.9594C12.679 16.9139 12.6894 16.869 12.7094 16.8281L16.0016 12.9219C16.0252 12.893 16.0472 12.8627 16.0672 12.8312C16.2662 12.5273 16.3865 12.1787 16.417 11.8167C16.4476 11.4547 16.3875 11.0908 16.2422 10.7578L12.9578 3.38906C12.7713 2.95407 12.4487 2.59131 12.0385 2.35522C11.6284 2.11913 11.1526 2.02245 10.6828 2.07969C8.64099 2.34812 6.76676 3.35084 5.41037 4.90047C4.05397 6.4501 3.30824 8.4406 3.31252 10.5C3.31252 22.7344 13.2656 32.6875 25.5 32.6875C27.5593 32.6914 29.5496 31.9456 31.0992 30.5893C32.6488 29.2329 33.6516 27.3589 33.9203 25.3172C33.9774 24.8496 33.8821 24.376 33.6484 23.9669C33.4147 23.5579 33.0553 23.2352 32.6235 23.0469ZM25.5 30.8125C14.3 30.8125 5.18752 21.7 5.18752 10.5C5.18229 8.89676 5.76096 7.34647 6.8154 6.13876C7.86984 4.93106 9.32792 4.14857 10.9172 3.9375H10.9531C11.0161 3.93867 11.0773 3.95885 11.1286 3.99537C11.1799 4.0319 11.2189 4.08307 11.2406 4.14219L14.5375 11.5031C14.5563 11.544 14.5661 11.5886 14.5661 11.6336C14.5661 11.6786 14.5563 11.7231 14.5375 11.7641L11.2391 15.6797C11.2146 15.7077 11.1921 15.7375 11.1719 15.7687C10.9655 16.0838 10.844 16.4469 10.819 16.8227C10.7941 17.1986 10.8667 17.5745 11.0297 17.9141C12.4156 20.7516 15.275 23.5891 18.1438 24.975C18.4853 25.1371 18.8631 25.2079 19.2401 25.1805C19.6172 25.1532 19.9808 25.0285 20.2953 24.8187C20.325 24.7984 20.3547 24.7766 20.3828 24.7531L24.2391 21.4719C24.2772 21.4514 24.3192 21.4394 24.3624 21.4367C24.4055 21.434 24.4487 21.4407 24.4891 21.4562L31.8719 24.7641C31.9322 24.7897 31.9829 24.8337 32.0168 24.8898C32.0508 24.9459 32.0662 25.0112 32.061 25.0766C31.851 26.6666 31.0692 28.1257 29.8618 29.1814C28.6543 30.237 27.1038 30.8168 25.5 30.8125Z"
+                                            fill="#FF8343" />
+                                    </svg>
+                                </div>
+                                <div class="">
+                                    <h5 class="xl:mb-[18px] mb-2">Phone Number</h5>
+                                    <p class="mb-1 break-all"><a href="tel:9180878925634">+91 (808) 789-25634</a>
+                                    </p>
+                                    <p class="break-all"><a href="tel:9180878925634">+91 (808) 789-25634</a></p>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-white 3xl:py-[90px] 2xl:py-20 xl:py-17 lg:py-14 py-9 2xl:px-[60px] 1xl:px-10 xl:px-[18px] lg:px-4 sm:px-15 px-6 flex items-start justify-start sm:flex-row flex-col 3xl:gap-[30px] xl:gap-[23px] lg:gap-[14px] sm:gap-7 gap-[18px]">
+                                <div
+                                    class="rounded-full flex items-center justify-center bg-[#FAF0EB] overflow-hidden 2xl:w-[70px] 2xl:h-[70px] xl:w-[65px] xl:h-[65px] w-[55px] h-[55px] p-2 shrink-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36"
+                                        class="xl:w-[36px] xl:h-[36px] lg:w-[25px] lg:h-[25px] w-[30px] h-[30px]"
+                                        fill="none">
+                                        <path
+                                            d="M24.0009 16C24.0009 17.5913 23.3687 19.1174 22.2435 20.2426C21.1183 21.3679 19.5922 22 18.0009 22C16.4096 22 14.8834 21.3679 13.7582 20.2426C12.633 19.1174 12.0009 17.5913 12.0009 16C12.0009 14.4087 12.633 12.8826 13.7582 11.7574C14.8834 10.6321 16.4096 10 18.0009 10C19.5922 10 21.1183 10.6321 22.2435 11.7574C23.3687 12.8826 24.0009 14.4087 24.0009 16ZM22.0009 16C22.0009 14.9391 21.5794 13.9217 20.8293 13.1716C20.0792 12.4214 19.0617 12 18.0009 12C16.94 12 15.9226 12.4214 15.1724 13.1716C14.4223 13.9217 14.0009 14.9391 14.0009 16C14.0009 17.0609 14.4223 18.0783 15.1724 18.8284C15.9226 19.5786 16.94 20 18.0009 20C19.0617 20 20.0792 19.5786 20.8293 18.8284C21.5794 18.0783 22.0009 17.0609 22.0009 16ZM27.9009 25.91C30.5267 23.2828 32.0017 19.7204 32.0017 16.006C32.0017 12.2916 30.5267 8.72918 27.9009 6.102C26.6008 4.80183 25.0574 3.77047 23.3588 3.06681C21.6601 2.36316 19.8395 2.00099 18.0009 2.00099C16.1622 2.00099 14.3416 2.36316 12.643 3.06681C10.9443 3.77047 9.40091 4.80183 8.10087 6.102C5.47505 8.72918 4 12.2916 4 16.006C4 19.7204 5.47505 23.2828 8.10087 25.91L11.1429 28.908L15.2289 32.878L15.4949 33.114C17.0449 34.37 19.3149 34.29 20.7749 32.878L25.6449 28.138L27.9009 25.91ZM9.51087 7.512C10.6253 6.39628 11.9488 5.51118 13.4056 4.90729C14.8624 4.30339 16.4239 3.99256 18.0009 3.99256C19.5779 3.99256 21.1394 4.30339 22.5962 4.90729C24.0529 5.51118 25.3764 6.39628 26.4909 7.512C28.6794 9.70339 29.9376 12.655 30.0032 15.7513C30.0688 18.8477 28.9366 21.8499 26.8429 24.132L26.4909 24.5L23.8489 27.108L19.3889 31.446L19.2009 31.606C18.8545 31.8654 18.4333 32.0054 18.0005 32.005C17.5678 32.0046 17.1468 31.8639 16.8009 31.604L16.6149 31.444L10.6549 25.634L9.51087 24.5L9.15887 24.134C7.06509 21.8519 5.93297 18.8497 5.99855 15.7533C6.06413 12.657 7.32234 9.70339 9.51087 7.512Z"
+                                            fill="#FF8343" />
+                                    </svg>
+                                </div>
+                                <div class="">
+                                    <h5 class="xl:mb-[18px] mb-2">Location</h5>
+                                    <p>1234 Main Street, Springfield, USA 98765</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- BUSINESS PLAN -->
+        <section class="relative">
+            <div class="2xl:h-[550px] xl:h-[440px] lg:h-[415px] md:h-[350px] sm:h-[300px] h-[270px]">
+                <div class="absolute inset-0 bg-[url('../image/about-us-bg.svg')] bg-cover bg-center z-0"></div>
+                <div class="container">
+                    <div class="business-plan-outer-box ">
+                        <div class="business-plan-inner-box">
+                            <h4>Let's make your business mate a new plan</h4>
+                            <a href="./contactUs.html"
+                                class="btn btn-primary p-1 1xl:ps-[27px] xl:ps-5 ps-3.5 1xl:gap-3 gap-2 rounded-full group">
+                                Learn More
+                                <span
+                                    class="btn btn-arrow rounded-full 3xl:w-[52px] 3xl:h-[52px] 1xl:w-12 1xl:h-12 xl:w-11 xl:h-11 w-9 h-9 ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                        fill="none"
+                                        class="1xl:w-[22px] 1xl:h-[22px] xl:w-[19px] xl:h-[19px] w-[17px] h-[17px]">
+                                        <g clip-path="url(#clip0_421_92)">
+                                            <path
+                                                d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                                fill="currentColor" />
+                                        </g>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- FOOTER -->
+        <section class="bg-black">
+            <footer>
+                <div class="container">
+                    <div class="divide-y divide-white/15">
+                        <div
+                            class="flex items-start flex-wrap gap-6 justify-between w-full 3xl:pb-[60px] 2xl:pb-12.5 xl:pb-10 lg:pb-7 sm:pb-6 pb-5 3xl:pt-[90px] 2xl:pt-20 1xl:pt-[70px] xl:pt-[60px] lg:pt-12.5 md:pt-10 pt-[30px]">
+                            <h3 class="text-white">Want to start a project?</h3>
+                            <a href="./contactUs.html" class="btn btn-primary all-btn rounded-full group">
+                                Start a Project
+                                <span class="btn btn-arrow rounded-full all-btn-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                        fill="none"
+                                        class="1xl:w-[22px] 1xl:h-[22px] xl:w-[19px] xl:h-[19px] w-[17px] h-[17px]">
+                                        <g clip-path="url(#clip0_421_92)">
+                                            <path
+                                                d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                                fill="currentColor" />
+                                        </g>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+
+                        <div class="3xl:py-12.5 2xl:py-[45px] lg:py-10 py-[30px]">
+                            <div class="footer-list">
+                                <div class="list">
+                                    <h5 class="p2 list-title">Navigation</h5>
+                                    <span class="dash block border border-primary"></span>
+                                    <p class="p2 list-link"><a href="./aboutUs.html" class="text-white">About
+                                            us</a></p>
+                                    <p class="p2 list-link"><a href="./whyEnx.html" class="text-white">Why ENX?</a>
+                                    </p>
+                                    <p class="p2 list-link"><a href="./singleInsight.html"
+                                            class="text-white">Solutions</a>
+                                    </p>
+                                    <p class="p2 list-link"><a href="./career.html" class="text-white">Careers</a>
+                                    </p>
+                                </div>
+                                <div class="list">
+                                    <h5 class="p2 list-title">Why ENX?</h5>
+                                        <span class="dash block border border-primary"></span>
+                                        <p class="p2 list-link"><a href="javascript:;" class="text-white">Our
+                                                Mission</a></p>
+                                        <p class="p2 list-link"><a href="javascript:;" class="text-white">Vision &
+                                                Values</a></p>
+                                        <p class="p2 list-link"><a href="./whyEnx.html" class="text-white">Why Choose
+                                                Us?</a></p>
+                                        <p class="p2 list-link"><a href="javascript:;" class="text-white">Success
+                                                Stories</a></p>
+                                        <p class="p2 list-link"><a href="javascript:;" class="text-white">Social
+                                                Impact</a>
+                                        </p>
+                                </div>
+                                <div class="list">
+                                    <h5 class="p2 list-title">Solutions</h5>
+                                    <span class="dash block border border-primary"></span>
+                                    <p class="p2 list-link"><a href="javascript:;" class="text-white">Cloud
+                                            Computing</a></p>
+                                    <p class="p2 list-link"><a href="./cyberSecurity.html"
+                                            class="text-white">Cybersecurity</a></p>
+                                    <p class="p2 list-link"><a href="javascript:;" class="text-white">Managed IT
+                                            Services</a></p>
+                                    <p class="p2 list-link"><a href="./softwareDevelopment.html"
+                                            class="text-white">Software Development</a></p>
+                                    <p class="p2 list-link"><a href="javascript:;" class="text-white">IT
+                                            Consulting</a>
+                                    </p>
+                                </div>
+                                <div class="list">
+                                    <h5 class="p2 list-title">Support</h5>
+                                    <span class="dash block border border-primary"></span>
+                                    <p class="p2 list-link"><a href="./support.html" class="text-white">Help
+                                            center</a>
+                                    </p>
+                                    <p class="p2 list-link"><a href="./contactUs.html" class="text-white">Contact</a>
+                                    </p>
+                                    <p class="p2 list-link"><a href="./privacyPolicy.html" class="text-white">Privacy
+                                            Policy</a></p>
+                                    <p class="p2 list-link"><a href="terms.html" class="text-white">Terms of
+                                            Use</a>
+                                    </p>
+                                    <p class="p2 list-link"><a href="./faq.html" class="text-white">FAQ’s</a></p>
+                                </div>
+                                <div class="list">
+                                    <h5 class="p2 list-title">Social Media</h5>
+                                    <span class="dash block border border-primary"></span>
+                                    <p class="p2 list-link"><a href="https://in.linkedin.com/"
+                                            class="text-white">LinkedIn</a></p>
+                                    <p class="p2 list-link"><a href="https://x.com/?lang=en"
+                                            class="text-white">Twitter</a></p>
+                                    <p class="p2 list-link"><a href="https://dribbble.com/"
+                                            class="text-white">Dribble</a></p>
+                                    <p class="p2 list-link"><a href="https://www.instagram.com/"
+                                            class="text-white">Instagram</a></p>
+                                    <p class="p2 list-link"><a href="https://medium.com/" class="text-white">Medium</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="newsletter-box">
+                                <h4 class="text-white md:w-1/2 w-full text-start">Sign up for our
+                                    newsletter</h4>
+                                <div class="newsletter-input-box md:w-1/2 w-full">
+                                    <input type="text" name="newsletter" placeholder="Enter email..."
+                                        class="newsletter-input p2">
+                                    <button aria-label="Open Page" class="btn btn-primary all-btn rounded-full group">
+                                        Subscribe
+                                        <span
+                                            class="btn btn-arrow rounded-full 3xl:w-[52px] 3xl:h-[52px] 1xl:w-12 1xl:h-12 xl:w-11 xl:h-11 w-9 h-9">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                                                viewBox="0 0 22 22" fill="none"
+                                                class="1xl:w-[22px] 1xl:h-[22px] xl:w-[19px] xl:h-[19px] w-[17px] h-[17px]">
+                                                <g clip-path="url(#clip0_421_92)">
+                                                    <path
+                                                        d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                                        fill="currentColor" />
+                                                </g>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="copyright">
+                            <img loading="lazy" src="../image/logo-white.svg" alt="main logo"
+                                class="2xl:w-[106px] xl:w-[100px] lg:w-[90px] sm:w-20 w-18 h-full object-cover" />
+                            <p class="p2 text-white">Copyright © 2024 <span class="text-primary">ENX</span>. All rights
+                                reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </section>
+
+    </div>
+
+    <!-- Swiper JS -->
+    <script async src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- AOS ANIMATION -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+   <script>
+        AOS.init({
+            offset: 60,
+        });
+    </script>
+
+    <!-- Your Custom JS -->
+    <script defer src="../js/custom.js"></script>
+</body>
+
+</html>

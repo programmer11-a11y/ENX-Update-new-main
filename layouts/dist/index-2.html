@@ -1,0 +1,2635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tag -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title Tag  -->
+    <title>ENX - Information Technology Website - Home</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../image/favicon.svg" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- StyleSheet -->
+    <link rel="stylesheet" href="../css/output.css" />
+    <!-- aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    <div class="relative overflow-hidden">
+        <!-- Header -->
+        <!-- Dropdown Overlay -->
+        <div id="dropdownOverlay" class="fixed inset-0 bg-black/50 hidden z-40">
+        </div>
+        <header class="fixed w-full h-auto nav-section z-50">
+            <div
+                class="2xl:h-[96px] xl:h-[85px] lg:h-20 md:h-[75px] sm:h-[60px] h-[55px] lg:px-10 min-[900px]:px-5 bg-white border-b border-gray-100 min-[900px]:flex min-[900px]:items-center min-[900px]:justify-between relative z-50">
+                <div class="min-[900px]:p-0 px-4 flex justify-between items-center h-full">
+                    <a href="./index.html">
+                        <img loading="lazy"
+                            class="2xl:w-[106px] xl:w-[100px] lg:w-[90px] sm:w-20 w-18 h-full object-cover"
+                            src="../image/Logo.svg" alt="Logo" />
+                    </a>
+
+                    <!-- Burger Button -->
+                    <button aria-label="Open menu" id="burgerBtn"
+                        class="min-[900px]:hidden block sm:w-6 sm:h-6 w-5 h-5">
+                        <span id="burger-icon">
+                            <!-- Burger Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                class="w-full h-full">
+                                <rect x="1" y="1" width="22" height="2" fill="#353535" />
+                                <rect x="1" y="8" width="22" height="2" fill="#353535" />
+                                <rect x="1" y="15" width="22" height="2" fill="#353535" />
+                            </svg>
+                        </span>
+                        <span id="close-icon" class="hidden">
+                            <!-- Close Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                                <path d="M5.5 5.5L18.5 18.5M5.5 18.5L18.5 5.5" stroke="#353535" stroke-width="1.5" />
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+
+                <!-- Navigation Links -->
+                <ul id="nav-links"
+                    class="nav-links hidden min-[900px]:static fixed left-0 min-[900px]:w-auto w-full h-full min-[900px]:divide-y-0 divide-y divide-gray-100 min-[900px]:flex min-[900px]:items-stretch align-start bg-white 3xl:gap-10 2xl:gap-9 1xl:gap-6 gap-4 min-[900px]:py-0 pt-[5px] pb-4 transition-all duration-300 min-[900px]:m-0 m-px">
+                    <li class="min-[900px]:relative">
+                        <button aria-label="Open menu" onclick="toggleDropdown(this)"
+                            class="dropdown-btn border-b border-transparent hover:text-primary min-[900px]:px-0 px-4 p2 focus-visible:none">
+                            Home
+                            <svg class="w-4 h-4 transform transition-transform duration-300 ease-in-out" fill="none"
+                                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+
+                        <!-- Centered dropdown menu -->
+                        <div
+                            class="dropdown-menu min-[900px]:h-fit! h-full! bg-white hidden overflow-auto min-[900px]:overflow-hidden min-[900px]:w-[130px]! min-[900px]:border-t border-gray-100 min-[900px]:absolute min-[900px]:left-1/2 min-[900px]:transform min-[900px]:-translate-x-[25%] z-50 transition-all ease-in-out">
+
+                            <div class="flex flex-col items-start justify-center w-full">
+                                <div
+                                    class="flex min-[900px]:hidden items-center justify-between min-[900px]:border-0 border border-gray-100 h-[55px] px-4 dropdown-title w-webkit-fill">
+                                    <div class="flex items-center gap-[15px] ">
+                                        <svg onclick="closeDropdown(this)" width="23" height="23" viewBox="0 0 28 28"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg" class="cursor-pointer">
+                                            <path d="M22.75 14H5.25M5.25 14L11.8125 7M5.25 14L11.8125 21"
+                                                stroke="#353535" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                        <span>HOME</span>
+                                    </div>
+                                    <svg onclick="closeDropdown(this)" xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none" class="cursor-pointer">
+                                        <path d="M5.5 5.5L18.5 18.5M5.5 18.5L18.5 5.5" stroke="#353535"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+
+                                <ul class="space-y-3 p-5">
+                                    <li class="p2">
+                                        <a href="./index.html">Home-1</a>
+                                    </li>
+                                    <li class="p2">
+                                        <a href="./index-2.html">Home-2</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <button aria-label="Open menu" onclick="toggleDropdown(this)"
+                            class="dropdown-btn border-b border-transparent hover:text-primary min-[900px]:px-0 px-4 p2">
+                            Why ENX?
+                            <svg class="w-4 h-4 transform transition-transform duration-300 ease-in-out" fill="none"
+                                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu bg-white hidden overflow-auto min-[900px]:overflow-hidden">
+                            <div
+                                class="flex min-[900px]:flex-row flex-col-reverse 3xl:gap-[120px] xl:gap-20 lg:gap-12.5 md:gap-10 gap-4">
+                                <div class="dropdown-menu-banner">
+                                    <img loading="lazy" src="../image/enx.webp" alt="Why ENX?"
+                                        class="w-full h-full object-cover" />
+                                </div>
+                                <div class="flex flex-col items-start w-full 2xl:py-[70px] xl:py-10 lg:py-5">
+                                    <span class="dropdown-title min-[900px]:block hidden">WHY ENX?</span>
+                                    <div
+                                        class="flex min-[900px]:hidden items-center justify-between min-[900px]:border-0 border border-gray-100 h-[55px] px-4 dropdown-title w-webkit-fill">
+                                        <div class="flex items-center gap-[15px] ">
+                                            <svg onclick="closeDropdown(this)" width="23" height="23"
+                                                viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                class="cursor-pointer">
+                                                <path d="M22.75 14H5.25M5.25 14L11.8125 7M5.25 14L11.8125 21"
+                                                    stroke="#353535" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            <span>WHY ENX?</span>
+                                        </div>
+                                        <svg onclick="closeDropdown(this)" xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none" class="cursor-pointer">
+                                            <path d="M5.5 5.5L18.5 18.5M5.5 18.5L18.5 5.5" stroke="#353535"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <ul
+                                        class="grid grid-cols-1 3xl:gap-7 2xl:gap-6 1xl:gap-5 lg:gap-4 sm:gap-2 gap-1 min-[900px]:p-0 min-[900px]:pr-5 p-5">
+                                        <li>
+                                            <h6> <a href="./aboutUs.html">About ENX</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6> <a href="./whyEnx.html">Why ENX?</a></h6>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <button aria-label="Open menu" onclick="toggleDropdown(this)"
+                            class="dropdown-btn border-b border-transparent hover:text-primary min-[900px]:px-0 px-4">
+                            Services
+                            <svg class="w-4 h-4 transform transition-transform duration-300 ease-in-out" fill="none"
+                                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu bg-white hidden min-[900px]:overflow-hidden overflow-auto">
+                            <div
+                                class="flex min-[900px]:flex-row flex-col-reverse 3xl:gap-[120px] xl:gap-20 lg:gap-12.5 md:gap-10 gap-4">
+                                <div class="dropdown-menu-banner">
+                                    <img loading="lazy" src="../image/solution.webp" alt="Services"
+                                        class="w-full h-full object-cover" />
+                                </div>
+                                <div class="flex flex-col items-start w-full 2xl:py-[70px] xl:py-10 lg:py-5">
+                                    <span class="dropdown-title min-[900px]:block hidden">Services</span>
+                                    <div
+                                        class="flex min-[900px]:hidden items-center justify-between min-[900px]:border-0 border border-gray-100 h-[55px] px-4 dropdown-title w-webkit-fill">
+                                        <div class="flex items-center gap-[15px]">
+                                            <svg onclick="closeDropdown(this)" width="23" height="23"
+                                                viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                class="cursor-pointer">
+                                                <path d="M22.75 14H5.25M5.25 14L11.8125 7M5.25 14L11.8125 21"
+                                                    stroke="#353535" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            <span>TOp SERVICES</span>
+                                        </div>
+                                        <svg onclick="closeDropdown(this)" xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none" class="cursor-pointer">
+                                            <path d="M5.5 5.5L18.5 18.5M5.5 18.5L18.5 5.5" stroke="#353535"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <ul
+                                        class="grid w-full justify-between sm:grid-cols-2 grid-cols-1 3xl:gap-y-7 2xl:gap-y-6 1xl:gap-y-5 lg:gap-y-4 sm:gap-y-2 gap-y-1 min-[900px]:p-0 min-[900px]:pr-5 p-5">
+                                        <li>
+                                            <h6><a href="./aerospace.html">Aerospace & Defense</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./financial.html">Financial Services</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./manufacture.html">Manufacturing & Industrial</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./media.html">Media & Entertainment</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./healthcare.html">Healthcare & Life Sciences</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./ecommerce.html">Retail & E-Commerce</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./transportation.html">Transportation & Logistics</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./construction.html">Construction & Infrastructure</a></h6>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <button aria-label="Open menu" onclick="toggleDropdown(this)"
+                            class="dropdown-btn border-b border-transparent hover:text-primary min-[900px]:px-0 px-4">
+                            Resources
+                            <svg class="w-4 h-4 transform transition-transform duration-300 ease-in-out" fill="none"
+                                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu bg-white hidden overflow-auto min-[900px]:overflow-hidden">
+                            <div
+                                class="flex min-[900px]:flex-row flex-col-reverse 3xl:gap-[120px] xl:gap-20 lg:gap-12.5 md:gap-10 gap-4">
+                                <div class="dropdown-menu-banner">
+                                    <img loading="lazy" src="../image/resources.webp" alt="Resources"
+                                        class="w-full h-full object-cover" />
+                                </div>
+                                <div class="flex flex-col items-start w-full 1xl:py-10 lg:py-5">
+                                    <span class="dropdown-title min-[900px]:block hidden">RESOURCES</span>
+                                    <div
+                                        class="flex min-[900px]:hidden items-center justify-between min-[900px]:border-0 border border-gray-100 h-[55px] px-4 dropdown-title w-webkit-fill">
+                                        <div class="flex items-center gap-[15px]">
+                                            <svg onclick="closeDropdown(this)" width="23" height="23"
+                                                viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                class="cursor-pointer">
+                                                <path d="M22.75 14H5.25M5.25 14L11.8125 7M5.25 14L11.8125 21"
+                                                    stroke="#353535" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            <span>RESOURCES</span>
+                                        </div>
+                                        <svg onclick="closeDropdown(this)" xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none" class="cursor-pointer">
+                                            <path d="M5.5 5.5L18.5 18.5M5.5 18.5L18.5 5.5" stroke="#353535"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <ul
+                                        class="w-full justify-between grid sm:grid-cols-3 grid-cols-1 sm:grid-flow-col sm:grid-rows-7 3xl:gap-y-7 2xl:gap-y-6 1xl:gap-y-5 lg:gap-4 sm:gap-y-2 gap-y-1 min-[900px]:p-0 min-[900px]:pr-5 p-5">
+                                        <li>
+                                            <h6><a href="./caseStudy-1.html">Case Studies 01</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./caseStudy-2.html">Case Studies 02</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./single-case-study-1.html">Single Case Studies</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./team-1.html">Our Team 01</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./team-2.html">Our Team 02</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./single-team-1.html">Single Team</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./offices.html">Our Offices</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./contactUs.html">Contact Us</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./testimonials.html">Testimonial </a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./faq.html">FAQ’s</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./404.html">404</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./career.html">Careers</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./contactUs.html">Support</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./clients.html">Our Clients</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./privacyPolicy.html">Privacy Policy</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./terms.html">Terms & Conditions</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./cookiePolicy.html">Cookie Policy</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./licensing.html">Licensing</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./dataProtection.html">Data Protection</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./sitemap.html">Site Map</a></h6>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <button aria-label="Open menu" onclick="toggleDropdown(this)"
+                            class="dropdown-btn border-b border-transparent hover:text-primary min-[900px]:px-0 px-4">
+                            Insights
+                            <svg class="w-4 h-4 transform transition-transform duration-300 ease-in-out" fill="none"
+                                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu bg-white hidden overflow-auto min-[900px]:overflow-hidden">
+                            <div
+                                class="flex min-[900px]:flex-row flex-col-reverse 3xl:gap-[120px] xl:gap-20 lg:gap-12.5 md:gap-10 gap-4">
+                                <div class="dropdown-menu-banner">
+                                    <img loading="lazy" src="../image/Insights.webp" alt="Insights"
+                                        class="w-full h-full object-cover" />
+                                </div>
+                                <div class="flex flex-col items-start w-full 2xl:py-[70px] xl:py-10 lg:py-5">
+                                    <span class="dropdown-title min-[900px]:block hidden">INSIGHTS</span>
+                                    <div
+                                        class="flex min-[900px]:hidden items-center justify-between min-[900px]:border-0 border border-gray-100 h-[55px] px-4 dropdown-title w-webkit-fill">
+                                        <div class="flex items-center gap-[15px]">
+                                            <svg onclick="closeDropdown(this)" width="23" height="23"
+                                                viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                class="cursor-pointer">
+                                                <path d="M22.75 14H5.25M5.25 14L11.8125 7M5.25 14L11.8125 21"
+                                                    stroke="#353535" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            <span>INSIGHTS</span>
+                                        </div>
+                                        <svg onclick="closeDropdown(this)" xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none" class="cursor-pointer">
+                                            <path d="M5.5 5.5L18.5 18.5M5.5 18.5L18.5 5.5" stroke="#353535"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <ul
+                                        class="grid grid-cols-1 3xl:gap-7 2xl:gap-6 1xl:gap-5 lg:gap-4 sm:gap-2 gap-1 min-[900px]:p-0 min-[900px]:pr-5 p-5">
+                                        <li>
+                                            <h6><a href="./insights-1.html">Latest Insights 01</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./insights-2.html">Latest Insights 02</a></h6>
+                                        </li>
+
+                                        <li>
+                                            <h6><a href="./single-insight-1.html">Single Insights</a></h6>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="./contactUs.html"
+                            class="p2 h-full flex items-center min-[900px]:justify-center min-[900px]:p-0 md:py-4 py-[14px] min-[900px]:px-0 px-4">
+                            Contact us</a>
+                    </li>
+
+                    <li class="min-[900px]:hidden py-[18px] min-[900px]:px-0 px-4">
+                        <a href="./contactUs.html" class="btn btn-primary p-1 ps-3 gap-2 rounded-full group w-fit">
+                            Get started
+                            <span class="btn btn-arrow rounded-full w-9 h-9 ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                    fill="none" class="1w-[17px] h-[17px]">
+                                    <g clip-path="url(#clip0_421_92)">
+                                        <path
+                                            d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                            fill="currentColor" />
+                                    </g>
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <a href="./contactUs.html" aria-label="Open Page"
+                    class="btn btn-primary all-btn rounded-full group min-[900px]:flex hidden w-fit">
+                    Get started
+                    <span class="btn btn-arrow rounded-full all-btn-arrow">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M-2.02496e-05 12.4396L11.1557 1.28395L1.59365 1.28395L1.51169 -9.34181e-05L13.3504 -9.30945e-05L13.3504 11.8386L12.0663 11.7566L12.0663 2.19462L0.910647 13.3503L-2.02496e-05 12.4396Z"
+                                fill="currentColor" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </header>
+        <!--/ End Header -->
+
+        <!-- Hero section -->
+        <section class="relative w-full 2xl:pt-[146px] xl:pt-[116px] md:pt-27 pt-20">
+            <div class="container" data-aos="fade-right">
+                <div class="flex items-center justify-between w-full lg:mb-12.5 mb-10">
+                    <div class="sm:w-5/6 w-full flex flex-col">
+                        <div class="flex items-center md:gap-[18px] gap-1.5 xl:mb-[30px] lg:mb-6 mb-5">
+                            <span class="dash border border-primary"></span>
+                            <p class="p2 uppercase">INNOVATION FIRST</p>
+                        </div>
+                        <h1 class="text-black-100 2xl:mb-[25px] sm:mb-4 mb-3">Digital <span
+                                class="text-primary">Experiences</span> That Deliver</h1>
+                        <p class="p2 text-black-100 md:max-w-[930px] w-full">
+                            ENX helps modern businesses accelerate transformation with powerful design systems,
+                            strategic thinking, and scalable digital solutions built for real-world impact.
+                        </p>
+                        <a href="./our-services.html" aria-label="Open Page"
+                            class="btn btn-primary all-btn rounded-full group flex overflow-hidden w-fit lg:mt-[30px] md:mt-5 mt-3">
+                            Explore Our Solutions
+                            <span class="btn btn-arrow rounded-full all-btn-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                    fill="none"
+                                    class="1xl:w-[22px] 1xl:h-[22px] xl:w-[19px] xl:h-[19px] w-[17px] h-[17px]">
+                                    <g clip-path="url(#clip0_421_92)">
+                                        <path
+                                            d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                            fill="currentColor"></path>
+                                    </g>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative" data-aos="fade-up">
+                <img loading="lazy" src="../image/home-2-hero.png" alt="hero banner"
+                    class="w-full 1xl:h-full lg:h-[550px] md:h-[500px] sm:h-[400px] h-[300px] object-cover" />
+                <!-- rotating text -->
+                <div
+                    class="absolute 2xl:right-[180px] 1xl:right-[115px] sm:right-[85px] right-4 xl:top-[-100px] lg:top-[-75px] md:top-[-67px] sm:top-[-55px] top-[-45px]">
+                    <div
+                        class="relative 3xl:size-[204px] 2xl:size-[190px] 1xl:size-[185px] xl:size-[170px] sm:size-[150px] size-[90px] flex items-center justify-center">
+                        <!-- Rotating Circular Text -->
+                        <svg class="absolute inset-0 animate-spin-slow bg-primary rounded-full lg:p-2 p-1"
+                            viewBox="0 0 200 200">
+                            <defs>
+                                <path id="circlePath" d="M 100,100 m -80,0 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0" />
+                            </defs>
+
+                            <text class="uppercase text-[25px] tracking-wider text-white font-black" fill="white">
+                                <textPath href="#circlePath">
+                                    ENX SOLUTIONS - ENX SOLUTIONS -
+                                </textPath>
+                            </text>
+                        </svg>
+                        <!-- Center Logo (FIXED) -->
+                        <div class="relative z-10">
+                            <img src="../image/Enx-two.svg" alt="logo"
+                                class="3xl:w-[128px] 2xl:w-[120px] 1xl:w-[110px] xl:w-[100px] sm:w-[90px] w-[56px]" />
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/ End Hero section -->
+
+        <!-- What we do section -->
+        <section class="3xl:pb-25 2xl:pb-[90px] xl:pb-20 lg:pb-17 pb-12.5">
+            <div class="bg-purple-100 3xl:py-25 2xl:py-[90px] xl:py-20 lg:py-17 py-12.5">
+                <!-- container -->
+                <div class="container">
+                    <!-- sub_title -->
+                    <div class="flex items-center justify-between w-full xl:pb-10 lg:pb-7 sm:pb-6 pb-5">
+                        <div class="flex flex-col lg:gap-8 1xl:gap-7 gap-5" data-aos="fade-right">
+                            <div class="flex items-center md:gap-[18px] gap-1.5">
+                                <span class="dash border border-primary"></span>
+                                <p class="p2 uppercase">WHAT WE DO BEST</p>
+                            </div>
+                            <h3>Capabilities That
+                                <span class="text-primary">Matter</span>
+                            </h3>
+                        </div>
+                        <!-- sub_button -->
+                        <a href="./softwareDevelopment.html" aria-label="Open Page"
+                            class="btn btn-primary all-btn rounded-full group sm:flex hidden w-fit"
+                            data-aos="fade-left">
+                            Explore All Capabilities
+                            <span class=" btn btn-arrow rounded-full all-btn-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                    fill="none"
+                                    class="1xl:w-[22px] 1xl:h-[22px] xl:w-[19px] xl:h-[19px] w-[17px] h-[17px]">
+                                    <g clip-path="url(#clip0_421_92)">
+                                        <path
+                                            d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                            fill="currentColor"></path>
+                                    </g>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+
+                    <!-- Count grid -->
+                    <div
+                        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 2xl:gap-[25px] xl:gap-5 lg:gap-4.5 gap-4">
+                        <!-- Card 1 -->
+                        <div class="bg-white 2xl:p-[30px] xl:p-6 sm:p-5 p-4 rounded-lg" data-aos="fade-up">
+                            <div class="flex flex-col">
+                                <div class="xl:mb-7 md:mb-5 mb-4">
+                                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                        class="3xl:size-[60px] 2xl:size-12.5 1xl:size-11 md:size-10 size-9"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 60L30 30V60H0Z" fill="#FF8343" />
+                                        <path d="M30 60L60 30V60H30Z" fill="#FF8343" />
+                                        <path d="M0 30L30 0V30H0Z" fill="#FF8343" />
+                                        <path d="M30 30L60 0V30H30Z" fill="#FF8343" />
+                                    </svg>
+                                </div>
+                                <h5
+                                    class="2xl:pb-[25px] xl:pb-5 sm:pb-4 pb-3 2xl:mb-[25px] sm:mb-5 mb-3 border-b border-[#DADDE9]">
+                                    Strategic Experience Design</h5>
+                                <p class="p2 leading-relaxed">We craft
+                                    user-focused
+                                    digital experiences that simplify complexity, enhance engagement, and turn every
+                                    interaction into measurable value.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="bg-white 2xl:p-[30px] xl:p-6 sm:p-5 p-4 rounded-lg" data-aos="fade-up">
+                            <div class="flex flex-col">
+                                <div class="xl:mb-7 md:mb-5 mb-4">
+                                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                        class="3xl:size-[60px] 2xl:size-12.5 1xl:size-11 md:size-10 size-9"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 60L30 30V60H0Z" fill="#FF8343" />
+                                        <path d="M30 60L60 30V60H30Z" fill="#FF8343" />
+                                        <path d="M0 30L30 0V30H0Z" fill="#FF8343" />
+                                        <path d="M30 30L60 0V30H30Z" fill="#FF8343" />
+                                    </svg>
+                                </div>
+                                <h5
+                                    class="2xl:pb-[25px] xl:pb-5 sm:pb-4 pb-3 2xl:mb-[25px] sm:mb-5 mb-3 border-b border-[#DADDE9]">
+                                    Enterprise-Ready Design Systems</h5>
+                                <p class="p2 leading-relaxed">Build consistent,
+                                    scalable systems with modular components designed to support teams across products,
+                                    platforms, and global markets.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="bg-white 2xl:p-[30px] xl:p-6 sm:p-5 p-4 rounded-lg" data-aos="fade-up">
+                            <div class="flex flex-col">
+                                <div class="xl:mb-7 md:mb-5 mb-4">
+                                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                        class="3xl:size-[60px] 2xl:size-12.5 1xl:size-11 md:size-10 size-9"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 60L30 30V60H0Z" fill="#FF8343" />
+                                        <path d="M30 60L60 30V60H30Z" fill="#FF8343" />
+                                        <path d="M0 30L30 0V30H0Z" fill="#FF8343" />
+                                        <path d="M30 30L60 0V30H30Z" fill="#FF8343" />
+                                    </svg>
+                                </div>
+                                <h5
+                                    class="2xl:pb-[25px] xl:pb-5 sm:pb-4 pb-3 2xl:mb-[25px] sm:mb-5 mb-3 border-b border-[#DADDE9]">
+                                    Data-Driven Product Strategy</h5>
+                                <p class="p2 leading-relaxed">From market
+                                    insights to user behavior patterns, we translate data into actionable product
+                                    decisions that accelerate growth and reduce risk.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="bg-white 2xl:p-[30px] xl:p-6 sm:p-5 p-4 rounded-lg" data-aos="fade-up">
+                            <div class="flex flex-col">
+                                <div class="xl:mb-7 md:mb-5 mb-4">
+                                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                        class="3xl:size-[60px] 2xl:size-12.5 1xl:size-11 md:size-10 size-9"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 60L30 30V60H0Z" fill="#FF8343" />
+                                        <path d="M30 60L60 30V60H30Z" fill="#FF8343" />
+                                        <path d="M0 30L30 0V30H0Z" fill="#FF8343" />
+                                        <path d="M30 30L60 0V30H30Z" fill="#FF8343" />
+                                    </svg>
+                                </div>
+                                <h5
+                                    class="2xl:pb-[25px] xl:pb-5 sm:pb-4 pb-3 2xl:mb-[25px] sm:mb-5 mb-3 border-b border-[#DADDE9]">
+                                    High-Performance UI Architecture</h5>
+                                <p class="p2 leading-relaxed">Robust, flexible
+                                    UI frameworks engineered for speed, accessibility, and seamless integration across
+                                    modern development environments.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- responsive btn -->
+                    <button aria-label="Open Page"
+                        class="btn btn-primary p-1 1xl:ps-[27px] xl:ps-5 ps-3.5 1xl:gap-3 gap-2 rounded-full group flex sm:hidden mt-[32px] mx-auto">
+                        Explore All Capabilities
+                        <span
+                            class="btn btn-arrow rounded-full 3xl:w-[52px] 3xl:h-[52px] 1xl:w-12 1xl:h-12 xl:w-11 xl:h-11 w-9 h-9 ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                fill="none" class="1xl:w-[22px] 1xl:h-[22px] xl:w-[19px] xl:h-[19px] w-[17px] h-[17px]">
+                                <g clip-path="url(#clip0_421_92)">
+                                    <path
+                                        d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                        fill="currentColor" />
+                                </g>
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!--/ End What we do section -->
+
+        <!-- Global Impact section -->
+        <section class="3xl:pb-25 2xl:pb-[90px] xl:pb-20 lg:pb-17 pb-12.5">
+            <!-- container -->
+            <div class="container">
+                <!-- sub_title -->
+                <div class="flex items-center justify-between w-full xl:pb-10 lg:pb-7 sm:pb-6 pb-5">
+                    <div class="flex flex-col lg:gap-8 1xl:gap-7 gap-5" data-aos="fade-right">
+                        <div class="flex items-center md:gap-[18px] gap-1.5">
+                            <span class="dash border border-primary"></span>
+                            <p class="p2 uppercase">GLOBAL IMPACT</p>
+                        </div>
+                        <h3>Impact Across
+                            <span class="text-primary">Industries</span>
+                        </h3>
+
+                    </div>
+                    <!-- sub_button -->
+                    <a href="./aboutUs.html" aria-label="Open Page"
+                        class="btn btn-primary all-btn rounded-full group sm:flex hidden w-fit" data-aos="fade-left">
+                        Discover Our Impact
+                        <span class=" btn btn-arrow rounded-full all-btn-arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                fill="none" class="1xl:w-[22px] 1xl:h-[22px] xl:w-[19px] xl:h-[19px] w-[17px] h-[17px]">
+                                <g clip-path="url(#clip0_421_92)">
+                                    <path
+                                        d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                        fill="currentColor"></path>
+                                </g>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+                <div class="flex justify-between md:flex-row flex-col lg:gap-[30px] gap-[22px]">
+                    <!-- banner image-->
+                    <div class="3xl:max-w-[768px] 2xl:max-w-[720px] 1xl:max-w-[650px] lg:max-w-3/6 md:max-w-2/5 w-full md:h-auto h-full shrink-0"
+                        data-aos="fade-right">
+                        <img loading="lazy" src="../image/global-impact.webp" alt="join team"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <!-- Global content -->
+                    <div class="w-full my-auto" data-aos="fade-left">
+                        <!-- Count grid -->
+                        <div
+                            class="grid grid-cols-2 w-full justify-center xl:gap-[30px] lg:gap-6 sm:gap-4 gap-[14px] success-projects flex-wrap">
+                            <!-- Count Content -->
+                            <div
+                                class="2xl:p-[30px] 1xl:p-7 xl:p-6.5 lg:p-5 lg:py-5 p-4 bg-white border border-gray-100 w-auto h-full">
+                                <h4 class="count-up text-primary big-font" data-start="0" data-end="20"
+                                    data-duration="2000" data-suffix="+">20+</h4>
+                                <span
+                                    class="block 1xl:w-15 sm:w-10 w-8 border 3xl:my-[35px] 2xl:my-[40px] xl:my-8.5 sm:my-7 my-4"></span>
+                                <p class="sm:text-lg sm:leading-7 text-base">
+                                    Industries Served</p>
+                            </div>
+                            <!-- Count Content -->
+                            <div
+                                class="2xl:p-[30px] 1xl:p-7 xl:p-6.5 lg:p-5 lg:py-5 p-4 bg-white border border-gray-100 w-auto h-full">
+                                <h4 class="count-up text-primary big-font" data-start="0" data-end="300"
+                                    data-duration="2000" data-suffix="+">300+</h4>
+                                <span
+                                    class="block 1xl:w-15 sm:w-10 w-8 border 3xl:my-[35px] 2xl:my-[40px] xl:my-8.5 sm:my-7 my-4"></span>
+                                <p class="sm:text-lg sm:leading-7 text-base">
+                                    Projects Delivered</p>
+                            </div>
+                            <!-- Count Content -->
+                            <div
+                                class="2xl:p-[30px] 1xl:p-7 xl:p-6.5 lg:p-5 lg:py-5 p-4 bg-white border border-gray-100 w-auto h-full">
+                                <h4 class="count-up text-primary big-font" data-start="0" data-end="95"
+                                    data-duration="2000" data-suffix="%">95%</h4>
+                                <span
+                                    class="block 1xl:w-15 sm:w-10 w-8 border 3xl:my-[35px] 2xl:my-[40px] xl:my-8.5 sm:my-7 my-4"></span>
+                                <p class="sm:text-lg sm:leading-7 text-base">
+                                    Client Satisfaction</p>
+                            </div>
+                            <!-- Count Content -->
+                            <div
+                                class="2xl:p-[30px] 1xl:p-7 xl:p-6.5 lg:p-5 lg:py-5 p-4 bg-white border border-gray-100 w-auto h-full">
+                                <h4 class="count-up text-primary big-font" data-start="0" data-end="40"
+                                    data-duration="2000" data-suffix="%">40%</h4>
+                                <span
+                                    class="block 1xl:w-15 sm:w-10 w-8 border 3xl:my-[35px] 2xl:my-[40px] xl:my-8.5 sm:my-7 my-4"></span>
+                                <p class="sm:text-lg sm:leading-7 text-base">
+                                    Faster Deployment</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- responsive btn -->
+                <button aria-label="Open Page"
+                    class="btn btn-primary p-1 1xl:ps-[27px] xl:ps-5 ps-3.5 1xl:gap-3 gap-2 rounded-full group flex sm:hidden mt-[32px] mx-auto">
+                    Discover Our Impact
+                    <span
+                        class="btn btn-arrow rounded-full 3xl:w-[52px] 3xl:h-[52px] 1xl:w-12 1xl:h-12 xl:w-11 xl:h-11 w-9 h-9 ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none"
+                            class="1xl:w-[22px] 1xl:h-[22px] xl:w-[19px] xl:h-[19px] w-[17px] h-[17px]">
+                            <g clip-path="url(#clip0_421_92)">
+                                <path
+                                    d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                    fill="currentColor" />
+                            </g>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+        </section>
+        <!--/ End Global Impact section -->
+
+        <!-- Our Services section -->
+        <section class="3xl:pb-25 2xl:pb-[90px] xl:pb-20 lg:pb-17 pb-12.5">
+            <div class="bg-purple-100 3xl:py-25 2xl:py-[90px] xl:py-20 lg:py-17 py-12.5">
+                <!-- container -->
+                <div class="container">
+                    <!-- sub_title -->
+                    <div class="flex items-center justify-between w-full xl:pb-10 lg:pb-7 sm:pb-6 pb-5">
+                        <div class="flex flex-col  lg:gap-[35px] md:gap-6 gap-5" data-aos="fade-right">
+                            <div class="flex items-center md:gap-[18px] gap-1.5">
+                                <span class="dash border border-primary"></span>
+                                <p class="p2 uppercase">OUR SERVICES</p>
+                            </div>
+                            <h3>Services That Drive <span class="text-primary">Results</span></h3>
+                        </div>
+                        <a href="./our-services.html" aria-label="Open Page"
+                            class="btn btn-primary all-btn rounded-full group sm:flex hidden w-fit"
+                            data-aos="fade-left">
+                            Explore Services
+                            <span class=" btn btn-arrow rounded-full all-btn-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                    fill="none"
+                                    class="1xl:w-[22px] 1xl:h-[22px] xl:w-[19px] xl:h-[19px] w-[17px] h-[17px]">
+                                    <g clip-path="url(#clip0_421_92)">
+                                        <path
+                                            d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                            fill="currentColor" />
+                                    </g>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 bg-white sm:p-0 px-5">
+                        <!-- Card 1 -->
+                        <div class="bg-white lg:px-[25px] sm:py-[30px] py-6 sm:px-5 sm:border-r border-b border-gray-100"
+                            data-aos="fade-up">
+                            <div class="flex items-start xl:gap-[18px] sm:gap-3 gap-2.5 flex-col md:flex-row">
+                                <!-- services_svg -->
+                                <div
+                                    class="bg-[#FAF0EB] 3xl:p-[22px] p-[19px] flex items-center justify-center rounded-full">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"
+                                        class="3xl:w-[30px] 3xl:h-[30px] 1xl:w-7 1xl:h-7 xl:w-6 xl:h-6 w-7 h-7"
+                                        fill="none">
+                                        <path d="M0 30L15 15V30H0Z" fill="#FF8343" />
+                                        <path d="M15 30L30 15V30H15Z" fill="#FF8343" />
+                                        <path d="M0 15L15 0V15H0Z" fill="#FF8343" />
+                                        <path d="M15 15L30 0V15H15Z" fill="#FF8343" />
+                                    </svg>
+                                </div>
+                                <!-- services_Content -->
+                                <div class="pt-[5px]">
+                                    <h5 class="1xl:mb-[15px] sm:mb-[14px] mb-2">
+                                        <a href="./aerospace.html" class="font-light">
+                                            Aerospace & Defense</a>
+                                    </h5>
+                                    <p class="p2 sm:line-clamp-3 line-clamp-4">
+                                        A sector where precision, reliability, and innovation define success. We help
+                                        organization modernize operations, optimize engineering...
+                                    </p>
+                                    <!-- button -->
+                                    <div class="lg:mt-[25px] mt-5">
+                                        <a class="read-more btn w-fit text-primary hover:text-black font-normal tracking-wide 2xl:text-lg text-md 2xl:leading-[34px] leading-[26px]"
+                                            href="./aerospace.html">READ MORE<svg width="15" height="15"
+                                                viewBox="0 0 15 15" fill="none"
+                                                class="lg:ml-2.5 ml-2 1xl:size-[15px] size-[12px]"
+                                                mlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_7077_4647)">
+                                                    <path
+                                                        d="M0.376871 13.7997L12.6481 1.52849L2.12991 1.52849L2.03975 0.116041L15.0623 0.116043L15.0623 13.1386L13.6499 13.0484L13.6499 2.53022L1.37861 14.8015L0.376871 13.7997Z"
+                                                        fill="currentColor"></path>
+                                                </g>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="bg-white lg:px-[25px] sm:py-[30px] py-6 sm:px-5 xl:border-r border-b border-gray-100"
+                            data-aos="fade-up">
+                            <div class="flex items-start xl:gap-[18px] sm:gap-3 gap-2.5 flex-col md:flex-row">
+                                <!-- services_svg -->
+                                <div
+                                    class="bg-[#FAF0EB] 3xl:p-[22px] p-[19px] flex items-center justify-center rounded-full">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"
+                                        class="3xl:w-[30px] 3xl:h-[30px] 1xl:w-7 1xl:h-7 xl:w-6 xl:h-6 w-7 h-7"
+                                        fill="none">
+                                        <path d="M0 30L15 15V30H0Z" fill="#FF8343" />
+                                        <path d="M15 30L30 15V30H15Z" fill="#FF8343" />
+                                        <path d="M0 15L15 0V15H0Z" fill="#FF8343" />
+                                        <path d="M15 15L30 0V15H15Z" fill="#FF8343" />
+                                    </svg>
+                                </div>
+                                <!-- services_Content -->
+                                <div class="pt-[5px]">
+                                    <h5 class="1xl:mb-[15px] sm:mb-[14px] mb-2">
+                                        <a href="./healthcare.html" class="font-light">
+                                            Healthcare & Life Sciences</a>
+                                    </h5>
+                                    <p class="p2 sm:line-clamp-3 line-clamp-4">A rapidly evolving space that
+                                        demands accuracy, compliance, and patient-centric innovation. We support
+                                        providers, labs, pharma...</p>
+                                    <!-- button -->
+                                    <div class="lg:mt-[25px] mt-5">
+                                        <a class="read-more btn w-fit text-primary hover:text-black font-normal tracking-wide 2xl:text-lg text-md 2xl:leading-[34px] leading-[26px]"
+                                            href="./healthcare.html">READ MORE<svg width="15" height="15"
+                                                viewBox="0 0 15 15" fill="none"
+                                                class="lg:ml-2.5 ml-2 1xl:size-[15px] size-[12px]"
+                                                mlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_7077_4647)">
+                                                    <path
+                                                        d="M0.376871 13.7997L12.6481 1.52849L2.12991 1.52849L2.03975 0.116041L15.0623 0.116043L15.0623 13.1386L13.6499 13.0484L13.6499 2.53022L1.37861 14.8015L0.376871 13.7997Z"
+                                                        fill="currentColor"></path>
+                                                </g>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="bg-white lg:px-[25px] sm:py-[30px] py-6 sm:px-5 xl:border-r-0 sm:border-r border-b border-gray-100"
+                            data-aos="fade-up">
+                            <div class="flex items-start xl:gap-[18px] sm:gap-3 gap-2.5 flex-col md:flex-row">
+                                <!-- services_svg -->
+                                <div
+                                    class="bg-[#FAF0EB] 3xl:p-[22px] p-[19px] flex items-center justify-center rounded-full">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"
+                                        class="3xl:w-[30px] 3xl:h-[30px] 1xl:w-7 1xl:h-7 xl:w-6 xl:h-6 w-7 h-7"
+                                        fill="none">
+                                        <path d="M0 30L15 15V30H0Z" fill="#FF8343" />
+                                        <path d="M15 30L30 15V30H15Z" fill="#FF8343" />
+                                        <path d="M0 15L15 0V15H0Z" fill="#FF8343" />
+                                        <path d="M15 15L30 0V15H15Z" fill="#FF8343" />
+                                    </svg>
+                                </div>
+                                <!-- services_Content -->
+                                <div class="pt-[5px]">
+                                    <h5 class="1xl:mb-[15px] sm:mb-[14px] mb-2">
+                                        <a href="./financial.html" class="font-light">
+                                            Financial Services</a>
+                                    </h5>
+                                    <p class="p2 sm:line-clamp-3 line-clamp-4">A trust-driven industry where
+                                        every transaction, decision, and experience matters. We empower banks, fintech
+                                        platforms, and insurers with...</p>
+                                    <!-- button -->
+                                    <div class="lg:mt-[25px] mt-5">
+                                        <a class="read-more btn w-fit text-primary hover:text-black font-normal tracking-wide 2xl:text-lg text-md 2xl:leading-[34px] leading-[26px]"
+                                            href="./financial.html">READ MORE<svg width="15" height="15"
+                                                viewBox="0 0 15 15" fill="none"
+                                                class="lg:ml-2.5 ml-2 1xl:size-[15px] size-[12px]"
+                                                mlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_7077_4647)">
+                                                    <path
+                                                        d="M0.376871 13.7997L12.6481 1.52849L2.12991 1.52849L2.03975 0.116041L15.0623 0.116043L15.0623 13.1386L13.6499 13.0484L13.6499 2.53022L1.37861 14.8015L0.376871 13.7997Z"
+                                                        fill="currentColor"></path>
+                                                </g>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="bg-white lg:px-[25px] sm:py-[30px] py-6 sm:px-5 xl:border-b-0 border-b xl:border-r border-gray-100"
+                            data-aos="fade-up">
+                            <div class="flex items-start xl:gap-[18px] sm:gap-3 gap-2.5 flex-col md:flex-row">
+                                <!-- services_svg -->
+                                <div
+                                    class="bg-[#FAF0EB] 3xl:p-[22px] p-[19px] flex items-center justify-center rounded-full">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"
+                                        class="3xl:w-[30px] 3xl:h-[30px] 1xl:w-7 1xl:h-7 xl:w-6 xl:h-6 w-7 h-7"
+                                        fill="none">
+                                        <path d="M0 30L15 15V30H0Z" fill="#FF8343" />
+                                        <path d="M15 30L30 15V30H15Z" fill="#FF8343" />
+                                        <path d="M0 15L15 0V15H0Z" fill="#FF8343" />
+                                        <path d="M15 15L30 0V15H15Z" fill="#FF8343" />
+                                    </svg>
+                                </div>
+                                <!-- services_Content -->
+                                <div class="pt-[5px]">
+                                    <h5 class="1xl:mb-[15px] sm:mb-[14px] mb-2">
+                                        <a href="./ecommerce.html" class="font-light">
+                                            Retail & E-Commerce</a>
+                                    </h5>
+                                    <p class="p2 sm:line-clamp-3 line-clamp-4">
+                                        A fast-evolving space where customer expectations shift every day. We help
+                                        brands create personalized shopping journeys...
+                                    </p>
+                                    <!-- button -->
+                                    <div class="lg:mt-[25px] mt-5">
+                                        <a class="read-more btn w-fit text-primary hover:text-black font-normal tracking-wide 2xl:text-lg text-md 2xl:leading-[34px] leading-[26px]"
+                                            href="./ecommerce.html">READ MORE<svg width="15" height="15"
+                                                viewBox="0 0 15 15" fill="none"
+                                                class="lg:ml-2.5 ml-2 1xl:size-[15px] size-[12px]"
+                                                mlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_7077_4647)">
+                                                    <path
+                                                        d="M0.376871 13.7997L12.6481 1.52849L2.12991 1.52849L2.03975 0.116041L15.0623 0.116043L15.0623 13.1386L13.6499 13.0484L13.6499 2.53022L1.37861 14.8015L0.376871 13.7997Z"
+                                                        fill="currentColor"></path>
+                                                </g>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 5 -->
+                        <div class="bg-white lg:px-[25px] sm:py-[30px] py-6 sm:px-5 sm:border-r sm:border-b-0 border-b border-gray-100"
+                            data-aos="fade-up">
+                            <div class="flex items-start xl:gap-[18px] sm:gap-3 gap-2.5 flex-col md:flex-row">
+                                <!-- services_svg -->
+                                <div
+                                    class="bg-[#FAF0EB] 3xl:p-[22px] p-[19px] flex items-center justify-center rounded-full">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"
+                                        class="3xl:w-[30px] 3xl:h-[30px] 1xl:w-7 1xl:h-7 xl:w-6 xl:h-6 w-7 h-7"
+                                        fill="none">
+                                        <path d="M0 30L15 15V30H0Z" fill="#FF8343" />
+                                        <path d="M15 30L30 15V30H15Z" fill="#FF8343" />
+                                        <path d="M0 15L15 0V15H0Z" fill="#FF8343" />
+                                        <path d="M15 15L30 0V15H15Z" fill="#FF8343" />
+                                    </svg>
+                                </div>
+                                <!-- services_Content -->
+                                <div class="pt-[5px]">
+                                    <h5 class="1xl:mb-[15px] sm:mb-[14px] mb-2">
+                                        <a href="./manufacture.html" class="font-light">
+                                            Manufacturing & Industrial</a>
+                                    </h5>
+                                    <p class="p2 sm:line-clamp-3 line-clamp-4">A performance-focused industry
+                                        built on precision and productivity. We assist manufacturers in modernizing
+                                        their operations...</p>
+                                    <!-- button -->
+                                    <div class="lg:mt-[25px] mt-5">
+                                        <a class="read-more btn w-fit text-primary hover:text-black font-normal tracking-wide 2xl:text-lg text-md 2xl:leading-[34px] leading-[26px]"
+                                            href="./manufacture.html">READ MORE<svg width="15" height="15"
+                                                viewBox="0 0 15 15" fill="none"
+                                                class="lg:ml-2.5 ml-2 1xl:size-[15px] size-[12px]"
+                                                mlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_7077_4647)">
+                                                    <path
+                                                        d="M0.376871 13.7997L12.6481 1.52849L2.12991 1.52849L2.03975 0.116041L15.0623 0.116043L15.0623 13.1386L13.6499 13.0484L13.6499 2.53022L1.37861 14.8015L0.376871 13.7997Z"
+                                                        fill="currentColor"></path>
+                                                </g>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 6 -->
+                        <div class="bg-white lg:px-[25px] sm:py-[30px] py-6 sm:px-5" data-aos="fade-up">
+                            <div class="flex items-start xl:gap-[18px] sm:gap-3 gap-2.5 flex-col md:flex-row">
+                                <!-- services_svg -->
+                                <div
+                                    class="bg-[#FAF0EB] 3xl:p-[22px] p-[19px] flex items-center justify-center rounded-full">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"
+                                        class="3xl:w-[30px] 3xl:h-[30px] 1xl:w-7 1xl:h-7 xl:w-6 xl:h-6 w-7 h-7"
+                                        fill="none">
+                                        <path d="M0 30L15 15V30H0Z" fill="#FF8343" />
+                                        <path d="M15 30L30 15V30H15Z" fill="#FF8343" />
+                                        <path d="M0 15L15 0V15H0Z" fill="#FF8343" />
+                                        <path d="M15 15L30 0V15H15Z" fill="#FF8343" />
+                                    </svg>
+                                </div>
+                                <!-- services_Content -->
+                                <div class="pt-[5px]">
+                                    <h5 class="1xl:mb-[15px] sm:mb-[14px] mb-2">
+                                        <a href="./transportation.html" class="font-light">
+                                            Transportation & Logistics</a>
+                                    </h5>
+                                    <p class="p2 sm:line-clamp-3 line-clamp-4">
+                                        An efficiency-centric industry where precision, timing, and visibility define
+                                        success. We help logistics providers adopt automation, improve fleet
+                                        performance, enhance route planning, integrate real-time tracking, and
+                                        streamline operations to deliver faster, smarter, and more reliable movement of
+                                        goods worldwide.
+                                    </p>
+                                    <!-- button -->
+                                    <div class="lg:mt-[25px] mt-5">
+                                        <a class="read-more btn w-fit text-primary hover:text-black font-normal tracking-wide 2xl:text-lg text-md 2xl:leading-[34px] leading-[26px]"
+                                            href="./transportation.html">READ MORE<svg width="15" height="15"
+                                                viewBox="0 0 15 15" fill="none"
+                                                class="lg:ml-2.5 ml-2 1xl:size-[15px] size-[12px]"
+                                                mlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_7077_4647)">
+                                                    <path
+                                                        d="M0.376871 13.7997L12.6481 1.52849L2.12991 1.52849L2.03975 0.116041L15.0623 0.116043L15.0623 13.1386L13.6499 13.0484L13.6499 2.53022L1.37861 14.8015L0.376871 13.7997Z"
+                                                        fill="currentColor"></path>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_7077_4647">
+                                                        <rect width="15" height="15" fill="white"
+                                                            transform="translate(15) rotate(90)"></rect>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- responsive btn -->
+                    <a href="./our-service.html" aria-label="Open Page"
+                        class="btn btn-primary w-fit p-1 1xl:ps-[27px] xl:ps-5 ps-3.5 1xl:gap-3 gap-2 rounded-full group flex sm:hidden mt-[32px] mx-auto">
+                        Explore Services
+                        <span
+                            class="btn btn-arrow rounded-full 3xl:w-[52px] 3xl:h-[52px] 1xl:w-12 1xl:h-12 xl:w-11 xl:h-11 w-9 h-9 ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                fill="none" class="1xl:w-[22px] 1xl:h-[22px] xl:w-[19px] xl:h-[19px] w-[17px] h-[17px]">
+                                <g clip-path="url(#clip0_421_92)">
+                                    <path
+                                        d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                        fill="currentColor" />
+                                </g>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!--/ End Our Services section -->
+
+        <!-- Real Result section -->
+        <section class="3xl:pb-25 2xl:pb-[90px] xl:pb-20 lg:pb-17 pb-12.5">
+            <!-- container -->
+            <div class="container">
+                <!-- sub_title -->
+                <div class="flex items-center justify-between w-full xl:pb-10 lg:pb-7 sm:pb-6 pb-5">
+                    <div class="flex flex-col lg:gap-8 1xl:gap-7 gap-5" data-aos="fade-right">
+                        <div class="flex items-center md:gap-[18px] gap-1.5">
+                            <span class="dash border border-primary"></span>
+                            <p class="p2 uppercase">REAL RESULTS</p>
+                        </div>
+                        <h3>Proven Success
+                            <span class="text-primary">Stories</span>
+                        </h3>
+                    </div>
+                    <!-- sub_button -->
+                    <a href="./caseStudy-2.html" aria-label="Open Page"
+                        class="btn btn-primary all-btn rounded-full group sm:flex hidden w-fit" data-aos="fade-left">
+                        Explore Case Studies
+                        <span class=" btn btn-arrow rounded-full all-btn-arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                fill="none" class="1xl:w-[22px] 1xl:h-[22px] xl:w-[19px] xl:h-[19px] w-[17px] h-[17px]">
+                                <g clip-path="url(#clip0_421_92)">
+                                    <path
+                                        d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                        fill="currentColor"></path>
+                                </g>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+                <!-- grid column -->
+                <div class="grid md:grid-cols-2 grid-cols-1 2xl:gap-[34px] xl:gap-7 md:gap-6 gap-5">
+                    <!-- column-grid -->
+                    <div class="bg-[#FAF0EB] flex 1xl:flex-row flex-col items-center group" data-aos="fade-up">
+                        <a href="./single-case-study-1.html"
+                            class="overflow-hidden 1xl:h-full h-auto 1xl:max-h-full xl:max-h-[340px] sm:max-h-[300px] max-h-[200px] 1xl:max-w-[275px] max-w-full w-full shrink-0">
+                            <img loading="lazy" src="../image/case-study-1.webp" alt="Case Study"
+                                class="w-full h-full object-cover scale-100 group-hover:scale-105 transition-all ease-in-out">
+                        </a>
+                        <div class="lg:p-[30px] md:p-5 py-[25px] px-[15px]">
+                            <div class="flex items-start 2xl:gap-[18px] xl:gap-3.5 gap-1.5 lg:mb-[22px] mb-[18px]">
+                                <span class="dash border border-primary 2xl:mt-4 mt-3.5"></span>
+                                <p class="uppercase text-[#6E7485] sm:text-base text-sm">Digital Transformation</p>
+                            </div>
+                            <a href="./single-case-study-1.html">
+                                <h5 class="xl:mb-[15px] mb-2.5 group-hover:text-primary tracking-normal">
+                                    Redefining the Digital Experience
+                                    for a Global Consulting Leader</h5>
+                                <p class="p2">
+                                    A complete digital overhaul that improved navigation, enhanced engagement, and
+                                    created a unified...
+                                </p>
+                                <div class="lg:mt-[25px] mt-5">
+                                    <a class="read-more btn w-fit text-primary hover:text-black font-normal tracking-wide 2xl:text-lg text-md 2xl:leading-[34px] leading-[26px]"
+                                        href="./single-case-study-1.html">READ MORE
+                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                            class="lg:ml-2.5 ml-2 1xl:size-[15px] size-[12px]"
+                                            mlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_7077_4647)">
+                                                <path
+                                                    d="M0.376871 13.7997L12.6481 1.52849L2.12991 1.52849L2.03975 0.116041L15.0623 0.116043L15.0623 13.1386L13.6499 13.0484L13.6499 2.53022L1.37861 14.8015L0.376871 13.7997Z"
+                                                    fill="currentColor"></path>
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <!-- column-grid -->
+                    <div class="bg-[#F4F3FF] flex 1xl:flex-row flex-col items-center group" data-aos="fade-up">
+                        <a href="./single-case-study-2.html"
+                            class="overflow-hidden 1xl:h-full h-auto 1xl:max-h-full xl:max-h-[340px] sm:max-h-[300px] max-h-[200px] 1xl:max-w-[275px] max-w-full w-full shrink-0">
+                            <img loading="lazy" src="../image/case-study-2.webp" alt="Case Study"
+                                class="w-full h-full object-cover scale-100 group-hover:scale-105 transition-all ease-in-out">
+                        </a>
+                        <div class="lg:p-[30px] md:p-5 py-[25px] px-[15px]">
+                            <div class="flex items-start 2xl:gap-[18px] xl:gap-3.5 gap-1.5 lg:mb-[22px] mb-[18px]">
+                                <span class="dash border border-primary 2xl:mt-4 mt-3.5"></span>
+                                <p class="uppercase text-[#6E7485] sm:text-base text-sm">Scalable Design Systems</p>
+                            </div>
+                            <a href="./single-case-study-2.html">
+                                <h5 class="xl:mb-[15px] mb-2.5 group-hover:text-primary tracking-normal">
+                                    Building a Future-Ready UI Framework for a Fast-Growing Tech Enterprise</h5>
+                                <p class="p2">A complete digital overhaul that
+                                    improved navigation, enhanced engagement, and created a unified...</p>
+                                <div class="lg:mt-[25px] mt-5">
+                                    <a class="read-more btn w-fit text-primary hover:text-black font-normal tracking-wide 2xl:text-lg text-md 2xl:leading-[34px] leading-[26px]"
+                                        href="./single-case-study-2.html">READ MORE
+                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                            class="lg:ml-2.5 ml-2 1xl:size-[15px] size-[12px]"
+                                            mlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_7077_4647)">
+                                                <path
+                                                    d="M0.376871 13.7997L12.6481 1.52849L2.12991 1.52849L2.03975 0.116041L15.0623 0.116043L15.0623 13.1386L13.6499 13.0484L13.6499 2.53022L1.37861 14.8015L0.376871 13.7997Z"
+                                                    fill="currentColor"></path>
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <!-- column-grid -->
+                    <div class="bg-[#F4F3FF] flex 1xl:flex-row flex-col items-center group" data-aos="fade-up">
+                        <a href="./single-case-study-3.html"
+                            class="overflow-hidden 1xl:h-full h-auto 1xl:max-h-full xl:max-h-[340px] sm:max-h-[300px] max-h-[200px] 1xl:max-w-[275px] max-w-full w-full shrink-0">
+                            <img loading="lazy" src="../image/case-study-3.webp" alt="Case Study"
+                                class="w-full h-full object-cover scale-100 group-hover:scale-105 transition-all ease-in-out">
+                        </a>
+                        <div class="lg:p-[30px] md:p-5 py-[25px] px-[15px]">
+                            <div class="flex items-start 2xl:gap-[18px] xl:gap-3.5 gap-1.5 lg:mb-[22px] mb-[18px]">
+                                <span class="dash border border-primary 2xl:mt-4 mt-3.5"></span>
+                                <p class="uppercase text-[#6E7485] sm:text-base text-sm">Brand Evolution</p>
+                            </div>
+                            <a href="./single-case-study-3.html">
+                                <h5 class="xl:mb-[15px] mb-2.5 group-hover:text-primary tracking-normal">
+                                    Elevating a Financial Services Brand With a Modern, High-Trust Digital Identity</h5>
+                                <p class="p2">A sophisticated visual upgrade
+                                    that improved clarity, strengthened credibility, and increased long-term...</p>
+                                <div class="lg:mt-[25px] mt-5">
+                                    <a class="read-more btn w-fit text-primary hover:text-black font-normal tracking-wide 2xl:text-lg text-md 2xl:leading-[34px] leading-[26px]"
+                                        href="./single-case-study-3.html">READ MORE
+                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                            class="lg:ml-2.5 ml-2 1xl:size-[15px] size-[12px]"
+                                            mlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_7077_4647)">
+                                                <path
+                                                    d="M0.376871 13.7997L12.6481 1.52849L2.12991 1.52849L2.03975 0.116041L15.0623 0.116043L15.0623 13.1386L13.6499 13.0484L13.6499 2.53022L1.37861 14.8015L0.376871 13.7997Z"
+                                                    fill="currentColor"></path>
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <!-- column-grid -->
+                    <div class="bg-[#FAF0EB] flex 1xl:flex-row flex-col items-center group" data-aos="fade-up">
+                        <a href="./single-case-study-4.html"
+                            class="overflow-hidden 1xl:h-full h-auto 1xl:max-h-full xl:max-h-[340px] sm:max-h-[300px] max-h-[200px] 1xl:max-w-[275px] max-w-full w-full shrink-0">
+                            <img loading="lazy" src="../image/case-study-4.webp" alt="Case Study"
+                                class="w-full h-full object-cover scale-100 group-hover:scale-105 transition-all ease-in-out">
+                        </a>
+                        <div class="lg:p-[30px] md:p-5 py-[25px] px-[15px]">
+                            <div class="flex items-start 2xl:gap-[18px] xl:gap-3.5 gap-1.5 lg:mb-[22px] mb-[18px]">
+                                <span class="dash border border-primary 2xl:mt-4 mt-3.5"></span>
+                                <p class="uppercase text-[#6E7485] sm:text-base text-sm">Healthcare Technology</p>
+                            </div>
+                            <a href="./single-case-study-4.html">
+                                <h5 class="xl:mb-[15px] mb-2.5 group-hover:text-primary tracking-normal">
+                                    Transforming Patient Care With a Smart, Connected Healthcare Platform</h5>
+                                <p class="p2">Built an intuitive, secure, and
+                                    seamless healthcare solution that improved patient management, reduced...</p>
+                                <div class="lg:mt-[25px] mt-5">
+                                    <a class="read-more btn w-fit text-primary hover:text-black font-normal tracking-wide 2xl:text-lg text-md 2xl:leading-[34px] leading-[26px]"
+                                        href="./single-case-study-.html">READ MORE
+                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                            class="lg:ml-2.5 ml-2 1xl:size-[15px] size-[12px]"
+                                            mlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_7077_4647)">
+                                                <path
+                                                    d="M0.376871 13.7997L12.6481 1.52849L2.12991 1.52849L2.03975 0.116041L15.0623 0.116043L15.0623 13.1386L13.6499 13.0484L13.6499 2.53022L1.37861 14.8015L0.376871 13.7997Z"
+                                                    fill="currentColor"></path>
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- responsive btn -->
+                <a href="./caseStudy-1.html" aria-label="Open Page"
+                    class="btn btn-primary p-1 1xl:ps-[27px] xl:ps-5 ps-3.5 1xl:gap-3 gap-2 rounded-full group flex sm:hidden mt-[32px] mx-auto">
+                    Explore Case Studies
+                    <span
+                        class="btn btn-arrow rounded-full 3xl:w-[52px] 3xl:h-[52px] 1xl:w-12 1xl:h-12 xl:w-11 xl:h-11 w-9 h-9 ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none"
+                            class="1xl:w-[22px] 1xl:h-[22px] xl:w-[19px] xl:h-[19px] w-[17px] h-[17px]">
+                            <g clip-path="url(#clip0_421_92)">
+                                <path
+                                    d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                    fill="currentColor" />
+                            </g>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </section>
+        <!--/ End Real Result section -->
+
+        <!-- Our Framework section -->
+        <section class="3xl:pb-25 2xl:pb-[90px] xl:pb-20 lg:pb-17 pb-12.5">
+            <div class="bg-purple-100 3xl:py-25 2xl:py-[90px] xl:py-20 lg:py-17 sm:py-12 py-9">
+                <!-- container -->
+                <div class="container">
+                    <!-- sub_title -->
+                    <div class="flex items-center justify-between w-full xl:pb-10 lg:pb-7 sm:pb-6 pb-5">
+                        <div class="flex flex-col  lg:gap-[35px] md:gap-6 gap-5" data-aos="fade-right">
+                            <div class="flex items-center md:gap-[18px] gap-1.5">
+                                <span class="dash border border-primary"></span>
+                                <p class="p2 uppercase">OUR FRAMEWORK</p>
+                            </div>
+                            <h3>ENX Process <span class="text-primary">Framework</span></h3>
+                        </div>
+                        <a href="./our-services.html" aria-label="Open Page"
+                            class="btn btn-primary all-btn rounded-full group sm:flex hidden w-fit"
+                            data-aos="fade-left">
+                            Explore Our Workflow
+                            <span class=" btn btn-arrow rounded-full all-btn-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                    fill="none"
+                                    class="1xl:w-[22px] 1xl:h-[22px] xl:w-[19px] xl:h-[19px] w-[17px] h-[17px]">
+                                    <g clip-path="url(#clip0_421_92)">
+                                        <path
+                                            d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                            fill="currentColor" />
+                                    </g>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                    <!-- grid column -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:gap-[34px] xl:gap-6.5 gap-5">
+                        <!-- Card 1 -->
+                        <div class="bg-white 2xl:p-[30px] xl:p-6 sm:p-5 p-4 rounded-lg shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1)]"
+                            data-aos="fade-up">
+                            <div class="flex items-start xl:gap-[22px] sm:gap-4 gap-3 flex-col">
+                                <div
+                                    class="bg-[#FAF0EB] 2xl:size-[74px] xl:size-17.5 md:size-15 sm:size-14 size-12.5 flex items-center justify-center rounded-full">
+                                    <h4 class="framework-number text-primary">01</h4>
+                                </div>
+                                <div>
+                                    <h5 class="1xl:mb-[15px] sm:mb-[14px] mb-2">
+                                        Discovery & Alignment</h5>
+                                    <p class="p2">We analyze goals, needs, and
+                                        challenges to build a shared understanding and define the right direction.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="bg-white 2xl:p-[30px] xl:p-6 sm:p-5 p-4 rounded-lg shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1)]"
+                            data-aos="fade-up">
+                            <div class="flex items-start xl:gap-[22px] sm:gap-4 gap-3 flex-col">
+                                <div
+                                    class="bg-[#FAF0EB] 2xl:size-[74px] xl:size-17.5 md:size-15 sm:size-14 size-12.5 flex items-center justify-center rounded-full">
+                                    <h4 class="framework-number text-primary">02</h4>
+                                </div>
+                                <div>
+                                    <h5 class="1xl:mb-[15px] sm:mb-[14px] mb-2">
+                                        Strategy & Planning</h5>
+                                    <p class="p2">A focused roadmap that
+                                        outlines features, timelines, and success metrics for smooth execution.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="bg-white 2xl:p-[30px] xl:p-6 sm:p-5 p-4 rounded-lg shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1)]"
+                            data-aos="fade-up">
+                            <div class="flex items-start xl:gap-[22px] sm:gap-4 gap-3 flex-col">
+                                <div
+                                    class="bg-[#FAF0EB] 2xl:size-[74px] xl:size-17.5 md:size-15 sm:size-14 size-12.5 flex items-center justify-center rounded-full">
+                                    <h4 class="framework-number text-primary">03</h4>
+                                </div>
+                                <div>
+                                    <h5 class="1xl:mb-[15px] sm:mb-[14px] mb-2">
+                                        Design & Prototyping</h5>
+                                    <p class="p2">Crafting intuitive,
+                                        user-centered designs supported by rapid prototypes for early validation.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 4 -->
+                        <div class="bg-white 2xl:p-[30px] xl:p-6 sm:p-5 p-4 rounded-lg shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1)]"
+                            data-aos="fade-up">
+                            <div class="flex items-start xl:gap-[22px] sm:gap-4 gap-3 flex-col">
+                                <div
+                                    class="bg-[#FAF0EB] 2xl:size-[74px] xl:size-17.5 md:size-15 sm:size-14 size-12.5 flex items-center justify-center rounded-full">
+                                    <h4 class="framework-number text-primary">04</h4>
+                                </div>
+                                <div>
+                                    <h5 class="1xl:mb-[15px] sm:mb-[14px] mb-2">
+                                        Development & Integration</h5>
+                                    <p class="p2">Building scalable, secure, and
+                                        high-performance solutions aligned with industry standards.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 5 -->
+                        <div class="bg-white 2xl:p-[30px] xl:p-6 sm:p-5 p-4 rounded-lg shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1)]"
+                            data-aos="fade-up">
+                            <div class="flex items-start xl:gap-[22px] sm:gap-4 gap-3 flex-col">
+                                <div
+                                    class="bg-[#FAF0EB] 2xl:size-[74px] xl:size-17.5 md:size-15 sm:size-14 size-12.5 flex items-center justify-center rounded-full">
+                                    <h4 class="framework-number text-primary">05</h4>
+                                </div>
+                                <div>
+                                    <h5 class="1xl:mb-[15px] sm:mb-[14px] mb-2">
+                                        QA Testing & Optimization</h5>
+                                    <p class="p2">Ensuring functionality,
+                                        performance, security, and reliability through rigorous testing.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 6 -->
+                        <div class="bg-white 2xl:p-[30px] xl:p-6 sm:p-5 p-4 rounded-lg shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1)]"
+                            data-aos="fade-up">
+                            <div class="flex items-start xl:gap-[22px] sm:gap-4 gap-3 flex-col">
+                                <div
+                                    class="bg-[#FAF0EB] 2xl:size-[74px] xl:size-17.5 md:size-15 sm:size-14 size-12.5 flex items-center justify-center rounded-full">
+                                    <h4 class="framework-number text-primary">06</h4>
+                                </div>
+                                <div>
+                                    <h5 class="1xl:mb-[15px] sm:mb-[14px] mb-2">
+                                        Launch & Support</h5>
+                                    <p class="p2">A seamless rollout with
+                                        continuous improvements, monitoring, and long-term partnership support.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- responsive btn -->
+                    <button aria-label="Open Page"
+                        class="btn btn-primary p-1 1xl:ps-[27px] xl:ps-5 ps-3.5 1xl:gap-3 gap-2 rounded-full group flex sm:hidden mt-[32px] mx-auto">
+                        Explore Our Workflow
+                        <span
+                            class="btn btn-arrow rounded-full 3xl:w-[52px] 3xl:h-[52px] 1xl:w-12 1xl:h-12 xl:w-11 xl:h-11 w-9 h-9 ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                fill="none" class="1xl:w-[22px] 1xl:h-[22px] xl:w-[19px] xl:h-[19px] w-[17px] h-[17px]">
+                                <g clip-path="url(#clip0_421_92)">
+                                    <path
+                                        d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                        fill="currentColor" />
+                                </g>
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!--/ End Our Framework section -->
+
+        <!-- Our Team section -->
+        <section class="3xl:pb-25 2xl:pb-[90px] xl:pb-20 lg:pb-17 pb-12.5 h-fit">
+            <!-- container -->
+            <div class="container">
+                <!-- sub_title -->
+                <div class="flex items-center justify-between w-full xl:pb-10 lg:pb-7 sm:pb-6 pb-5">
+                    <div class="flex flex-col lg:gap-8 1xl:gap-7 gap-5" data-aos="fade-right">
+                        <div class="flex items-center gap-[18px]">
+                            <span class="dash border border-primary"></span>
+                            <p class="p2 uppercase">OUR TEAM</p>
+                        </div>
+                        <h3>The People Behind <span class="text-primary">ENX</span>
+                        </h3>
+                    </div>
+                    <!-- sub_button -->
+                    <a href="./team-1.html" aria-label="Open Page"
+                        class="btn btn-primary all-btn rounded-full group sm:flex hidden w-fit" data-aos="fade-left">
+                        Meet the Team
+                        <span class=" btn btn-arrow rounded-full all-btn-arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                fill="none" class="1xl:w-[22px] 1xl:h-[22px] xl:w-[19px] xl:h-[19px] w-[17px] h-[17px]">
+                                <g clip-path="url(#clip0_421_92)">
+                                    <path
+                                        d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                        fill="currentColor" />
+                                </g>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+                <!-- Team Grid -->
+                <div
+                    class="grid grid-cols-1 min-[440px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:gap-[34px] 1xl:gap-6 gap-5 items-center">
+                    <!-- Card 1 -->
+                    <div class="group relative" data-aos="fade-up">
+                        <a href="./single-team-1.html"
+                            class="min-[450px]:max-h-[450px] w-full h-full xl:mb-5 mb-2 block">
+                            <img loading="lazy" src="../image/team-1.webp" alt="Camilo"
+                                class="w-full h-full object-cover" />
+                        </a>
+                        <div class="flex items-start justify-between w-full">
+                            <div>
+                                <h6 class="sm:mb-[5px] group-hover:text-primary transition-all ease-in-out">
+                                    Ethan Cole</h6>
+                                <p class="p2 text-[#868686]">Chief Executive Officer</p>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"
+                                class="2xl:w-7 2xl:h-7 xl:w-6 xl:h-6 w-[22px] h-[22px] mt-1" fill="none">
+                                <g clip-path="url(#clip0_316_377)">
+                                    <path
+                                        d="M4.29965 22.6539L19.9176 7.03591L6.53079 7.03591L6.41605 5.23825L22.9902 5.23825L22.9902 21.8124L21.1925 21.6977L21.1925 8.31084L5.57459 23.9288L4.29965 22.6539Z"
+                                        fill="#FF8343" />
+                                </g>
+                            </svg>
+                        </div>
+
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="group relative" data-aos="fade-up">
+                        <a href="./single-team-2.html"
+                            class="min-[450px]:max-h-[450px] w-full h-full xl:mb-5 mb-2 block">
+                            <img loading="lazy" src="../image/team-2.webp" alt="Camilo"
+                                class="w-full h-full object-cover" />
+                        </a>
+                        <div class="flex items-start justify-between w-full">
+                            <div>
+                                <h6 class="sm:mb-[5px] group-hover:text-primary transition-all ease-in-out">
+                                    Sofia Martinez</h6>
+                                <p class="p2 text-[#868686]">Senior UI/UX Designer</p>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"
+                                class="2xl:w-7 2xl:h-7 xl:w-6 xl:h-6 w-[22px] h-[22px] mt-1" fill="none">
+                                <g clip-path="url(#clip0_316_377)">
+                                    <path
+                                        d="M4.29965 22.6539L19.9176 7.03591L6.53079 7.03591L6.41605 5.23825L22.9902 5.23825L22.9902 21.8124L21.1925 21.6977L21.1925 8.31084L5.57459 23.9288L4.29965 22.6539Z"
+                                        fill="#FF8343" />
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="group relative" data-aos="fade-up">
+                        <a href="./single-team-3.html"
+                            class="min-[450px]:max-h-[450px] w-full h-full xl:mb-5 mb-2 block">
+                            <img loading="lazy" src="../image/team-3.webp" alt="Camilo"
+                                class="w-full h-full object-cover" />
+                        </a>
+                        <div class="flex items-start justify-between w-full">
+                            <div>
+                                <h6 class="sm:mb-[5px] group-hover:text-primary transition-all ease-in-out">
+                                    Liam Brooks</h6>
+                                <p class="p2 text-[#868686]">Business Strategy Lead</p>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"
+                                class="2xl:w-7 2xl:h-7 xl:w-6 xl:h-6 w-[22px] h-[22px] mt-1" fill="none">
+                                <g clip-path="url(#clip0_316_377)">
+                                    <path
+                                        d="M4.29965 22.6539L19.9176 7.03591L6.53079 7.03591L6.41605 5.23825L22.9902 5.23825L22.9902 21.8124L21.1925 21.6977L21.1925 8.31084L5.57459 23.9288L4.29965 22.6539Z"
+                                        fill="#FF8343" />
+                                </g>
+                            </svg>
+                        </div>
+
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="group relative" data-aos="fade-up">
+                        <a href="./single-team-4.html"
+                            class="min-[450px]:max-h-[450px] w-full h-full xl:mb-5 mb-2 block">
+                            <img loading="lazy" src="../image/team-4.webp" alt="Camilo"
+                                class="w-full h-full object-cover" />
+                        </a>
+                        <div class="flex items-start justify-between w-full">
+                            <div>
+                                <h6 class="sm:mb-[5px] group-hover:text-primary transition-all ease-in-out">
+                                    Hannah Lee</h6>
+                                <p class="p2 text-[#868686]">Visual Designer</p>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"
+                                class="2xl:w-7 2xl:h-7 xl:w-6 xl:h-6 w-[22px] h-[22px] mt-1" fill="none">
+                                <g clip-path="url(#clip0_316_377)">
+                                    <path
+                                        d="M4.29965 22.6539L19.9176 7.03591L6.53079 7.03591L6.41605 5.23825L22.9902 5.23825L22.9902 21.8124L21.1925 21.6977L21.1925 8.31084L5.57459 23.9288L4.29965 22.6539Z"
+                                        fill="#FF8343" />
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <!-- responsive btn -->
+                <a href="./team-1.html" aria-label="Open Page"
+                    class="btn btn-primary p-1 1xl:ps-[27px] xl:ps-5 ps-3.5 1xl:gap-3 gap-2 rounded-full group flex sm:hidden mt-[30px] w-fit">
+                    Explore All Capabilities
+                    <span
+                        class="btn btn-arrow rounded-full 3xl:w-[52px] 3xl:h-[52px] 1xl:w-12 1xl:h-12 xl:w-11 xl:h-11 w-9 h-9 ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none"
+                            class="1xl:w-[22px] 1xl:h-[22px] xl:w-[19px] xl:h-[19px] w-[17px] h-[17px]">
+                            <g clip-path="url(#clip0_421_92)">
+                                <path
+                                    d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                    fill="currentColor" />
+                            </g>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </section>
+        <!--/ End Our Team section -->
+
+        <!-- Testimonials section -->
+        <section class="3xl:pb-25 2xl:pb-[90px] xl:pb-20 lg:pb-17 pb-12.5">
+            <div class="3xl:py-25 2xl:py-[90px] xl:py-20 lg:py-17 py-12.5 relative h-fit">
+                <div class="absolute inset-0 bg-[url('../image/testimonial-banner.webp')] bg-cover bg-center z-0">
+                </div>
+                <!-- container -->
+                <div class="container h-full relative z-1 testimonials-2">
+                    <!-- sub_title -->
+                    <div class="flex items-center justify-between w-full xl:pb-10 lg:pb-7 sm:pb-6 pb-5 ">
+                        <div class="flex flex-col lg:gap-[35px] md:gap-6 gap-5" data-aos="fade-right">
+                            <div class="flex items-center md:gap-[18px] gap-1.5">
+                                <span class="dash border border-primary"></span>
+                                <p class="p2 uppercase">CLIENT SUCCESS</p>
+                            </div>
+                            <h3>What Our <span class="text-primary">Clients</span>
+                                Say</h3>
+                        </div>
+                        <!-- arrows/buttons -->
+                        <div class="sm:flex items-center justify-center w-auto hidden" data-aos="fade-left">
+                            <div class="arrow flex items-center justify-end lg:gap-[18px] gap-2.5">
+                                <div class="swiper-button-prev relative! m-0 left-0! top-0! mt-0!">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_7135_4462)">
+                                            <path
+                                                d="M21.0602 10.5L3.70608 10.5L11.1436 3.0625L10.2086 2L1.00024 11.2083L10.2086 20.4167L11.1436 19.3542L3.70608 11.9167L21.0602 11.9167L21.0602 10.5Z"
+                                                fill="#08030E" />
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="swiper-button-next relative! m-0 right-0! top-0! mt-0!">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_5062_2614)">
+                                            <path
+                                                d="M0.93976 10.5L18.2939 10.5L10.8564 3.0625L11.7914 2L20.9998 11.2083L11.7914 20.4167L10.8564 19.3542L18.2939 11.9167L0.93976 11.9167L0.93976 10.5Z"
+                                                fill="#08030E" />
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Swiper -->
+                    <div class="swiper testimonials" data-aos="fade-up">
+                        <div class="swiper-wrapper">
+
+                            <!-- 1st testimonials -->
+                            <div class="swiper-slide h-auto!">
+                                <div
+                                    class="bg-white 2xl:p-[30px] xl:p-6 sm:p-5 p-4 rounded-lg shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1)] flex flex-col items-center h-full">
+                                    <h6 class="lg:mb-12.5 md:mb-8 sm:mb-6 mb-5 h-full text-[#383838]">
+                                        “ENX transformed our website design completely. The modular system allowed us to
+                                        launch faster, with a clean, professional look that impresses clients and
+                                        stakeholders alike.”</h6>
+                                    <div class="flex sm:items-center items-start justify-between gap-[11px] w-full">
+                                        <div class="flex items-start lg:gap-[18px] gap-2.5">
+                                            <img loading="lazy" src="../image/camilo.webp" alt="Camilo"
+                                                class="2xl:w-17.5 lg:w-15 w-11 h-full object-cover" />
+                                            <div class="text-left">
+                                                <h6 class="xl:mb-[5px] mb-0">
+                                                    Olivia Harper</h6>
+                                                <div class="flex items-start gap-2">
+                                                    <span
+                                                        class="dash border border-primary lg:w-[25px]! w-[12px]! lg:mt-2 mt-[13px]"></span>
+                                                    <p class="text-[#868686] lg:text-base lg:leading-[20px] text-sm">
+                                                        Marketing
+                                                        Director, FinTech Co.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sm:mt-0 mt-[-20px]">
+                                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                                class="2xl:w-12.5 xl:w-9 w-[30px]" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M28.125 27.7144V5.71436H50V28.0286C50 43.1144 35.9375 45.0001 35.9375 45.0001L34.0625 40.6001C34.0625 40.6001 40.3125 39.6572 41.5625 34.6286C42.8125 30.8572 40.3125 27.7144 40.3125 27.7144H28.125ZM0 27.7144V5.71436H21.875V28.0286C21.875 43.1144 7.8125 45.0001 7.8125 45.0001L5.9375 40.6001C5.9375 40.6001 12.1875 39.6572 13.4375 34.6286C14.6875 30.8572 12.1875 27.7144 12.1875 27.7144H0Z"
+                                                    fill="#FF8343" />
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- 2nd testimonials -->
+                            <div class="swiper-slide h-auto!">
+                                <div
+                                    class="bg-white 2xl:p-[30px] xl:p-6 sm:p-5 p-4 rounded-lg shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1)] flex flex-col items-center h-full">
+                                    <h6 class="lg:mb-12.5 md:mb-8 sm:mb-6 mb-5 h-full text-[#383838]">
+                                        “The ENX framework made scaling our digital platform effortless. Every component
+                                        was
+                                        reusable, making our design, development teams extremely efficient.”</h6>
+                                    <div class="flex items-center justify-between gap-[11px] w-full">
+                                        <div class="flex items-start lg:gap-[18px] gap-2.5">
+                                            <img loading="lazy" src="../image/testimonials-user-2.webp" alt="Camilo"
+                                                class="2xl:w-17.5 lg:w-15 w-11 h-full object-cover" />
+                                            <div class="text-left">
+                                                <h6 class="xl:mb-[5px] mb-0">
+                                                    Liam Chen</h6>
+                                                <div class="flex items-start gap-2">
+                                                    <span
+                                                        class="dash border border-primary lg:w-[25px]! w-[12px]! lg:mt-2 mt-[13px]"></span>
+                                                    <p class="text-[#868686] lg:text-base lg:leading-[20px] text-sm">
+                                                        Product
+                                                        Manager, SaaS Enterprise</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sm:mt-0 mt-[-20px]">
+                                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                                class="2xl:w-12.5 xl:w-9 w-[30px]" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M28.125 27.7144V5.71436H50V28.0286C50 43.1144 35.9375 45.0001 35.9375 45.0001L34.0625 40.6001C34.0625 40.6001 40.3125 39.6572 41.5625 34.6286C42.8125 30.8572 40.3125 27.7144 40.3125 27.7144H28.125ZM0 27.7144V5.71436H21.875V28.0286C21.875 43.1144 7.8125 45.0001 7.8125 45.0001L5.9375 40.6001C5.9375 40.6001 12.1875 39.6572 13.4375 34.6286C14.6875 30.8572 12.1875 27.7144 12.1875 27.7144H0Z"
+                                                    fill="#FF8343" />
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- 3nd testimonials -->
+                            <div class="swiper-slide h-auto!">
+                                <div
+                                    class="bg-white 2xl:p-[30px] xl:p-6 sm:p-5 p-4 rounded-lg shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1)] flex flex-col items-center h-full">
+                                    <h6 class="lg:mb-12.5 md:mb-8 sm:mb-6 mb-5 h-full text-[#383838]">
+                                        “From clean layouts to strategic design choices, ENX delivered exactly what we
+                                        needed. The attention to detail and usability is unmatched.”</h6>
+                                    <div class="flex items-center justify-between gap-[11px] w-full">
+                                        <div class="flex items-start lg:gap-[18px] gap-2.5">
+                                            <img loading="lazy" src="../image/testimonials-user-3.webp" alt="Camilo"
+                                                class="2xl:w-17.5 lg:w-15 w-11 h-full object-cover" />
+                                            <div class="text-left">
+                                                <h6 class="xl:mb-[5px] mb-0">
+                                                    Sophia Patle</h6>
+                                                <div class="flex items-start gap-2">
+                                                    <span
+                                                        class="dash border border-primary lg:w-[25px]! w-[12px]! lg:mt-2 mt-[13px]"></span>
+                                                    <p class="text-[#868686] lg:text-base lg:leading-[20px] text-sm">
+                                                        COO, Consulting Firm</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sm:mt-0 mt-[-20px]">
+                                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                                class="2xl:w-12.5 xl:w-9 w-[30px]" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M28.125 27.7144V5.71436H50V28.0286C50 43.1144 35.9375 45.0001 35.9375 45.0001L34.0625 40.6001C34.0625 40.6001 40.3125 39.6572 41.5625 34.6286C42.8125 30.8572 40.3125 27.7144 40.3125 27.7144H28.125ZM0 27.7144V5.71436H21.875V28.0286C21.875 43.1144 7.8125 45.0001 7.8125 45.0001L5.9375 40.6001C5.9375 40.6001 12.1875 39.6572 13.4375 34.6286C14.6875 30.8572 12.1875 27.7144 12.1875 27.7144H0Z"
+                                                    fill="#FF8343" />
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!-- mobile  -->
+                    <div class="flex items-center flex-wrap sm:justify-center justify-between gap-2 lg:mt-12.5 md:mt-[35px] mt-[25px]"
+                        data-aos="fade-up">
+                        <a href="testimonials.html" aria-label="Open Page"
+                            class="btn btn-primary all-btn rounded-full group sm:flex w-fit">
+                            More Testimonials
+                            <span class=" btn btn-arrow rounded-full all-btn-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                    fill="none"
+                                    class="1xl:w-[22px] 1xl:h-[22px] xl:w-[19px] xl:h-[19px] w-[17px] h-[17px]">
+                                    <g clip-path="url(#clip0_421_92)">
+                                        <path
+                                            d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                            fill="currentColor" />
+                                    </g>
+                                </svg>
+                            </span>
+                        </a>
+
+                        <!-- arrows/buttons -->
+                        <div class="flex items-center justify-center sm:w-auto w-[95px] sm:hidden" data-aos="fade-up">
+                            <div class="arrow flex items-center justify-end lg:gap-[18px] gap-2.5 w-auto!">
+                                <div class="swiper-button-prev bg-white relative! mt-0! left-0! bottom-0!">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_7244_5395)">
+                                            <path
+                                                d="M21.0602 10.5L3.70608 10.5L11.1436 3.0625L10.2086 2L1.00024 11.2083L10.2086 20.4167L11.1436 19.3542L3.70608 11.9167L21.0602 11.9167L21.0602 10.5Z"
+                                                fill="#08030E" />
+                                        </g>
+                                    </svg>
+
+                                </div>
+                                <div class="swiper-button-next bg-white relative! mt-0! right-0! bottom-0!">
+                                    <svg width="21" height="19" viewBox="0 0 21 19" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M6.2571e-05 8.5L17.3542 8.5L9.91673 1.0625L10.8517 -4.02509e-07L20.0601 9.20833L10.8517 18.4167L9.91673 17.3542L17.3542 9.91666L6.2509e-05 9.91666L6.2571e-05 8.5Z"
+                                            fill="#08030E" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/ End Testimonials section -->
+
+        <!-- Blogs Section -->
+        <section class="3xl:pb-25 2xl:pb-[90px] xl:pb-20 lg:pb-17 pb-12.5">
+            <div class="overflow-x-clip">
+                <div class="container">
+                    <!-- sub_title -->
+                    <div class="flex items-center justify-between w-full xl:pb-10 lg:pb-7 sm:pb-6 pb-5">
+                        <div class="flex flex-col lg:gap-8 1xl:gap-7 gap-5" data-aos="fade-right">
+                            <div class="flex items-center gap-[18px]">
+                                <span class="dash border border-primary"></span>
+                                <p class="p2 uppercase leading-[14px]">LATEST INSIGHTS</p>
+                            </div>
+                            <h3>Insights & Expert <span class="text-primary">Perspectives</span>
+                            </h3>
+                        </div>
+                        <!-- sub_button -->
+                        <a href="./insights-2.html" aria-label="Open Page"
+                            class="btn btn-primary all-btn rounded-full group sm:flex hidden w-fit"
+                            data-aos="fade-left">
+                            View All Insights
+                            <span class="btn btn-arrow rounded-full all-btn-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                    fill="none"
+                                    class="1xl:w-[22px] 1xl:h-[22px] xl:w-[19px] xl:h-[19px] w-[17px] h-[17px]">
+                                    <g clip-path="url(#clip0_421_92)">
+                                        <path
+                                            d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                            fill="currentColor" />
+                                    </g>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+
+                    <!-- Cards Swiper -->
+                    <div class="mySwiper cards swiper overflow-visible! swiper-initialized swiper-horizontal swiper-backface-visible"
+                        data-aos="fade-up">
+                        <div class="swiper-wrapper">
+                            <!-- 1st card -->
+                            <div class="swiper-slide group">
+                                <div class="flex flex-col items-start md:gap-[25px] gap-5 relative">
+                                    <div class="w-full">
+                                        <a href="./single-insight-1.html"
+                                            class="relative before:block before:content-[''] 2xl:before:pt-[348px] 1xl:before:pt-[260px] md:before:pt-[240px] before:pt-[218px] w-full h-full">
+                                            <img loading="lazy" src="../image/insight-1.webp" alt="Tech Trend Image"
+                                                class="absolute top-0 left-0 w-full h-full object-cover" />
+                                        </a>
+                                    </div>
+                                    <div class="flex flex-col items-start justify-between h-full w-full">
+                                        <div class="flex items-center lg:gap-3 gap-2 lg:mb-[15px] mb-3">
+                                            <span class="dash border border-primary"></span>
+                                            <p class="p2">By
+                                                <span class="text-primary hover:text-black">Sarah Jennings </span>
+                                                — 05 Sept, 2025
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <h4 class="2xl:mb-[15px] mb-2.5">
+                                                <a href="./single-insight-1.html" class="font-light">
+                                                    Transforming Digital Experiences with Smart Innovation
+                                                </a>
+                                            </h4>
+                                            <p class="p2">
+                                                Explore how businesses are elevating customer interactions through
+                                                intelligent automation, user-centric design, and scalable digital
+                                                ecosystems that drive better engagement and long-term growth.
+                                            </p>
+                                        </div>
+                                        <a href="./single-insight-1.html" aria-label="Open Page"
+                                            class="btn btn-primary all-btn rounded-full group 2xl:mt-[25px] mt-5">
+                                            Read More
+                                            <span class="btn btn-arrow rounded-full all-btn-arrow">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                                                    viewBox="0 0 22 22" fill="none"
+                                                    class="1xl:w-[22px] 1xl:h-[22px] xl:w-[19px] xl:h-[19px] w-[17px] h-[17px]">
+                                                    <g clip-path="url(#clip0_421_92)">
+                                                        <path
+                                                            d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                                            fill="currentColor" />
+                                                    </g>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 2nd card -->
+                            <div class="swiper-slide group">
+                                <div class="flex flex-col items-start md:gap-[25px] gap-5 relative">
+                                    <div class="w-full">
+                                        <a href="./single-insight-2.html"
+                                            class="relative before:block before:content-[''] 2xl:before:pt-[348px] 1xl:before:pt-[260px] md:before:pt-[240px] before:pt-[218px] w-full h-full">
+                                            <img loading="lazy" src="../image/insight-2.webp" alt="Tech Trend Image"
+                                                class="absolute top-0 left-0 w-full h-full object-cover" />
+                                        </a>
+                                    </div>
+                                    <div class="flex flex-col items-start justify-between h-full w-full">
+                                        <div class="flex items-center lg:gap-3 gap-2 lg:mb-[15px] mb-3">
+                                            <span class="dash border border-primary"></span>
+                                            <p class="p2">By
+                                                <span class="text-primary hover:text-black">Michael Carter</span>
+                                                — 12 Sept, 2025
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <h4 class="2xl:mb-[15px] mb-2.5">
+                                                <a href="./single-insight-2.html" class="font-light">
+                                                    Building Future-Ready Systems for Modern Enterprises
+                                                </a>
+                                            </h4>
+                                            <p class="p2">
+                                                Learn how organizations are modernizing their digital infrastructure,
+                                                adopting cloud-native technologies, and creating resilient systems that
+                                                support stability, security, and scalable performance.
+                                            </p>
+                                        </div>
+                                        <a href="./single-insight-2.html" aria-label="Open Page"
+                                            class="btn btn-primary all-btn rounded-full group 2xl:mt-[25px] mt-5">
+                                            Read More
+                                            <span class="btn btn-arrow rounded-full all-btn-arrow">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                                                    viewBox="0 0 22 22" fill="none"
+                                                    class="1xl:w-[22px] 1xl:h-[22px] xl:w-[19px] xl:h-[19px] w-[17px] h-[17px]">
+                                                    <g clip-path="url(#clip0_421_92)">
+                                                        <path
+                                                            d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                                            fill="currentColor" />
+                                                    </g>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 3rd card -->
+                            <div class="swiper-slide group">
+                                <div class="flex flex-col items-start md:gap-[25px] gap-5 relative">
+                                    <div class="w-full">
+                                        <a href="./single-insight-3.html"
+                                            class="relative before:block before:content-[''] 2xl:before:pt-[348px] 1xl:before:pt-[260px] md:before:pt-[240px] before:pt-[218px] w-full h-full">
+                                            <img loading="lazy" src="../image/team-skill-3.webp" alt="Tech Trend Image"
+                                                class="absolute top-0 left-0 w-full h-full object-cover" />
+                                        </a>
+                                    </div>
+                                    <div class="flex flex-col items-start justify-between h-full w-full">
+                                        <div class="flex items-center lg:gap-3 gap-2 lg:mb-[15px] mb-3">
+                                            <span class="dash border border-primary"></span>
+                                            <p class="p2">By
+                                                <span class="text-primary hover:text-black">Daniel Foster</span>
+                                                — 18 Sept, 2025
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <h4 class="2xl:mb-[15px] mb-2.5">
+                                                <a href="./single-insight-3.html" class="font-light">
+                                                    How Data Intelligence Shapes Smarter Business Decisions
+                                                </a>
+                                            </h4>
+                                            <p class="p2">
+                                                Discover the role of real-time analytics, machine learning, and
+                                                predictive insights in helping companies make faster, more confident
+                                                decisions that improve operations and drive measurable outcomes.
+                                            </p>
+                                        </div>
+                                        <a href="./single-insight-3.html" aria-label="Open Page"
+                                            class="btn btn-primary all-btn rounded-full group 2xl:mt-[25px] mt-5">
+                                            Read More
+                                            <span class="btn btn-arrow rounded-full all-btn-arrow">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                                                    viewBox="0 0 22 22" fill="none"
+                                                    class="1xl:w-[22px] 1xl:h-[22px] xl:w-[19px] xl:h-[19px] w-[17px] h-[17px]">
+                                                    <g clip-path="url(#clip0_421_92)">
+                                                        <path
+                                                            d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                                            fill="currentColor" />
+                                                    </g>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 4th card -->
+                            <div class="swiper-slide group">
+                                <div class="flex flex-col items-start md:gap-[25px] gap-5 relative">
+                                    <div class="w-full">
+                                        <a href="./single-insight-4.html"
+                                            class="relative before:block before:content-[''] 2xl:before:pt-[348px] 1xl:before:pt-[260px] md:before:pt-[240px] before:pt-[218px] w-full h-full">
+                                            <img loading="lazy" src="../image/insight-4.webp" alt="Tech Trend Image"
+                                                class="absolute top-0 left-0 w-full h-full object-cover" />
+                                        </a>
+                                    </div>
+                                    <div class="flex flex-col items-start justify-between h-full w-full">
+                                        <div class="flex items-center lg:gap-3 gap-2 lg:mb-[15px] mb-3">
+                                            <span class="dash border border-primary"></span>
+                                            <p class="p2">By
+                                                <span class="text-primary hover:text-black"> Olivia Hart</span>
+                                                — 22 Sept, 2025
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <h4 class="2xl:mb-[15px] mb-2.5">
+                                                <a href="./single-insight-4.html" class="font-light">
+                                                    Redefining User Journeys with Modern Experience Design
+                                                </a>
+                                            </h4>
+                                            <p class="p2">
+                                                Understand how intuitive interfaces, responsive layouts, and
+                                                human-centered workflows are creating smoother digital journeys that
+                                                boost engagement and customer satisfaction across platforms.
+                                            </p>
+                                        </div>
+                                        <a href="./single-insight-4.html" aria-label="Open Page"
+                                            class="btn btn-primary all-btn rounded-full group 2xl:mt-[25px] mt-5">
+                                            Read More
+                                            <span class="btn btn-arrow rounded-full all-btn-arrow">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                                                    viewBox="0 0 22 22" fill="none"
+                                                    class="1xl:w-[22px] 1xl:h-[22px] xl:w-[19px] xl:h-[19px] w-[17px] h-[17px]">
+                                                    <g clip-path="url(#clip0_421_92)">
+                                                        <path
+                                                            d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                                            fill="currentColor" />
+                                                    </g>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 5th card -->
+                            <div class="swiper-slide group">
+                                <div class="flex flex-col items-start md:gap-[25px] gap-5 relative">
+                                    <div class="w-full">
+                                        <a href="./single-insight-5.html"
+                                            class="relative before:block before:content-[''] 2xl:before:pt-[348px] 1xl:before:pt-[260px] md:before:pt-[240px] before:pt-[218px] w-full h-full">
+                                            <img loading="lazy" src="../image/insight-5.webp" alt="Tech Trend Image"
+                                                class="absolute top-0 left-0 w-full h-full object-cover" />
+                                        </a>
+                                    </div>
+                                    <div class="flex flex-col items-start justify-between h-full w-full">
+                                        <div class="flex items-center lg:gap-3 gap-2 lg:mb-[15px] mb-3">
+                                            <span class="dash border border-primary"></span>
+                                            <p class="p2">By
+                                                <span class="text-primary hover:text-black">Ethan Wells</span>
+                                                — 27 Sept, 2025
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <h4 class="2xl:mb-[15px] mb-2.5">
+                                                <a href="./single-insight-5.html" class="font-light">
+                                                    Strengthening Cybersecurity for a Hyper-Connected World
+                                                </a>
+                                            </h4>
+                                            <p class="p2">
+                                                Explore the evolving threat landscape and discover how proactive
+                                                defense, zero-trust architecture, and automated monitoring are
+                                                protecting modern enterprises from rising cyber risks.
+                                            </p>
+                                        </div>
+                                        <a href="./single-insight-5.html" aria-label="Open Page"
+                                            class="btn btn-primary all-btn rounded-full group 2xl:mt-[25px] mt-5">
+                                            Read More
+                                            <span class="btn btn-arrow rounded-full all-btn-arrow">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                                                    viewBox="0 0 22 22" fill="none"
+                                                    class="1xl:w-[22px] 1xl:h-[22px] xl:w-[19px] xl:h-[19px] w-[17px] h-[17px]">
+                                                    <g clip-path="url(#clip0_421_92)">
+                                                        <path
+                                                            d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                                            fill="currentColor" />
+                                                    </g>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- arrows/buttons -->
+                        <div
+                            class="flex items-center sm:justify-center justify-between w-auto 2xl:pt-[70px] 1xl:pt-12.5 lg:pt-12 md:pt-10 pt-8 xl:gap-[30px] gap-3 sm:border-0 border-t border-gray-100 sm:mt-0 mt-7">
+
+                            <!-- sub_button -->
+                            <a href="./team-1.html" aria-label="Open Page"
+                                class="btn btn-primary all-btn rounded-full group sm:hidden  w-fit">
+                                View All Insights
+                                <span class="btn btn-arrow rounded-full all-btn-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                        fill="none"
+                                        class="1xl:w-[22px] 1xl:h-[22px] xl:w-[19px] xl:h-[19px] w-[17px] h-[17px]">
+                                        <g clip-path="url(#clip0_421_92)">
+                                            <path
+                                                d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                                fill="currentColor" />
+                                        </g>
+                                    </svg>
+                                </span>
+                            </a>
+
+                            <div class="arrow flex items-center justify-end lg:gap-[18px] gap-2.5 w-auto!">
+                                <div class="swiper-button-prev relative! m-0 left-0! top-0! mt-0!">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_7135_4462)">
+                                            <path
+                                                d="M21.0602 10.5L3.70608 10.5L11.1436 3.0625L10.2086 2L1.00024 11.2083L10.2086 20.4167L11.1436 19.3542L3.70608 11.9167L21.0602 11.9167L21.0602 10.5Z"
+                                                fill="#08030E" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_7135_4462">
+                                                <rect width="22" height="22" fill="white"
+                                                    transform="matrix(4.37114e-08 1 1 -4.37114e-08 0 9.61651e-07)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+
+                                </div>
+                                <div class="swiper-button-next relative! m-0 right-0! top-0! mt-0!">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_5062_2614)">
+                                            <path
+                                                d="M0.93976 10.5L18.2939 10.5L10.8564 3.0625L11.7914 2L20.9998 11.2083L11.7914 20.4167L10.8564 19.3542L18.2939 11.9167L0.93976 11.9167L0.93976 10.5Z"
+                                                fill="#08030E" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_5062_2614">
+                                                <rect width="22" height="22" fill="white"
+                                                    transform="translate(22) rotate(90)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+
+                                </div>
+                            </div>
+
+
+                            <!-- Range Slider -->
+                            <div class="slider-container w-full sm:block hidden">
+                                <input type="range" id="slideRange" min="1" max="4" value="1"
+                                    class="custom-range w-full" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/ End Blogs Section -->
+
+        <!-- Get Started Section -->
+        <section class="3xl:pb-25 2xl:pb-[90px] xl:pb-20 lg:pb-17 pb-12.5">
+            <div class="relative md:py-0 py-12.5">
+                <div class="absolute inset-0 bg-[url('../image/about-us-bg.svg')] bg-cover bg-center z-0"></div>
+                <div class="container">
+                    <div
+                        class="relative z-1 flex md:items-end items-center justify-between md:flex-row flex-col lg:gap-10 md:gap-3">
+                        <div
+                            class="xl:max-w-[526px] lg:max-w-[400px] sm:max-w-[320px] max-w-[250px] flex items-end lg:pt-12">
+                            <img src="../image/Get-started.webp" alt="get-started" class="w-full" />
+                        </div>
+                        <div
+                            class="3xl:py-25 2xl:py-[90px] xl:py-20 lg:py-17 md:py-10 relative h-fit flex items-center">
+                            <div
+                                class="bg-white 2xl:py-[70px] 1xl:py-15 1xl:px-15 xl:p-13 md:py-10 md:px-6 py-[35px] px-5 border border-gray-100 xl:max-w-[730px] lg:max-w-[515px] max-w-full">
+                                <div class="flex flex-col lg:gap-[30px] gap-5">
+                                    <div class="flex items-center md:gap-2.5 gap-[7px]">
+                                        <span class="dash border border-primary"></span>
+                                        <p class="p2 uppercase leading-[14px]">GET STARTED</p>
+                                    </div>
+                                    <h3 class="md:mb-5 mb-3">
+                                        Ready to Build What’s Next?
+                                    </h3>
+                                </div>
+                                <p class="p2 lg:mb-[35px] md:mb-6 mb-5">Let’s
+                                    turn your ideas into high-performing
+                                    digital solutions with strategy, speed, and expert execution.</p>
+
+                                <a href="./contactUs.html" class="btn btn-primary all-btn rounded-full group w-fit">
+                                    Start Your Project
+                                    <span class="btn btn-arrow rounded-full all-btn-arrow">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                                            viewBox="0 0 22 22" fill="none"
+                                            class="1xl:w-[22px] 1xl:h-[22px] xl:w-[19px] xl:h-[19px] w-[17px] h-[17px]">
+                                            <g clip-path="url(#clip0_421_92)">
+                                                <path
+                                                    d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                                    fill="currentColor" />
+                                            </g>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/ End Get Started Section -->
+
+        <!-- FAQ section -->
+        <section class="3xl:pb-25 2xl:pb-[90px] xl:pb-20 lg:pb-17 pb-12.5 relative h-fit">
+            <!-- container -->
+            <div class="container">
+                <div
+                    class="flex items-start justify-between w-full lg:flex-row flex-col 3xl:gap-[140px] 1xl:gap-[90px] lg:gap-[55px] sm:gap-10">
+                    <!-- sub_title -->
+                    <div class="sm:mb-0 mb-[25px]" data-aos="fade-right">
+                        <div class="flex flex-col 2xl:gap-[35px] md:gap-6 gap-5">
+                            <div class="flex items-center md:gap-[18px] gap-1.5">
+                                <span class="dash border border-primary"></span>
+                                <p class="p2 uppercase">FAQ’s</p>
+                            </div>
+                            <h3 class="lg:mb-5 mb-3">Answers to <span class="text-primary">Common</span> Questions</h3>
+                        </div>
+                        <p class="p2 sm:mb-[30px]">
+                            Find detailed explanations to help you make confident decisions while working with ENX.
+                        </p>
+                        <!-- sub_button -->
+                        <a href="./faq.html" aria-label="Open Page"
+                            class="btn btn-primary all-btn rounded-full group sm:flex hidden w-fit">
+                            Explore More FAQs
+                            <span class=" btn btn-arrow rounded-full all-btn-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                    fill="none"
+                                    class="1xl:w-[22px] 1xl:h-[22px] xl:w-[19px] xl:h-[19px] w-[17px] h-[17px]">
+                                    <g clip-path="url(#clip0_421_92)">
+                                        <path
+                                            d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                            fill="currentColor"></path>
+                                    </g>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="faq-outer-box" data-aos="fade-up">
+                        <!-- FAQ Item -->
+                        <div class="faq-inner-box">
+                            <button class="faq-toggle-button p" onclick="toggleFaq(this)">
+                                <h6 class="faq-title">How long does a typical project take?</h6>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" class="faq-toggle-svg">
+                                    <g clip-path="url(#clip0_7273_5307)">
+                                        <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)"
+                                            fill="black" />
+                                        <rect x="7" width="2" height="16" fill="black" />
+                                    </g>
+                                </svg>
+
+                            </button>
+                            <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                <div class="mt-4.5">
+                                    <span class="p2">
+                                        Most ENX projects are completed within 2–6 weeks, depending on the complexity,
+                                        number of pages, and feature depth. We begin with a structured discovery phase,
+                                        followed by design, refinement, and quality checks ensuring every step meets our
+                                        global-standard delivery benchmarks.
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-inner-box">
+                            <button class="faq-toggle-button p" onclick="toggleFaq(this)">
+                                <h6 class="faq-title">
+                                    Do you work with all types of businesses?
+                                </h6>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" class="faq-toggle-svg">
+                                    <g clip-path="url(#clip0_7273_5307)">
+                                        <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)"
+                                            fill="black" />
+                                        <rect x="7" width="2" height="16" fill="black" />
+                                    </g>
+                                </svg>
+                            </button>
+                            <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                <div class="mt-4.5">
+                                    <span class="p2">Most ENX projects are completed within 2–6 weeks,
+                                        depending on the complexity, number of pages, and feature depth. We begin with a
+                                        structured discovery phase, followed by design, refinement, and quality checks
+                                        ensuring every step meets our global-standard delivery benchmarks.
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-inner-box">
+                            <button class="faq-toggle-button p" onclick="toggleFaq(this)">
+                                <h6 class="faq-title">
+                                    What do you need from us to get started?
+                                </h6>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" class="faq-toggle-svg">
+                                    <g clip-path="url(#clip0_7273_5307)">
+                                        <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)"
+                                            fill="black" />
+                                        <rect x="7" width="2" height="16" fill="black" />
+                                    </g>
+                                </svg>
+                            </button>
+                            <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                <div class="lg:mt-4.5 mt-3.5">
+                                    <span class="p2">
+                                        ENX offers cloud computing, software development, cybersecurity, managed IT
+                                        services, and more tailored for your business needs.
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-inner-box">
+                            <button class="faq-toggle-button p" onclick="toggleFaq(this)">
+                                <h6 class="faq-title">
+                                    Can you support long-term maintenance?
+                                </h6>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" class="faq-toggle-svg">
+                                    <g clip-path="url(#clip0_7273_5307)">
+                                        <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)"
+                                            fill="black" />
+                                        <rect x="7" width="2" height="16" fill="black" />
+                                    </g>
+                                </svg>
+                            </button>
+                            <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                <div class="lg:mt-4.5 mt-3.5">
+                                    <span class="p2">
+                                        Yes. We provide post-delivery assistance for updates, refinements,
+                                        troubleshooting, and continuous improvement.
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-inner-box">
+                            <button class="faq-toggle-button p" onclick="toggleFaq(this)">
+                                <h6 class="faq-title">
+                                    How do you ensure quality?
+                                </h6>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" class="faq-toggle-svg">
+                                    <g clip-path="url(#clip0_7273_5307)">
+                                        <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)"
+                                            fill="black" />
+                                        <rect x="7" width="2" height="16" fill="black" />
+                                    </g>
+                                </svg>
+                            </button>
+                            <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                <div class="lg:mt-4.5 mt-3.5">
+                                    <span class="p2">
+                                        Our QA pipeline includes UX audits, accessibility checks, brand alignment,
+                                        prototype testing, and final performance validation.
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/ End FAQ section -->
+
+        <!-- Footer section -->
+        <footer class="bg-purple-100">
+            <!-- text-slider -->
+            <div class="overflow-hidden text-white bg-black 1xl:py-[15px] md:py-3 sm:py-[10px] py-[6px]">
+                <div class="footer-marquee">
+                    <ul class="footer-marquee-track m-0 p-0">
+                        <li class="flex gap-5 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26"
+                                fill="none">
+                                <path d="M0 26L13 13V26H0Z" fill="#FF8343" />
+                                <path d="M13 26L26 13V26H13Z" fill="#FF8343" />
+                                <path d="M0 13L13 0V13H0Z" fill="#FF8343" />
+                                <path d="M13 13L26 0V13H13Z" fill="#FF8343" />
+                            </svg>
+                            <h5 class="font-light text-white w-auto">Built for Global Businesses</h5>
+                        </li>
+                        <li class="flex gap-5 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26"
+                                fill="none">
+                                <path d="M0 26L13 13V26H0Z" fill="#FF8343" />
+                                <path d="M13 26L26 13V26H13Z" fill="#FF8343" />
+                                <path d="M0 13L13 0V13H0Z" fill="#FF8343" />
+                                <path d="M13 13L26 0V13H13Z" fill="#FF8343" />
+                            </svg>
+                            <h5 class="font-light text-white w-auto">Precision-Driven Design</h5>
+                        </li>
+                        <li class="flex gap-5 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26"
+                                fill="none">
+                                <path d="M0 26L13 13V26H0Z" fill="#FF8343" />
+                                <path d="M13 26L26 13V26H13Z" fill="#FF8343" />
+                                <path d="M0 13L13 0V13H0Z" fill="#FF8343" />
+                                <path d="M13 13L26 0V13H13Z" fill="#FF8343" />
+                            </svg>
+                            <h5 class="font-light text-white w-auto">Enterprise-Grade Quality</h5>
+                        </li>
+                        <li class="flex gap-5 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26"
+                                fill="none">
+                                <path d="M0 26L13 13V26H0Z" fill="#FF8343" />
+                                <path d="M13 26L26 13V26H13Z" fill="#FF8343" />
+                                <path d="M0 13L13 0V13H0Z" fill="#FF8343" />
+                                <path d="M13 13L26 0V13H13Z" fill="#FF8343" />
+                            </svg>
+                            <h5 class="font-light text-white w-auto">Solutions That Scale</h5>
+                        </li>
+                        <li class="flex gap-5 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26"
+                                fill="none">
+                                <path d="M0 26L13 13V26H0Z" fill="#FF8343" />
+                                <path d="M13 26L26 13V26H13Z" fill="#FF8343" />
+                                <path d="M0 13L13 0V13H0Z" fill="#FF8343" />
+                                <path d="M13 13L26 0V13H13Z" fill="#FF8343" />
+                            </svg>
+                            <h5 class="font-light text-white w-auto">Trusted by Industry Leaders</h5>
+                        </li>
+                        <li class="flex gap-5 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26"
+                                fill="none">
+                                <path d="M0 26L13 13V26H0Z" fill="#FF8343" />
+                                <path d="M13 26L26 13V26H13Z" fill="#FF8343" />
+                                <path d="M0 13L13 0V13H0Z" fill="#FF8343" />
+                                <path d="M13 13L26 0V13H13Z" fill="#FF8343" />
+                            </svg>
+                            <h5 class="font-light text-white w-auto">Innovate With Confidence</h5>
+                        </li>
+                        <li class="flex gap-5 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26"
+                                fill="none">
+                                <path d="M0 26L13 13V26H0Z" fill="#FF8343" />
+                                <path d="M13 26L26 13V26H13Z" fill="#FF8343" />
+                                <path d="M0 13L13 0V13H0Z" fill="#FF8343" />
+                                <path d="M13 13L26 0V13H13Z" fill="#FF8343" />
+                            </svg>
+                            <h5 class="font-light text-white w-auto">Design That Drives Growth</h5>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- bottom footer -->
+            <div class="container ">
+                <div
+                    class="flex items-start justify-between w-ful 2xl:pt-15 2xl:pb-12.5 lg:pt-14 lg:pb-11.5 pt-12 pb-7.5 md:gap-10 sm:gap-8 gap-7.5 md:flex-nowrap flex-wrap">
+                    <div class="flex flex-col items-start">
+                        <img class="2xl:w-36 1xl:w-32 lg:w-30 sm:w-26 w-25 h-auto 2xl:mb-12.5 sm:mb-11 mb-7.5"
+                            src="../image/Logo.svg" alt="logo" />
+                        <ul
+                            class="flex items-center 2xl:gap-10 xl:gap-8 lg:gap-6 gap-x-5 gap-y-3 flex-wrap 1xl:mb-10 sm:mb-8 mb-5.5">
+                            <li>
+                                <p class="font-normal"><a href="./aboutUs.html">About Us</a></p>
+                            </li>
+                            <li>
+                                <p class="font-normal"><a href="./our-services.html">Services</a></p>
+                            </li>
+                            <li>
+                                <p class="font-normal"><a href="./caseStudy-2.html">Case Studies</a></p>
+                            </li>
+                            <li>
+                                <p class="font-normal"><a href="./insights-2.html">Insights</a></p>
+                            </li>
+                            <li>
+                                <p class="font-normal"><a href="./career.html">Careers</a></p>
+                            </li>
+                            <li>
+                                <p class="font-normal"><a href="./contact-us.html">Contact</a></p>
+                            </li>
+                        </ul>
+                        <div
+                            class="flex lg:items-center items-start lg:flex-row flex-col lg:divide-x lg:divide-y-0 divide-y divide-gray-100 bg-white lg:py-2 lg:px-0 px-3 border border-gray-100 rounded-[10px]">
+                            <div class="flex items-center lg:gap-4 gap-3 lg:px-4.5 px-0 lg:py-0 py-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none">
+                                    <path
+                                        d="M14.947 2H5.06469C2.9855 2 1.29999 3.68552 1.29999 5.76471V14.2353C1.29999 16.3145 2.9855 18 5.06469 18H14.947C17.0262 18 18.7118 16.3145 18.7118 14.2353V5.76471C18.7118 3.68552 17.0262 2 14.947 2Z"
+                                        stroke="#FF8343" stroke-width="1.4" />
+                                    <path
+                                        d="M1.34424 5.84912L8.12541 9.73618C8.69367 10.0659 9.339 10.2396 9.996 10.2396C10.653 10.2396 11.2983 10.0659 11.8666 9.73618L18.6666 5.84912"
+                                        stroke="#FF8343" stroke-width="1.4" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <p class="p2 text-black-100">
+                                    <a href="mailto:contact@enxglobal.com">
+                                        <span class="font-bold">Email:</span>
+                                        contact@enxglobal.com
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="flex items-center lg:gap-4 gap-3 lg:px-4.5 px-0 lg:py-0 py-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_7280_5416)">
+                                        <path
+                                            d="M19.1425 13.7038L14.3219 11.5436C14.1035 11.45 13.8652 11.4123 13.6286 11.4341C13.3919 11.4558 13.1645 11.5362 12.9668 11.6681C12.9467 11.681 12.9277 11.6953 12.9096 11.7109L10.3902 13.8538C10.364 13.8681 10.3349 13.8761 10.3052 13.8771C10.2754 13.8782 10.2458 13.8723 10.2187 13.86C8.59928 13.0783 6.92167 11.4109 6.13695 9.8139C6.12389 9.78722 6.11709 9.7579 6.11709 9.72819C6.11709 9.69847 6.12389 9.66916 6.13695 9.64247L8.28702 7.09136C8.30248 7.0725 8.31679 7.05273 8.32988 7.03217C8.45988 6.8337 8.53839 6.60598 8.55835 6.36956C8.5783 6.13315 8.53906 5.89549 8.44417 5.67804L6.2992 0.865619C6.17739 0.581537 5.96673 0.344623 5.69884 0.190437C5.43094 0.0362499 5.12027 -0.0268925 4.81344 0.0104861C3.47995 0.185795 2.25592 0.840657 1.37008 1.8527C0.484244 2.86474 -0.00278344 4.1647 1.19671e-05 5.50967C1.19671e-05 13.4998 6.50023 20 14.4903 20C15.8352 20.0026 17.135 19.5155 18.147 18.6297C19.159 17.7439 19.8139 16.52 19.9895 15.1865C20.0268 14.8812 19.9645 14.5719 19.8119 14.3047C19.6593 14.0376 19.4245 13.8268 19.1425 13.7038ZM14.4903 18.7755C7.17576 18.7755 1.22454 12.8242 1.22454 5.50967C1.22113 4.46262 1.59905 3.45014 2.28769 2.66141C2.97632 1.87268 3.92857 1.36165 4.96651 1.2238H4.98998C5.0311 1.22456 5.07103 1.23774 5.10453 1.26159C5.13804 1.28545 5.16355 1.31887 5.17774 1.35747L7.33087 6.16479C7.34315 6.19152 7.34951 6.22059 7.34951 6.25C7.34951 6.27941 7.34315 6.30848 7.33087 6.33521L5.17672 8.89244C5.16072 8.91076 5.14606 8.9302 5.13284 8.95061C4.99804 9.15639 4.91867 9.39349 4.9024 9.63895C4.88613 9.88441 4.93352 10.1299 5.03998 10.3517C5.94511 12.2048 7.81252 14.0579 9.68605 14.9631C9.90912 15.0689 10.1558 15.1152 10.4021 15.0973C10.6483 15.0794 10.8858 14.998 11.0912 14.861C11.1106 14.8478 11.13 14.8335 11.1483 14.8182L13.6668 12.6752C13.6917 12.6619 13.7191 12.654 13.7473 12.6523C13.7755 12.6505 13.8037 12.6549 13.8301 12.665L18.6517 14.8253C18.691 14.8421 18.7242 14.8708 18.7463 14.9074C18.7685 14.9441 18.7786 14.9867 18.7751 15.0294C18.638 16.0678 18.1275 17.0208 17.3389 17.7102C16.5503 18.3996 15.5377 18.7783 14.4903 18.7755Z"
+                                            fill="#FF8343" />
+                                    </g>
+                                </svg>
+                                <p class="p2 text-black-100">
+                                    <a href="tel:+12024801120">
+                                        <span class="font-bold">HR:</span>
+                                        +1 (202) 480-1120
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col p-0! 2xl:w-[34%] lg:w-[37%] md:w-[66%] w-full">
+                        <h6 class="w-full text-start sm:mb-6 mb-3">Stay Updated With ENX</h6>
+                        <div
+                            class="newsletter-input-box border border-[#DADDE9] w-full p-[5px]! 1xl:mb-10 sm:mb-8 mb-5.5">
+                            <input type="text" name="newsletter" placeholder="Enter your email"
+                                class="newsletter-input p2 tracking-normal!">
+                            <button
+                                class="btn btn-primary p-1 1xl:ps-[27px] xl:ps-5 ps-3.5 1xl:gap-[12px] gap-2 rounded-full group">Subscribe<span
+                                    class="btn btn-arrow rounded-full 3xl:w-11 3xl:h-11 1xl:w-10 1xl:h-10 xl:w-9 xl:h-9 w-8 h-8">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                        fill="none"
+                                        class="1xl:w-[22px] 1xl:h-[22px] xl:w-[19px] xl:h-[19px] w-[17px] h-[17px]">
+                                        <g clip-path="url(#clip0_421_92)">
+                                            <path
+                                                d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                                fill="currentColor" />
+                                        </g>
+                                    </svg>
+                                </span>
+                            </button>
+                        </div>
+                        <div class="flex items-center lg:gap-5 gap-4">
+                            <div>
+                                <a target="_blank" href="https://www.linkedin.com/feed/"
+                                    class="dark-light border border-gray-100 2xl:w-[52px] 2xl:h-[52px] lg:w-[48px] lg:h-[48px] w-[44px] h-[44px] flex items-center justify-center rounded-full">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                        class="1xl:w-[22px] 1xl:h-[22px] xl:w-[19px] xl:h-[19px] w-[17px] h-[17px]"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M6.13949 3.63624C6.13924 4.14946 5.93631 4.64155 5.57536 5.00426C5.21441 5.36698 4.72499 5.57061 4.21478 5.57035C3.70457 5.57009 3.21536 5.36597 2.85477 5.0029C2.49417 4.63982 2.29174 4.14752 2.29199 3.63431C2.29225 3.12109 2.49517 2.629 2.85613 2.26628C3.21708 1.90357 3.70649 1.69994 4.2167 1.7002C4.72691 1.70045 5.21613 1.90457 5.57672 2.26765C5.93731 2.63073 6.13975 3.12303 6.13949 3.63624ZM6.1972 7.00328H2.3497V19.1169H6.1972V7.00328ZM12.2763 7.00328H8.44799V19.1169H12.2378V12.7601C12.2378 9.21894 16.8259 8.88998 16.8259 12.7601V19.1169H20.6253V11.4443C20.6253 5.47456 13.8345 5.6971 12.2378 8.62874L12.2763 7.00328Z"
+                                            fill="currentColor" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div>
+                                <a target="_blank" href="https://x.com/"
+                                    class="dark-light border border-gray-100 2xl:w-[52px] 2xl:h-[52px] lg:w-[48px] lg:h-[48px] w-[44px] h-[44px] flex items-center justify-center rounded-full">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                        class="1xl:w-[22px] 1xl:h-[22px] xl:w-[19px] xl:h-[19px] w-[17px] h-[17px]"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g mask="url(#mask0_8420_72)">
+                                            <path
+                                                d="M16.2705 2.69336H19.0821L12.9404 9.73074L20.1663 19.3086H14.5092L10.0752 13.5009L5.00729 19.3086H2.19313L8.7617 11.7788L1.83301 2.69467H7.6342L11.6361 8.00217L16.2705 2.69336ZM15.2818 17.6219H16.8402L6.78301 4.29229H5.11206L15.2818 17.6219Z"
+                                                fill="currentColor" />
+                                        </g>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div>
+                                <a target="_blank" href="https://dribbble.com/"
+                                    class="dark-light border border-gray-100 2xl:w-[52px] 2xl:h-[52px] lg:w-[48px] lg:h-[48px] w-[44px] h-[44px] flex items-center justify-center rounded-full">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                        class="1xl:w-[22px] 1xl:h-[22px] xl:w-[19px] xl:h-[19px] w-[17px] h-[17px]"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M20.1664 11.0007C20.1678 12.208 19.9301 13.4038 19.4668 14.5187C19.0035 15.6337 18.3239 16.6458 17.4672 17.4966C16.6175 18.3448 15.6089 19.0172 14.4992 19.4755C13.3894 19.9337 12.2003 20.1688 10.9997 20.1673C5.93693 20.1673 1.83302 16.0634 1.83302 11.0007C1.82972 8.6502 2.73258 6.38893 4.35385 4.68712C5.20921 3.78441 6.2398 3.06577 7.38253 2.57518C8.52526 2.08459 9.7561 1.83238 10.9997 1.83399C12.2003 1.83251 13.3894 2.06761 14.4992 2.52587C15.6089 2.98412 16.6175 3.65653 17.4672 4.5047C18.3239 5.3555 19.0035 6.36762 19.4668 7.48259C19.9301 8.59756 20.1678 9.79327 20.1664 11.0007Z"
+                                            stroke="currentColor" stroke-width="1.55833" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M20.1669 10.9999C18.8295 10.9999 15.1399 10.4957 11.8376 11.9454C8.25021 13.5207 5.65284 15.9645 4.52075 17.4839"
+                                            stroke="currentColor" stroke-width="1.55833" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M7.5625 2.5C8.99708 3.82413 12.1275 7.19517 13.2917 10.5419C14.4558 13.8887 14.8867 18.0036 15.1525 19.1746"
+                                            stroke="currentColor" stroke-width="1.55833" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M1.9043 9.85457C3.63588 9.95907 8.21967 10.053 11.153 8.8004C14.0863 7.54778 16.6104 5.24374 17.4762 4.5127M2.52121 14.4897C3.32907 16.4448 4.7858 18.0619 6.64621 19.0689"
+                                            stroke="currentColor" stroke-width="1.55833" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M1.83302 11.0007C1.82972 8.6502 2.73258 6.38893 4.35385 4.68712C5.20921 3.78441 6.2398 3.06577 7.38253 2.57518C8.52526 2.08459 9.7561 1.83238 10.9997 1.83399M14.6664 2.59666C15.7105 3.05306 16.6603 3.70013 17.4672 4.5047C18.3239 5.3555 19.0035 6.36762 19.4668 7.48259C19.9301 8.59756 20.1678 9.79327 20.1664 11.0007C20.1664 12.1291 19.9624 13.2103 19.5889 14.209M10.9997 20.1673C12.2003 20.1688 13.3894 19.9337 14.4992 19.4755C15.6089 19.0172 16.6175 18.3448 17.4672 17.4966"
+                                            stroke="currentColor" stroke-width="1.55833" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div>
+                                <a target="_blank" href="https://www.instagram.com/"
+                                    class="dark-light border border-gray-100 2xl:w-[52px] 2xl:h-[52px] lg:w-[48px] lg:h-[48px] w-[44px] h-[44px] flex items-center justify-center rounded-full">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_8420_91)">
+                                            <path
+                                                d="M14.1713 1.66797H5.83573C3.53394 1.66797 1.66797 3.53394 1.66797 5.83573V14.1713C1.66797 16.4731 3.53394 18.339 5.83573 18.339H14.1713C16.4731 18.339 18.339 16.4731 18.339 14.1713V5.83573C18.339 3.53394 16.4731 1.66797 14.1713 1.66797Z"
+                                                stroke="currentColor" stroke-width="1.85234" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M13.3365 9.47991C13.4393 10.1736 13.3208 10.8821 12.9978 11.5046C12.6748 12.1271 12.1638 12.6319 11.5373 12.9472C10.9109 13.2625 10.201 13.3723 9.50861 13.2609C8.81621 13.1494 8.17657 12.8225 7.68067 12.3266C7.18477 11.8307 6.85787 11.1911 6.74645 10.4987C6.63503 9.80629 6.74478 9.09639 7.06008 8.46995C7.37538 7.84352 7.88018 7.33246 8.50268 7.00946C9.12518 6.68646 9.83367 6.56796 10.5274 6.67083C11.235 6.77577 11.8901 7.1055 12.396 7.61134C12.9018 8.11717 13.2315 8.77229 13.3365 9.47991Z"
+                                                stroke="currentColor" stroke-width="1.85234" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <ellipse cx="14.5866" cy="5.41635" rx="1.25062" ry="1.25033"
+                                                fill="currentColor" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_8420_91">
+                                                <rect width="20.0053" height="20.0053" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="border-t border-[#DADDE9] 2xl:py-7 sm:py-6 py-5 flex items-center sm:justify-between justify-center sm:gap-5 gap-1.5 sm:flex-nowrap flex-wrap">
+                    <p class="p2 text-black-100 font-normal sm:text-stat text-center">Copyright © 2024
+                        <span class="text-primary">ENX</span>. All rights
+                        reserved.
+                    </p>
+                    <div class="flex items-center">
+                        <p class="font-normal px-4"><a href="./privacyPolicy.html">Privacy Policy</a></p>
+                        <p class="font-normal">|</p>
+                        <p class="font-normal px-4"><a href="./terms.html">Terms of Use</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--/ End Footer section -->
+    </div>
+
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 60,
+        });
+    </script>
+    <!-- Custom JS -->
+    <script src="../js/custom.js"></script>
+
+</body>
+
+</html>

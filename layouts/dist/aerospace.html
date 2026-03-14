@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- style.css -->
+    <link rel="stylesheet" href="../css/output.css" />
+    <link rel="icon" type="image/x-icon" href="../image/favicon.svg" />
+    <!-- AOS ANIMATION -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>ENX - Case Study</title>
+</head>
+
+<body>
+    <div class="relative overflow-hidden">
+
+        <!-- Header -->
+        <!-- Dropdown Overlay -->
+        <div id="dropdownOverlay" class="fixed inset-0 bg-black/50 hidden z-40">
+        </div>
+        <header class="fixed w-full h-auto nav-section z-50">
+            <div
+                class="2xl:h-[96px] xl:h-[85px] lg:h-20 md:h-[75px] sm:h-[60px] h-[55px] lg:px-10 min-[900px]:px-5 bg-white border-b border-gray-100 min-[900px]:flex min-[900px]:items-center min-[900px]:justify-between relative z-50">
+                <div class="min-[900px]:p-0 px-4 flex justify-between items-center h-full">
+                    <a href="./index.html">
+                        <img loading="lazy"
+                            class="2xl:w-[106px] xl:w-[100px] lg:w-[90px] sm:w-20 w-18 h-full object-cover"
+                            src="../image/Logo.svg" alt="Logo" />
+                    </a>
+
+                    <!-- Burger Button -->
+                    <button aria-label="Open menu" id="burgerBtn"
+                        class="min-[900px]:hidden block sm:w-6 sm:h-6 w-5 h-5">
+                        <span id="burger-icon">
+                            <!-- Burger Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                class="w-full h-full">
+                                <rect x="1" y="1" width="22" height="2" fill="#353535" />
+                                <rect x="1" y="8" width="22" height="2" fill="#353535" />
+                                <rect x="1" y="15" width="22" height="2" fill="#353535" />
+                            </svg>
+                        </span>
+                        <span id="close-icon" class="hidden">
+                            <!-- Close Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                                <path d="M5.5 5.5L18.5 18.5M5.5 18.5L18.5 5.5" stroke="#353535" stroke-width="1.5" />
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+
+                <!-- Navigation Links -->
+                <ul id="nav-links"
+                    class="nav-links hidden min-[900px]:static fixed left-0 min-[900px]:w-auto w-full h-full min-[900px]:divide-y-0 divide-y divide-gray-100 min-[900px]:flex min-[900px]:items-stretch align-start bg-white 3xl:gap-10 2xl:gap-9 1xl:gap-6 gap-4 min-[900px]:py-0 pt-[5px] pb-4 transition-all duration-300 min-[900px]:m-0 m-px">
+                    <li class="min-[900px]:relative">
+                        <button aria-label="Open menu" onclick="toggleDropdown(this)"
+                            class="dropdown-btn border-b border-transparent hover:text-primary min-[900px]:px-0 px-4 p2 focus-visible:none">
+                            Home
+                            <svg class="w-4 h-4 transform transition-transform duration-300 ease-in-out" fill="none"
+                                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+
+                        <!-- Centered dropdown menu -->
+                        <div
+                            class="dropdown-menu min-[900px]:h-fit! h-full! bg-white hidden overflow-auto min-[900px]:overflow-hidden min-[900px]:w-[130px]! min-[900px]:border-t border-gray-100 min-[900px]:absolute min-[900px]:left-1/2 min-[900px]:transform min-[900px]:-translate-x-[25%] z-50 transition-all ease-in-out">
+
+                            <div class="flex flex-col items-start justify-center w-full">
+                                <div
+                                    class="flex min-[900px]:hidden items-center justify-between min-[900px]:border-0 border border-gray-100 h-[55px] px-4 dropdown-title w-webkit-fill">
+                                    <div class="flex items-center gap-[15px] ">
+                                        <svg onclick="closeDropdown(this)" width="23" height="23" viewBox="0 0 28 28"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg" class="cursor-pointer">
+                                            <path d="M22.75 14H5.25M5.25 14L11.8125 7M5.25 14L11.8125 21"
+                                                stroke="#353535" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                        <span>HOME</span>
+                                    </div>
+                                    <svg onclick="closeDropdown(this)" xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none" class="cursor-pointer">
+                                        <path d="M5.5 5.5L18.5 18.5M5.5 18.5L18.5 5.5" stroke="#353535"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+
+                                <ul class="space-y-3 p-5">
+                                    <li class="p2">
+                                        <a href="./index.html">Home-1</a>
+                                    </li>
+                                    <li class="p2">
+                                        <a href="./index-2.html">Home-2</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <button aria-label="Open menu" onclick="toggleDropdown(this)"
+                            class="dropdown-btn border-b border-transparent hover:text-primary min-[900px]:px-0 px-4 p2">
+                            Why ENX?
+                            <svg class="w-4 h-4 transform transition-transform duration-300 ease-in-out" fill="none"
+                                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu bg-white hidden overflow-auto min-[900px]:overflow-hidden">
+                            <div
+                                class="flex min-[900px]:flex-row flex-col-reverse 3xl:gap-[120px] xl:gap-20 lg:gap-12.5 md:gap-10 gap-4">
+                                <div class="dropdown-menu-banner">
+                                    <img loading="lazy" src="../image/enx.webp" alt="Why ENX?"
+                                        class="w-full h-full object-cover" />
+                                </div>
+                                <div class="flex flex-col items-start w-full 2xl:py-[70px] xl:py-10 lg:py-5">
+                                    <span class="dropdown-title min-[900px]:block hidden">WHY ENX?</span>
+                                    <div
+                                        class="flex min-[900px]:hidden items-center justify-between min-[900px]:border-0 border border-gray-100 h-[55px] px-4 dropdown-title w-webkit-fill">
+                                        <div class="flex items-center gap-[15px] ">
+                                            <svg onclick="closeDropdown(this)" width="23" height="23"
+                                                viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                class="cursor-pointer">
+                                                <path d="M22.75 14H5.25M5.25 14L11.8125 7M5.25 14L11.8125 21"
+                                                    stroke="#353535" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            <span>WHY ENX?</span>
+                                        </div>
+                                        <svg onclick="closeDropdown(this)" xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none" class="cursor-pointer">
+                                            <path d="M5.5 5.5L18.5 18.5M5.5 18.5L18.5 5.5" stroke="#353535"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <ul
+                                        class="grid grid-cols-1 3xl:gap-7 2xl:gap-6 1xl:gap-5 lg:gap-4 sm:gap-2 gap-1 min-[900px]:p-0 min-[900px]:pr-5 p-5">
+                                        <li>
+                                            <h6> <a href="./aboutUs.html">About ENX</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6> <a href="./whyEnx.html">Why ENX?</a></h6>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <button aria-label="Open menu" onclick="toggleDropdown(this)"
+                            class="dropdown-btn border-b border-transparent hover:text-primary min-[900px]:px-0 px-4">
+                            Services
+                            <svg class="w-4 h-4 transform transition-transform duration-300 ease-in-out" fill="none"
+                                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu bg-white hidden min-[900px]:overflow-hidden overflow-auto">
+                            <div
+                                class="flex min-[900px]:flex-row flex-col-reverse 3xl:gap-[120px] xl:gap-20 lg:gap-12.5 md:gap-10 gap-4">
+                                <div class="dropdown-menu-banner">
+                                    <img loading="lazy" src="../image/solution.webp" alt="Services"
+                                        class="w-full h-full object-cover" />
+                                </div>
+                                <div class="flex flex-col items-start w-full 2xl:py-[70px] xl:py-10 lg:py-5">
+                                    <span class="dropdown-title min-[900px]:block hidden">Services</span>
+                                    <div
+                                        class="flex min-[900px]:hidden items-center justify-between min-[900px]:border-0 border border-gray-100 h-[55px] px-4 dropdown-title w-webkit-fill">
+                                        <div class="flex items-center gap-[15px]">
+                                            <svg onclick="closeDropdown(this)" width="23" height="23"
+                                                viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                class="cursor-pointer">
+                                                <path d="M22.75 14H5.25M5.25 14L11.8125 7M5.25 14L11.8125 21"
+                                                    stroke="#353535" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            <span>TOp SERVICES</span>
+                                        </div>
+                                        <svg onclick="closeDropdown(this)" xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none" class="cursor-pointer">
+                                            <path d="M5.5 5.5L18.5 18.5M5.5 18.5L18.5 5.5" stroke="#353535"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <ul
+                                        class="grid w-full justify-between sm:grid-cols-2 grid-cols-1 3xl:gap-y-7 2xl:gap-y-6 1xl:gap-y-5 lg:gap-y-4 sm:gap-y-2 gap-y-1 min-[900px]:p-0 min-[900px]:pr-5 p-5">
+                                        <li>
+                                            <h6><a href="./aerospace.html">Aerospace & Defense</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./financial.html">Financial Services</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./manufacture.html">Manufacturing & Industrial</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./media.html">Media & Entertainment</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./healthcare.html">Healthcare & Life Sciences</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./ecommerce.html">Retail & E-Commerce</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./transportation.html">Transportation & Logistics</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./construction.html">Construction & Infrastructure</a></h6>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <button aria-label="Open menu" onclick="toggleDropdown(this)"
+                            class="dropdown-btn border-b border-transparent hover:text-primary min-[900px]:px-0 px-4">
+                            Resources
+                            <svg class="w-4 h-4 transform transition-transform duration-300 ease-in-out" fill="none"
+                                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu bg-white hidden overflow-auto min-[900px]:overflow-hidden">
+                            <div
+                                class="flex min-[900px]:flex-row flex-col-reverse 3xl:gap-[120px] xl:gap-20 lg:gap-12.5 md:gap-10 gap-4">
+                                <div class="dropdown-menu-banner">
+                                    <img loading="lazy" src="../image/resources.webp" alt="Resources"
+                                        class="w-full h-full object-cover" />
+                                </div>
+                                <div class="flex flex-col items-start w-full 1xl:py-10 lg:py-5">
+                                    <span class="dropdown-title min-[900px]:block hidden">RESOURCES</span>
+                                    <div
+                                        class="flex min-[900px]:hidden items-center justify-between min-[900px]:border-0 border border-gray-100 h-[55px] px-4 dropdown-title w-webkit-fill">
+                                        <div class="flex items-center gap-[15px]">
+                                            <svg onclick="closeDropdown(this)" width="23" height="23"
+                                                viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                class="cursor-pointer">
+                                                <path d="M22.75 14H5.25M5.25 14L11.8125 7M5.25 14L11.8125 21"
+                                                    stroke="#353535" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            <span>RESOURCES</span>
+                                        </div>
+                                        <svg onclick="closeDropdown(this)" xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none" class="cursor-pointer">
+                                            <path d="M5.5 5.5L18.5 18.5M5.5 18.5L18.5 5.5" stroke="#353535"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <ul
+                                        class="w-full justify-between grid sm:grid-cols-3 grid-cols-1 sm:grid-flow-col sm:grid-rows-7 3xl:gap-y-7 2xl:gap-y-6 1xl:gap-y-5 lg:gap-4 sm:gap-y-2 gap-y-1 min-[900px]:p-0 min-[900px]:pr-5 p-5">
+                                        <li>
+                                            <h6><a href="./caseStudy-1.html">Case Studies 01</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./caseStudy-2.html">Case Studies 02</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./single-case-study-1.html">Single Case Studies</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./team-1.html">Our Team 01</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./team-2.html">Our Team 02</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./single-team-1.html">Single Team</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./offices.html">Our Offices</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./contactUs.html">Contact Us</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./testimonials.html">Testimonial </a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./faq.html">FAQ’s</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./404.html">404</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./career.html">Careers</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./contactUs.html">Support</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./clients.html">Our Clients</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./privacyPolicy.html">Privacy Policy</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./terms.html">Terms & Conditions</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./cookiePolicy.html">Cookie Policy</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./licensing.html">Licensing</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./dataProtection.html">Data Protection</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./sitemap.html">Site Map</a></h6>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <button aria-label="Open menu" onclick="toggleDropdown(this)"
+                            class="dropdown-btn border-b border-transparent hover:text-primary min-[900px]:px-0 px-4">
+                            Insights
+                            <svg class="w-4 h-4 transform transition-transform duration-300 ease-in-out" fill="none"
+                                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu bg-white hidden overflow-auto min-[900px]:overflow-hidden">
+                            <div
+                                class="flex min-[900px]:flex-row flex-col-reverse 3xl:gap-[120px] xl:gap-20 lg:gap-12.5 md:gap-10 gap-4">
+                                <div class="dropdown-menu-banner">
+                                    <img loading="lazy" src="../image/Insights.webp" alt="Insights"
+                                        class="w-full h-full object-cover" />
+                                </div>
+                                <div class="flex flex-col items-start w-full 2xl:py-[70px] xl:py-10 lg:py-5">
+                                    <span class="dropdown-title min-[900px]:block hidden">INSIGHTS</span>
+                                    <div
+                                        class="flex min-[900px]:hidden items-center justify-between min-[900px]:border-0 border border-gray-100 h-[55px] px-4 dropdown-title w-webkit-fill">
+                                        <div class="flex items-center gap-[15px]">
+                                            <svg onclick="closeDropdown(this)" width="23" height="23"
+                                                viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                class="cursor-pointer">
+                                                <path d="M22.75 14H5.25M5.25 14L11.8125 7M5.25 14L11.8125 21"
+                                                    stroke="#353535" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            <span>INSIGHTS</span>
+                                        </div>
+                                        <svg onclick="closeDropdown(this)" xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none" class="cursor-pointer">
+                                            <path d="M5.5 5.5L18.5 18.5M5.5 18.5L18.5 5.5" stroke="#353535"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <ul
+                                        class="grid grid-cols-1 3xl:gap-7 2xl:gap-6 1xl:gap-5 lg:gap-4 sm:gap-2 gap-1 min-[900px]:p-0 min-[900px]:pr-5 p-5">
+                                        <li>
+                                            <h6><a href="./insights-1.html">Latest Insights 01</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./insights-2.html">Latest Insights 02</a></h6>
+                                        </li>
+                                        
+                                        <li>
+                                            <h6><a href="./single-insight-1.html">Single Insights</a></h6>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="./contactUs.html"
+                            class="p2 h-full flex items-center min-[900px]:justify-center min-[900px]:p-0 md:py-4 py-[14px] min-[900px]:px-0 px-4">
+                            Contact us</a>
+                    </li>
+
+                    <li class="min-[900px]:hidden py-[18px] min-[900px]:px-0 px-4">
+                        <a href="./contactUs.html" class="btn btn-primary p-1 ps-3 gap-2 rounded-full group w-fit">
+                            Get started
+                            <span class="btn btn-arrow rounded-full w-9 h-9 ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                    fill="none" class="1w-[17px] h-[17px]">
+                                    <g clip-path="url(#clip0_421_92)">
+                                        <path
+                                            d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                            fill="currentColor" />
+                                    </g>
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <a href="./contactUs.html" aria-label="Open Page"
+                    class="btn btn-primary all-btn rounded-full group min-[900px]:flex hidden w-fit">
+                    Get started
+                    <span class="btn btn-arrow rounded-full all-btn-arrow">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M-2.02496e-05 12.4396L11.1557 1.28395L1.59365 1.28395L1.51169 -9.34181e-05L13.3504 -9.30945e-05L13.3504 11.8386L12.0663 11.7566L12.0663 2.19462L0.910647 13.3503L-2.02496e-05 12.4396Z"
+                                fill="currentColor" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </header>
+        <!--/ End Header -->
+
+        <!-- HERO -->
+        <section
+            class="2xl:pt-24 xl:pt-[85px] lg:pt-20 md:pt-18/.5 sm:pt-[59px] pt-13.5 3xl:pb-25 2xl:pb-[90px] xl:pb-20 lg:pb-17 pb-12.5">
+            <div class="relative w-full lg:min-h-[calc(100vh-90px)] lg:h-full overflow-hidden">
+
+                <!-- Background Video -->
+                <video class="absolute inset-0 w-full h-full object-cover z-0" autoplay muted loop playsinline>
+                    <source src="../video/aerospace.webm" type="video/mp4">
+                </video>
+
+                <!-- Gradient overlay -->
+                <div class="absolute inset-0 bg-linear-to-t from-black/60 to-black/0 z-10"></div>
+
+                <!-- Content area -->
+                <div class="relative z-20">
+                    <div
+                        class="container 2xl:h-[calc(100vh-96px)] xl:h-[calc(100vh-85px)] lg:h-[calc(100vh-80px)] relative">
+                        <div class="flex items-end min-h-[450px] h-full">
+                            <div class="w-full 2xl:pb-15 lg:pb-12.5 pb-9" data-aos="fade-right">
+
+                                <!-- BREADCRUMB -->
+                                <div class="flex items-center gap-3">
+                                    <span class="p2 text-white opacity-60">Home</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <g opacity="0.6">
+                                            <path d="M5 14L12 8L5 2" stroke="#F8F8F8" stroke-linecap="square" />
+                                        </g>
+                                    </svg>
+                                    <span class="p2 text-white">Aerospace & Defense</span>
+                                </div>
+
+                                <h1 class="text-white 2xl:mt-[60px] xl:mt-12.5 md:mt-10 sm:mt-[30px] mt-5">
+                                    Aerospace & Defense
+                                </h1>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Aerospace section -->
+        <section class="relative overflow-hidden">
+            <div class="lg:container lg:px-4 mx-auto">
+                <div class="flex justify-between lg:flex-row flex-col md:gap-10 gap-7">
+                    <!-- Organizational heading -->
+                    <div class="3xl:max-w-[700px] 2xl:max-w-[605px] 1xl:max-w-[585px] xl:max-w-[511px] lg:max-w-[480px] w-full my-auto max-lg:container mx-auto"
+                        data-aos="fade-right">
+                        <div class="w-full my-auto">
+                            <div class="flex flex-col sm:px-0 px-4 lg:py-8">
+                                <div class="flex items-center gap-2.5">
+                                    <span class="dash border border-primary"></span>
+                                    <p class="p2 uppercase">Aerospace</p>
+                                </div>
+                                <h3 class="3xl:mt-[35px] 3xl:mb-[25px] xl:my-7 lg:my-5 mb-[15px] mt-5">
+                                    Navigating Complex <span class="text-primary"> Aerospace </span>& Defense Challenges
+                                </h3>
+                                <p class="p2 3xl:mb-[25px] xl:mb-7 lg:mb-5 mb-[18px]">
+                                    The aerospace and defense industry faces stringent safety Organizations require
+                                    precision, reliability, and innovative solutions to stay ahead in this critical
+                                    sector.
+                                </p>
+                                <ul class="filter-marker mt-0 space-y-2">
+                                    <li class="flex items-start 1xl:gap-2.5 gap-2">
+                                        <p class="p2"><span class="text-black-100 font-bold">Regulatory
+                                                Compliance:</span>
+                                            Meeting strict aerospace and defense regulations while maintaining
+                                            efficiency.
+                                        </p>
+                                    </li>
+                                    <li class="flex items-start 1xl:gap-2.5 gap-2">
+                                        <p class="p2"><span class="text-black-100 font-bold">Technology
+                                                Integration::</span>
+                                            Seamlessly integrating advanced systems across platforms and operations.
+                                        </p>
+                                    </li>
+                                    <li class="flex items-start 1xl:gap-2.5 gap-2">
+                                        <p class="p2"><span class="text-black-100 font-bold">Operational
+                                                Reliability:</span>
+                                            Ensuring mission-critical systems perform flawlessly under pressure.
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="3xl:max-w-[948px] 2xl:max-w-[730px] 1xl:max-w-[700px] lg:max-w-[625px] w-full 3xl:-mr-[180px] 2xl:-mr-[76px] 1xl:-mr-[108px] xl:-mr-[60px] lg:-mr-[105px] md:-mr-[128px] lg:h-auto md:h-[500px] h-[450px]"
+                        data-aos="fade-left">
+                        <img loading="lazy" src="../image/Aerospace.webp" alt="join team"
+                            class="w-full h-full object-cover" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/ End Aerospace section -->
+
+        <!-- Services We Offer section -->
+        <section class="3xl:pb-25 2xl:pb-[90px] xl:pb-20 lg:pb-17 pb-12.5">
+            <div class="bg-purple-100 3xl:py-25 2xl:py-[90px] xl:py-20 lg:py-17 sm:py-12 py-9">
+                <!-- container -->
+                <div class="container">
+                    <!-- sub_title -->
+                    <div
+                        class="flex md:items-center justify-between md:flex-row flex-col w-full gap-[15px] xl:pb-10 lg:pb-7 sm:pb-6 pb-5">
+                        <div class="flex flex-col 2xl:gap-8 1xl:gap-7 gap-5" data-aos="fade-right">
+                            <div class="flex items-center md:gap-[18px] gap-1.5">
+                                <span class="dash border border-primary"></span>
+                                <p class="p2 uppercase">Services We Offer</p>
+                            </div>
+                            <h3>Aerospace & Defense <span class="text-primary">Services</span>
+                            </h3>
+                        </div>
+                        <p class="p2 2xl:max-w-[515px] xl:max-w-[432px] lg:max-w-94 md:max-w-90 w-full"
+                            data-aos="fade-left">
+                            We deliver focused, high-precision solutions built to support the complex needs of aerospace
+                            and defense organizations.
+                        </p>
+                    </div>
+
+                    <!-- grid column -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:gap-[34px] xl:gap-6.5 gap-5">
+                        <!-- Card 1 -->
+                        <div class="bg-white 2xl:p-[30px] xl:p-6 sm:p-5 p-4 rounded-lg shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1)]"
+                            data-aos="fade-up">
+                            <div class="flex items-start xl:gap-[22px] sm:gap-4 gap-3 flex-col">
+                                <div
+                                    class="bg-[#FAF0EB] 2xl:size-[74px] xl:size-17.5 md:size-15 sm:size-14 size-12.5 flex items-center justify-center rounded-full">
+                                    <h4 class="framework-number text-primary">01</h4>
+                                </div>
+                                <div>
+                                    <h5 class="1xl:mb-[15px] sm:mb-[14px] mb-2">
+                                        Systems Integration</h5>
+                                    <p class="p2">
+                                        Unify critical hardware and software for seamless, reliable operations.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="bg-white 2xl:p-[30px] xl:p-6 sm:p-5 p-4 rounded-lg shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1)]"
+                            data-aos="fade-up">
+                            <div class="flex items-start xl:gap-[22px] sm:gap-4 gap-3 flex-col">
+                                <div
+                                    class="bg-[#FAF0EB] 2xl:size-[74px] xl:size-17.5 md:size-15 sm:size-14 size-12.5 flex items-center justify-center rounded-full">
+                                    <h4 class="framework-number text-primary">02</h4>
+                                </div>
+                                <div>
+                                    <h5 class="1xl:mb-[15px] sm:mb-[14px] mb-2">
+                                        Software Development</h5>
+                                    <p class="p2">
+                                        Build secure, high-performance applications for aerospace and defense platforms.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="bg-white 2xl:p-[30px] xl:p-6 sm:p-5 p-4 rounded-lg shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1)]"
+                            data-aos="fade-up">
+                            <div class="flex items-start xl:gap-[22px] sm:gap-4 gap-3 flex-col">
+                                <div
+                                    class="bg-[#FAF0EB] 2xl:size-[74px] xl:size-17.5 md:size-15 sm:size-14 size-12.5 flex items-center justify-center rounded-full">
+                                    <h4 class="framework-number text-primary">03</h4>
+                                </div>
+                                <div>
+                                    <h5 class="1xl:mb-[15px] sm:mb-[14px] mb-2">
+                                        Predictive Maintenance</h5>
+                                    <p class="p2">
+                                        Detect issues early with data-driven insights and reduce operational downtime.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 4 -->
+                        <div class="bg-white 2xl:p-[30px] xl:p-6 sm:p-5 p-4 rounded-lg shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1)]"
+                            data-aos="fade-up">
+                            <div class="flex items-start xl:gap-[22px] sm:gap-4 gap-3 flex-col">
+                                <div
+                                    class="bg-[#FAF0EB] 2xl:size-[74px] xl:size-17.5 md:size-15 sm:size-14 size-12.5 flex items-center justify-center rounded-full">
+                                    <h4 class="framework-number text-primary">04</h4>
+                                </div>
+                                <div>
+                                    <h5 class="1xl:mb-[15px] sm:mb-[14px] mb-2">
+                                        Secure Communication Systems</h5>
+                                    <p class="p2">
+                                        Enable encrypted, real-time communication across mission-critical environments.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 5 -->
+                        <div class="bg-white 2xl:p-[30px] xl:p-6 sm:p-5 p-4 rounded-lg shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1)]"
+                            data-aos="fade-up">
+                            <div class="flex items-start xl:gap-[22px] sm:gap-4 gap-3 flex-col">
+                                <div
+                                    class="bg-[#FAF0EB] 2xl:size-[74px] xl:size-17.5 md:size-15 sm:size-14 size-12.5 flex items-center justify-center rounded-full">
+                                    <h4 class="framework-number text-primary">05</h4>
+                                </div>
+                                <div>
+                                    <h5 class="1xl:mb-[15px] sm:mb-[14px] mb-2">
+                                        Compliance & Safety Engineering</h5>
+                                    <p class="p2">
+                                        Ensure all systems meet strict industry regulations and certification standards.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 6 -->
+                        <div class="bg-white 2xl:p-[30px] xl:p-6 sm:p-5 p-4 rounded-lg shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1)]"
+                            data-aos="fade-up">
+                            <div class="flex items-start xl:gap-[22px] sm:gap-4 gap-3 flex-col">
+                                <div
+                                    class="bg-[#FAF0EB] 2xl:size-[74px] xl:size-17.5 md:size-15 sm:size-14 size-12.5 flex items-center justify-center rounded-full">
+                                    <h4 class="framework-number text-primary">06</h4>
+                                </div>
+                                <div>
+                                    <h5 class="1xl:mb-[15px] sm:mb-[14px] mb-2">
+                                        Data Analytics & Intelligence</h5>
+                                    <p class="p2">
+                                        Transform raw operational data into actionable insights for improved
+                                        decision-making.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/ End Services We Offer section -->
+
+        <!-- How We Work section -->
+        <section class="3xl:pb-25 2xl:pb-[90px] xl:pb-20 lg:pb-17 pb-12.5">
+            <div class="container">
+                <!-- sub_title -->
+                <div
+                    class="flex md:items-center justify-between md:flex-row flex-col w-full gap-[15px] xl:pb-10 lg:pb-7 sm:pb-6 pb-5">
+                    <div class="flex flex-col 2xl:gap-8 1xl:gap-7 gap-5" data-aos="fade-right">
+                        <div class="flex items-center md:gap-[18px] gap-1.5">
+                            <span class="dash border border-primary"></span>
+                            <p class="p2 uppercase">How We Work</p>
+                        </div>
+                        <h3>A Clear and Reliable <span class="text-primary">Workflow</span>
+                        </h3>
+                    </div>
+                    <p class="p2 2xl:max-w-[515px] xl:max-w-[432px] lg:max-w-94 md:max-w-90 w-full"
+                        data-aos="fade-left">
+                        Our streamlined process ensures precision, compliance, and on-time delivery for every aerospace
+                        and defense project.
+                    </p>
+                </div>
+
+                <div
+                    class="grid lg:grid-cols-4 min-[440px]:grid-cols-2 grid-cols-1 w-full justify-center 2xl:gap-8 1xl:gap-7 xl:gap-5.5 gap-[14px] success-projects flex-wrap">
+                    <div class="flex flex-col items-end justify-end gap-3" data-aos="fade-up">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="189" height="83" viewBox="0 0 189 83" fill="none"
+                            class="shrink-0 lg:block hidden">
+                            <path
+                                d="M78.7606 26.0764L78.4641 25.3875L78.7606 26.0764ZM188.09 6.3048C188.397 6.02648 188.42 5.55217 188.142 5.24539L183.607 0.246087C183.328 -0.0606952 182.854 -0.0837772 182.547 0.194537C182.24 0.472852 182.217 0.947164 182.496 1.25395L186.527 5.69777L182.083 9.7292C181.777 10.0075 181.753 10.4818 182.032 10.7886C182.31 11.0954 182.784 11.1185 183.091 10.8402L188.09 6.3048ZM0.577464 82.3039C1.15505 82.7823 1.15503 82.7823 1.15502 82.7824C1.15502 82.7824 1.15501 82.7824 1.155 82.7824C1.155 82.7824 1.155 82.7824 1.15502 82.7824C1.15505 82.7823 1.15512 82.7822 1.15523 82.7821C1.15544 82.7818 1.15582 82.7814 1.15636 82.7807C1.15743 82.7795 1.15914 82.7774 1.16148 82.7746C1.16616 82.769 1.17338 82.7603 1.18313 82.7487C1.20263 82.7254 1.23226 82.6901 1.27194 82.6432C1.3513 82.5493 1.4709 82.4089 1.63027 82.2244C1.94901 81.8554 2.42679 81.3104 3.05984 80.6099L2.50338 80.107L1.94693 79.6042C1.30613 80.3133 0.820954 80.8667 0.495194 81.2438C0.332313 81.4323 0.20928 81.5768 0.126572 81.6746C0.085217 81.7235 0.0539425 81.7607 0.0328078 81.786C0.0222404 81.7986 0.0142073 81.8082 0.0087167 81.8148C0.00597175 81.8181 0.00386239 81.8207 0.00238906 81.8224C0.00165239 81.8233 0.00107491 81.824 0.000656213 81.8245C0.000447209 81.8248 0.00027828 81.825 0.000148705 81.8251C8.39169e-05 81.8252 2.89809e-05 81.8253 -1.6103e-05 81.8253C-3.82837e-05 81.8254 -6.45409e-05 81.8254 -7.59925e-05 81.8254C-9.90779e-05 81.8254 -0.000120409 81.8255 0.577464 82.3039ZM5.86284 76.5153L6.4027 77.0359C7.58388 75.8111 8.95895 74.421 10.5223 72.8957L9.99859 72.3588L9.47484 71.822C7.90006 73.3584 6.51426 74.7594 5.32298 75.9947L5.86284 76.5153ZM13.5449 68.978L14.0563 69.5267C15.4034 68.2712 16.8512 66.9533 18.3976 65.5853L17.9006 65.0236L17.4037 64.4619C15.8473 65.8387 14.3898 67.1653 13.0336 68.4294L13.5449 68.978ZM21.6127 61.8085L22.0978 62.3805C23.5348 61.162 25.0412 59.9141 26.6159 58.6443L26.1451 58.0605L25.6743 57.4767C24.0897 58.7545 22.5737 60.0102 21.1277 61.2365L21.6127 61.8085ZM29.9906 55.0237L30.4494 55.617C31.9557 54.4522 33.5159 53.2745 35.129 52.0892L34.6849 51.4848L34.2408 50.8805C32.6176 52.0732 31.0476 53.2583 29.5318 54.4304L29.9906 55.0237ZM38.6714 48.6181L39.103 49.2315C40.6685 48.1301 42.2783 47.0258 43.9317 45.9229L43.5155 45.299L43.0993 44.6751C41.4353 45.785 39.8152 46.8963 38.2398 48.0047L38.6714 48.6181ZM47.6204 42.6224L48.0235 43.2549C49.6483 42.2196 51.3114 41.1886 53.0119 40.1653L52.6252 39.5227L52.2385 38.8801C50.5267 39.9101 48.8529 40.9479 47.2174 41.9899L47.6204 42.6224ZM56.8541 37.0397L57.2268 37.6905C58.9012 36.7317 60.6089 35.7826 62.3495 34.846L61.9941 34.1855L61.6387 33.5251C59.8863 34.468 58.167 35.4236 56.4814 36.3888L56.8541 37.0397ZM66.3352 31.9119L66.6757 32.5801C68.3977 31.7027 70.1495 30.8392 71.9307 29.9923L71.6086 29.315L71.2866 28.6377C69.4928 29.4906 67.7286 30.3601 65.9947 31.2436L66.3352 31.9119ZM76.0592 27.2617L76.3654 27.9464C77.2558 27.5482 78.153 27.1544 79.057 26.7653L78.7606 26.0764L78.4641 25.3875C77.5535 25.7794 76.6498 26.176 75.753 26.5771L76.0592 27.2617ZM78.7606 26.0764L79.057 26.7653C79.9892 26.3642 80.9219 25.9709 81.8549 25.5853L81.5685 24.8921L81.282 24.199C80.3424 24.5874 79.403 24.9835 78.4641 25.3875L78.7606 26.0764ZM86.2755 23.0111L86.5457 23.7108C88.4421 22.9784 90.3376 22.2767 92.2297 21.6044L91.9785 20.8977L91.7274 20.191C89.823 20.8677 87.9147 21.5741 86.0053 22.3115L86.2755 23.0111ZM96.7735 19.2528L97.0092 19.9648C98.9422 19.325 100.869 18.7151 102.788 18.1336L102.57 17.4159L102.352 16.6981C100.422 17.2832 98.4832 17.8969 96.5379 18.5408L96.7735 19.2528ZM107.436 15.9951L107.639 16.7172C109.602 16.1654 111.554 15.6428 113.491 15.1478L113.305 14.4212L113.119 13.6945C111.171 14.1924 109.208 14.7181 107.233 15.2731L107.436 15.9951ZM118.226 13.2137L118.398 13.9437C120.394 13.4741 122.371 13.0333 124.326 12.6195L124.17 11.8857L124.015 11.152C122.05 11.5681 120.062 12.0113 118.055 12.4836L118.226 13.2137ZM129.141 10.8807L129.283 11.6171C131.303 11.2277 133.294 10.8668 135.253 10.5324L135.127 9.79309L135 9.05379C133.031 9.38997 131.03 9.75278 128.999 10.1443L129.141 10.8807ZM140.127 8.98432L140.24 9.72571C142.286 9.41297 144.291 9.12893 146.248 8.87103L146.15 8.12746L146.052 7.38389C144.085 7.64309 142.07 7.92858 140.014 8.24293L140.127 8.98432ZM151.187 7.50747L151.272 8.25261C153.344 8.01552 155.353 7.80779 157.292 7.62596L157.222 6.87924L157.152 6.13252C155.203 6.31527 153.184 6.52405 151.102 6.76234L151.187 7.50747ZM162.29 6.44788L162.347 7.1957C164.475 7.03317 166.496 6.90226 168.4 6.79734L168.359 6.04848L168.318 5.29961C166.404 5.40509 164.371 5.53668 162.233 5.70006L162.29 6.44788ZM173.409 5.81664L173.437 6.56614C175.709 6.48314 177.744 6.4383 179.516 6.4175L179.507 5.66755L179.498 4.9176C177.715 4.93855 175.667 4.98367 173.382 5.06714L173.409 5.81664ZM184.58 5.67021L184.57 6.42013C185.542 6.43403 186.289 6.45369 186.792 6.46985C187.044 6.47792 187.234 6.48511 187.361 6.49027C187.425 6.49284 187.473 6.49491 187.504 6.49631C187.52 6.49702 187.532 6.49756 187.539 6.49792C187.543 6.4981 187.546 6.49824 187.548 6.49832C187.549 6.49836 187.549 6.49839 187.55 6.49841C187.55 6.49842 187.55 6.49842 187.55 6.49843C187.55 6.49843 187.55 6.49843 187.55 6.49843C187.55 6.49843 187.55 6.49843 187.55 6.49843C187.55 6.49843 187.55 6.49843 187.587 5.74932C187.623 5.0002 187.623 5.0002 187.623 5.0002C187.623 5.0002 187.623 5.0002 187.623 5.00019C187.623 5.00019 187.623 5.00019 187.623 5.00019C187.622 5.00017 187.622 5.00016 187.622 5.00015C187.621 5.00012 187.62 5.00007 187.619 5.00002C187.617 4.99991 187.614 4.99975 187.609 4.99955C187.601 4.99914 187.588 4.99856 187.571 4.99781C187.537 4.99631 187.488 4.99416 187.422 4.99149C187.291 4.98618 187.096 4.97883 186.84 4.97062C186.329 4.95419 185.573 4.93431 184.591 4.92029L184.58 5.67021ZM78.7606 26.0764L78.4641 25.3875L78.7606 26.0764ZM188.09 6.3048C188.397 6.02648 188.42 5.55217 188.142 5.24539L183.607 0.246087C183.328 -0.0606952 182.854 -0.0837772 182.547 0.194537C182.24 0.472852 182.217 0.947164 182.496 1.25395L186.527 5.69777L182.083 9.7292C181.777 10.0075 181.753 10.4818 182.032 10.7886C182.31 11.0954 182.784 11.1185 183.091 10.8402L188.09 6.3048ZM0.577464 82.3039C1.15505 82.7823 1.15503 82.7823 1.15502 82.7824C1.15502 82.7824 1.15501 82.7824 1.155 82.7824C1.155 82.7824 1.155 82.7824 1.15502 82.7824C1.15505 82.7823 1.15512 82.7822 1.15523 82.7821C1.15544 82.7818 1.15582 82.7814 1.15636 82.7807C1.15743 82.7795 1.15914 82.7774 1.16148 82.7746C1.16616 82.769 1.17338 82.7603 1.18313 82.7487C1.20263 82.7254 1.23226 82.6901 1.27194 82.6432C1.3513 82.5493 1.4709 82.4089 1.63027 82.2244C1.94901 81.8554 2.42679 81.3104 3.05984 80.6099L2.50338 80.107L1.94693 79.6042C1.30613 80.3133 0.820954 80.8667 0.495194 81.2438C0.332313 81.4323 0.20928 81.5768 0.126572 81.6746C0.085217 81.7235 0.0539425 81.7607 0.0328078 81.786C0.0222404 81.7986 0.0142073 81.8082 0.0087167 81.8148C0.00597175 81.8181 0.00386239 81.8207 0.00238906 81.8224C0.00165239 81.8233 0.00107491 81.824 0.000656213 81.8245C0.000447209 81.8248 0.00027828 81.825 0.000148705 81.8251C8.39169e-05 81.8252 2.89809e-05 81.8253 -1.6103e-05 81.8253C-3.82837e-05 81.8254 -6.45409e-05 81.8254 -7.59925e-05 81.8254C-9.90779e-05 81.8254 -0.000120409 81.8255 0.577464 82.3039ZM5.86284 76.5153L6.4027 77.0359C7.58388 75.8111 8.95895 74.421 10.5223 72.8957L9.99859 72.3588L9.47484 71.822C7.90006 73.3584 6.51426 74.7594 5.32298 75.9947L5.86284 76.5153ZM13.5449 68.978L14.0563 69.5267C15.4034 68.2712 16.8512 66.9533 18.3976 65.5853L17.9006 65.0236L17.4037 64.4619C15.8473 65.8387 14.3898 67.1653 13.0336 68.4294L13.5449 68.978ZM21.6127 61.8085L22.0978 62.3805C23.5348 61.162 25.0412 59.9141 26.6159 58.6443L26.1451 58.0605L25.6743 57.4767C24.0897 58.7545 22.5737 60.0102 21.1277 61.2365L21.6127 61.8085ZM29.9906 55.0237L30.4494 55.617C31.9557 54.4522 33.5159 53.2745 35.129 52.0892L34.6849 51.4848L34.2408 50.8805C32.6176 52.0732 31.0476 53.2583 29.5318 54.4304L29.9906 55.0237ZM38.6714 48.6181L39.103 49.2315C40.6685 48.1301 42.2783 47.0258 43.9317 45.9229L43.5155 45.299L43.0993 44.6751C41.4353 45.785 39.8152 46.8963 38.2398 48.0047L38.6714 48.6181ZM47.6204 42.6224L48.0235 43.2549C49.6483 42.2196 51.3114 41.1886 53.0119 40.1653L52.6252 39.5227L52.2385 38.8801C50.5267 39.9101 48.8529 40.9479 47.2174 41.9899L47.6204 42.6224ZM56.8541 37.0397L57.2268 37.6905C58.9012 36.7317 60.6089 35.7826 62.3495 34.846L61.9941 34.1855L61.6387 33.5251C59.8863 34.468 58.167 35.4236 56.4814 36.3888L56.8541 37.0397ZM66.3352 31.9119L66.6757 32.5801C68.3977 31.7027 70.1495 30.8392 71.9307 29.9923L71.6086 29.315L71.2866 28.6377C69.4928 29.4906 67.7286 30.3601 65.9947 31.2436L66.3352 31.9119ZM76.0592 27.2617L76.3654 27.9464C77.2558 27.5482 78.153 27.1544 79.057 26.7653L78.7606 26.0764L78.4641 25.3875C77.5535 25.7794 76.6498 26.176 75.753 26.5771L76.0592 27.2617ZM78.7606 26.0764L79.057 26.7653C79.9892 26.3642 80.9219 25.9709 81.8549 25.5853L81.5685 24.8921L81.282 24.199C80.3424 24.5874 79.403 24.9835 78.4641 25.3875L78.7606 26.0764ZM86.2755 23.0111L86.5457 23.7108C88.4421 22.9784 90.3376 22.2767 92.2297 21.6044L91.9785 20.8977L91.7274 20.191C89.823 20.8677 87.9147 21.5741 86.0053 22.3115L86.2755 23.0111ZM96.7735 19.2528L97.0092 19.9648C98.9422 19.325 100.869 18.7151 102.788 18.1336L102.57 17.4159L102.352 16.6981C100.422 17.2832 98.4832 17.8969 96.5379 18.5408L96.7735 19.2528ZM107.436 15.9951L107.639 16.7172C109.602 16.1654 111.554 15.6428 113.491 15.1478L113.305 14.4212L113.119 13.6945C111.171 14.1924 109.208 14.7181 107.233 15.2731L107.436 15.9951ZM118.226 13.2137L118.398 13.9437C120.394 13.4741 122.371 13.0333 124.326 12.6195L124.17 11.8857L124.015 11.152C122.05 11.5681 120.062 12.0113 118.055 12.4836L118.226 13.2137ZM129.141 10.8807L129.283 11.6171C131.303 11.2277 133.294 10.8668 135.253 10.5324L135.127 9.79309L135 9.05379C133.031 9.38997 131.03 9.75278 128.999 10.1443L129.141 10.8807ZM140.127 8.98432L140.24 9.72571C142.286 9.41297 144.291 9.12893 146.248 8.87103L146.15 8.12746L146.052 7.38389C144.085 7.64309 142.07 7.92858 140.014 8.24293L140.127 8.98432ZM151.187 7.50747L151.272 8.25261C153.344 8.01552 155.353 7.80779 157.292 7.62596L157.222 6.87924L157.152 6.13252C155.203 6.31527 153.184 6.52405 151.102 6.76234L151.187 7.50747ZM162.29 6.44788L162.347 7.1957C164.475 7.03317 166.496 6.90226 168.4 6.79734L168.359 6.04848L168.318 5.29961C166.404 5.40509 164.371 5.53668 162.233 5.70006L162.29 6.44788ZM173.409 5.81664L173.437 6.56614C175.709 6.48314 177.744 6.4383 179.516 6.4175L179.507 5.66755L179.498 4.9176C177.715 4.93855 175.667 4.98367 173.382 5.06714L173.409 5.81664ZM184.58 5.67021L184.57 6.42013C185.542 6.43403 186.289 6.45369 186.792 6.46985C187.044 6.47792 187.234 6.48511 187.361 6.49027C187.425 6.49284 187.473 6.49491 187.504 6.49631C187.52 6.49702 187.532 6.49756 187.539 6.49792C187.543 6.4981 187.546 6.49824 187.548 6.49832C187.549 6.49836 187.549 6.49839 187.55 6.49841C187.55 6.49842 187.55 6.49842 187.55 6.49843C187.55 6.49843 187.55 6.49843 187.55 6.49843C187.55 6.49843 187.55 6.49843 187.55 6.49843C187.55 6.49843 187.55 6.49843 187.587 5.74932C187.623 5.0002 187.623 5.0002 187.623 5.0002C187.623 5.0002 187.623 5.0002 187.623 5.00019C187.623 5.00019 187.623 5.00019 187.623 5.00019C187.622 5.00017 187.622 5.00016 187.622 5.00015C187.621 5.00012 187.62 5.00007 187.619 5.00002C187.617 4.99991 187.614 4.99975 187.609 4.99955C187.601 4.99914 187.588 4.99856 187.571 4.99781C187.537 4.99631 187.488 4.99416 187.422 4.99149C187.291 4.98618 187.096 4.97883 186.84 4.97062C186.329 4.95419 185.573 4.93431 184.591 4.92029L184.58 5.67021Z"
+                                fill="black" />
+                        </svg>
+                        <div
+                            class="3xl:p-[30px] 2xl:p-8 xl:p-6 sm:p-5 py-5 p-4 bg-white border border-gray-100 w-full lg:h-fit h-full">
+                            <h4 class="text-primary big-font">01</h4>
+                            <h6 class="3xl:mt-7.5 1xl:mt-5 mt-4">Discovery & Analysis</h6>
+                            <span class="block w-[60px] border 3xl:my-7.5 1xl:my-5 my-4"></span>
+                            <p class="p2 text-black-100">
+                                We assess requirements, compliance needs, and operational goals to define a clear
+                                project scope.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col items-end justify-end gap-3" data-aos="fade-up">
+                        <div
+                            class="3xl:p-[30px] 2xl:p-8 xl:p-6 sm:p-5 py-5 p-4 bg-white border border-gray-100 w-full lg:h-fit h-full">
+                            <h4 class="text-primary big-font">02</h4>
+                            <h6 class="3xl:mt-7.5 1xl:mt-5 mt-4">Planning & Architecture</h6>
+                            <span class="block w-[60px] border 3xl:my-7.5 1xl:my-5 my-4"></span>
+                            <p class="p2 text-black-100">
+                                Create technical architecture, solution blueprint, and compliance-aligned development
+                                roadmap.
+                            </p>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="189" height="83" viewBox="0 0 189 83" fill="none"
+                            class="shrink-0 lg:block hidden">
+                            <path
+                                d="M78.7606 56.706L78.4641 57.3949L78.7606 56.706ZM188.09 76.4776C188.397 76.7559 188.42 77.2302 188.142 77.537L183.607 82.5363C183.328 82.8431 182.854 82.8662 182.547 82.5879C182.24 82.3096 182.217 81.8352 182.496 81.5285L186.527 77.0846L182.083 73.0532C181.777 72.7749 181.753 72.3006 182.032 71.9938C182.31 71.687 182.784 71.6639 183.091 71.9423L188.09 76.4776ZM0.577464 0.478517C1.15505 8.61858e-05 1.15503 6.71043e-05 1.15502 4.93212e-05C1.15502 4.8655e-05 1.15501 3.39468e-05 1.155 3.08606e-05C1.155 2.46883e-05 1.155 3.07816e-05 1.15502 4.91405e-05C1.15505 8.58697e-05 1.15512 0.000168109 1.15523 0.000301175C1.15544 0.000563755 1.15582 0.00101899 1.15636 0.00166319C1.15743 0.00295514 1.15914 0.00500831 1.16148 0.00782167C1.16616 0.0134466 1.17338 0.0221052 1.18313 0.0337554C1.20263 0.0570596 1.23226 0.0923322 1.27194 0.139256C1.3513 0.233105 1.4709 0.37355 1.63027 0.558019C1.94901 0.926962 2.42679 1.47199 3.05984 2.17251L2.50338 2.67536L1.94693 3.17821C1.30613 2.4691 0.820954 1.91571 0.495194 1.53863C0.332313 1.3501 0.20928 1.20564 0.126572 1.10783C0.085217 1.05893 0.0539425 1.02169 0.0328078 0.996435C0.0222404 0.983807 0.0142073 0.974177 0.0087167 0.967583C0.00597175 0.964285 0.00386239 0.961746 0.00238906 0.959972C0.00165239 0.959085 0.00107491 0.958389 0.000656213 0.957886C0.000447209 0.957634 0.00027828 0.957428 0.000148705 0.957272C8.39169e-05 0.957194 2.89809e-05 0.957129 -1.6103e-05 0.957075C-3.82837e-05 0.957047 -6.45409e-05 0.957016 -7.59925e-05 0.957003C-9.90779e-05 0.956973 -0.000120409 0.956948 0.577464 0.478517ZM5.86284 6.26709L6.4027 5.74646C7.58388 6.97126 8.95895 8.36142 10.5223 9.88674L9.99859 10.4236L9.47484 10.9604C7.90006 9.42397 6.51426 8.02299 5.32298 6.78772L5.86284 6.26709ZM13.5449 13.8044L14.0563 13.2557C15.4034 14.5113 16.8512 15.8291 18.3976 17.1971L17.9006 17.7588L17.4037 18.3206C15.8473 16.9437 14.3898 15.6171 13.0336 14.3531L13.5449 13.8044ZM21.6127 20.9739L22.0978 20.4019C23.5348 21.6204 25.0412 22.8683 26.6159 24.1381L26.1451 24.7219L25.6743 25.3058C24.0897 24.028 22.5737 22.7722 21.1277 21.5459L21.6127 20.9739ZM29.9906 27.7587L30.4494 27.1654C31.9557 28.3302 33.5159 29.5079 35.129 30.6932L34.6849 31.2976L34.2408 31.902C32.6176 30.7092 31.0476 29.5241 29.5318 28.352L29.9906 27.7587ZM38.6714 34.1643L39.103 33.5509C40.6685 34.6523 42.2783 35.7566 43.9317 36.8595L43.5155 37.4834L43.0993 38.1074C41.4353 36.9974 39.8152 35.8861 38.2398 34.7777L38.6714 34.1643ZM47.6204 40.16L48.0235 39.5275C49.6483 40.5628 51.3114 41.5938 53.0119 42.6171L52.6252 43.2597L52.2385 43.9023C50.5267 42.8723 48.8529 41.8345 47.2174 40.7925L47.6204 40.16ZM56.8541 45.7427L57.2268 45.0919C58.9012 46.0507 60.6089 46.9999 62.3495 47.9364L61.9941 48.5969L61.6387 49.2573C59.8863 48.3144 58.167 47.3588 56.4814 46.3936L56.8541 45.7427ZM66.3352 50.8705L66.6757 50.2023C68.3977 51.0797 70.1495 51.9432 71.9307 52.7901L71.6086 53.4674L71.2866 54.1447C69.4928 53.2918 67.7286 52.4223 65.9947 51.5388L66.3352 50.8705ZM76.0592 55.5207L76.3654 54.836C77.2558 55.2342 78.153 55.628 79.057 56.0171L78.7606 56.706L78.4641 57.3949C77.5535 57.003 76.6498 56.6064 75.753 56.2053L76.0592 55.5207ZM78.7606 56.706L79.057 56.0171C79.9892 56.4182 80.9219 56.8115 81.8549 57.1972L81.5685 57.8903L81.282 58.5834C80.3424 58.195 79.403 57.7989 78.4641 57.3949L78.7606 56.706ZM86.2755 59.7713L86.5457 59.0716C88.4421 59.804 90.3376 60.5057 92.2297 61.178L91.9785 61.8847L91.7274 62.5914C89.823 61.9147 87.9147 61.2083 86.0053 60.4709L86.2755 59.7713ZM96.7735 63.5296L97.0092 62.8176C98.9422 63.4574 100.869 64.0673 102.788 64.6488L102.57 65.3666L102.352 66.0843C100.422 65.4992 98.4832 64.8855 96.5379 64.2416L96.7735 63.5296ZM107.436 66.7873L107.639 66.0653C109.602 66.617 111.554 67.1396 113.491 67.6346L113.305 68.3612L113.119 69.0879C111.171 68.59 109.208 68.0643 107.233 67.5093L107.436 66.7873ZM118.226 69.5688L118.398 68.8387C120.394 69.3083 122.371 69.7491 124.326 70.163L124.17 70.8967L124.015 71.6304C122.05 71.2144 120.062 70.7711 118.055 70.2988L118.226 69.5688ZM129.141 71.9017L129.283 71.1653C131.303 71.5547 133.294 71.9156 135.253 72.25L135.127 72.9893L135 73.7286C133.031 73.3924 131.03 73.0296 128.999 72.6382L129.141 71.9017ZM140.127 73.7981L140.24 73.0567C142.286 73.3694 144.291 73.6535 146.248 73.9114L146.15 74.655L146.052 75.3985C144.085 75.1393 142.07 74.8538 140.014 74.5395L140.127 73.7981ZM151.187 75.2749L151.272 74.5298C153.344 74.7669 155.353 74.9746 157.292 75.1564L157.222 75.9032L157.152 76.6499C155.203 76.4671 153.184 76.2584 151.102 76.0201L151.187 75.2749ZM162.29 76.3345L162.347 75.5867C164.475 75.7492 166.496 75.8801 168.4 75.9851L168.359 76.7339L168.318 77.4828C166.404 77.3773 164.371 77.2457 162.233 77.0824L162.29 76.3345ZM173.409 76.9658L173.437 76.2163C175.709 76.2993 177.744 76.3441 179.516 76.3649L179.507 77.1149L179.498 77.8648C177.715 77.8439 175.667 77.7987 173.382 77.7153L173.409 76.9658ZM184.58 77.1122L184.57 76.3623C185.542 76.3484 186.289 76.3287 186.792 76.3126C187.044 76.3045 187.234 76.2973 187.361 76.2921C187.425 76.2896 187.473 76.2875 187.504 76.2861C187.52 76.2854 187.532 76.2848 187.539 76.2845C187.543 76.2843 187.546 76.2842 187.548 76.2841C187.549 76.284 187.549 76.284 187.55 76.284C187.55 76.284 187.55 76.284 187.55 76.284C187.55 76.284 187.55 76.284 187.55 76.284C187.55 76.284 187.55 76.284 187.55 76.284C187.55 76.284 187.55 76.284 187.587 77.0331C187.623 77.7822 187.623 77.7822 187.623 77.7822C187.623 77.7822 187.623 77.7822 187.623 77.7822C187.623 77.7822 187.623 77.7822 187.623 77.7822C187.622 77.7822 187.622 77.7822 187.622 77.7823C187.621 77.7823 187.62 77.7823 187.619 77.7824C187.617 77.7825 187.614 77.7827 187.609 77.7829C187.601 77.7833 187.588 77.7839 187.571 77.7846C187.537 77.7861 187.488 77.7883 187.422 77.7909C187.291 77.7962 187.096 77.8036 186.84 77.8118C186.329 77.8282 185.573 77.8481 184.591 77.8621L184.58 77.1122ZM78.7606 56.706L78.4641 57.3949L78.7606 56.706ZM188.09 76.4776C188.397 76.7559 188.42 77.2302 188.142 77.537L183.607 82.5363C183.328 82.8431 182.854 82.8662 182.547 82.5879C182.24 82.3096 182.217 81.8352 182.496 81.5285L186.527 77.0846L182.083 73.0532C181.777 72.7749 181.753 72.3006 182.032 71.9938C182.31 71.687 182.784 71.6639 183.091 71.9423L188.09 76.4776ZM0.577464 0.478517C1.15505 8.61858e-05 1.15503 6.71043e-05 1.15502 4.93212e-05C1.15502 4.8655e-05 1.15501 3.39468e-05 1.155 3.08606e-05C1.155 2.46883e-05 1.155 3.07816e-05 1.15502 4.91405e-05C1.15505 8.58697e-05 1.15512 0.000168109 1.15523 0.000301175C1.15544 0.000563755 1.15582 0.00101899 1.15636 0.00166319C1.15743 0.00295514 1.15914 0.00500831 1.16148 0.00782167C1.16616 0.0134466 1.17338 0.0221052 1.18313 0.0337554C1.20263 0.0570596 1.23226 0.0923322 1.27194 0.139256C1.3513 0.233105 1.4709 0.37355 1.63027 0.558019C1.94901 0.926962 2.42679 1.47199 3.05984 2.17251L2.50338 2.67536L1.94693 3.17821C1.30613 2.4691 0.820954 1.91571 0.495194 1.53863C0.332313 1.3501 0.20928 1.20564 0.126572 1.10783C0.085217 1.05893 0.0539425 1.02169 0.0328078 0.996435C0.0222404 0.983807 0.0142073 0.974177 0.0087167 0.967583C0.00597175 0.964285 0.00386239 0.961746 0.00238906 0.959972C0.00165239 0.959085 0.00107491 0.958389 0.000656213 0.957886C0.000447209 0.957634 0.00027828 0.957428 0.000148705 0.957272C8.39169e-05 0.957194 2.89809e-05 0.957129 -1.6103e-05 0.957075C-3.82837e-05 0.957047 -6.45409e-05 0.957016 -7.59925e-05 0.957003C-9.90779e-05 0.956973 -0.000120409 0.956948 0.577464 0.478517ZM5.86284 6.26709L6.4027 5.74646C7.58388 6.97126 8.95895 8.36142 10.5223 9.88674L9.99859 10.4236L9.47484 10.9604C7.90006 9.42397 6.51426 8.02299 5.32298 6.78772L5.86284 6.26709ZM13.5449 13.8044L14.0563 13.2557C15.4034 14.5113 16.8512 15.8291 18.3976 17.1971L17.9006 17.7588L17.4037 18.3206C15.8473 16.9437 14.3898 15.6171 13.0336 14.3531L13.5449 13.8044ZM21.6127 20.9739L22.0978 20.4019C23.5348 21.6204 25.0412 22.8683 26.6159 24.1381L26.1451 24.7219L25.6743 25.3058C24.0897 24.028 22.5737 22.7722 21.1277 21.5459L21.6127 20.9739ZM29.9906 27.7587L30.4494 27.1654C31.9557 28.3302 33.5159 29.5079 35.129 30.6932L34.6849 31.2976L34.2408 31.902C32.6176 30.7092 31.0476 29.5241 29.5318 28.352L29.9906 27.7587ZM38.6714 34.1643L39.103 33.5509C40.6685 34.6523 42.2783 35.7566 43.9317 36.8595L43.5155 37.4834L43.0993 38.1074C41.4353 36.9974 39.8152 35.8861 38.2398 34.7777L38.6714 34.1643ZM47.6204 40.16L48.0235 39.5275C49.6483 40.5628 51.3114 41.5938 53.0119 42.6171L52.6252 43.2597L52.2385 43.9023C50.5267 42.8723 48.8529 41.8345 47.2174 40.7925L47.6204 40.16ZM56.8541 45.7427L57.2268 45.0919C58.9012 46.0507 60.6089 46.9999 62.3495 47.9364L61.9941 48.5969L61.6387 49.2573C59.8863 48.3144 58.167 47.3588 56.4814 46.3936L56.8541 45.7427ZM66.3352 50.8705L66.6757 50.2023C68.3977 51.0797 70.1495 51.9432 71.9307 52.7901L71.6086 53.4674L71.2866 54.1447C69.4928 53.2918 67.7286 52.4223 65.9947 51.5388L66.3352 50.8705ZM76.0592 55.5207L76.3654 54.836C77.2558 55.2342 78.153 55.628 79.057 56.0171L78.7606 56.706L78.4641 57.3949C77.5535 57.003 76.6498 56.6064 75.753 56.2053L76.0592 55.5207ZM78.7606 56.706L79.057 56.0171C79.9892 56.4182 80.9219 56.8115 81.8549 57.1972L81.5685 57.8903L81.282 58.5834C80.3424 58.195 79.403 57.7989 78.4641 57.3949L78.7606 56.706ZM86.2755 59.7713L86.5457 59.0716C88.4421 59.804 90.3376 60.5057 92.2297 61.178L91.9785 61.8847L91.7274 62.5914C89.823 61.9147 87.9147 61.2083 86.0053 60.4709L86.2755 59.7713ZM96.7735 63.5296L97.0092 62.8176C98.9422 63.4574 100.869 64.0673 102.788 64.6488L102.57 65.3666L102.352 66.0843C100.422 65.4992 98.4832 64.8855 96.5379 64.2416L96.7735 63.5296ZM107.436 66.7873L107.639 66.0653C109.602 66.617 111.554 67.1396 113.491 67.6346L113.305 68.3612L113.119 69.0879C111.171 68.59 109.208 68.0643 107.233 67.5093L107.436 66.7873ZM118.226 69.5688L118.398 68.8387C120.394 69.3083 122.371 69.7491 124.326 70.163L124.17 70.8967L124.015 71.6304C122.05 71.2144 120.062 70.7711 118.055 70.2988L118.226 69.5688ZM129.141 71.9017L129.283 71.1653C131.303 71.5547 133.294 71.9156 135.253 72.25L135.127 72.9893L135 73.7286C133.031 73.3924 131.03 73.0296 128.999 72.6382L129.141 71.9017ZM140.127 73.7981L140.24 73.0567C142.286 73.3694 144.291 73.6535 146.248 73.9114L146.15 74.655L146.052 75.3985C144.085 75.1393 142.07 74.8538 140.014 74.5395L140.127 73.7981ZM151.187 75.2749L151.272 74.5298C153.344 74.7669 155.353 74.9746 157.292 75.1564L157.222 75.9032L157.152 76.6499C155.203 76.4671 153.184 76.2584 151.102 76.0201L151.187 75.2749ZM162.29 76.3345L162.347 75.5867C164.475 75.7492 166.496 75.8801 168.4 75.9851L168.359 76.7339L168.318 77.4828C166.404 77.3773 164.371 77.2457 162.233 77.0824L162.29 76.3345ZM173.409 76.9658L173.437 76.2163C175.709 76.2993 177.744 76.3441 179.516 76.3649L179.507 77.1149L179.498 77.8648C177.715 77.8439 175.667 77.7987 173.382 77.7153L173.409 76.9658ZM184.58 77.1122L184.57 76.3623C185.542 76.3484 186.289 76.3287 186.792 76.3126C187.044 76.3045 187.234 76.2973 187.361 76.2921C187.425 76.2896 187.473 76.2875 187.504 76.2861C187.52 76.2854 187.532 76.2848 187.539 76.2845C187.543 76.2843 187.546 76.2842 187.548 76.2841C187.549 76.284 187.549 76.284 187.55 76.284C187.55 76.284 187.55 76.284 187.55 76.284C187.55 76.284 187.55 76.284 187.55 76.284C187.55 76.284 187.55 76.284 187.55 76.284C187.55 76.284 187.55 76.284 187.587 77.0331C187.623 77.7822 187.623 77.7822 187.623 77.7822C187.623 77.7822 187.623 77.7822 187.623 77.7822C187.623 77.7822 187.623 77.7822 187.623 77.7822C187.622 77.7822 187.622 77.7822 187.622 77.7823C187.621 77.7823 187.62 77.7823 187.619 77.7824C187.617 77.7825 187.614 77.7827 187.609 77.7829C187.601 77.7833 187.588 77.7839 187.571 77.7846C187.537 77.7861 187.488 77.7883 187.422 77.7909C187.291 77.7962 187.096 77.8036 186.84 77.8118C186.329 77.8282 185.573 77.8481 184.591 77.8621L184.58 77.1122Z"
+                                fill="black" />
+                        </svg>
+                    </div>
+
+                    <div class="flex flex-col items-end justify-end gap-3" data-aos="fade-up">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="189" height="83" viewBox="0 0 189 83" fill="none"
+                            class="shrink-0 lg:block hidden">
+                            <path
+                                d="M78.7606 26.0764L78.4641 25.3875L78.7606 26.0764ZM188.09 6.3048C188.397 6.02648 188.42 5.55217 188.142 5.24539L183.607 0.246087C183.328 -0.0606952 182.854 -0.0837772 182.547 0.194537C182.24 0.472852 182.217 0.947164 182.496 1.25395L186.527 5.69777L182.083 9.7292C181.777 10.0075 181.753 10.4818 182.032 10.7886C182.31 11.0954 182.784 11.1185 183.091 10.8402L188.09 6.3048ZM0.577464 82.3039C1.15505 82.7823 1.15503 82.7823 1.15502 82.7824C1.15502 82.7824 1.15501 82.7824 1.155 82.7824C1.155 82.7824 1.155 82.7824 1.15502 82.7824C1.15505 82.7823 1.15512 82.7822 1.15523 82.7821C1.15544 82.7818 1.15582 82.7814 1.15636 82.7807C1.15743 82.7795 1.15914 82.7774 1.16148 82.7746C1.16616 82.769 1.17338 82.7603 1.18313 82.7487C1.20263 82.7254 1.23226 82.6901 1.27194 82.6432C1.3513 82.5493 1.4709 82.4089 1.63027 82.2244C1.94901 81.8554 2.42679 81.3104 3.05984 80.6099L2.50338 80.107L1.94693 79.6042C1.30613 80.3133 0.820954 80.8667 0.495194 81.2438C0.332313 81.4323 0.20928 81.5768 0.126572 81.6746C0.085217 81.7235 0.0539425 81.7607 0.0328078 81.786C0.0222404 81.7986 0.0142073 81.8082 0.0087167 81.8148C0.00597175 81.8181 0.00386239 81.8207 0.00238906 81.8224C0.00165239 81.8233 0.00107491 81.824 0.000656213 81.8245C0.000447209 81.8248 0.00027828 81.825 0.000148705 81.8251C8.39169e-05 81.8252 2.89809e-05 81.8253 -1.6103e-05 81.8253C-3.82837e-05 81.8254 -6.45409e-05 81.8254 -7.59925e-05 81.8254C-9.90779e-05 81.8254 -0.000120409 81.8255 0.577464 82.3039ZM5.86284 76.5153L6.4027 77.0359C7.58388 75.8111 8.95895 74.421 10.5223 72.8957L9.99859 72.3588L9.47484 71.822C7.90006 73.3584 6.51426 74.7594 5.32298 75.9947L5.86284 76.5153ZM13.5449 68.978L14.0563 69.5267C15.4034 68.2712 16.8512 66.9533 18.3976 65.5853L17.9006 65.0236L17.4037 64.4619C15.8473 65.8387 14.3898 67.1653 13.0336 68.4294L13.5449 68.978ZM21.6127 61.8085L22.0978 62.3805C23.5348 61.162 25.0412 59.9141 26.6159 58.6443L26.1451 58.0605L25.6743 57.4767C24.0897 58.7545 22.5737 60.0102 21.1277 61.2365L21.6127 61.8085ZM29.9906 55.0237L30.4494 55.617C31.9557 54.4522 33.5159 53.2745 35.129 52.0892L34.6849 51.4848L34.2408 50.8805C32.6176 52.0732 31.0476 53.2583 29.5318 54.4304L29.9906 55.0237ZM38.6714 48.6181L39.103 49.2315C40.6685 48.1301 42.2783 47.0258 43.9317 45.9229L43.5155 45.299L43.0993 44.6751C41.4353 45.785 39.8152 46.8963 38.2398 48.0047L38.6714 48.6181ZM47.6204 42.6224L48.0235 43.2549C49.6483 42.2196 51.3114 41.1886 53.0119 40.1653L52.6252 39.5227L52.2385 38.8801C50.5267 39.9101 48.8529 40.9479 47.2174 41.9899L47.6204 42.6224ZM56.8541 37.0397L57.2268 37.6905C58.9012 36.7317 60.6089 35.7826 62.3495 34.846L61.9941 34.1855L61.6387 33.5251C59.8863 34.468 58.167 35.4236 56.4814 36.3888L56.8541 37.0397ZM66.3352 31.9119L66.6757 32.5801C68.3977 31.7027 70.1495 30.8392 71.9307 29.9923L71.6086 29.315L71.2866 28.6377C69.4928 29.4906 67.7286 30.3601 65.9947 31.2436L66.3352 31.9119ZM76.0592 27.2617L76.3654 27.9464C77.2558 27.5482 78.153 27.1544 79.057 26.7653L78.7606 26.0764L78.4641 25.3875C77.5535 25.7794 76.6498 26.176 75.753 26.5771L76.0592 27.2617ZM78.7606 26.0764L79.057 26.7653C79.9892 26.3642 80.9219 25.9709 81.8549 25.5853L81.5685 24.8921L81.282 24.199C80.3424 24.5874 79.403 24.9835 78.4641 25.3875L78.7606 26.0764ZM86.2755 23.0111L86.5457 23.7108C88.4421 22.9784 90.3376 22.2767 92.2297 21.6044L91.9785 20.8977L91.7274 20.191C89.823 20.8677 87.9147 21.5741 86.0053 22.3115L86.2755 23.0111ZM96.7735 19.2528L97.0092 19.9648C98.9422 19.325 100.869 18.7151 102.788 18.1336L102.57 17.4159L102.352 16.6981C100.422 17.2832 98.4832 17.8969 96.5379 18.5408L96.7735 19.2528ZM107.436 15.9951L107.639 16.7172C109.602 16.1654 111.554 15.6428 113.491 15.1478L113.305 14.4212L113.119 13.6945C111.171 14.1924 109.208 14.7181 107.233 15.2731L107.436 15.9951ZM118.226 13.2137L118.398 13.9437C120.394 13.4741 122.371 13.0333 124.326 12.6195L124.17 11.8857L124.015 11.152C122.05 11.5681 120.062 12.0113 118.055 12.4836L118.226 13.2137ZM129.141 10.8807L129.283 11.6171C131.303 11.2277 133.294 10.8668 135.253 10.5324L135.127 9.79309L135 9.05379C133.031 9.38997 131.03 9.75278 128.999 10.1443L129.141 10.8807ZM140.127 8.98432L140.24 9.72571C142.286 9.41297 144.291 9.12893 146.248 8.87103L146.15 8.12746L146.052 7.38389C144.085 7.64309 142.07 7.92858 140.014 8.24293L140.127 8.98432ZM151.187 7.50747L151.272 8.25261C153.344 8.01552 155.353 7.80779 157.292 7.62596L157.222 6.87924L157.152 6.13252C155.203 6.31527 153.184 6.52405 151.102 6.76234L151.187 7.50747ZM162.29 6.44788L162.347 7.1957C164.475 7.03317 166.496 6.90226 168.4 6.79734L168.359 6.04848L168.318 5.29961C166.404 5.40509 164.371 5.53668 162.233 5.70006L162.29 6.44788ZM173.409 5.81664L173.437 6.56614C175.709 6.48314 177.744 6.4383 179.516 6.4175L179.507 5.66755L179.498 4.9176C177.715 4.93855 175.667 4.98367 173.382 5.06714L173.409 5.81664ZM184.58 5.67021L184.57 6.42013C185.542 6.43403 186.289 6.45369 186.792 6.46985C187.044 6.47792 187.234 6.48511 187.361 6.49027C187.425 6.49284 187.473 6.49491 187.504 6.49631C187.52 6.49702 187.532 6.49756 187.539 6.49792C187.543 6.4981 187.546 6.49824 187.548 6.49832C187.549 6.49836 187.549 6.49839 187.55 6.49841C187.55 6.49842 187.55 6.49842 187.55 6.49843C187.55 6.49843 187.55 6.49843 187.55 6.49843C187.55 6.49843 187.55 6.49843 187.55 6.49843C187.55 6.49843 187.55 6.49843 187.587 5.74932C187.623 5.0002 187.623 5.0002 187.623 5.0002C187.623 5.0002 187.623 5.0002 187.623 5.00019C187.623 5.00019 187.623 5.00019 187.623 5.00019C187.622 5.00017 187.622 5.00016 187.622 5.00015C187.621 5.00012 187.62 5.00007 187.619 5.00002C187.617 4.99991 187.614 4.99975 187.609 4.99955C187.601 4.99914 187.588 4.99856 187.571 4.99781C187.537 4.99631 187.488 4.99416 187.422 4.99149C187.291 4.98618 187.096 4.97883 186.84 4.97062C186.329 4.95419 185.573 4.93431 184.591 4.92029L184.58 5.67021ZM78.7606 26.0764L78.4641 25.3875L78.7606 26.0764ZM188.09 6.3048C188.397 6.02648 188.42 5.55217 188.142 5.24539L183.607 0.246087C183.328 -0.0606952 182.854 -0.0837772 182.547 0.194537C182.24 0.472852 182.217 0.947164 182.496 1.25395L186.527 5.69777L182.083 9.7292C181.777 10.0075 181.753 10.4818 182.032 10.7886C182.31 11.0954 182.784 11.1185 183.091 10.8402L188.09 6.3048ZM0.577464 82.3039C1.15505 82.7823 1.15503 82.7823 1.15502 82.7824C1.15502 82.7824 1.15501 82.7824 1.155 82.7824C1.155 82.7824 1.155 82.7824 1.15502 82.7824C1.15505 82.7823 1.15512 82.7822 1.15523 82.7821C1.15544 82.7818 1.15582 82.7814 1.15636 82.7807C1.15743 82.7795 1.15914 82.7774 1.16148 82.7746C1.16616 82.769 1.17338 82.7603 1.18313 82.7487C1.20263 82.7254 1.23226 82.6901 1.27194 82.6432C1.3513 82.5493 1.4709 82.4089 1.63027 82.2244C1.94901 81.8554 2.42679 81.3104 3.05984 80.6099L2.50338 80.107L1.94693 79.6042C1.30613 80.3133 0.820954 80.8667 0.495194 81.2438C0.332313 81.4323 0.20928 81.5768 0.126572 81.6746C0.085217 81.7235 0.0539425 81.7607 0.0328078 81.786C0.0222404 81.7986 0.0142073 81.8082 0.0087167 81.8148C0.00597175 81.8181 0.00386239 81.8207 0.00238906 81.8224C0.00165239 81.8233 0.00107491 81.824 0.000656213 81.8245C0.000447209 81.8248 0.00027828 81.825 0.000148705 81.8251C8.39169e-05 81.8252 2.89809e-05 81.8253 -1.6103e-05 81.8253C-3.82837e-05 81.8254 -6.45409e-05 81.8254 -7.59925e-05 81.8254C-9.90779e-05 81.8254 -0.000120409 81.8255 0.577464 82.3039ZM5.86284 76.5153L6.4027 77.0359C7.58388 75.8111 8.95895 74.421 10.5223 72.8957L9.99859 72.3588L9.47484 71.822C7.90006 73.3584 6.51426 74.7594 5.32298 75.9947L5.86284 76.5153ZM13.5449 68.978L14.0563 69.5267C15.4034 68.2712 16.8512 66.9533 18.3976 65.5853L17.9006 65.0236L17.4037 64.4619C15.8473 65.8387 14.3898 67.1653 13.0336 68.4294L13.5449 68.978ZM21.6127 61.8085L22.0978 62.3805C23.5348 61.162 25.0412 59.9141 26.6159 58.6443L26.1451 58.0605L25.6743 57.4767C24.0897 58.7545 22.5737 60.0102 21.1277 61.2365L21.6127 61.8085ZM29.9906 55.0237L30.4494 55.617C31.9557 54.4522 33.5159 53.2745 35.129 52.0892L34.6849 51.4848L34.2408 50.8805C32.6176 52.0732 31.0476 53.2583 29.5318 54.4304L29.9906 55.0237ZM38.6714 48.6181L39.103 49.2315C40.6685 48.1301 42.2783 47.0258 43.9317 45.9229L43.5155 45.299L43.0993 44.6751C41.4353 45.785 39.8152 46.8963 38.2398 48.0047L38.6714 48.6181ZM47.6204 42.6224L48.0235 43.2549C49.6483 42.2196 51.3114 41.1886 53.0119 40.1653L52.6252 39.5227L52.2385 38.8801C50.5267 39.9101 48.8529 40.9479 47.2174 41.9899L47.6204 42.6224ZM56.8541 37.0397L57.2268 37.6905C58.9012 36.7317 60.6089 35.7826 62.3495 34.846L61.9941 34.1855L61.6387 33.5251C59.8863 34.468 58.167 35.4236 56.4814 36.3888L56.8541 37.0397ZM66.3352 31.9119L66.6757 32.5801C68.3977 31.7027 70.1495 30.8392 71.9307 29.9923L71.6086 29.315L71.2866 28.6377C69.4928 29.4906 67.7286 30.3601 65.9947 31.2436L66.3352 31.9119ZM76.0592 27.2617L76.3654 27.9464C77.2558 27.5482 78.153 27.1544 79.057 26.7653L78.7606 26.0764L78.4641 25.3875C77.5535 25.7794 76.6498 26.176 75.753 26.5771L76.0592 27.2617ZM78.7606 26.0764L79.057 26.7653C79.9892 26.3642 80.9219 25.9709 81.8549 25.5853L81.5685 24.8921L81.282 24.199C80.3424 24.5874 79.403 24.9835 78.4641 25.3875L78.7606 26.0764ZM86.2755 23.0111L86.5457 23.7108C88.4421 22.9784 90.3376 22.2767 92.2297 21.6044L91.9785 20.8977L91.7274 20.191C89.823 20.8677 87.9147 21.5741 86.0053 22.3115L86.2755 23.0111ZM96.7735 19.2528L97.0092 19.9648C98.9422 19.325 100.869 18.7151 102.788 18.1336L102.57 17.4159L102.352 16.6981C100.422 17.2832 98.4832 17.8969 96.5379 18.5408L96.7735 19.2528ZM107.436 15.9951L107.639 16.7172C109.602 16.1654 111.554 15.6428 113.491 15.1478L113.305 14.4212L113.119 13.6945C111.171 14.1924 109.208 14.7181 107.233 15.2731L107.436 15.9951ZM118.226 13.2137L118.398 13.9437C120.394 13.4741 122.371 13.0333 124.326 12.6195L124.17 11.8857L124.015 11.152C122.05 11.5681 120.062 12.0113 118.055 12.4836L118.226 13.2137ZM129.141 10.8807L129.283 11.6171C131.303 11.2277 133.294 10.8668 135.253 10.5324L135.127 9.79309L135 9.05379C133.031 9.38997 131.03 9.75278 128.999 10.1443L129.141 10.8807ZM140.127 8.98432L140.24 9.72571C142.286 9.41297 144.291 9.12893 146.248 8.87103L146.15 8.12746L146.052 7.38389C144.085 7.64309 142.07 7.92858 140.014 8.24293L140.127 8.98432ZM151.187 7.50747L151.272 8.25261C153.344 8.01552 155.353 7.80779 157.292 7.62596L157.222 6.87924L157.152 6.13252C155.203 6.31527 153.184 6.52405 151.102 6.76234L151.187 7.50747ZM162.29 6.44788L162.347 7.1957C164.475 7.03317 166.496 6.90226 168.4 6.79734L168.359 6.04848L168.318 5.29961C166.404 5.40509 164.371 5.53668 162.233 5.70006L162.29 6.44788ZM173.409 5.81664L173.437 6.56614C175.709 6.48314 177.744 6.4383 179.516 6.4175L179.507 5.66755L179.498 4.9176C177.715 4.93855 175.667 4.98367 173.382 5.06714L173.409 5.81664ZM184.58 5.67021L184.57 6.42013C185.542 6.43403 186.289 6.45369 186.792 6.46985C187.044 6.47792 187.234 6.48511 187.361 6.49027C187.425 6.49284 187.473 6.49491 187.504 6.49631C187.52 6.49702 187.532 6.49756 187.539 6.49792C187.543 6.4981 187.546 6.49824 187.548 6.49832C187.549 6.49836 187.549 6.49839 187.55 6.49841C187.55 6.49842 187.55 6.49842 187.55 6.49843C187.55 6.49843 187.55 6.49843 187.55 6.49843C187.55 6.49843 187.55 6.49843 187.55 6.49843C187.55 6.49843 187.55 6.49843 187.587 5.74932C187.623 5.0002 187.623 5.0002 187.623 5.0002C187.623 5.0002 187.623 5.0002 187.623 5.00019C187.623 5.00019 187.623 5.00019 187.623 5.00019C187.622 5.00017 187.622 5.00016 187.622 5.00015C187.621 5.00012 187.62 5.00007 187.619 5.00002C187.617 4.99991 187.614 4.99975 187.609 4.99955C187.601 4.99914 187.588 4.99856 187.571 4.99781C187.537 4.99631 187.488 4.99416 187.422 4.99149C187.291 4.98618 187.096 4.97883 186.84 4.97062C186.329 4.95419 185.573 4.93431 184.591 4.92029L184.58 5.67021Z"
+                                fill="black" />
+                        </svg>
+                        <div
+                            class="3xl:p-[30px] 2xl:p-8 xl:p-6 sm:p-5 py-5 p-4 bg-white border border-gray-100 w-full lg:h-fit h-full">
+                            <h4 class="text-primary big-font">03</h4>
+                            <h6 class="3xl:mt-7.5 1xl:mt-5 mt-4">Development & Integration</h6>
+                            <span class="block w-[60px] border 3xl:my-7.5 1xl:my-5 my-4"></span>
+                            <p class="p2 text-black-100">
+                                Build, test, integrate high-performance systems tailored for mission-critical
+                                environments.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="3xl:p-[30px] 2xl:p-8 xl:p-6 sm:p-5 py-5 p-4 bg-white border border-gray-100 w-full lg:h-fit h-full"
+                        data-aos="fade-up">
+                        <h4 class="text-primary big-font">04</h4>
+                        <h6 class="3xl:mt-7.5 1xl:mt-5 mt-4">Validation & Deployment</h6>
+                        <span class="block w-[60px] border 3xl:my-7.5 1xl:my-5 my-4"></span>
+                        <p class="p2 text-black-100">
+                            Perform rigorous testing, ensure certifications, and deploy systems with full support and
+                            documentation.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!--/ End How We Work section -->
+
+        <!-- Why It Matters section -->
+        <section>
+            <div class="bg-purple-100 3xl:py-25 2xl:py-[90px] xl:py-20 lg:py-17 py-12.5">
+                <!-- container -->
+                <div class="container">
+                    <!-- sub_title -->
+                    <div
+                        class="flex md:items-center justify-between md:flex-row flex-col w-full gap-[15px] xl:pb-10 lg:pb-7 sm:pb-6 pb-5">
+                        <div class="flex flex-col 2xl:gap-8 1xl:gap-7 gap-5" data-aos="fade-right">
+                            <div class="flex items-center md:gap-[18px] gap-1.5">
+                                <span class="dash border border-primary"></span>
+                                <p class="p2 uppercase">Why It Matters</p>
+                            </div>
+                            <h3>Benefits for <span class="text-primary">Aerospace </span>& Defense
+                            </h3>
+                        </div>
+                        <p class="p2 2xl:max-w-[515px] xl:max-w-[432px] lg:max-w-94 md:max-w-90 w-full"
+                            data-aos="fade-left">
+                            Our solutions enhance performance, reduce risks, and support your most demanding missions
+                            with unmatched reliability.
+                        </p>
+                    </div>
+
+                    <!-- Count grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 2xl:gap-[25px] xl:gap-5 lg:gap-4.5 gap-4">
+                        <!-- Card 1 -->
+                        <div class="bg-white 2xl:p-[30px] xl:p-6 sm:p-5 p-4 rounded-lg" data-aos="fade-up">
+                            <div class="flex flex-col">
+                                <div class="xl:mb-7 md:mb-5 mb-4">
+                                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                        class="3xl:size-[60px] 2xl:size-12.5 1xl:size-11 md:size-10 size-9"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 60L30 30V60H0Z" fill="#FF8343" />
+                                        <path d="M30 60L60 30V60H30Z" fill="#FF8343" />
+                                        <path d="M0 30L30 0V30H0Z" fill="#FF8343" />
+                                        <path d="M30 30L60 0V30H30Z" fill="#FF8343" />
+                                    </svg>
+                                </div>
+                                <h5
+                                    class="2xl:pb-[25px] xl:pb-5 sm:pb-4 pb-3 2xl:mb-[25px] sm:mb-5 mb-3 border-b border-[#DADDE9]">
+                                    Enhanced Operational Efficiency</h5>
+                                <p class="p2 leading-relaxed">
+                                    Streamlined workflows and integrated systems for smoother operations.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="bg-white 2xl:p-[30px] xl:p-6 sm:p-5 p-4 rounded-lg" data-aos="fade-up">
+                            <div class="flex flex-col">
+                                <div class="xl:mb-7 md:mb-5 mb-4">
+                                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                        class="3xl:size-[60px] 2xl:size-12.5 1xl:size-11 md:size-10 size-9"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 60L30 30V60H0Z" fill="#FF8343" />
+                                        <path d="M30 60L60 30V60H30Z" fill="#FF8343" />
+                                        <path d="M0 30L30 0V30H0Z" fill="#FF8343" />
+                                        <path d="M30 30L60 0V30H30Z" fill="#FF8343" />
+                                    </svg>
+                                </div>
+                                <h5
+                                    class="2xl:pb-[25px] xl:pb-5 sm:pb-4 pb-3 2xl:mb-[25px] sm:mb-5 mb-3 border-b border-[#DADDE9]">
+                                    Improved Safety & Compliance</h5>
+                                <p class="p2 leading-relaxed">
+                                    Solutions aligned with strict aerospace and defense standards.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="bg-white 2xl:p-[30px] xl:p-6 sm:p-5 p-4 rounded-lg" data-aos="fade-up">
+                            <div class="flex flex-col">
+                                <div class="xl:mb-7 md:mb-5 mb-4">
+                                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                        class="3xl:size-[60px] 2xl:size-12.5 1xl:size-11 md:size-10 size-9"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 60L30 30V60H0Z" fill="#FF8343" />
+                                        <path d="M30 60L60 30V60H30Z" fill="#FF8343" />
+                                        <path d="M0 30L30 0V30H0Z" fill="#FF8343" />
+                                        <path d="M30 30L60 0V30H30Z" fill="#FF8343" />
+                                    </svg>
+                                </div>
+                                <h5
+                                    class="2xl:pb-[25px] xl:pb-5 sm:pb-4 pb-3 2xl:mb-[25px] sm:mb-5 mb-3 border-b border-[#DADDE9]">
+                                    Lower Downtime & Maintenance Costs</h5>
+                                <p class="p2 leading-relaxed">
+                                    Predictive insights keep systems running at peak performance.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="bg-white 2xl:p-[30px] xl:p-6 sm:p-5 p-4 rounded-lg" data-aos="fade-up">
+                            <div class="flex flex-col">
+                                <div class="xl:mb-7 md:mb-5 mb-4">
+                                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                        class="3xl:size-[60px] 2xl:size-12.5 1xl:size-11 md:size-10 size-9"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 60L30 30V60H0Z" fill="#FF8343" />
+                                        <path d="M30 60L60 30V60H30Z" fill="#FF8343" />
+                                        <path d="M0 30L30 0V30H0Z" fill="#FF8343" />
+                                        <path d="M30 30L60 0V30H30Z" fill="#FF8343" />
+                                    </svg>
+                                </div>
+                                <h5
+                                    class="2xl:pb-[25px] xl:pb-5 sm:pb-4 pb-3 2xl:mb-[25px] sm:mb-5 mb-3 border-b border-[#DADDE9]">
+                                    Stronger Security & Data Integrity</h5>
+                                <p class="p2 leading-relaxed">
+                                    Advanced encryption and secure architectures reduce cyber risks.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/ End Why It Matters section -->
+
+        <!-- Technologies section -->
+        <section class="relative overflow-hidden 3xl:pb-25 2xl:pb-[90px] xl:pb-20 lg:pb-17 pb-12.5">
+            <div class="lg:container lg:px-4 mx-auto">
+                <div
+                    class="flex justify-between items-stretch lg:flex-row flex-col-reverse 3xl:gap-25 2xl:gap-22 1xl:gap-18 xl:gap-14 gap-7">
+                    <!-- Organizational heading -->
+                    <div class="lg:max-w-[55%] w-full 3xl:-ml-[180px] 2xl:-ml-[76px] 1xl:-ml-[100px] xl:-ml-[65px] lg:-ml-[40px] lg:h-auto md:h-[500px] sm:h-[450px] h-full"
+                        data-aos="fade-right">
+                        <img loading="lazy" src="../image/technologies.webp" alt="join team"
+                            class="w-full h-full object-cover" />
+                    </div>
+
+                    <div class="lg:max-w-1/2 w-full my-auto 1xl:py-16 xl:py-12 lg:py-7 pt-12.5 md:pb-7 sm:pb-5 pb-2 sm:px-0 px-4 max-lg:container mx-auto"
+                        data-aos="fade-left">
+                        <div class="w-full my-auto">
+                            <div class="flex flex-col">
+                                <div class="flex items-center gap-2.5">
+                                    <span class="dash border border-primary"></span>
+                                    <p class="p2 uppercase">Tools & Technologies</p>
+                                </div>
+                                <h3 class="3xl:mt-[35px] 3xl:mb-[25px] xl:my-7 lg:my-5 mb-[15px] mt-5 1xl:pr-10">
+                                    Built on Reliable, Aerospace- Grade <span class="text-primary"> Technologies </span>
+                                </h3>
+                                <p class="p2 3xl:mb-[25px] xl:mb-7 lg:mb-5 mb-[18px]">
+                                    We utilize a robust mix of aerospace-certified, secure, and high-performance
+                                    technologies to build mission-critical systems. Every tool and platform is selected
+                                    for its reliability, compliance, real-time capability, and long-term operational
+                                    stability ensuring your aerospace and defense operations run smoothly under even the
+                                    most demanding conditions.
+                                </p>
+                                <ul class="filter-marker mt-0 space-y-2 sm:mb-9 mb-6">
+                                    <li class="flex items-start 1xl:gap-2.5 gap-2">
+                                        <p class="p2">RTOS Platforms (VxWorks, QNX, Integrity)
+                                        </p>
+                                    </li>
+                                    <li class="flex items-start 1xl:gap-2.5 gap-2">
+                                        <p class="p2">FPGA / Embedded Development Toolchains
+                                        </p>
+                                    </li>
+                                    <li class="flex items-start 1xl:gap-2.5 gap-2">
+                                        <p class="p2">AI/ML Frameworks (TensorFlow, PyTorch)
+                                        </p>
+                                    </li>
+                                    <li class="flex items-start 1xl:gap-2.5 gap-2">
+                                        <p class="p2">End-to-End Encryption Systems (AES-256, ECC)
+                                        </p>
+                                    </li>
+                                    <li class="flex items-start 1xl:gap-2.5 gap-2">
+                                        <p class="p2">Cloud & On-Prem Infrastructure (GovCloud, Azure Gov)
+                                        </p>
+                                    </li>
+                                </ul>
+
+                                <a href="./contactUs.html" aria-label="Open Page"
+                                    class="btn btn-primary all-btn rounded-full group w-fit">
+                                    Get Technical Consultation
+                                    <span
+                                        class="btn btn-arrow rounded-full 3xl:w-11 3xl:h-11 1xl:w-10 1xl:h-10 xl:w-9 xl:h-9 w-8 h-8">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                                            viewBox="0 0 22 22" fill="none"
+                                            class="1xl:w-5 1xl:h-5 xl:w-[19px] xl:h-[19px] lg:w-4 lg:h-4 w-3.5 h-3.5">
+                                            <g clip-path="url(#clip0_421_92)">
+                                                <path
+                                                    d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                                    fill="currentColor" />
+                                            </g>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!--/ End Technologies section -->
+
+        <!-- FAQ section -->
+        <section class="3xl:pb-25 2xl:pb-[90px] xl:pb-20 lg:pb-17 pb-12.5 relative h-fit">
+            <!-- container -->
+            <div class="container">
+                <div
+                    class="flex items-start justify-between w-full lg:flex-row flex-col 3xl:gap-[140px] 1xl:gap-[90px] lg:gap-[55px] sm:gap-10">
+                    <!-- sub_title -->
+                    <div class="sm:mb-0 mb-[25px]" data-aos="fade-right">
+                        <div class="flex flex-col 2xl:gap-[35px] md:gap-6 gap-5">
+                            <div class="flex items-center md:gap-[18px] gap-1.5">
+                                <span class="dash border border-primary"></span>
+                                <p class="p2 uppercase">FAQ’s</p>
+                            </div>
+                            <h3 class="lg:mb-5 mb-3">Answers to <span class="text-primary">Common</span> Questions</h3>
+                        </div>
+                        <p class="p2 sm:mb-[30px]">
+                            Find detailed explanations to help you make confident decisions while working with ENX.
+                        </p>
+                        <!-- sub_button -->
+                        <a href="./faq.html" aria-label="Open Page"
+                            class="btn btn-primary all-btn rounded-full group sm:flex hidden w-fit">
+                            Explore More FAQs
+                            <span class=" btn btn-arrow rounded-full all-btn-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                    fill="none"
+                                    class="1xl:w-[22px] 1xl:h-[22px] xl:w-[19px] xl:h-[19px] w-[17px] h-[17px]">
+                                    <g clip-path="url(#clip0_421_92)">
+                                        <path
+                                            d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                            fill="currentColor"></path>
+                                    </g>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="faq-outer-box" data-aos="fade-up">
+                        <!-- FAQ Item -->
+                        <div class="faq-inner-box">
+                            <button class="faq-toggle-button p" onclick="toggleFaq(this)">
+                                <h6 class="faq-title">What types of aerospace & defense systems do you develop?</h6>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" class="faq-toggle-svg">
+                                    <g clip-path="url(#clip0_7273_5307)">
+                                        <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)"
+                                            fill="black" />
+                                        <rect x="7" width="2" height="16" fill="black" />
+                                    </g>
+                                </svg>
+
+                            </button>
+                            <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                <div class="mt-4.5">
+                                    <span class="p2">
+                                        We design and build mission-critical systems including avionics software,
+                                        predictive maintenance platforms, secure communication modules, embedded
+                                        systems, and real-time monitoring solutions.
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-inner-box">
+                            <button class="faq-toggle-button p" onclick="toggleFaq(this)">
+                                <h6 class="faq-title">
+                                    Are your solutions compliant with industry standards?
+                                </h6>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" class="faq-toggle-svg">
+                                    <g clip-path="url(#clip0_7273_5307)">
+                                        <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)"
+                                            fill="black" />
+                                        <rect x="7" width="2" height="16" fill="black" />
+                                    </g>
+                                </svg>
+                            </button>
+                            <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                <div class="mt-4.5">
+                                    <span class="p2">
+                                        Yes. All our aerospace and defense solutions strictly follow standards such as
+                                        DO-178C, DO-254, AS9100, MIL-STD, and ISO 27001, ensuring safety, security, and
+                                        certification readiness.
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-inner-box">
+                            <button class="faq-toggle-button p" onclick="toggleFaq(this)">
+                                <h6 class="faq-title">
+                                    Do you support legacy system modernization?
+                                </h6>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" class="faq-toggle-svg">
+                                    <g clip-path="url(#clip0_7273_5307)">
+                                        <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)"
+                                            fill="black" />
+                                        <rect x="7" width="2" height="16" fill="black" />
+                                    </g>
+                                </svg>
+                            </button>
+                            <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                <div class="lg:mt-4.5 mt-3.5">
+                                    <span class="p2">
+                                        Absolutely. We upgrade outdated systems with modern architectures, RTOS
+                                        integration, secure communication layers, and scalable cloud environments while
+                                        maintaining compatibility.
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-inner-box">
+                            <button class="faq-toggle-button p" onclick="toggleFaq(this)">
+                                <h6 class="faq-title">
+                                    How do you ensure security for defense-grade software?
+                                </h6>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" class="faq-toggle-svg">
+                                    <g clip-path="url(#clip0_7273_5307)">
+                                        <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)"
+                                            fill="black" />
+                                        <rect x="7" width="2" height="16" fill="black" />
+                                    </g>
+                                </svg>
+                            </button>
+                            <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                <div class="lg:mt-4.5 mt-3.5">
+                                    <span class="p2">
+                                        We apply military-grade encryption, multi-layer cybersecurity frameworks, secure
+                                        coding practices, and continuous threat monitoring to protect sensitive mission
+                                        data.
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-inner-box">
+                            <button class="faq-toggle-button p" onclick="toggleFaq(this)">
+                                <h6 class="faq-title">
+                                    Do you offer maintenance and post-deployment support?
+                                </h6>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" class="faq-toggle-svg">
+                                    <g clip-path="url(#clip0_7273_5307)">
+                                        <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)"
+                                            fill="black" />
+                                        <rect x="7" width="2" height="16" fill="black" />
+                                    </g>
+                                </svg>
+                            </button>
+                            <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                <div class="lg:mt-4.5 mt-3.5">
+                                    <span class="p2">
+                                        Yes. We provide long-term maintenance, performance monitoring, predictive
+                                        insights, version upgrades, and full lifecycle support.
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/ End FAQ section -->
+
+        <!-- Get Started Section -->
+        <section>
+            <div class="relative md:py-0 py-12.5">
+                <div class="absolute inset-0 bg-[url('../image/about-us-bg.svg')] bg-cover bg-center z-0"></div>
+                <div class="container">
+                    <div
+                        class="relative z-1 flex md:items-end items-center justify-between md:flex-row flex-col lg:gap-10 md:gap-3">
+                        <div
+                            class="xl:max-w-[526px] lg:max-w-[400px] sm:max-w-[320px] max-w-[250px] flex items-end lg:pt-12">
+                            <img src="../image/Get-started.webp" alt="get-started" class="w-full" />
+                        </div>
+                        <div
+                            class="3xl:py-25 2xl:py-[90px] xl:py-20 lg:py-17 md:py-10 relative h-fit flex items-center">
+                            <div
+                                class="bg-white 2xl:py-[70px] 1xl:py-15 1xl:px-15 xl:p-13 md:py-10 md:px-6 py-[35px] px-5 border border-gray-100 xl:max-w-[730px] lg:max-w-[515px] max-w-full">
+                                <div class="flex flex-col lg:gap-[30px] gap-5">
+                                    <div class="flex items-center md:gap-2.5 gap-[7px]">
+                                        <span class="dash border border-primary"></span>
+                                        <p class="p2 uppercase leading-[14px]">GET STARTED</p>
+                                    </div>
+                                    <h3 class="md:mb-5 mb-3">
+                                        Ready to Build What’s Next?
+                                    </h3>
+                                </div>
+                                <p class="p2 lg:mb-[35px] md:mb-6 mb-5">Let’s
+                                    turn your ideas into high-performing
+                                    digital solutions with strategy, speed, and expert execution.</p>
+
+                                <a href="./contactUs.html" class="btn btn-primary all-btn rounded-full group w-fit">
+                                    Start Your Project
+                                    <span class="btn btn-arrow rounded-full all-btn-arrow">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                                            viewBox="0 0 22 22" fill="none"
+                                            class="1xl:w-[22px] 1xl:h-[22px] xl:w-[19px] xl:h-[19px] w-[17px] h-[17px]">
+                                            <g clip-path="url(#clip0_421_92)">
+                                                <path
+                                                    d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                                    fill="currentColor" />
+                                            </g>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/ End Get Started Section -->
+
+        <!-- Footer section -->
+        <footer class="bg-black">
+            <div class="container">
+                <div class="divide-y divide-white/15">
+                    <div
+                        class="flex items-start flex-wrap gap-6 justify-between w-full 3xl:pb-[60px] 2xl:pb-12.5 xl:pb-10 lg:pb-7 sm:pb-6 pb-5 3xl:pt-[90px] 2xl:pt-20 1xl:pt-[70px] xl:pt-[60px] lg:pt-12.5 md:pt-10 pt-[30px]">
+                        <h3 class="text-white">Want to start a project?</h3>
+                        <a href="./contactUs.html" class="btn btn-primary all-btn rounded-full group">
+                            Start a Project
+                            <span class="btn btn-arrow rounded-full all-btn-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                    fill="none"
+                                    class="1xl:w-[22px] 1xl:h-[22px] xl:w-[19px] xl:h-[19px] w-[17px] h-[17px]">
+                                    <g clip-path="url(#clip0_421_92)">
+                                        <path
+                                            d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                            fill="currentColor" />
+                                    </g>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="3xl:py-[35px] 2xl:py-7 py-5">
+                        <div class="footer-list">
+                            <div class="list">
+                                <h5 class="p2 list-title">Company </h5>
+                                <span class="dash block border border-primary"></span>
+                                <a href="./aboutUs.html" class="p2 list-link">About Us
+                                </a>
+                                <a href="./career.html" class="p2 list-link">Careers</a>
+                                <a href="./our-offices.html" class="p2 list-link">Offices</a>
+                                <a href="./contactUs.html" class="p2 list-link">Contact</a>
+                                <a href="./whyEnx.html" class="p2 list-link">Why ENX?</a>
+                            </div>
+                            <div class="list">
+                                <h5 class="p2 list-title">Quick Links</h5>
+                                <span class="dash block border border-primary"></span>
+                                <a href="./our-services.html" class="p2 list-link">Services</a>
+                                <a href="./caseStudy-1.html" class="p2 list-link">Case Studies</a>
+                                <a href="./insights.html" class="p2 list-link">Insights</a>
+                                <a href="./support.html" class="p2 list-link">Support</a>
+                                <a href="./faq.html" class="p2 list-link">FAQs</a>
+                            </div>
+                            <div class="list">
+                                <h5 class="p2 list-title">Solutions</h5>
+                                <span class="dash block border border-primary"></span>
+                                <a href="./aerospace.html" class="p2 list-link">Aerospace & Defense</a>
+                                <a href="./healthcare.html" class="p2 list-link">Healthcare & Life Sciences</a>
+                                <a href="./financial.html" class="p2 list-link">Financial Services</a>
+                                <a href="./ecommerce.html" class="p2 list-link">Retail & E-Commerce</a>
+                                <a href="./manufacture.html" class="p2 list-link">Manufacturing & Industrial</a>
+                            </div>
+                            <div class="list">
+                                <h5 class="p2 list-title">Legal</h5>
+                                <span class="dash block border border-primary"></span>
+                                <a href="./privacyPolicy.html" class="p2 list-link">Privacy Policy</a>
+                                <a href="./terms.html" class="p2 list-link">Terms of Use</a>
+                                <a href="./cookie-policy.html" class="p2 list-link">Cookie Policy</a>
+                                <a href="./licensing.html" class="p2 list-link">Licensing</a>
+                                <a href="./data-protection.html" class="p2 list-link">Data Protection</a>
+                            </div>
+                            <div class="list">
+                                <h5 class="p2 list-title">Connect Us</h5>
+                                <span class="dash block border border-primary"></span>
+                                <a href="mailto:support@enxstudio.com" class="p2 list-link font-medium">
+                                    Email: support@enxstudio.com
+                                </a>
+                                <a href="tel:+12025550147" class="p2 list-link font-medium">
+                                    Phone: +1 202 555 0147
+                                </a>
+                                <a href="https://maps.app.goo.gl/D5hGpZESA22Eqw1H9" target="_blank"
+                                    rel="noopener noreferrer" class="p2 list-link font-medium">
+                                    Address: ENX Digital Studio New York, USA
+                                </a>
+                                <div class="flex items-center lg:gap-5 gap-4 lg:mt-[25px] mt-3">
+                                    <div>
+                                        <a target="_blank" href="https://www.linkedin.com/feed/"
+                                            class="dark-btn border 2xl:w-[52px] 2xl:h-[52px] lg:w-[48px] lg:h-[48px] w-[44px] h-[44px] flex items-center justify-center rounded-full">
+                                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                                class="1xl:w-[22px] 1xl:h-[22px] xl:w-[19px] xl:h-[19px] w-[17px] h-[17px]"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M6.13949 3.63624C6.13924 4.14946 5.93631 4.64155 5.57536 5.00426C5.21441 5.36698 4.72499 5.57061 4.21478 5.57035C3.70457 5.57009 3.21536 5.36597 2.85477 5.0029C2.49417 4.63982 2.29174 4.14752 2.29199 3.63431C2.29225 3.12109 2.49517 2.629 2.85613 2.26628C3.21708 1.90357 3.70649 1.69994 4.2167 1.7002C4.72691 1.70045 5.21613 1.90457 5.57672 2.26765C5.93731 2.63073 6.13975 3.12303 6.13949 3.63624ZM6.1972 7.00328H2.3497V19.1169H6.1972V7.00328ZM12.2763 7.00328H8.44799V19.1169H12.2378V12.7601C12.2378 9.21894 16.8259 8.88998 16.8259 12.7601V19.1169H20.6253V11.4443C20.6253 5.47456 13.8345 5.6971 12.2378 8.62874L12.2763 7.00328Z"
+                                                    fill="currentColor" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a target="_blank" href="https://x.com/"
+                                            class="dark-btn border 2xl:w-[52px] 2xl:h-[52px] lg:w-[48px] lg:h-[48px] w-[44px] h-[44px] flex items-center justify-center rounded-full">
+                                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                                class="1xl:w-[22px] 1xl:h-[22px] xl:w-[19px] xl:h-[19px] w-[17px] h-[17px]"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g mask="url(#mask0_8420_72)">
+                                                    <path
+                                                        d="M16.2705 2.69336H19.0821L12.9404 9.73074L20.1663 19.3086H14.5092L10.0752 13.5009L5.00729 19.3086H2.19313L8.7617 11.7788L1.83301 2.69467H7.6342L11.6361 8.00217L16.2705 2.69336ZM15.2818 17.6219H16.8402L6.78301 4.29229H5.11206L15.2818 17.6219Z"
+                                                        fill="currentColor" />
+                                                </g>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a target="_blank" href="https://dribbble.com/"
+                                            class="dark-btn border 2xl:w-[52px] 2xl:h-[52px] lg:w-[48px] lg:h-[48px] w-[44px] h-[44px] flex items-center justify-center rounded-full">
+                                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                                class="1xl:w-[22px] 1xl:h-[22px] xl:w-[19px] xl:h-[19px] w-[17px] h-[17px]"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M20.1664 11.0007C20.1678 12.208 19.9301 13.4038 19.4668 14.5187C19.0035 15.6337 18.3239 16.6458 17.4672 17.4966C16.6175 18.3448 15.6089 19.0172 14.4992 19.4755C13.3894 19.9337 12.2003 20.1688 10.9997 20.1673C5.93693 20.1673 1.83302 16.0634 1.83302 11.0007C1.82972 8.6502 2.73258 6.38893 4.35385 4.68712C5.20921 3.78441 6.2398 3.06577 7.38253 2.57518C8.52526 2.08459 9.7561 1.83238 10.9997 1.83399C12.2003 1.83251 13.3894 2.06761 14.4992 2.52587C15.6089 2.98412 16.6175 3.65653 17.4672 4.5047C18.3239 5.3555 19.0035 6.36762 19.4668 7.48259C19.9301 8.59756 20.1678 9.79327 20.1664 11.0007Z"
+                                                    stroke="currentColor" stroke-width="1.55833" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M20.1669 10.9999C18.8295 10.9999 15.1399 10.4957 11.8376 11.9454C8.25021 13.5207 5.65284 15.9645 4.52075 17.4839"
+                                                    stroke="currentColor" stroke-width="1.55833" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M7.5625 2.5C8.99708 3.82413 12.1275 7.19517 13.2917 10.5419C14.4558 13.8887 14.8867 18.0036 15.1525 19.1746"
+                                                    stroke="currentColor" stroke-width="1.55833" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M1.9043 9.85457C3.63588 9.95907 8.21967 10.053 11.153 8.8004C14.0863 7.54778 16.6104 5.24374 17.4762 4.5127M2.52121 14.4897C3.32907 16.4448 4.7858 18.0619 6.64621 19.0689"
+                                                    stroke="currentColor" stroke-width="1.55833" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M1.83302 11.0007C1.82972 8.6502 2.73258 6.38893 4.35385 4.68712C5.20921 3.78441 6.2398 3.06577 7.38253 2.57518C8.52526 2.08459 9.7561 1.83238 10.9997 1.83399M14.6664 2.59666C15.7105 3.05306 16.6603 3.70013 17.4672 4.5047C18.3239 5.3555 19.0035 6.36762 19.4668 7.48259C19.9301 8.59756 20.1678 9.79327 20.1664 11.0007C20.1664 12.1291 19.9624 13.2103 19.5889 14.209M10.9997 20.1673C12.2003 20.1688 13.3894 19.9337 14.4992 19.4755C15.6089 19.0172 16.6175 18.3448 17.4672 17.4966"
+                                                    stroke="currentColor" stroke-width="1.55833" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a target="_blank" href="https://www.instagram.com/"
+                                            class="dark-btn border 2xl:w-[52px] 2xl:h-[52px] lg:w-[48px] lg:h-[48px] w-[44px] h-[44px] flex items-center justify-center rounded-full">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_8420_91)">
+                                                    <path
+                                                        d="M14.1713 1.66797H5.83573C3.53394 1.66797 1.66797 3.53394 1.66797 5.83573V14.1713C1.66797 16.4731 3.53394 18.339 5.83573 18.339H14.1713C16.4731 18.339 18.339 16.4731 18.339 14.1713V5.83573C18.339 3.53394 16.4731 1.66797 14.1713 1.66797Z"
+                                                        stroke="currentColor" stroke-width="1.85234"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path
+                                                        d="M13.3365 9.47991C13.4393 10.1736 13.3208 10.8821 12.9978 11.5046C12.6748 12.1271 12.1638 12.6319 11.5373 12.9472C10.9109 13.2625 10.201 13.3723 9.50861 13.2609C8.81621 13.1494 8.17657 12.8225 7.68067 12.3266C7.18477 11.8307 6.85787 11.1911 6.74645 10.4987C6.63503 9.80629 6.74478 9.09639 7.06008 8.46995C7.37538 7.84352 7.88018 7.33246 8.50268 7.00946C9.12518 6.68646 9.83367 6.56796 10.5274 6.67083C11.235 6.77577 11.8901 7.1055 12.396 7.61134C12.9018 8.11717 13.2315 8.77229 13.3365 9.47991Z"
+                                                        stroke="currentColor" stroke-width="1.85234"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                    <ellipse cx="14.5866" cy="5.41635" rx="1.25062" ry="1.25033"
+                                                        fill="currentColor" />
+                                                </g>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="newsletter-box">
+                            <h4 class="text-white md:w-1/2 w-full text-start">
+                                Sign up for our newsletter</h4>
+                            <div class="newsletter-input-box md:w-1/2 w-full">
+                                <input type="text" name="newsletter" placeholder="Enter email..."
+                                    class="newsletter-input p2">
+                                <button aria-label="Open Page" class="btn btn-primary all-btn rounded-full group">
+                                    Subscribe
+                                    <span
+                                        class="btn btn-arrow rounded-full 3xl:w-11 3xl:h-11 1xl:w-10 1xl:h-10 xl:w-9 xl:h-9 w-8 h-8">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                                            viewBox="0 0 22 22" fill="none"
+                                            class="1xl:w-5 1xl:h-5 xl:w-[19px] xl:h-[19px] lg:w-4 lg:h-4 w-3.5 h-3.5">
+                                            <g clip-path="url(#clip0_421_92)">
+                                                <path
+                                                    d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                                    fill="currentColor" />
+                                            </g>
+                                        </svg>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="copyright">
+                        <a href="./index.html">
+                            <img loading="lazy" src="../image/logo-white.svg" alt="main logo"
+                                class="2xl:w-[106px] xl:w-[100px] lg:w-[90px] sm:w-20 w-18 h-full object-cover" />
+                        </a>
+                        <p class="p2 text-white">Copyright © 2024 <span class="text-primary">ENX</span>. All rights
+                            reserved. </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--/ End Footer section -->
+
+    </div>
+
+
+    <!-- Swiper JS -->
+    <script async src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- AOS ANIMATION -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 60,
+        });
+    </script>
+    <!-- Your Custom JS -->
+    <script defer src="../js/custom.js"></script>
+
+</body>
+
+</html>
