@@ -1,0 +1,1985 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ENX - Single Insight</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../image/favicon.svg" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- StyleSheet -->
+    <link rel="stylesheet" href="../css/output.css" />
+    <!-- aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    <div class="relative">
+
+        <!-- Header -->
+        <!-- Dropdown Overlay -->
+        <div id="dropdownOverlay" class="fixed inset-0 bg-black/50 hidden z-40">
+        </div>
+        <header class="fixed w-full h-auto nav-section z-50">
+            <div
+                class="2xl:h-[96px] xl:h-[85px] lg:h-20 md:h-[75px] sm:h-[60px] h-[55px] lg:px-10 min-[900px]:px-5 bg-white border-b border-gray-100 min-[900px]:flex min-[900px]:items-center min-[900px]:justify-between relative z-50">
+                <div class="min-[900px]:p-0 px-4 flex justify-between items-center h-full">
+                    <a href="./index.html">
+                        <img loading="lazy"
+                            class="2xl:w-[106px] xl:w-[100px] lg:w-[90px] sm:w-20 w-18 h-full object-cover"
+                            src="../image/Logo.svg" alt="Logo" />
+                    </a>
+
+                    <!-- Burger Button -->
+                    <button aria-label="Open menu" id="burgerBtn"
+                        class="min-[900px]:hidden block sm:w-6 sm:h-6 w-5 h-5">
+                        <span id="burger-icon">
+                            <!-- Burger Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                class="w-full h-full">
+                                <rect x="1" y="1" width="22" height="2" fill="#353535" />
+                                <rect x="1" y="8" width="22" height="2" fill="#353535" />
+                                <rect x="1" y="15" width="22" height="2" fill="#353535" />
+                            </svg>
+                        </span>
+                        <span id="close-icon" class="hidden">
+                            <!-- Close Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                                <path d="M5.5 5.5L18.5 18.5M5.5 18.5L18.5 5.5" stroke="#353535" stroke-width="1.5" />
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+
+                <!-- Navigation Links -->
+                <ul id="nav-links"
+                    class="nav-links hidden min-[900px]:static fixed left-0 min-[900px]:w-auto w-full h-full min-[900px]:divide-y-0 divide-y divide-gray-100 min-[900px]:flex min-[900px]:items-stretch align-start bg-white 3xl:gap-10 2xl:gap-9 1xl:gap-6 gap-4 min-[900px]:py-0 pt-[5px] pb-4 transition-all duration-300 min-[900px]:m-0 m-px">
+                    <li class="min-[900px]:relative">
+                        <button aria-label="Open menu" onclick="toggleDropdown(this)"
+                            class="dropdown-btn border-b border-transparent hover:text-primary min-[900px]:px-0 px-4 p2 focus-visible:none">
+                            Home
+                            <svg class="w-4 h-4 transform transition-transform duration-300 ease-in-out" fill="none"
+                                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+
+                        <!-- Centered dropdown menu -->
+                        <div
+                            class="dropdown-menu min-[900px]:h-fit! h-full! bg-white hidden overflow-auto min-[900px]:overflow-hidden min-[900px]:w-[130px]! min-[900px]:border-t border-gray-100 min-[900px]:absolute min-[900px]:left-1/2 min-[900px]:transform min-[900px]:-translate-x-[25%] z-50 transition-all ease-in-out">
+
+                            <div class="flex flex-col items-start justify-center w-full">
+                                <div
+                                    class="flex min-[900px]:hidden items-center justify-between min-[900px]:border-0 border border-gray-100 h-[55px] px-4 dropdown-title w-webkit-fill">
+                                    <div class="flex items-center gap-[15px] ">
+                                        <svg onclick="closeDropdown(this)" width="23" height="23" viewBox="0 0 28 28"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg" class="cursor-pointer">
+                                            <path d="M22.75 14H5.25M5.25 14L11.8125 7M5.25 14L11.8125 21"
+                                                stroke="#353535" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                        <span>HOME</span>
+                                    </div>
+                                    <svg onclick="closeDropdown(this)" xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none" class="cursor-pointer">
+                                        <path d="M5.5 5.5L18.5 18.5M5.5 18.5L18.5 5.5" stroke="#353535"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+
+                                <ul class="space-y-3 p-5">
+                                    <li class="p2">
+                                        <a href="./index.html">Home-1</a>
+                                    </li>
+                                    <li class="p2">
+                                        <a href="./index-2.html">Home-2</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <button aria-label="Open menu" onclick="toggleDropdown(this)"
+                            class="dropdown-btn border-b border-transparent hover:text-primary min-[900px]:px-0 px-4 p2">
+                            Why ENX?
+                            <svg class="w-4 h-4 transform transition-transform duration-300 ease-in-out" fill="none"
+                                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu bg-white hidden overflow-auto min-[900px]:overflow-hidden">
+                            <div
+                                class="flex min-[900px]:flex-row flex-col-reverse 3xl:gap-[120px] xl:gap-20 lg:gap-12.5 md:gap-10 gap-4">
+                                <div class="dropdown-menu-banner">
+                                    <img loading="lazy" src="../image/enx.webp" alt="Why ENX?"
+                                        class="w-full h-full object-cover" />
+                                </div>
+                                <div class="flex flex-col items-start w-full 2xl:py-[70px] xl:py-10 lg:py-5">
+                                    <span class="dropdown-title min-[900px]:block hidden">WHY ENX?</span>
+                                    <div
+                                        class="flex min-[900px]:hidden items-center justify-between min-[900px]:border-0 border border-gray-100 h-[55px] px-4 dropdown-title w-webkit-fill">
+                                        <div class="flex items-center gap-[15px] ">
+                                            <svg onclick="closeDropdown(this)" width="23" height="23"
+                                                viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                class="cursor-pointer">
+                                                <path d="M22.75 14H5.25M5.25 14L11.8125 7M5.25 14L11.8125 21"
+                                                    stroke="#353535" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            <span>WHY ENX?</span>
+                                        </div>
+                                        <svg onclick="closeDropdown(this)" xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none" class="cursor-pointer">
+                                            <path d="M5.5 5.5L18.5 18.5M5.5 18.5L18.5 5.5" stroke="#353535"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <ul
+                                        class="grid grid-cols-1 3xl:gap-7 2xl:gap-6 1xl:gap-5 lg:gap-4 sm:gap-2 gap-1 min-[900px]:p-0 min-[900px]:pr-5 p-5">
+                                        <li>
+                                            <h6> <a href="./aboutUs.html">About ENX</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6> <a href="./whyEnx.html">Why ENX?</a></h6>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <button aria-label="Open menu" onclick="toggleDropdown(this)"
+                            class="dropdown-btn border-b border-transparent hover:text-primary min-[900px]:px-0 px-4">
+                            Services
+                            <svg class="w-4 h-4 transform transition-transform duration-300 ease-in-out" fill="none"
+                                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu bg-white hidden min-[900px]:overflow-hidden overflow-auto">
+                            <div
+                                class="flex min-[900px]:flex-row flex-col-reverse 3xl:gap-[120px] xl:gap-20 lg:gap-12.5 md:gap-10 gap-4">
+                                <div class="dropdown-menu-banner">
+                                    <img loading="lazy" src="../image/solution.webp" alt="Services"
+                                        class="w-full h-full object-cover" />
+                                </div>
+                                <div class="flex flex-col items-start w-full 2xl:py-[70px] xl:py-10 lg:py-5">
+                                    <span class="dropdown-title min-[900px]:block hidden">Services</span>
+                                    <div
+                                        class="flex min-[900px]:hidden items-center justify-between min-[900px]:border-0 border border-gray-100 h-[55px] px-4 dropdown-title w-webkit-fill">
+                                        <div class="flex items-center gap-[15px]">
+                                            <svg onclick="closeDropdown(this)" width="23" height="23"
+                                                viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                class="cursor-pointer">
+                                                <path d="M22.75 14H5.25M5.25 14L11.8125 7M5.25 14L11.8125 21"
+                                                    stroke="#353535" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            <span>TOp SERVICES</span>
+                                        </div>
+                                        <svg onclick="closeDropdown(this)" xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none" class="cursor-pointer">
+                                            <path d="M5.5 5.5L18.5 18.5M5.5 18.5L18.5 5.5" stroke="#353535"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <ul
+                                        class="grid w-full justify-between sm:grid-cols-2 grid-cols-1 3xl:gap-y-7 2xl:gap-y-6 1xl:gap-y-5 lg:gap-y-4 sm:gap-y-2 gap-y-1 min-[900px]:p-0 min-[900px]:pr-5 p-5">
+                                        <li>
+                                            <h6><a href="./aerospace.html">Aerospace & Defense</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./financial.html">Financial Services</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./manufacture.html">Manufacturing & Industrial</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./media.html">Media & Entertainment</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./healthcare.html">Healthcare & Life Sciences</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./ecommerce.html">Retail & E-Commerce</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./transportation.html">Transportation & Logistics</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./construction.html">Construction & Infrastructure</a></h6>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <button aria-label="Open menu" onclick="toggleDropdown(this)"
+                            class="dropdown-btn border-b border-transparent hover:text-primary min-[900px]:px-0 px-4">
+                            Resources
+                            <svg class="w-4 h-4 transform transition-transform duration-300 ease-in-out" fill="none"
+                                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu bg-white hidden overflow-auto min-[900px]:overflow-hidden">
+                            <div
+                                class="flex min-[900px]:flex-row flex-col-reverse 3xl:gap-[120px] xl:gap-20 lg:gap-12.5 md:gap-10 gap-4">
+                                <div class="dropdown-menu-banner">
+                                    <img loading="lazy" src="../image/resources.webp" alt="Resources"
+                                        class="w-full h-full object-cover" />
+                                </div>
+                                <div class="flex flex-col items-start w-full 1xl:py-10 lg:py-5">
+                                    <span class="dropdown-title min-[900px]:block hidden">RESOURCES</span>
+                                    <div
+                                        class="flex min-[900px]:hidden items-center justify-between min-[900px]:border-0 border border-gray-100 h-[55px] px-4 dropdown-title w-webkit-fill">
+                                        <div class="flex items-center gap-[15px]">
+                                            <svg onclick="closeDropdown(this)" width="23" height="23"
+                                                viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                class="cursor-pointer">
+                                                <path d="M22.75 14H5.25M5.25 14L11.8125 7M5.25 14L11.8125 21"
+                                                    stroke="#353535" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            <span>RESOURCES</span>
+                                        </div>
+                                        <svg onclick="closeDropdown(this)" xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none" class="cursor-pointer">
+                                            <path d="M5.5 5.5L18.5 18.5M5.5 18.5L18.5 5.5" stroke="#353535"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <ul
+                                        class="w-full justify-between grid sm:grid-cols-3 grid-cols-1 sm:grid-flow-col sm:grid-rows-7 3xl:gap-y-7 2xl:gap-y-6 1xl:gap-y-5 lg:gap-4 sm:gap-y-2 gap-y-1 min-[900px]:p-0 min-[900px]:pr-5 p-5">
+                                        <li>
+                                            <h6><a href="./caseStudy-1.html">Case Studies 01</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./caseStudy-2.html">Case Studies 02</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./single-case-study-1.html">Single Case Studies</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./team-1.html">Our Team 01</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./team-2.html">Our Team 02</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./single-team-1.html">Single Team</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./offices.html">Our Offices</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./contactUs.html">Contact Us</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./testimonials.html">Testimonial </a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./faq.html">FAQ’s</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./404.html">404</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./career.html">Careers</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./contactUs.html">Support</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./clients.html">Our Clients</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./privacyPolicy.html">Privacy Policy</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./terms-conditions.html">Terms & Conditions</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./cookiePolicy.html">Cookie Policy</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./licensing.html">Licensing</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./dataProtection.html">Data Protection</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./sitemap.html">Site Map</a></h6>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <button aria-label="Open menu" onclick="toggleDropdown(this)"
+                            class="dropdown-btn border-b border-transparent hover:text-primary min-[900px]:px-0 px-4">
+                            Insights
+                            <svg class="w-4 h-4 transform transition-transform duration-300 ease-in-out" fill="none"
+                                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu bg-white hidden overflow-auto min-[900px]:overflow-hidden">
+                            <div
+                                class="flex min-[900px]:flex-row flex-col-reverse 3xl:gap-[120px] xl:gap-20 lg:gap-12.5 md:gap-10 gap-4">
+                                <div class="dropdown-menu-banner">
+                                    <img loading="lazy" src="../image/Insights.webp" alt="Insights"
+                                        class="w-full h-full object-cover" />
+                                </div>
+                                <div class="flex flex-col items-start w-full 2xl:py-[70px] xl:py-10 lg:py-5">
+                                    <span class="dropdown-title min-[900px]:block hidden">INSIGHTS</span>
+                                    <div
+                                        class="flex min-[900px]:hidden items-center justify-between min-[900px]:border-0 border border-gray-100 h-[55px] px-4 dropdown-title w-webkit-fill">
+                                        <div class="flex items-center gap-[15px]">
+                                            <svg onclick="closeDropdown(this)" width="23" height="23"
+                                                viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                class="cursor-pointer">
+                                                <path d="M22.75 14H5.25M5.25 14L11.8125 7M5.25 14L11.8125 21"
+                                                    stroke="#353535" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            <span>INSIGHTS</span>
+                                        </div>
+                                        <svg onclick="closeDropdown(this)" xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none" class="cursor-pointer">
+                                            <path d="M5.5 5.5L18.5 18.5M5.5 18.5L18.5 5.5" stroke="#353535"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <ul
+                                        class="grid grid-cols-1 3xl:gap-7 2xl:gap-6 1xl:gap-5 lg:gap-4 sm:gap-2 gap-1 min-[900px]:p-0 min-[900px]:pr-5 p-5">
+                                        <li>
+                                            <h6><a href="./insights-1.html">Latest Insights 01</a></h6>
+                                        </li>
+                                        <li>
+                                            <h6><a href="./insights-2.html">Latest Insights 02</a></h6>
+                                        </li>
+
+                                        <li>
+                                            <h6><a href="./single-insight-1.html">Single Insights</a></h6>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="./contactUs.html"
+                            class="p2 h-full flex items-center min-[900px]:justify-center min-[900px]:p-0 md:py-4 py-[14px] min-[900px]:px-0 px-4">
+                            Contact us</a>
+                    </li>
+
+                    <li class="min-[900px]:hidden py-[18px] min-[900px]:px-0 px-4">
+                        <a href="./contactUs.html" class="btn btn-primary p-1 ps-3 gap-2 rounded-full group w-fit">
+                            Get started
+                            <span class="btn btn-arrow rounded-full w-9 h-9 ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                    fill="none" class="1w-[17px] h-[17px]">
+                                    <g clip-path="url(#clip0_421_92)">
+                                        <path
+                                            d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                            fill="currentColor" />
+                                    </g>
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <a href="./contactUs.html" aria-label="Open Page"
+                    class="btn btn-primary all-btn rounded-full group min-[900px]:flex hidden w-fit">
+                    Get started
+                    <span class="btn btn-arrow rounded-full all-btn-arrow">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M-2.02496e-05 12.4396L11.1557 1.28395L1.59365 1.28395L1.51169 -9.34181e-05L13.3504 -9.30945e-05L13.3504 11.8386L12.0663 11.7566L12.0663 2.19462L0.910647 13.3503L-2.02496e-05 12.4396Z"
+                                fill="currentColor" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </header>
+        <!--/ End Header -->
+
+        <!-- HERO -->
+        <section
+            class="relative w-full 2xl:pt-[90px] xl:pt-[85px] lg:pt-20 md:pt-[75px] sm:pt-15 pt-[55px] 2xl:pb-12.5 1xl:pb-10.5 lg:pb-9.5 md:pb-7.5 pb-5">
+            <div class="w-full 2xl:pt-12.5 xl:pt-10.5 md:pt-8.5 sm:pt-6.5 pt-6">
+                <div class="container">
+                    <!-- Content area -->
+                    <div class="relative z-20 1xl:pb-7.5 sm:pb-6 pb-5">
+                        <h1 class="h3 text-black-100">
+                            Strengthening Cybersecurity for a Hyper-Connected World
+                        </h1>
+                        <div class="flex items-start gap-3 2xl:mt-6 md:mt-5 sm:mt-4 mt-2.5">
+                            <span class="dash border border-primary mt-3"></span>
+                            <p class="p2">By
+                                <span class="font-normal text-primary">Ethan Wells</span> —
+                                27 Sept, 2025
+                            </p>
+                        </div>
+                    </div>
+                    <div class="3xl:h-[700px] 2xl:h-[650px] 1xl:h-[590px] xl:h-[540px] md:h-[500px] h-full">
+                        <img src="../image/insight-5.webp" alt="insight" class="w-full h-full object-cover" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MAIN CONTENT -->
+        <section class="3xl:pb-25 2xl:pb-[90px] 1xl:pb-20 lg:pb-17 md:pb-12.5 pb-10 scrollable-section">
+            <div class="container">
+                <div class="flex 2xl:gap-20 1xl:gap-15 gap-13 items-start">
+
+                    <!-- ════ MAIN ARTICLE CONTENT ════ -->
+                    <article class="flex-1 1xl:max-w-[75.5%] xl:max-w-[73.5%] max-w-full w-full">
+                        <div class="scroll-main-content">
+                            <!-- Introduction -->
+                            <div>
+                                <h4 id="introduction" class="mt-0!">Introduction</h4>
+                                <p class="p2">
+                                    In today’s hyper-connected digital environment, organizations operate across cloud
+                                    platforms, remote teams, IoT devices, and integrated third-party systems. While this
+                                    connectivity accelerates innovation and efficiency, it also expands the attack
+                                    surface for cyber threats. Cybersecurity is no longer a technical concern alone—it
+                                    is a core business priority.
+                                </p>
+                                <p class="p2">
+                                    As data flows continuously across networks and platforms, the risk of breaches,
+                                    ransomware, and system disruptions grows significantly. Modern cybersecurity
+                                    strategies must evolve beyond basic protection measures to address complex,
+                                    constantly changing threat landscapes. Businesses must adopt proactive, adaptive
+                                    security frameworks that protect not only systems, but trust and reputation.
+                                </p>
+                                <p class="p2">
+                                    Strengthening cybersecurity in a hyper-connected world requires a holistic approach.
+                                    It involves aligning technology, processes, and people to ensure resilience,
+                                    compliance, and long-term operational stability in an environment where threats are
+                                    increasingly sophisticated persistent.
+                                </p>
+                            </div>
+                            <!-- Understanding Modular Web Design -->
+                            <div>
+                                <h4 id="title-1">The Evolving Nature of Cyber Threats</h4>
+                                <p class="p2">
+                                    Cyber threats have shifted from isolated attacks to coordinated, multi-layered
+                                    operations targeting vulnerabilities across digital ecosystems. Attackers now
+                                    exploit weak access controls, outdated systems, and human error to gain unauthorized
+                                    access and disrupt operations. With the rise of cloud computing and remote work,
+                                    traditional perimeter-based security models are no longer sufficient. Threats can
+                                    originate from anywhere, making it critical to monitor, detect, and respond in real
+                                    time. Organizations must assume that breaches are possible and design systems that
+                                    can contain and recover from incidents quickly.
+                                </p>
+                                <p class="p2">
+                                    Understanding this evolving threat landscape is the first step toward building
+                                    effective cybersecurity strategies. By recognizing how attackers operate, businesses
+                                    can anticipate risks and implement controls that reduce exposure and impact.
+                                </p>
+                            </div>
+
+                            <div>
+                                <!-- Key Benefits -->
+                                <h4 id="title-2">Key Pillars of Modern Cybersecurity</h4>
+
+                                <!-- Improved Scalability -->
+                                <div class="3xl:space-y-6 md:space-y-5 space-y-4">
+                                    <div>
+                                        <h5 id="t2-sub-title-1">Zero Trust Architecture</h5>
+                                        <p class="p2">
+                                            Zero Trust operates on the principle of “never trust, always verify.” Every
+                                            user, device, and system interaction is continuously authenticated and
+                                            authorized. This approach minimizes lateral movement within networks and
+                                            limits the damage caused by compromised credentials.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <!-- Faster Development -->
+                                        <h5 id="t2-sub-title-5">Cloud and Infrastructure Security</h5>
+                                            <p class="p2">
+                                                As organizations migrate to cloud environments, securing infrastructure
+                                                becomes critical. This includes encryption, secure configurations, and
+                                                continuous monitoring to prevent misconfigurations and unauthorized
+                                                access. Strong cloud security ensures scalability without compromising
+                                                protection.
+                                            </p>
+                                    </div>
+                                    <div>
+
+                                        <!-- Faster Development -->
+                                        <h5 id="t2-sub-title-2">Identity and Access Management</h5>
+                                        <p class="p2">
+                                            Managing who can access what—and under what conditions—is central to
+                                            cybersecurity. Role-based access controls, multi-factor authentication, and
+                                            identity governance reduce the risk of insider threats and credential
+                                            misuse.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <!-- Faster Development -->
+                                        <h5 id="t2-sub-title-3">Threat Detection and Response</h5>
+                                        <p class="p2">
+                                            Advanced threat detection systems use analytics and behavioral monitoring to
+                                            identify anomalies early. Rapid response mechanisms help contain threats
+                                            before they escalate, minimizing downtime and data loss.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <!-- Faster Development -->
+                                        <h5 id="t2-sub-title-4">Data Protection and Encryption</h5>
+                                        <p class="p2">
+                                            Protecting sensitive data at rest and in transit is essential in a connected
+                                            world. Encryption ensures that even if data is intercepted, it remains
+                                            unusable to unauthorized parties. Data protection policies also support
+                                            regulatory compliance.
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div>
+                                <!-- Consistent UX -->
+                                <h4 id="title-3">Cybersecurity as a Business Enabler</h4>
+                                <p class="p2">
+                                    Strong cybersecurity does more than prevent attacks—it enables growth and
+                                    innovation. When systems are secure, organizations can confidently adopt new
+                                    technologies, expand digital services, and collaborate across ecosystems without
+                                    fear of disruption.
+                                </p>
+                                <p class="p2">
+                                    Customers and partners increasingly expect organizations to protect their data
+                                    responsibly. Demonstrating robust cybersecurity practices builds trust and enhances
+                                    brand credibility. In many industries, security maturity is now a key factor in
+                                    vendor selection and partnerships.
+                                </p>
+                                <img src="../image/insight-thumbnail-5.webp" alt="thumbnail"
+                                    class="w-full h-full object-cover" />
+                                <p class="p2">
+                                    From a financial perspective, proactive cybersecurity reduces the long-term costs
+                                    associated with breaches, downtime, and legal penalties. Investing in prevention and
+                                    resilience is far more effective than reacting to incidents after damage has
+                                    occurred.
+                                </p>
+                            </div>
+
+                            <div>
+                                <!-- Easier Maintenance -->
+                                <h4 id="title-4">Strategic Approaches to Strengthening Cybersecurity</h4>
+                                <ul class="filter-marker mt-0 2xl:space-y-2.5 space-y-2">
+                                    <li class="flex items-start xl:gap-2.5 gap-2">
+                                        <p class="p2">
+                                            <span class="text-black-100 font-bold">Risk-Based Security Planning: </span>
+                                            Organizations should prioritize security efforts based on risk exposure and
+                                            business impact. This ensures resources are focused on protecting critical
+                                            assets and operations.
+                                        </p>
+                                    </li>
+                                    <li class="flex items-start xl:gap-2.5 gap-2">
+                                        <p class="p2">
+                                            <span class="text-black-100 font-bold">Continuous Monitoring and Auditing:
+                                            </span>
+                                            Cybersecurity is not a one-time implementation. Continuous monitoring and
+                                            regular audits help identify vulnerabilities and ensure controls remain
+                                            effective over time.
+                                        </p>
+                                    </li>
+                                    <li class="flex items-start xl:gap-2.5 gap-2">
+                                        <p class="p2">
+                                            <span class="text-black-100 font-bold">Integration with Business Processes:
+                                            </span>
+                                            Security should be embedded into development, operations, and
+                                            decision-making processes. This alignment ensures protection without slowing
+                                            down innovation.
+                                        </p>
+                                    </li>
+                                    <li class="flex items-start xl:gap-2.5 gap-2">
+                                        <p class="p2">
+                                            <span class="text-black-100 font-bold">Incident Response Preparedness:
+                                            </span>
+                                            Having a clear incident response plan enables faster recovery when breaches
+                                            occur. Prepared teams can minimize damage and restore operations
+                                            efficiently.
+                                        </p>
+                                    </li>
+                                    <li class="flex items-start xl:gap-2.5 gap-2">
+                                        <p class="p2">
+                                            <span class="text-black-100 font-bold">Compliance and Regulatory Alignment:
+                                            </span>
+                                            Adhering to industry standards and regulations strengthens security posture
+                                            while avoiding legal and financial risks. Compliance also provides a
+                                            structured framework for improvement.
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <!-- Team Collaboration -->
+                                <h4 id="conclusion">Conclusion</h4>
+                                <p class="p2">
+                                    In a hyper-connected world, cybersecurity is a continuous journey rather than a
+                                    final destination. As digital ecosystems grow more complex, organizations must adopt
+                                    adaptive strategies that evolve alongside emerging threats. Resilience, visibility,
+                                    and preparedness are the foundations of modern security. By embracing advanced
+                                    security architectures, fostering a culture of awareness, and integrating protection
+                                    into every layer of operations, businesses can reduce risk while enabling
+                                    innovation. Cybersecurity becomes a strategic asset rather than a constraint.
+                                </p>
+                                <p class="p2">
+                                    Ultimately, strengthening cybersecurity is about safeguarding trust—trust in
+                                    systems, data, and digital experiences. Organizations that prioritize security today
+                                    are better positioned to thrive in an increasingly connected and unpredictable
+                                    future.
+                                </p>
+                            </div>
+
+                            <div>
+                                <!-- FAQs -->
+                                <h4 id="faqs">FAQs</h4>
+                                <div class="faq-outer-box max-w-full!">
+                                    <!-- FAQ Item -->
+                                    <div class="faq-inner-box">
+                                        <button class="faq-toggle-button p" onclick="toggleFaq(this)">
+                                            <h6 class="faq-title">Why is cybersecurity more challenging in a
+                                                hyper-connected world?</h6>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg" class="faq-toggle-svg">
+                                                <g clip-path="url(#clip0_7273_5307)">
+                                                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)"
+                                                        fill="black" />
+                                                    <rect x="7" width="2" height="16" fill="black" />
+                                                </g>
+                                            </svg>
+
+                                        </button>
+                                        <div
+                                            class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                            <div class="mt-4.5">
+                                                <span class="p2">
+                                                    Increased connectivity expands the attack surface, creating more
+                                                    entry points for threats. Multiple platforms, devices, and
+                                                    integrations increase complexity and risk.
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="faq-inner-box">
+                                        <button class="faq-toggle-button p" onclick="toggleFaq(this)">
+                                            <h6 class="faq-title">
+                                                What is Zero Trust and why is it important?
+                                            </h6>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg" class="faq-toggle-svg">
+                                                <g clip-path="url(#clip0_7273_5307)">
+                                                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)"
+                                                        fill="black" />
+                                                    <rect x="7" width="2" height="16" fill="black" />
+                                                </g>
+                                            </svg>
+                                        </button>
+                                        <div
+                                            class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                            <div class="mt-4.5">
+                                                <span class="p2">
+                                                    Zero Trust is a security model that continuously verifies all users
+                                                    and devices. It reduces the impact of breaches by limiting access
+                                                    and movement within networks.
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="faq-inner-box">
+                                        <button class="faq-toggle-button p" onclick="toggleFaq(this)">
+                                            <h6 class="faq-title">
+                                                How does cloud adoption affect cybersecurity?
+                                            </h6>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg" class="faq-toggle-svg">
+                                                <g clip-path="url(#clip0_7273_5307)">
+                                                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)"
+                                                        fill="black" />
+                                                    <rect x="7" width="2" height="16" fill="black" />
+                                                </g>
+                                            </svg>
+                                        </button>
+                                        <div
+                                            class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                            <div class="lg:mt-4.5 mt-3.5">
+                                                <span class="p2">
+                                                    Cloud environments require shared responsibility for security.
+                                                    Proper configurations, monitoring, and access controls are essential
+                                                    to prevent vulnerabilities.
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="faq-inner-box">
+                                        <button class="faq-toggle-button p" onclick="toggleFaq(this)">
+                                            <h6 class="faq-title">
+                                                Can employee training really improve cybersecurity?
+                                            </h6>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg" class="faq-toggle-svg">
+                                                <g clip-path="url(#clip0_7273_5307)">
+                                                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)"
+                                                        fill="black" />
+                                                    <rect x="7" width="2" height="16" fill="black" />
+                                                </g>
+                                            </svg>
+                                        </button>
+                                        <div
+                                            class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                            <div class="lg:mt-4.5 mt-3.5">
+                                                <span class="p2">
+                                                    Yes, trained employees are better equipped to recognize threats like
+                                                    phishing and social engineering, significantly reducing security
+                                                    incidents.
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="faq-inner-box">
+                                        <button class="faq-toggle-button p" onclick="toggleFaq(this)">
+                                            <h6 class="faq-title">
+                                                How often should cybersecurity systems be reviewed?
+                                            </h6>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg" class="faq-toggle-svg">
+                                                <g clip-path="url(#clip0_7273_5307)">
+                                                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)"
+                                                        fill="black" />
+                                                    <rect x="7" width="2" height="16" fill="black" />
+                                                </g>
+                                            </svg>
+                                        </button>
+                                        <div
+                                            class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                            <div class="lg:mt-4.5 mt-3.5">
+                                                <span class="p2">
+                                                    Cybersecurity systems should be continuously monitored and regularly
+                                                    audited to address new threats and maintain effectiveness.
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="faq-inner-box">
+                                        <button class="faq-toggle-button p" onclick="toggleFaq(this)">
+                                            <h6 class="faq-title">
+                                                Is cybersecurity only an IT responsibility?
+                                            </h6>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg" class="faq-toggle-svg">
+                                                <g clip-path="url(#clip0_7273_5307)">
+                                                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)"
+                                                        fill="black" />
+                                                    <rect x="7" width="2" height="16" fill="black" />
+                                                </g>
+                                            </svg>
+                                        </button>
+                                        <div
+                                            class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                            <div class="lg:mt-4.5 mt-3.5">
+                                                <span class="p2">
+                                                    No, cybersecurity is a business-wide responsibility involving
+                                                    leadership, employees, and processes, not just IT teams.
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="3xl:mt-15 2xl:mt-14 1xl:mt-11.5 mt-9.5">
+                            <div
+                                class="flex items-stretch justify-between w-full 2xl:pb-6 lg:pb-5 pb-4 border-b border-gray-100">
+                                <p
+                                    class="3xl:text-[40px] 2xl:text-[37px] 1xl:text-[34px] lg:text-[30px] md:text-[28px] text-[25px] 2xl:leading-12.5 md:leading-10 leading-8 text-black-100 m-0! font-light sm:block hidden">
+                                    Comments (03)</p>
+
+                                <div class="relative inline-block sm:w-fit w-full" id="insight-wrapper">
+                                    <!-- Trigger -->
+                                    <button id="insightDropdownBtn"
+                                        class="flex items-center sm:justify-end justify-between w-full h-full p2 font-normal text-black-100 gap-1 select-none focus:outline-none">
+                                        <span class="flex items-center gap-1">
+                                            Browse By: <span class="text-primary">Newest First</span></span>
+                                        <svg id="insightChevron" xmlns="http://www.w3.org/2000/svg" width="12"
+                                            height="12" viewBox="0 0 12 12" fill="none"
+                                            class="ml-1 transition-all duration-300">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M6.37894 9.63163C6.16963 9.84093 5.83035 9.84093 5.62104 9.63163L0.156971 4.16755C-0.0523238 3.95824 -0.0523238 3.61896 0.156971 3.40965L0.409621 3.15698C0.618916 2.94767 0.958252 2.94767 1.16755 3.15698L5.99999 7.98944L10.8325 3.15698C11.0418 2.94767 11.381 2.94767 11.5903 3.15698L11.843 3.40965C12.0523 3.61896 12.0523 3.95824 11.843 4.16755L6.37894 9.63163Z"
+                                                fill="currentColor" />
+                                        </svg>
+                                    </button>
+
+                                    <!-- Dropdown Menu -->
+                                    <div id="insightMenu"
+                                        class="hidden absolute 2xl:mt-[25px] lg:mt-[21px] mt-[17px] 2xl::w-[210px] lg:w-[190px] w-full right-0 shadow-xl bg-white z-50 overflow-hidden">
+                                        <ul class="2xl:py-1 py-1.5 2xl:px-6 lg:px-5 px-4">
+                                            <li>
+                                                <button
+                                                    class="block 3xl:py-2.5 2xl:py-2 py-1.5 text-slate-100 hover:text-primary p2 font-normal active:text-primary focus:text-primary w-full text-left">
+                                                    Oldest First
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button
+                                                    class="block 3xl:py-2.5 2xl:py-2 py-1.5 text-slate-100 hover:text-primary p2 font-normal active:text-primary focus:text-primary w-full text-left">
+                                                    Newest First
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button
+                                                    class="block 3xl:py-2.5 2xl:py-2 py-1.5 text-slate-100 hover:text-primary p2 font-normal active:text-primary focus:text-primary w-full text-left">
+                                                    Most Liked
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button
+                                                    class="block 3xl:py-2.5 2xl:py-2 py-1.5 text-slate-100 hover:text-primary p2 font-normal active:text-primary focus:text-primary w-full text-left">
+                                                    Most Replied
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <!-- ── Comments List ── -->
+                                <div id="commentsList"
+                                    class="2xl:space-y-10 1xl:space-y-8 md:space-y-7 space-y-6 2xl:mt-10 xl:mt-8 mt-7.5 border-b border-gray-100 3xl:pb-12.5 2xl:pb-10.5 1xl:pb-9 pb-8">
+
+                                    <!-- ══════ Comment 1: Jonathan Klein ══════ -->
+                                    <div>
+                                        <div class="comment-item relative" data-likes="25" data-date="2025-11-18"
+                                            data-replies="2">
+                                            <div>
+                                                <div
+                                                    class="absolute top-0 bottom-0 2xl:left-5.5 lg:left-5 left-4.5 px-5 w-px h-full border-l border-gray-300 sm:block hidden">
+                                                </div>
+                                            </div>
+                                            <div class="flex flex-col items-start gap-2.5 relative">
+                                                <div class="flex items-center 2xl:gap-4 sm:gap-3 gap-2.5 relative">
+                                                    <img src="../image/jonathan-klein.webp" alt="Jonathan Klein"
+                                                        class="2xl:size-11.5 1xl:size-10.5 sm:size-9.5 size-8 rounded-full object-cover shrink-0 m-0" />
+                                                    <div class="flex flex-wrap items-center gap-2">
+                                                        <h6 class="text-black-100">Jonathan Klein</h6>
+                                                        <p class="text-4xl">·</p>
+                                                        <p class="p2 font-normal">18 Nov 2025</p>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-1 min-w-0 2xl:pl-15.5 1xl:pl-13.5 sm:pl-12.5 pl-0">
+                                                    <p class="p2">
+                                                        This article provides a surprisingly deep and practical
+                                                        breakdown of how a real product roadmap should be built. I
+                                                        really appreciate how each section dives into the “why” behind
+                                                        the process, not just the “how.” It’s rare to find content that
+                                                        balances strategy and execution this well, and this one truly
+                                                        stands out.
+                                                    </p>
+
+                                                    <div class="flex items-center sm:gap-6 gap-5 3xl:mt-5 mt-4">
+                                                        <button onclick="vote(this,1)"
+                                                            class="like-btn flex items-center gap-1.5 text-slate-100 transition-all cursor-pointer">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="18"
+                                                                height="18" viewBox="0 0 18 18" fill="none"
+                                                                class="h-auto 2xl:w-4.5 w-4">
+                                                                <g clip-path="url(#clip0_5492_3740)">
+                                                                    <path
+                                                                        d="M16.625 12.3036L17.2291 8.78465C17.2646 8.5784 17.2548 8.36684 17.2005 8.16478C17.1463 7.96271 17.0488 7.77502 16.915 7.61483C16.7811 7.45464 16.6141 7.32581 16.4256 7.23737C16.2372 7.14892 16.0318 7.10299 15.8238 7.10279H11.3843C11.2807 7.10281 11.1783 7.08013 11.0843 7.03632C10.9903 6.99251 10.9068 6.92863 10.8398 6.8491C10.7728 6.76957 10.7238 6.67631 10.6962 6.5758C10.6686 6.47528 10.663 6.36992 10.6799 6.26704L11.248 2.77826C11.3398 2.21178 11.3135 1.63228 11.1709 1.07656C11.1094 0.847146 10.9914 0.637041 10.8278 0.465647C10.6643 0.294253 10.4605 0.167094 10.2352 0.0959106L10.111 0.0553734C9.83 -0.0351015 9.52531 -0.0141215 9.25921 0.114023C8.96787 0.255471 8.75537 0.513356 8.67653 0.819541L8.26865 2.40135C8.13902 2.90479 7.95032 3.39092 7.70654 3.84947C7.35093 4.51963 6.80081 5.05696 6.22841 5.55289L4.99535 6.62238C4.82429 6.77117 4.69069 6.95864 4.60549 7.16942C4.5203 7.38021 4.48593 7.60831 4.50521 7.83505L5.20101 15.9364C5.23167 16.2947 5.3947 16.6284 5.65789 16.8716C5.92108 17.1148 6.2653 17.2498 6.62258 17.25H10.6054C13.5891 17.25 16.1349 15.1576 16.625 12.3036Z"
+                                                                        fill="currentColor" />
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                        d="M1.49681 6.66198C1.67257 6.65483 1.84451 6.7112 1.9767 6.81934C2.10889 6.92748 2.19111 7.07902 2.20619 7.24229L3.08836 16.761C3.10331 16.9028 3.08707 17.0459 3.04066 17.1816C2.99424 17.3173 2.91861 17.4427 2.81839 17.5503C2.71816 17.6579 2.59545 17.7453 2.45775 17.8072C2.32005 17.8691 2.17024 17.9042 2.01748 17.9104C1.86472 17.9166 1.71221 17.8937 1.56927 17.8431C1.42633 17.7925 1.29596 17.7153 1.18612 17.6162C1.07628 17.5172 0.989278 17.3983 0.930425 17.2668C0.871571 17.1353 0.842103 16.9941 0.843821 16.8517V7.29651C0.843895 7.13274 0.911854 6.97532 1.03352 6.85709C1.15518 6.73887 1.32116 6.66897 1.49681 6.66198Z"
+                                                                        fill="currentColor" />
+                                                                </g>
+                                                            </svg>
+                                                            <span class="vote-count">25</span>
+                                                        </button>
+                                                        <button onclick="vote(this,-1)"
+                                                            class="dislike-btn flex items-center gap-1.5 text-slate-100 hover:text-red-500 transition-colors cursor-pointer">
+                                                            <svg svg xmlns="http://www.w3.org/2000/svg" width="18"
+                                                                height="18" viewBox="0 0 18 18" fill="none"
+                                                                class="h-auto 2xl:w-4.5 w-4">
+                                                                <g clip-path="url(#clip0_5492_3753)">
+                                                                    <path
+                                                                        d="M16.625 5.69639L17.2291 9.21535C17.2646 9.4216 17.2548 9.63316 17.2005 9.83522C17.1463 10.0373 17.0488 10.225 16.915 10.3852C16.7811 10.5454 16.6141 10.6742 16.4256 10.7626C16.2372 10.8511 16.0318 10.897 15.8238 10.8972H11.3843C11.2807 10.8972 11.1783 10.9199 11.0843 10.9637C10.9903 11.0075 10.9068 11.0714 10.8398 11.1509C10.7728 11.2304 10.7238 11.3237 10.6962 11.4242C10.6686 11.5247 10.663 11.6301 10.6799 11.733L11.248 15.2217C11.3398 15.7882 11.3135 16.3677 11.1709 16.9234C11.1094 17.1529 10.9914 17.363 10.8278 17.5344C10.6643 17.7057 10.4605 17.8329 10.2352 17.9041L10.111 17.9446C9.83 18.0351 9.52531 18.0141 9.25921 17.886C8.96787 17.7445 8.75537 17.4866 8.67653 17.1805L8.26865 15.5987C8.13902 15.0952 7.95032 14.6091 7.70654 14.1505C7.35093 13.4804 6.80081 12.943 6.22841 12.4471L4.99535 11.3776C4.82429 11.2288 4.69069 11.0414 4.60549 10.8306C4.5203 10.6198 4.48593 10.3917 4.50521 10.165L5.20101 2.06357C5.23167 1.70529 5.3947 1.3716 5.65789 1.1284C5.92108 0.885204 6.2653 0.750183 6.62258 0.75H10.6054C13.5891 0.75 16.1349 2.8424 16.625 5.69639Z"
+                                                                        fill="currentColor" />
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                        d="M1.49681 11.338C1.67257 11.3452 1.84451 11.2888 1.9767 11.1807C2.10889 11.0725 2.19111 10.921 2.20619 10.7577L3.08836 1.23898C3.10331 1.09723 3.08707 0.954137 3.04066 0.818428C2.99424 0.68272 2.91861 0.557251 2.81839 0.449683C2.71816 0.342115 2.59545 0.254707 2.45775 0.192798C2.32005 0.130888 2.17024 0.0957766 2.01748 0.0896072C1.86472 0.0834379 1.71221 0.10634 1.56927 0.156917C1.42633 0.207492 1.29596 0.284679 1.18612 0.383763C1.07628 0.482848 0.989278 0.601749 0.930425 0.733206C0.871571 0.864662 0.842103 1.00592 0.843821 1.14834V10.7035C0.843895 10.8673 0.911854 11.0247 1.03352 11.1429C1.15518 11.2611 1.32116 11.331 1.49681 11.338Z"
+                                                                        fill="currentColor" />
+                                                                </g>
+                                                            </svg>
+                                                            <span class="vote-count inline-block">12</span>
+                                                        </button>
+                                                        <button onclick="toggleReply(this)"
+                                                            class="reply-btn flex items-center gap-1.5 text-slate-100 transition-colors cursor-pointer">
+                                                            <span class="ricon inline-block">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="18"
+                                                                    height="18" viewBox="0 0 18 18" fill="none"
+                                                                    class="h-auto 2xl:w-4.5 w-4">
+                                                                    <path
+                                                                        d="M7.20703 1.22341C7.61133 1.40271 7.875 1.80701 7.875 2.24998V4.49998H11.8125C15.2297 4.49998 18 7.27029 18 10.6875C18 14.6707 15.1348 16.4496 14.4773 16.8082C14.3895 16.8574 14.291 16.875 14.1926 16.875C13.8094 16.875 13.5 16.5621 13.5 16.1824C13.5 15.9187 13.6512 15.6761 13.8445 15.4969C14.175 15.1875 14.625 14.5687 14.625 13.5035C14.625 11.6402 13.1133 10.1285 11.25 10.1285H7.875V12.3785C7.875 12.8215 7.61484 13.2258 7.20703 13.4051C6.79922 13.5844 6.32812 13.5105 5.99766 13.2152L0.372656 8.15271C0.137109 7.93474 0 7.6324 0 7.31248C0 6.99255 0.137109 6.69021 0.372656 6.47576L5.99766 1.41326C6.32812 1.11443 6.80273 1.0406 7.20703 1.22341Z"
+                                                                        fill="currentColor" />
+                                                                </svg>
+                                                            </span>
+                                                            Reply (02)
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Nested Replies: Tailwind tree connector -->
+                                        <!-- Reply 1: Oliver — has bottom tail (not last) -->
+                                        <div class="comment-item 2xl:ml-5.5 lg:ml-5 sm:ml-4.5 relative" data-likes="05"
+                                            data-date="2025-11-21">
+                                            <div class="w-12.5 h-full">
+                                                <div
+                                                    class="absolute left-0 top-0 sm:w-12.5 w-5 3xl:h-17.5 2xl:h-15 1xl:h-13.5 sm:h-12.5 h-10.5 border-l border-b border-gray-300 1xl:rounded-bl-3xl rounded-bl-2xl">
+                                                </div>
+                                                <div class="absolute left-0 top-0 w-6 border-l border-gray-300 h-full">
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="flex flex-col items-start gap-2.5 relative 1xl:pl-10.5 sm:pl-9 pl-6 3xl:pt-11 2xl:pt-9 1xl:pt-7.5 sm:pt-6.5 pt-5">
+                                                <div class="flex items-center 2xl:gap-4 sm:gap-3 gap-2.5">
+                                                    <img src="../image/oliver-bennett.webp" alt="Oliver Bennett"
+                                                        class="2xl:size-11.5 1xl:size-10.5 sm:size-9.5 size-8 rounded-full object-cover shrink-0 m-0" />
+                                                    <div class="flex flex-wrap items-center sm:gap-2 gap-1">
+                                                        <h6 class="text-black-100">Oliver Bennett</h6>
+                                                        <p class="text-4xl">·</p>
+                                                        <p class="p2 font-normal">21 Nov 2025</p>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-1 min-w-0 2xl:pl-15.5 1xl:pl-13.5 sm:pl-12.5 pl-0">
+                                                    <p class="p2">
+                                                        Great point, Emily. A good RICE template would really help teams
+                                                        maintain consistency in scoring. Looking forward to seeing what
+                                                        ENX releases — this blog has already raised the bar for roadmap
+                                                        content.
+                                                    </p>
+                                                    <div class="flex items-center sm:gap-6 gap-5 3xl:mt-5 mt-4">
+                                                        <button onclick="vote(this,1)"
+                                                            class="like-btn flex items-center gap-1.5 text-slate-100 transition-all cursor-pointer">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="18"
+                                                                height="18" viewBox="0 0 18 18" fill="none"
+                                                                class="h-auto 2xl:w-4.5 w-4">
+                                                                <g clip-path="url(#clip0_5492_3740)">
+                                                                    <path
+                                                                        d="M16.625 12.3036L17.2291 8.78465C17.2646 8.5784 17.2548 8.36684 17.2005 8.16478C17.1463 7.96271 17.0488 7.77502 16.915 7.61483C16.7811 7.45464 16.6141 7.32581 16.4256 7.23737C16.2372 7.14892 16.0318 7.10299 15.8238 7.10279H11.3843C11.2807 7.10281 11.1783 7.08013 11.0843 7.03632C10.9903 6.99251 10.9068 6.92863 10.8398 6.8491C10.7728 6.76957 10.7238 6.67631 10.6962 6.5758C10.6686 6.47528 10.663 6.36992 10.6799 6.26704L11.248 2.77826C11.3398 2.21178 11.3135 1.63228 11.1709 1.07656C11.1094 0.847146 10.9914 0.637041 10.8278 0.465647C10.6643 0.294253 10.4605 0.167094 10.2352 0.0959106L10.111 0.0553734C9.83 -0.0351015 9.52531 -0.0141215 9.25921 0.114023C8.96787 0.255471 8.75537 0.513356 8.67653 0.819541L8.26865 2.40135C8.13902 2.90479 7.95032 3.39092 7.70654 3.84947C7.35093 4.51963 6.80081 5.05696 6.22841 5.55289L4.99535 6.62238C4.82429 6.77117 4.69069 6.95864 4.60549 7.16942C4.5203 7.38021 4.48593 7.60831 4.50521 7.83505L5.20101 15.9364C5.23167 16.2947 5.3947 16.6284 5.65789 16.8716C5.92108 17.1148 6.2653 17.2498 6.62258 17.25H10.6054C13.5891 17.25 16.1349 15.1576 16.625 12.3036Z"
+                                                                        fill="currentColor" />
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                        d="M1.49681 6.66198C1.67257 6.65483 1.84451 6.7112 1.9767 6.81934C2.10889 6.92748 2.19111 7.07902 2.20619 7.24229L3.08836 16.761C3.10331 16.9028 3.08707 17.0459 3.04066 17.1816C2.99424 17.3173 2.91861 17.4427 2.81839 17.5503C2.71816 17.6579 2.59545 17.7453 2.45775 17.8072C2.32005 17.8691 2.17024 17.9042 2.01748 17.9104C1.86472 17.9166 1.71221 17.8937 1.56927 17.8431C1.42633 17.7925 1.29596 17.7153 1.18612 17.6162C1.07628 17.5172 0.989278 17.3983 0.930425 17.2668C0.871571 17.1353 0.842103 16.9941 0.843821 16.8517V7.29651C0.843895 7.13274 0.911854 6.97532 1.03352 6.85709C1.15518 6.73887 1.32116 6.66897 1.49681 6.66198Z"
+                                                                        fill="currentColor" />
+                                                                </g>
+                                                            </svg>
+                                                            <span class="vote-count">05</span>
+                                                        </button>
+                                                        <button onclick="vote(this,-1)"
+                                                            class="dislike-btn flex items-center gap-1.5 text-slate-100 hover:text-red-500 transition-colors cursor-pointer">
+                                                            <svg svg xmlns="http://www.w3.org/2000/svg" width="18"
+                                                                height="18" viewBox="0 0 18 18" fill="none"
+                                                                class="h-auto 2xl:w-4.5 w-4">
+                                                                <g clip-path="url(#clip0_5492_3753)">
+                                                                    <path
+                                                                        d="M16.625 5.69639L17.2291 9.21535C17.2646 9.4216 17.2548 9.63316 17.2005 9.83522C17.1463 10.0373 17.0488 10.225 16.915 10.3852C16.7811 10.5454 16.6141 10.6742 16.4256 10.7626C16.2372 10.8511 16.0318 10.897 15.8238 10.8972H11.3843C11.2807 10.8972 11.1783 10.9199 11.0843 10.9637C10.9903 11.0075 10.9068 11.0714 10.8398 11.1509C10.7728 11.2304 10.7238 11.3237 10.6962 11.4242C10.6686 11.5247 10.663 11.6301 10.6799 11.733L11.248 15.2217C11.3398 15.7882 11.3135 16.3677 11.1709 16.9234C11.1094 17.1529 10.9914 17.363 10.8278 17.5344C10.6643 17.7057 10.4605 17.8329 10.2352 17.9041L10.111 17.9446C9.83 18.0351 9.52531 18.0141 9.25921 17.886C8.96787 17.7445 8.75537 17.4866 8.67653 17.1805L8.26865 15.5987C8.13902 15.0952 7.95032 14.6091 7.70654 14.1505C7.35093 13.4804 6.80081 12.943 6.22841 12.4471L4.99535 11.3776C4.82429 11.2288 4.69069 11.0414 4.60549 10.8306C4.5203 10.6198 4.48593 10.3917 4.50521 10.165L5.20101 2.06357C5.23167 1.70529 5.3947 1.3716 5.65789 1.1284C5.92108 0.885204 6.2653 0.750183 6.62258 0.75H10.6054C13.5891 0.75 16.1349 2.8424 16.625 5.69639Z"
+                                                                        fill="currentColor" />
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                        d="M1.49681 11.338C1.67257 11.3452 1.84451 11.2888 1.9767 11.1807C2.10889 11.0725 2.19111 10.921 2.20619 10.7577L3.08836 1.23898C3.10331 1.09723 3.08707 0.954137 3.04066 0.818428C2.99424 0.68272 2.91861 0.557251 2.81839 0.449683C2.71816 0.342115 2.59545 0.254707 2.45775 0.192798C2.32005 0.130888 2.17024 0.0957766 2.01748 0.0896072C1.86472 0.0834379 1.71221 0.10634 1.56927 0.156917C1.42633 0.207492 1.29596 0.284679 1.18612 0.383763C1.07628 0.482848 0.989278 0.601749 0.930425 0.733206C0.871571 0.864662 0.842103 1.00592 0.843821 1.14834V10.7035C0.843895 10.8673 0.911854 11.0247 1.03352 11.1429C1.15518 11.2611 1.32116 11.331 1.49681 11.338Z"
+                                                                        fill="currentColor" />
+                                                                </g>
+                                                            </svg>
+                                                            <span class="vote-count inline-block">03</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Reply 2: Isabella — no bottom tail (last) -->
+                                        <div class="comment-item 2xl:ml-5.5 lg:ml-5 sm:ml-4.5 relative" data-likes="09"
+                                            data-date="2025-11-21">
+                                            <div class="w-12.5 h-full">
+                                                <div
+                                                    class="absolute left-0 top-0 sm:w-12.5 w-5 3xl:h-17.5 2xl:h-15 1xl:h-13.5 sm:h-12.5 h-10.5 border-l border-b border-gray-300 1xl:rounded-bl-3xl rounded-bl-2xl">
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="flex flex-col items-start gap-2.5 relative 1xl:pl-10.5 sm:pl-9 pl-6 3xl:pt-11 2xl:pt-9 1xl:pt-7.5 sm:pt-6.5 pt-5">
+                                                <div class="flex items-center 2xl:gap-4 sm:gap-3 gap-2.5">
+                                                    <img src="../image/testimonial-9.webp" alt="Isabella Hughes"
+                                                        class="2xl:size-11.5 1xl:size-10.5 sm:size-9.5 size-8 rounded-full object-cover shrink-0 m-0" />
+                                                    <div class="flex flex-wrap items-center sm:gap-2 gap-1">
+                                                        <h6 class="text-black-100">Isabella Hughes</h6>
+                                                        <p class="text-4xl">·</p>
+                                                        <p class="p2 font-normal">21 Nov 2025</p>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-1 min-w-0 2xl:pl-15.5 1xl:pl-13.5 sm:pl-12.5 pl-0">
+                                                    <p class="p2">
+                                                        I agree completely! Clear examples make it so much easier to put
+                                                        these frameworks into practice. The explanations were excellent,
+                                                        and a template will make it even more actionable for product
+                                                        teams.
+                                                    </p>
+                                                    <div class="flex items-center sm:gap-6 gap-5 3xl:mt-5 mt-4">
+                                                        <button onclick="vote(this,1)"
+                                                            class="like-btn flex items-center gap-1.5 text-slate-100 transition-all cursor-pointer">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="18"
+                                                                height="18" viewBox="0 0 18 18" fill="none"
+                                                                class="h-auto 2xl:w-4.5 w-4">
+                                                                <g clip-path="url(#clip0_5492_3740)">
+                                                                    <path
+                                                                        d="M16.625 12.3036L17.2291 8.78465C17.2646 8.5784 17.2548 8.36684 17.2005 8.16478C17.1463 7.96271 17.0488 7.77502 16.915 7.61483C16.7811 7.45464 16.6141 7.32581 16.4256 7.23737C16.2372 7.14892 16.0318 7.10299 15.8238 7.10279H11.3843C11.2807 7.10281 11.1783 7.08013 11.0843 7.03632C10.9903 6.99251 10.9068 6.92863 10.8398 6.8491C10.7728 6.76957 10.7238 6.67631 10.6962 6.5758C10.6686 6.47528 10.663 6.36992 10.6799 6.26704L11.248 2.77826C11.3398 2.21178 11.3135 1.63228 11.1709 1.07656C11.1094 0.847146 10.9914 0.637041 10.8278 0.465647C10.6643 0.294253 10.4605 0.167094 10.2352 0.0959106L10.111 0.0553734C9.83 -0.0351015 9.52531 -0.0141215 9.25921 0.114023C8.96787 0.255471 8.75537 0.513356 8.67653 0.819541L8.26865 2.40135C8.13902 2.90479 7.95032 3.39092 7.70654 3.84947C7.35093 4.51963 6.80081 5.05696 6.22841 5.55289L4.99535 6.62238C4.82429 6.77117 4.69069 6.95864 4.60549 7.16942C4.5203 7.38021 4.48593 7.60831 4.50521 7.83505L5.20101 15.9364C5.23167 16.2947 5.3947 16.6284 5.65789 16.8716C5.92108 17.1148 6.2653 17.2498 6.62258 17.25H10.6054C13.5891 17.25 16.1349 15.1576 16.625 12.3036Z"
+                                                                        fill="currentColor" />
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                        d="M1.49681 6.66198C1.67257 6.65483 1.84451 6.7112 1.9767 6.81934C2.10889 6.92748 2.19111 7.07902 2.20619 7.24229L3.08836 16.761C3.10331 16.9028 3.08707 17.0459 3.04066 17.1816C2.99424 17.3173 2.91861 17.4427 2.81839 17.5503C2.71816 17.6579 2.59545 17.7453 2.45775 17.8072C2.32005 17.8691 2.17024 17.9042 2.01748 17.9104C1.86472 17.9166 1.71221 17.8937 1.56927 17.8431C1.42633 17.7925 1.29596 17.7153 1.18612 17.6162C1.07628 17.5172 0.989278 17.3983 0.930425 17.2668C0.871571 17.1353 0.842103 16.9941 0.843821 16.8517V7.29651C0.843895 7.13274 0.911854 6.97532 1.03352 6.85709C1.15518 6.73887 1.32116 6.66897 1.49681 6.66198Z"
+                                                                        fill="currentColor" />
+                                                                </g>
+                                                            </svg>
+                                                            <span class="vote-count">09</span>
+                                                        </button>
+                                                        <button onclick="vote(this,-1)"
+                                                            class="dislike-btn flex items-center gap-1.5 text-slate-100 hover:text-red-500 transition-colors cursor-pointer">
+                                                            <svg svg xmlns="http://www.w3.org/2000/svg" width="18"
+                                                                height="18" viewBox="0 0 18 18" fill="none"
+                                                                class="h-auto 2xl:w-4.5 w-4">
+                                                                <g clip-path="url(#clip0_5492_3753)">
+                                                                    <path
+                                                                        d="M16.625 5.69639L17.2291 9.21535C17.2646 9.4216 17.2548 9.63316 17.2005 9.83522C17.1463 10.0373 17.0488 10.225 16.915 10.3852C16.7811 10.5454 16.6141 10.6742 16.4256 10.7626C16.2372 10.8511 16.0318 10.897 15.8238 10.8972H11.3843C11.2807 10.8972 11.1783 10.9199 11.0843 10.9637C10.9903 11.0075 10.9068 11.0714 10.8398 11.1509C10.7728 11.2304 10.7238 11.3237 10.6962 11.4242C10.6686 11.5247 10.663 11.6301 10.6799 11.733L11.248 15.2217C11.3398 15.7882 11.3135 16.3677 11.1709 16.9234C11.1094 17.1529 10.9914 17.363 10.8278 17.5344C10.6643 17.7057 10.4605 17.8329 10.2352 17.9041L10.111 17.9446C9.83 18.0351 9.52531 18.0141 9.25921 17.886C8.96787 17.7445 8.75537 17.4866 8.67653 17.1805L8.26865 15.5987C8.13902 15.0952 7.95032 14.6091 7.70654 14.1505C7.35093 13.4804 6.80081 12.943 6.22841 12.4471L4.99535 11.3776C4.82429 11.2288 4.69069 11.0414 4.60549 10.8306C4.5203 10.6198 4.48593 10.3917 4.50521 10.165L5.20101 2.06357C5.23167 1.70529 5.3947 1.3716 5.65789 1.1284C5.92108 0.885204 6.2653 0.750183 6.62258 0.75H10.6054C13.5891 0.75 16.1349 2.8424 16.625 5.69639Z"
+                                                                        fill="currentColor" />
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                        d="M1.49681 11.338C1.67257 11.3452 1.84451 11.2888 1.9767 11.1807C2.10889 11.0725 2.19111 10.921 2.20619 10.7577L3.08836 1.23898C3.10331 1.09723 3.08707 0.954137 3.04066 0.818428C2.99424 0.68272 2.91861 0.557251 2.81839 0.449683C2.71816 0.342115 2.59545 0.254707 2.45775 0.192798C2.32005 0.130888 2.17024 0.0957766 2.01748 0.0896072C1.86472 0.0834379 1.71221 0.10634 1.56927 0.156917C1.42633 0.207492 1.29596 0.284679 1.18612 0.383763C1.07628 0.482848 0.989278 0.601749 0.930425 0.733206C0.871571 0.864662 0.842103 1.00592 0.843821 1.14834V10.7035C0.843895 10.8673 0.911854 11.0247 1.03352 11.1429C1.15518 11.2611 1.32116 11.331 1.49681 11.338Z"
+                                                                        fill="currentColor" />
+                                                                </g>
+                                                            </svg>
+                                                            <span class="vote-count inline-block">03</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- ══════ Comment 2: Liam Anderson ══════ -->
+                                    <div class="comment-item relative" data-likes="29" data-date="2025-11-19">
+                                        <div class="relative">
+                                            <div>
+                                                <div
+                                                    class="comment-line absolute top-0 bottom-0 2xl:left-5.5 lg:left-5 left-4.5 px-5 w-px h-0 duration-all ease-in-out border-l border-gray-300 sm:block hidden">
+                                                </div>
+                                            </div>
+                                            <div class="flex flex-col items-start gap-2.5 relative">
+                                                <div class="flex items-center 2xl:gap-4 sm:gap-3 gap-2.5">
+                                                    <img src="../image/liam-anderson.webp" alt="Liam Anderson"
+                                                        class="2xl:size-11.5 1xl:size-10.5 sm:size-9.5 size-8 rounded-full object-cover shrink-0 m-0" />
+                                                    <div class="flex flex-wrap items-center sm:gap-2 gap-1">
+                                                        <h6 class="text-black-100">Liam Anderson</h6>
+                                                        <p class="text-4xl">·</p>
+                                                        <p class="p2 font-normal">19 Nov 2025</p>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-1 min-w-0 2xl:pl-15.5 1xl:pl-13.5 sm:pl-12.5 pl-0">
+                                                    <p class="p2">
+                                                        I really connected with the part about keeping roadmaps flexible
+                                                        and iterative. Many organizations still treat roadmaps like
+                                                        fixed contracts, which creates unnecessary pressure. Your
+                                                        explanation helps highlight the importance of adaptability in
+                                                        modern product development.
+                                                    </p>
+
+                                                    <div class="flex items-center sm:gap-6 gap-5 3xl:mt-5 mt-4">
+                                                        <button onclick="vote(this,1)"
+                                                            class="like-btn flex items-center gap-1.5 text-slate-100 transition-all cursor-pointer">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="18"
+                                                                height="18" viewBox="0 0 18 18" fill="none"
+                                                                class="h-auto 2xl:w-4.5 w-4">
+                                                                <g clip-path="url(#clip0_5492_3740)">
+                                                                    <path
+                                                                        d="M16.625 12.3036L17.2291 8.78465C17.2646 8.5784 17.2548 8.36684 17.2005 8.16478C17.1463 7.96271 17.0488 7.77502 16.915 7.61483C16.7811 7.45464 16.6141 7.32581 16.4256 7.23737C16.2372 7.14892 16.0318 7.10299 15.8238 7.10279H11.3843C11.2807 7.10281 11.1783 7.08013 11.0843 7.03632C10.9903 6.99251 10.9068 6.92863 10.8398 6.8491C10.7728 6.76957 10.7238 6.67631 10.6962 6.5758C10.6686 6.47528 10.663 6.36992 10.6799 6.26704L11.248 2.77826C11.3398 2.21178 11.3135 1.63228 11.1709 1.07656C11.1094 0.847146 10.9914 0.637041 10.8278 0.465647C10.6643 0.294253 10.4605 0.167094 10.2352 0.0959106L10.111 0.0553734C9.83 -0.0351015 9.52531 -0.0141215 9.25921 0.114023C8.96787 0.255471 8.75537 0.513356 8.67653 0.819541L8.26865 2.40135C8.13902 2.90479 7.95032 3.39092 7.70654 3.84947C7.35093 4.51963 6.80081 5.05696 6.22841 5.55289L4.99535 6.62238C4.82429 6.77117 4.69069 6.95864 4.60549 7.16942C4.5203 7.38021 4.48593 7.60831 4.50521 7.83505L5.20101 15.9364C5.23167 16.2947 5.3947 16.6284 5.65789 16.8716C5.92108 17.1148 6.2653 17.2498 6.62258 17.25H10.6054C13.5891 17.25 16.1349 15.1576 16.625 12.3036Z"
+                                                                        fill="currentColor" />
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                        d="M1.49681 6.66198C1.67257 6.65483 1.84451 6.7112 1.9767 6.81934C2.10889 6.92748 2.19111 7.07902 2.20619 7.24229L3.08836 16.761C3.10331 16.9028 3.08707 17.0459 3.04066 17.1816C2.99424 17.3173 2.91861 17.4427 2.81839 17.5503C2.71816 17.6579 2.59545 17.7453 2.45775 17.8072C2.32005 17.8691 2.17024 17.9042 2.01748 17.9104C1.86472 17.9166 1.71221 17.8937 1.56927 17.8431C1.42633 17.7925 1.29596 17.7153 1.18612 17.6162C1.07628 17.5172 0.989278 17.3983 0.930425 17.2668C0.871571 17.1353 0.842103 16.9941 0.843821 16.8517V7.29651C0.843895 7.13274 0.911854 6.97532 1.03352 6.85709C1.15518 6.73887 1.32116 6.66897 1.49681 6.66198Z"
+                                                                        fill="currentColor" />
+                                                                </g>
+                                                            </svg>
+                                                            <span class="vote-count">29</span>
+                                                        </button>
+                                                        <button onclick="vote(this,-1)"
+                                                            class="dislike-btn flex items-center gap-1.5 text-slate-100 hover:text-red-500 transition-colors cursor-pointer">
+                                                            <svg svg xmlns="http://www.w3.org/2000/svg" width="18"
+                                                                height="18" viewBox="0 0 18 18" fill="none"
+                                                                class="h-auto 2xl:w-4.5 w-4">
+                                                                <g clip-path="url(#clip0_5492_3753)">
+                                                                    <path
+                                                                        d="M16.625 5.69639L17.2291 9.21535C17.2646 9.4216 17.2548 9.63316 17.2005 9.83522C17.1463 10.0373 17.0488 10.225 16.915 10.3852C16.7811 10.5454 16.6141 10.6742 16.4256 10.7626C16.2372 10.8511 16.0318 10.897 15.8238 10.8972H11.3843C11.2807 10.8972 11.1783 10.9199 11.0843 10.9637C10.9903 11.0075 10.9068 11.0714 10.8398 11.1509C10.7728 11.2304 10.7238 11.3237 10.6962 11.4242C10.6686 11.5247 10.663 11.6301 10.6799 11.733L11.248 15.2217C11.3398 15.7882 11.3135 16.3677 11.1709 16.9234C11.1094 17.1529 10.9914 17.363 10.8278 17.5344C10.6643 17.7057 10.4605 17.8329 10.2352 17.9041L10.111 17.9446C9.83 18.0351 9.52531 18.0141 9.25921 17.886C8.96787 17.7445 8.75537 17.4866 8.67653 17.1805L8.26865 15.5987C8.13902 15.0952 7.95032 14.6091 7.70654 14.1505C7.35093 13.4804 6.80081 12.943 6.22841 12.4471L4.99535 11.3776C4.82429 11.2288 4.69069 11.0414 4.60549 10.8306C4.5203 10.6198 4.48593 10.3917 4.50521 10.165L5.20101 2.06357C5.23167 1.70529 5.3947 1.3716 5.65789 1.1284C5.92108 0.885204 6.2653 0.750183 6.62258 0.75H10.6054C13.5891 0.75 16.1349 2.8424 16.625 5.69639Z"
+                                                                        fill="currentColor" />
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                        d="M1.49681 11.338C1.67257 11.3452 1.84451 11.2888 1.9767 11.1807C2.10889 11.0725 2.19111 10.921 2.20619 10.7577L3.08836 1.23898C3.10331 1.09723 3.08707 0.954137 3.04066 0.818428C2.99424 0.68272 2.91861 0.557251 2.81839 0.449683C2.71816 0.342115 2.59545 0.254707 2.45775 0.192798C2.32005 0.130888 2.17024 0.0957766 2.01748 0.0896072C1.86472 0.0834379 1.71221 0.10634 1.56927 0.156917C1.42633 0.207492 1.29596 0.284679 1.18612 0.383763C1.07628 0.482848 0.989278 0.601749 0.930425 0.733206C0.871571 0.864662 0.842103 1.00592 0.843821 1.14834V10.7035C0.843895 10.8673 0.911854 11.0247 1.03352 11.1429C1.15518 11.2611 1.32116 11.331 1.49681 11.338Z"
+                                                                        fill="currentColor" />
+                                                                </g>
+                                                            </svg>
+                                                            <span class="vote-count inline-block">17</span>
+                                                        </button>
+                                                        <button onclick="toggleReply(this)"
+                                                            class="reply-btn flex items-center gap-1.5 text-slate-100 transition-colors cursor-pointer">
+                                                            <span class="ricon inline-block">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="18"
+                                                                    height="18" viewBox="0 0 18 18" fill="none"
+                                                                    class="h-auto 2xl:w-4.5 w-4">
+                                                                    <path
+                                                                        d="M7.20703 1.22341C7.61133 1.40271 7.875 1.80701 7.875 2.24998V4.49998H11.8125C15.2297 4.49998 18 7.27029 18 10.6875C18 14.6707 15.1348 16.4496 14.4773 16.8082C14.3895 16.8574 14.291 16.875 14.1926 16.875C13.8094 16.875 13.5 16.5621 13.5 16.1824C13.5 15.9187 13.6512 15.6761 13.8445 15.4969C14.175 15.1875 14.625 14.5687 14.625 13.5035C14.625 11.6402 13.1133 10.1285 11.25 10.1285H7.875V12.3785C7.875 12.8215 7.61484 13.2258 7.20703 13.4051C6.79922 13.5844 6.32812 13.5105 5.99766 13.2152L0.372656 8.15271C0.137109 7.93474 0 7.6324 0 7.31248C0 6.99255 0.137109 6.69021 0.372656 6.47576L5.99766 1.41326C6.32812 1.11443 6.80273 1.0406 7.20703 1.22341Z"
+                                                                        fill="currentColor" />
+                                                                </svg>
+                                                            </span>
+                                                            Reply
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- ══════ Comment 3: Sofia Martinez ══════ -->
+                                    <div class="comment-item relative" data-likes="35" data-date="2025-11-19">
+                                        <div class="relative">
+                                            <div>
+                                                <div
+                                                    class="comment-line absolute top-0 bottom-0 2xl:left-5.5 lg:left-5 left-4.5 px-5 w-px h-0 duration-all ease-in-out border-l border-gray-300 sm:block hidden">
+                                                </div>
+                                            </div>
+                                            <div class="flex flex-col items-start gap-2.5 relative">
+                                                <div class="flex items-center 2xl:gap-4 sm:gap-3 gap-2.5">
+                                                    <img src="../image/sofia-martinez.webp" alt="Sofia Martinez"
+                                                        class="2xl:size-11.5 1xl:size-10.5 sm:size-9.5 size-8 rounded-full object-cover shrink-0 m-0" />
+                                                    <div class="flex flex-wrap items-center sm:gap-2 gap-1">
+                                                        <h6 class="text-black-100">Sofia Martinez</h6>
+                                                        <p class="text-4xl">·</p>
+                                                        <p class="p2 font-normal">19 Nov 2025</p>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-1 min-w-0 2xl:pl-15.5 1xl:pl-13.5 sm:pl-12.5 pl-0">
+                                                    <p class="p2">
+                                                        I really connected with the part about keeping roadmaps flexible
+                                                        and iterative. Many organizations still treat roadmaps like
+                                                        fixed contracts, which creates unnecessary pressure. Your
+                                                        explanation helps highlight the importance of adaptability in
+                                                        modern product development.
+                                                    </p>
+
+                                                    <div class="flex items-center sm:gap-6 gap-5 3xl:mt-5 mt-4">
+                                                        <button onclick="vote(this,1)"
+                                                            class="like-btn flex items-center gap-1.5 text-slate-100 transition-all cursor-pointer">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="18"
+                                                                height="18" viewBox="0 0 18 18" fill="none"
+                                                                class="h-auto 2xl:w-4.5 w-4">
+                                                                <g clip-path="url(#clip0_5492_3740)">
+                                                                    <path
+                                                                        d="M16.625 12.3036L17.2291 8.78465C17.2646 8.5784 17.2548 8.36684 17.2005 8.16478C17.1463 7.96271 17.0488 7.77502 16.915 7.61483C16.7811 7.45464 16.6141 7.32581 16.4256 7.23737C16.2372 7.14892 16.0318 7.10299 15.8238 7.10279H11.3843C11.2807 7.10281 11.1783 7.08013 11.0843 7.03632C10.9903 6.99251 10.9068 6.92863 10.8398 6.8491C10.7728 6.76957 10.7238 6.67631 10.6962 6.5758C10.6686 6.47528 10.663 6.36992 10.6799 6.26704L11.248 2.77826C11.3398 2.21178 11.3135 1.63228 11.1709 1.07656C11.1094 0.847146 10.9914 0.637041 10.8278 0.465647C10.6643 0.294253 10.4605 0.167094 10.2352 0.0959106L10.111 0.0553734C9.83 -0.0351015 9.52531 -0.0141215 9.25921 0.114023C8.96787 0.255471 8.75537 0.513356 8.67653 0.819541L8.26865 2.40135C8.13902 2.90479 7.95032 3.39092 7.70654 3.84947C7.35093 4.51963 6.80081 5.05696 6.22841 5.55289L4.99535 6.62238C4.82429 6.77117 4.69069 6.95864 4.60549 7.16942C4.5203 7.38021 4.48593 7.60831 4.50521 7.83505L5.20101 15.9364C5.23167 16.2947 5.3947 16.6284 5.65789 16.8716C5.92108 17.1148 6.2653 17.2498 6.62258 17.25H10.6054C13.5891 17.25 16.1349 15.1576 16.625 12.3036Z"
+                                                                        fill="currentColor" />
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                        d="M1.49681 6.66198C1.67257 6.65483 1.84451 6.7112 1.9767 6.81934C2.10889 6.92748 2.19111 7.07902 2.20619 7.24229L3.08836 16.761C3.10331 16.9028 3.08707 17.0459 3.04066 17.1816C2.99424 17.3173 2.91861 17.4427 2.81839 17.5503C2.71816 17.6579 2.59545 17.7453 2.45775 17.8072C2.32005 17.8691 2.17024 17.9042 2.01748 17.9104C1.86472 17.9166 1.71221 17.8937 1.56927 17.8431C1.42633 17.7925 1.29596 17.7153 1.18612 17.6162C1.07628 17.5172 0.989278 17.3983 0.930425 17.2668C0.871571 17.1353 0.842103 16.9941 0.843821 16.8517V7.29651C0.843895 7.13274 0.911854 6.97532 1.03352 6.85709C1.15518 6.73887 1.32116 6.66897 1.49681 6.66198Z"
+                                                                        fill="currentColor" />
+                                                                </g>
+                                                            </svg>
+                                                            <span class="vote-count">35</span>
+                                                        </button>
+                                                        <button onclick="vote(this,-1)"
+                                                            class="dislike-btn flex items-center gap-1.5 text-slate-100 hover:text-red-500 transition-colors cursor-pointer">
+                                                            <svg svg xmlns="http://www.w3.org/2000/svg" width="18"
+                                                                height="18" viewBox="0 0 18 18" fill="none"
+                                                                class="h-auto 2xl:w-4.5 w-4">
+                                                                <g clip-path="url(#clip0_5492_3753)">
+                                                                    <path
+                                                                        d="M16.625 5.69639L17.2291 9.21535C17.2646 9.4216 17.2548 9.63316 17.2005 9.83522C17.1463 10.0373 17.0488 10.225 16.915 10.3852C16.7811 10.5454 16.6141 10.6742 16.4256 10.7626C16.2372 10.8511 16.0318 10.897 15.8238 10.8972H11.3843C11.2807 10.8972 11.1783 10.9199 11.0843 10.9637C10.9903 11.0075 10.9068 11.0714 10.8398 11.1509C10.7728 11.2304 10.7238 11.3237 10.6962 11.4242C10.6686 11.5247 10.663 11.6301 10.6799 11.733L11.248 15.2217C11.3398 15.7882 11.3135 16.3677 11.1709 16.9234C11.1094 17.1529 10.9914 17.363 10.8278 17.5344C10.6643 17.7057 10.4605 17.8329 10.2352 17.9041L10.111 17.9446C9.83 18.0351 9.52531 18.0141 9.25921 17.886C8.96787 17.7445 8.75537 17.4866 8.67653 17.1805L8.26865 15.5987C8.13902 15.0952 7.95032 14.6091 7.70654 14.1505C7.35093 13.4804 6.80081 12.943 6.22841 12.4471L4.99535 11.3776C4.82429 11.2288 4.69069 11.0414 4.60549 10.8306C4.5203 10.6198 4.48593 10.3917 4.50521 10.165L5.20101 2.06357C5.23167 1.70529 5.3947 1.3716 5.65789 1.1284C5.92108 0.885204 6.2653 0.750183 6.62258 0.75H10.6054C13.5891 0.75 16.1349 2.8424 16.625 5.69639Z"
+                                                                        fill="currentColor" />
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                        d="M1.49681 11.338C1.67257 11.3452 1.84451 11.2888 1.9767 11.1807C2.10889 11.0725 2.19111 10.921 2.20619 10.7577L3.08836 1.23898C3.10331 1.09723 3.08707 0.954137 3.04066 0.818428C2.99424 0.68272 2.91861 0.557251 2.81839 0.449683C2.71816 0.342115 2.59545 0.254707 2.45775 0.192798C2.32005 0.130888 2.17024 0.0957766 2.01748 0.0896072C1.86472 0.0834379 1.71221 0.10634 1.56927 0.156917C1.42633 0.207492 1.29596 0.284679 1.18612 0.383763C1.07628 0.482848 0.989278 0.601749 0.930425 0.733206C0.871571 0.864662 0.842103 1.00592 0.843821 1.14834V10.7035C0.843895 10.8673 0.911854 11.0247 1.03352 11.1429C1.15518 11.2611 1.32116 11.331 1.49681 11.338Z"
+                                                                        fill="currentColor" />
+                                                                </g>
+                                                            </svg>
+                                                            <span class="vote-count inline-block">26</span>
+                                                        </button>
+                                                        <button onclick="toggleReply(this)"
+                                                            class="reply-btn flex items-center gap-1.5 text-slate-100 transition-colors cursor-pointer">
+                                                            <span class="ricon inline-block">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="18"
+                                                                    height="18" viewBox="0 0 18 18" fill="none"
+                                                                    class="h-auto 2xl:w-4.5 w-4">
+                                                                    <path
+                                                                        d="M7.20703 1.22341C7.61133 1.40271 7.875 1.80701 7.875 2.24998V4.49998H11.8125C15.2297 4.49998 18 7.27029 18 10.6875C18 14.6707 15.1348 16.4496 14.4773 16.8082C14.3895 16.8574 14.291 16.875 14.1926 16.875C13.8094 16.875 13.5 16.5621 13.5 16.1824C13.5 15.9187 13.6512 15.6761 13.8445 15.4969C14.175 15.1875 14.625 14.5687 14.625 13.5035C14.625 11.6402 13.1133 10.1285 11.25 10.1285H7.875V12.3785C7.875 12.8215 7.61484 13.2258 7.20703 13.4051C6.79922 13.5844 6.32812 13.5105 5.99766 13.2152L0.372656 8.15271C0.137109 7.93474 0 7.6324 0 7.31248C0 6.99255 0.137109 6.69021 0.372656 6.47576L5.99766 1.41326C6.32812 1.11443 6.80273 1.0406 7.20703 1.22341Z"
+                                                                        fill="currentColor" />
+                                                                </svg>
+                                                            </span>
+                                                            Reply
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- ══════ Comment 4: Christopher Hayes ══════ -->
+                                    <div class="comment-item relative" data-likes="39" data-date="2025-11-21">
+                                        <div class="relative">
+                                            <div>
+                                                <div
+                                                    class="comment-line absolute top-0 bottom-0 2xl:left-5.5 lg:left-5 left-4.5 px-5 w-px h-0 duration-all ease-in-out border-l border-gray-300 sm:block hidden">
+                                                </div>
+                                            </div>
+                                            <div class="flex flex-col items-start gap-2.5 relative">
+                                                <div class="flex items-center 2xl:gap-4 sm:gap-3 gap-2.5">
+                                                    <img src="../image/christopher-hayes.webp" alt="Christopher Hayes"
+                                                        class="2xl:size-11.5 1xl:size-10.5 sm:size-9.5 size-8 rounded-full object-cover shrink-0 m-0" />
+                                                    <div class="flex flex-wrap items-center sm:gap-2 gap-1">
+                                                        <h6 class="text-black-100">Christopher Hayes</h6>
+                                                        <p class="text-4xl">·</p>
+                                                        <p class="p2 font-normal">21 Nov 2025</p>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-1 min-w-0 2xl:pl-15.5 1xl:pl-13.5 sm:pl-12.5 pl-0">
+                                                    <p class="p2">
+                                                        This blog is incredibly thorough and well-crafted. The emphasis
+                                                        on data-driven decision-making really resonates with modern
+                                                        product teams. I appreciate how each section builds on the
+                                                        previous one, making the entire roadmap process feel achievable
+                                                        even for smaller teams. It’s rare to find content that blends
+                                                        strategy, clarity, application this effectively.
+                                                    </p>
+
+                                                    <div class="flex items-center sm:gap-6 gap-5 3xl:mt-5 mt-4">
+                                                        <button onclick="vote(this,1)"
+                                                            class="like-btn flex items-center gap-1.5 text-slate-100 transition-all cursor-pointer">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="18"
+                                                                height="18" viewBox="0 0 18 18" fill="none"
+                                                                class="h-auto 2xl:w-4.5 w-4">
+                                                                <g clip-path="url(#clip0_5492_3740)">
+                                                                    <path
+                                                                        d="M16.625 12.3036L17.2291 8.78465C17.2646 8.5784 17.2548 8.36684 17.2005 8.16478C17.1463 7.96271 17.0488 7.77502 16.915 7.61483C16.7811 7.45464 16.6141 7.32581 16.4256 7.23737C16.2372 7.14892 16.0318 7.10299 15.8238 7.10279H11.3843C11.2807 7.10281 11.1783 7.08013 11.0843 7.03632C10.9903 6.99251 10.9068 6.92863 10.8398 6.8491C10.7728 6.76957 10.7238 6.67631 10.6962 6.5758C10.6686 6.47528 10.663 6.36992 10.6799 6.26704L11.248 2.77826C11.3398 2.21178 11.3135 1.63228 11.1709 1.07656C11.1094 0.847146 10.9914 0.637041 10.8278 0.465647C10.6643 0.294253 10.4605 0.167094 10.2352 0.0959106L10.111 0.0553734C9.83 -0.0351015 9.52531 -0.0141215 9.25921 0.114023C8.96787 0.255471 8.75537 0.513356 8.67653 0.819541L8.26865 2.40135C8.13902 2.90479 7.95032 3.39092 7.70654 3.84947C7.35093 4.51963 6.80081 5.05696 6.22841 5.55289L4.99535 6.62238C4.82429 6.77117 4.69069 6.95864 4.60549 7.16942C4.5203 7.38021 4.48593 7.60831 4.50521 7.83505L5.20101 15.9364C5.23167 16.2947 5.3947 16.6284 5.65789 16.8716C5.92108 17.1148 6.2653 17.2498 6.62258 17.25H10.6054C13.5891 17.25 16.1349 15.1576 16.625 12.3036Z"
+                                                                        fill="currentColor" />
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                        d="M1.49681 6.66198C1.67257 6.65483 1.84451 6.7112 1.9767 6.81934C2.10889 6.92748 2.19111 7.07902 2.20619 7.24229L3.08836 16.761C3.10331 16.9028 3.08707 17.0459 3.04066 17.1816C2.99424 17.3173 2.91861 17.4427 2.81839 17.5503C2.71816 17.6579 2.59545 17.7453 2.45775 17.8072C2.32005 17.8691 2.17024 17.9042 2.01748 17.9104C1.86472 17.9166 1.71221 17.8937 1.56927 17.8431C1.42633 17.7925 1.29596 17.7153 1.18612 17.6162C1.07628 17.5172 0.989278 17.3983 0.930425 17.2668C0.871571 17.1353 0.842103 16.9941 0.843821 16.8517V7.29651C0.843895 7.13274 0.911854 6.97532 1.03352 6.85709C1.15518 6.73887 1.32116 6.66897 1.49681 6.66198Z"
+                                                                        fill="currentColor" />
+                                                                </g>
+                                                            </svg>
+                                                            <span class="vote-count">39</span>
+                                                        </button>
+                                                        <button onclick="vote(this,-1)"
+                                                            class="dislike-btn flex items-center gap-1.5 text-slate-100 hover:text-red-500 transition-colors cursor-pointer">
+                                                            <svg svg xmlns="http://www.w3.org/2000/svg" width="18"
+                                                                height="18" viewBox="0 0 18 18" fill="none"
+                                                                class="h-auto 2xl:w-4.5 w-4">
+                                                                <g clip-path="url(#clip0_5492_3753)">
+                                                                    <path
+                                                                        d="M16.625 5.69639L17.2291 9.21535C17.2646 9.4216 17.2548 9.63316 17.2005 9.83522C17.1463 10.0373 17.0488 10.225 16.915 10.3852C16.7811 10.5454 16.6141 10.6742 16.4256 10.7626C16.2372 10.8511 16.0318 10.897 15.8238 10.8972H11.3843C11.2807 10.8972 11.1783 10.9199 11.0843 10.9637C10.9903 11.0075 10.9068 11.0714 10.8398 11.1509C10.7728 11.2304 10.7238 11.3237 10.6962 11.4242C10.6686 11.5247 10.663 11.6301 10.6799 11.733L11.248 15.2217C11.3398 15.7882 11.3135 16.3677 11.1709 16.9234C11.1094 17.1529 10.9914 17.363 10.8278 17.5344C10.6643 17.7057 10.4605 17.8329 10.2352 17.9041L10.111 17.9446C9.83 18.0351 9.52531 18.0141 9.25921 17.886C8.96787 17.7445 8.75537 17.4866 8.67653 17.1805L8.26865 15.5987C8.13902 15.0952 7.95032 14.6091 7.70654 14.1505C7.35093 13.4804 6.80081 12.943 6.22841 12.4471L4.99535 11.3776C4.82429 11.2288 4.69069 11.0414 4.60549 10.8306C4.5203 10.6198 4.48593 10.3917 4.50521 10.165L5.20101 2.06357C5.23167 1.70529 5.3947 1.3716 5.65789 1.1284C5.92108 0.885204 6.2653 0.750183 6.62258 0.75H10.6054C13.5891 0.75 16.1349 2.8424 16.625 5.69639Z"
+                                                                        fill="currentColor" />
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                        d="M1.49681 11.338C1.67257 11.3452 1.84451 11.2888 1.9767 11.1807C2.10889 11.0725 2.19111 10.921 2.20619 10.7577L3.08836 1.23898C3.10331 1.09723 3.08707 0.954137 3.04066 0.818428C2.99424 0.68272 2.91861 0.557251 2.81839 0.449683C2.71816 0.342115 2.59545 0.254707 2.45775 0.192798C2.32005 0.130888 2.17024 0.0957766 2.01748 0.0896072C1.86472 0.0834379 1.71221 0.10634 1.56927 0.156917C1.42633 0.207492 1.29596 0.284679 1.18612 0.383763C1.07628 0.482848 0.989278 0.601749 0.930425 0.733206C0.871571 0.864662 0.842103 1.00592 0.843821 1.14834V10.7035C0.843895 10.8673 0.911854 11.0247 1.03352 11.1429C1.15518 11.2611 1.32116 11.331 1.49681 11.338Z"
+                                                                        fill="currentColor" />
+                                                                </g>
+                                                            </svg>
+                                                            <span class="vote-count inline-block">14</span>
+                                                        </button>
+                                                        <button onclick="toggleReply(this)"
+                                                            class="reply-btn flex items-center gap-1.5 text-slate-100 transition-colors cursor-pointer">
+                                                            <span class="ricon inline-block">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="18"
+                                                                    height="18" viewBox="0 0 18 18" fill="none"
+                                                                    class="h-auto 2xl:w-4.5 w-4">
+                                                                    <path
+                                                                        d="M7.20703 1.22341C7.61133 1.40271 7.875 1.80701 7.875 2.24998V4.49998H11.8125C15.2297 4.49998 18 7.27029 18 10.6875C18 14.6707 15.1348 16.4496 14.4773 16.8082C14.3895 16.8574 14.291 16.875 14.1926 16.875C13.8094 16.875 13.5 16.5621 13.5 16.1824C13.5 15.9187 13.6512 15.6761 13.8445 15.4969C14.175 15.1875 14.625 14.5687 14.625 13.5035C14.625 11.6402 13.1133 10.1285 11.25 10.1285H7.875V12.3785C7.875 12.8215 7.61484 13.2258 7.20703 13.4051C6.79922 13.5844 6.32812 13.5105 5.99766 13.2152L0.372656 8.15271C0.137109 7.93474 0 7.6324 0 7.31248C0 6.99255 0.137109 6.69021 0.372656 6.47576L5.99766 1.41326C6.32812 1.11443 6.80273 1.0406 7.20703 1.22341Z"
+                                                                        fill="currentColor" />
+                                                                </svg>
+                                                            </span>
+                                                            Reply
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- ══════ Comment 5: Victoria Collins ══════ -->
+                                    <div class="comment-item relative" data-likes="17" data-date="2025-11-21">
+                                        <div class="relative">
+                                            <div>
+                                                <div
+                                                    class="comment-line absolute top-0 bottom-0 2xl:left-5.5 lg:left-5 left-4.5 px-5 w-px h-0 duration-all ease-in-out border-l border-gray-300 sm:block hidden">
+                                                </div>
+                                            </div>
+                                            <div class="flex flex-col items-start gap-2.5 relative">
+                                                <div class="flex items-center 2xl:gap-4 sm:gap-3 gap-2.5">
+                                                    <img src="../image/victoria-collins.webp" alt="Victoria Collins"
+                                                        class="2xl:size-11.5 1xl:size-10.5 sm:size-9.5 size-8 rounded-full object-cover shrink-0 m-0" />
+                                                    <div class="flex flex-wrap items-center sm:gap-2 gap-1">
+                                                        <h6 class="text-black-100">Victoria Collins</h6>
+                                                        <p class="text-4xl">·</p>
+                                                        <p class="p2 font-normal">21 Nov 2025</p>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-1 min-w-0 2xl:pl-15.5 1xl:pl-13.5 sm:pl-12.5 pl-0">
+                                                    <p class="p2">
+                                                        What a powerful and insightful read! I especially loved the part
+                                                        about communication across teams — so many organizations
+                                                        underestimate how critical that is for a successful product
+                                                        rollout. The examples, explanations, and structured approach
+                                                        make this one of the most useful product roadmap guides I’ve
+                                                        come across. Definitely sharing this with my project and UX
+                                                        leads.
+                                                    </p>
+
+                                                    <div class="flex items-center sm:gap-6 gap-5 3xl:mt-5 mt-4">
+                                                        <button onclick="vote(this,1)"
+                                                            class="like-btn flex items-center gap-1.5 text-slate-100 transition-all cursor-pointer">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="18"
+                                                                height="18" viewBox="0 0 18 18" fill="none"
+                                                                class="h-auto 2xl:w-4.5 w-4">
+                                                                <g clip-path="url(#clip0_5492_3740)">
+                                                                    <path
+                                                                        d="M16.625 12.3036L17.2291 8.78465C17.2646 8.5784 17.2548 8.36684 17.2005 8.16478C17.1463 7.96271 17.0488 7.77502 16.915 7.61483C16.7811 7.45464 16.6141 7.32581 16.4256 7.23737C16.2372 7.14892 16.0318 7.10299 15.8238 7.10279H11.3843C11.2807 7.10281 11.1783 7.08013 11.0843 7.03632C10.9903 6.99251 10.9068 6.92863 10.8398 6.8491C10.7728 6.76957 10.7238 6.67631 10.6962 6.5758C10.6686 6.47528 10.663 6.36992 10.6799 6.26704L11.248 2.77826C11.3398 2.21178 11.3135 1.63228 11.1709 1.07656C11.1094 0.847146 10.9914 0.637041 10.8278 0.465647C10.6643 0.294253 10.4605 0.167094 10.2352 0.0959106L10.111 0.0553734C9.83 -0.0351015 9.52531 -0.0141215 9.25921 0.114023C8.96787 0.255471 8.75537 0.513356 8.67653 0.819541L8.26865 2.40135C8.13902 2.90479 7.95032 3.39092 7.70654 3.84947C7.35093 4.51963 6.80081 5.05696 6.22841 5.55289L4.99535 6.62238C4.82429 6.77117 4.69069 6.95864 4.60549 7.16942C4.5203 7.38021 4.48593 7.60831 4.50521 7.83505L5.20101 15.9364C5.23167 16.2947 5.3947 16.6284 5.65789 16.8716C5.92108 17.1148 6.2653 17.2498 6.62258 17.25H10.6054C13.5891 17.25 16.1349 15.1576 16.625 12.3036Z"
+                                                                        fill="currentColor" />
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                        d="M1.49681 6.66198C1.67257 6.65483 1.84451 6.7112 1.9767 6.81934C2.10889 6.92748 2.19111 7.07902 2.20619 7.24229L3.08836 16.761C3.10331 16.9028 3.08707 17.0459 3.04066 17.1816C2.99424 17.3173 2.91861 17.4427 2.81839 17.5503C2.71816 17.6579 2.59545 17.7453 2.45775 17.8072C2.32005 17.8691 2.17024 17.9042 2.01748 17.9104C1.86472 17.9166 1.71221 17.8937 1.56927 17.8431C1.42633 17.7925 1.29596 17.7153 1.18612 17.6162C1.07628 17.5172 0.989278 17.3983 0.930425 17.2668C0.871571 17.1353 0.842103 16.9941 0.843821 16.8517V7.29651C0.843895 7.13274 0.911854 6.97532 1.03352 6.85709C1.15518 6.73887 1.32116 6.66897 1.49681 6.66198Z"
+                                                                        fill="currentColor" />
+                                                                </g>
+                                                            </svg>
+                                                            <span class="vote-count">17</span>
+                                                        </button>
+                                                        <button onclick="vote(this,-1)"
+                                                            class="dislike-btn flex items-center gap-1.5 text-slate-100 hover:text-red-500 transition-colors cursor-pointer">
+                                                            <svg svg xmlns="http://www.w3.org/2000/svg" width="18"
+                                                                height="18" viewBox="0 0 18 18" fill="none"
+                                                                class="h-auto 2xl:w-4.5 w-4">
+                                                                <g clip-path="url(#clip0_5492_3753)">
+                                                                    <path
+                                                                        d="M16.625 5.69639L17.2291 9.21535C17.2646 9.4216 17.2548 9.63316 17.2005 9.83522C17.1463 10.0373 17.0488 10.225 16.915 10.3852C16.7811 10.5454 16.6141 10.6742 16.4256 10.7626C16.2372 10.8511 16.0318 10.897 15.8238 10.8972H11.3843C11.2807 10.8972 11.1783 10.9199 11.0843 10.9637C10.9903 11.0075 10.9068 11.0714 10.8398 11.1509C10.7728 11.2304 10.7238 11.3237 10.6962 11.4242C10.6686 11.5247 10.663 11.6301 10.6799 11.733L11.248 15.2217C11.3398 15.7882 11.3135 16.3677 11.1709 16.9234C11.1094 17.1529 10.9914 17.363 10.8278 17.5344C10.6643 17.7057 10.4605 17.8329 10.2352 17.9041L10.111 17.9446C9.83 18.0351 9.52531 18.0141 9.25921 17.886C8.96787 17.7445 8.75537 17.4866 8.67653 17.1805L8.26865 15.5987C8.13902 15.0952 7.95032 14.6091 7.70654 14.1505C7.35093 13.4804 6.80081 12.943 6.22841 12.4471L4.99535 11.3776C4.82429 11.2288 4.69069 11.0414 4.60549 10.8306C4.5203 10.6198 4.48593 10.3917 4.50521 10.165L5.20101 2.06357C5.23167 1.70529 5.3947 1.3716 5.65789 1.1284C5.92108 0.885204 6.2653 0.750183 6.62258 0.75H10.6054C13.5891 0.75 16.1349 2.8424 16.625 5.69639Z"
+                                                                        fill="currentColor" />
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                        d="M1.49681 11.338C1.67257 11.3452 1.84451 11.2888 1.9767 11.1807C2.10889 11.0725 2.19111 10.921 2.20619 10.7577L3.08836 1.23898C3.10331 1.09723 3.08707 0.954137 3.04066 0.818428C2.99424 0.68272 2.91861 0.557251 2.81839 0.449683C2.71816 0.342115 2.59545 0.254707 2.45775 0.192798C2.32005 0.130888 2.17024 0.0957766 2.01748 0.0896072C1.86472 0.0834379 1.71221 0.10634 1.56927 0.156917C1.42633 0.207492 1.29596 0.284679 1.18612 0.383763C1.07628 0.482848 0.989278 0.601749 0.930425 0.733206C0.871571 0.864662 0.842103 1.00592 0.843821 1.14834V10.7035C0.843895 10.8673 0.911854 11.0247 1.03352 11.1429C1.15518 11.2611 1.32116 11.331 1.49681 11.338Z"
+                                                                        fill="currentColor" />
+                                                                </g>
+                                                            </svg>
+                                                            <span class="vote-count inline-block">05</span>
+                                                        </button>
+                                                        <button onclick="toggleReply(this)"
+                                                            class="reply-btn flex items-center gap-1.5 text-slate-100 transition-colors cursor-pointer">
+                                                            <span class="ricon inline-block">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="18"
+                                                                    height="18" viewBox="0 0 18 18" fill="none"
+                                                                    class="h-auto 2xl:w-4.5 w-4">
+                                                                    <path
+                                                                        d="M7.20703 1.22341C7.61133 1.40271 7.875 1.80701 7.875 2.24998V4.49998H11.8125C15.2297 4.49998 18 7.27029 18 10.6875C18 14.6707 15.1348 16.4496 14.4773 16.8082C14.3895 16.8574 14.291 16.875 14.1926 16.875C13.8094 16.875 13.5 16.5621 13.5 16.1824C13.5 15.9187 13.6512 15.6761 13.8445 15.4969C14.175 15.1875 14.625 14.5687 14.625 13.5035C14.625 11.6402 13.1133 10.1285 11.25 10.1285H7.875V12.3785C7.875 12.8215 7.61484 13.2258 7.20703 13.4051C6.79922 13.5844 6.32812 13.5105 5.99766 13.2152L0.372656 8.15271C0.137109 7.93474 0 7.6324 0 7.31248C0 6.99255 0.137109 6.69021 0.372656 6.47576L5.99766 1.41326C6.32812 1.11443 6.80273 1.0406 7.20703 1.22341Z"
+                                                                        fill="currentColor" />
+                                                                </svg>
+                                                            </span>
+                                                            Reply
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- end commentsList -->
+
+                                <!-- ==== start reply form -->
+                                <!-- GLOBAL REPLY FORM -->
+                                <div id="replyForm"
+                                    class="reply-form overflow-hidden -translate-y-1.5 mt-0! transition-all duration-400 ease-in-out 2xl:ml-5.5 lg:ml-5 sm:ml-4.5"
+                                    style="max-height: 0px;">
+                                    <div class="w-12.5 h-full">
+                                        <div
+                                            class="absolute left-0 sm:top-0 top-3 2xl:w-11 1xl:w-10 sm:w-8 w-5 2xl:h-19 xl:h-14.5 md:h-12.5 sm:h-11.5 h-8 border-l border-b border-gray-300 1xl:rounded-bl-3xl rounded-bl-2xl">
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        class="min-h-0 overflow-hidden 2xl:pl-12.5 1xl:pl-11 sm:pl-9 pl-5 2xl:pt-12.5 xl:pt-8.5 sm:pt-6.5 pt-6">
+                                        <!-- flex items-start 2xl:gap-4 sm:gap-3 gap-2.5 relative 1xl:pl-10.5 sm:pl-9 pl-6 3xl:pt-11 2xl:pt-9 1xl:pt-7.5 sm:pt-6.5 pt-5 -->
+                                        <div class="reply-body transition-colors duration-200 delay-100">
+                                            <h3
+                                                class="3xl:text-[40px] 2xl:text-[37px] 1xl:text-[34px] xl:text-[30px] md:text-[28px] text-[25px] 2xl:leading-12.5 md:leading-10 leading-8 2xl:mb-4! 1xl:mb-3! mb-2!">
+                                                Leave a Reply</h3>
+                                            <p class="p2">
+                                                Share your thoughts or continue the discussion — your feedback matters!
+                                            </p>
+                                            <div
+                                                class="grid grid-cols-1 sm:grid-cols-2 2xl:gap-7 lg:gap-5.5 sm:gap-4.5 gap-4 2xl:mt-9 1xl:mt-7.5 md:mt-6.5 sm:mt-5.5 mt-4.5">
+                                                <div>
+                                                    <label class="input-label">First
+                                                        Name <span class="text-primary">*</span>
+                                                    </label>
+                                                    <input type="text" placeholder="Your first name" required
+                                                        class="input-field p2 w-full border border-gray-100" />
+                                                </div>
+                                                <div>
+                                                    <label class="input-label">Last
+                                                        Name <span class="text-primary">*</span>
+                                                    </label>
+                                                    <input type="text" placeholder="Your last name" required
+                                                        class="input-field p2 w-full border border-gray-100" />
+                                                </div>
+                                                <div>
+                                                    <label class="input-label">Email
+                                                        address <span class="text-primary">*</span>
+                                                    </label>
+                                                    <input type="email" placeholder="Your email address" required
+                                                        class="input-field p2 w-full border border-gray-100" />
+                                                </div>
+                                                <div>
+                                                    <label class="input-label">Your
+                                                        Website <span class="text-primary">*</span>
+                                                    </label>
+                                                    <input type="url" placeholder="Enter your website" required
+                                                        class="input-field p2 w-full border border-gray-100" />
+                                                </div>
+                                                <div class="sm:col-span-2">
+                                                    <label class="input-label">Upload Image
+                                                        <span class="text-primary">*</span>
+                                                    </label>
+                                                    <div class="relative">
+                                                        <input type="file" accept="image/*" required
+                                                            class="input-field lg:px-2! px-1.5! 2xl:py-[7px] py-[5px] p2 w-full border border-gray-100 cursor-pointer file:mr-2 file:py-0.5 file:h-full file:px-4 file:rounded-full file:border-0 file:text-sm file:text-black hover:file:text-white file:bg-primary/40 hover:file:bg-primary file:transition-all file:ease-in-out" />
+                                                    </div>
+                                                </div>
+                                                <div class="sm:col-span-2">
+                                                    <label class="input-label">Your
+                                                        Comment <span class="text-primary">*</span>
+                                                    </label>
+                                                    <textarea placeholder="Type your comment here..." required
+                                                        class="w-full border border-gray-100 sm:min-h-[120px] min-h-25 h-full lg:px-[25px] px-[15px] xl:py-[19px] md:py-[15px] py-3 lg:rounded-3xl! md:rounded-[18px]! rounded-[12px]! p2 input-field"></textarea>
+                                                </div>
+                                            </div>
+
+                                            <div class="flex items-center lg:gap-7.5 gap-6.5 2xl:mt-7.5 1xl:mt-6 mt-5">
+                                                <button onclick="submitReply(this)"
+                                                    class="btn btn-primary all-btn rounded-full group">
+                                                    Leave Reply
+                                                    <span class="btn btn-arrow rounded-full all-btn-arrow">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                                                            viewBox="0 0 22 22" fill="none"
+                                                            class="1xl:size-5.5 xl:size-5 size-4">
+                                                            <g clip-path="url(#clip0_421_92)">
+                                                                <path
+                                                                    d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                                                    fill="currentColor" />
+                                                            </g>
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                                <button onclick="cancelReply(this)"
+                                                    class="text-red-500 p2 font-normal hover:underline cursor-pointer">Cancel</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ==== end reply form -->
+
+                                <!-- Load More -->
+                                <button
+                                    class="btn btn-primary all-btn rounded-full group flex lg:mt-12.5 mt-[35px] mx-auto w-fit">
+                                    Load More
+                                    <span class="btn btn-arrow rounded-full all-btn-arrow">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                                            viewBox="0 0 22 22" fill="none" class="animate-spin">
+                                            <g clip-path="url(#clip0_9239_4440)">
+                                                <path
+                                                    d="M10.9995 0.84613V4.90767M15.2642 6.73536L18.2088 3.79075M17.0919 11H21.1534M15.2642 15.2646L18.2088 18.2092M10.9995 17.0923V21.1538M3.79032 18.2092L6.73493 15.2646M0.845703 11H4.90724M3.79032 3.79075L6.73493 6.73536"
+                                                    stroke="currentColor" stroke-width="1.26923" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </g>
+                                        </svg>
+                                    </span>
+                                </button>
+                            </div>
+
+                            <!-- Toast -->
+                            <div id="toast"
+                                class="fixed bottom-6 right-6 flex items-center gap-2 bg-gray-900 text-white text-sm px-5 py-3 rounded-xl shadow-2xl opacity-0 translate-y-4 transition-all duration-300 pointer-events-none z-50">
+                                <svg class="w-4 h-4 text-green-400 shrink-0" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span id="toastMsg"></span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="3xl:mt-15 2xl:mt-14 1xl:mt-11.5 mt-9.5">
+                            <div id="replyForm" class="min-h-0 overflow-hidden">
+                                <!-- flex items-start 2xl:gap-4 sm:gap-3 gap-2.5 relative 1xl:pl-10.5 sm:pl-9 pl-6 3xl:pt-11 2xl:pt-9 1xl:pt-7.5 sm:pt-6.5 pt-5 -->
+                                <div class="reply-body transition-colors duration-200 delay-100">
+                                    <h3
+                                        class="3xl:text-[40px] 2xl:text-[37px] 1xl:text-[34px] xl:text-[30px] md:text-[28px] text-[25px] 2xl:leading-12.5 md:leading-10 leading-8 2xl:mb-4! mb-3!">
+                                        Leave a Comment</h3>
+                                    <p class="p2">
+                                        Share your thoughts or questions — your feedback helps us create better content
+                                        for the ENX community.
+                                    </p>
+                                    <div
+                                        class="grid grid-cols-1 sm:grid-cols-2 2xl:gap-7 lg:gap-5.5 sm:gap-4.5 gap-4 2xl:mt-9 1xl:mt-7.5 md:mt-6.5 mt-5.5">
+                                        <div>
+                                            <label class="input-label">First
+                                                Name <span class="text-primary">*</span>
+                                            </label>
+                                            <input type="text" placeholder="Your first name" required
+                                                class="input-field p2 w-full border border-gray-100" />
+                                        </div>
+                                        <div>
+                                            <label class="input-label">Last
+                                                Name <span class="text-primary">*</span>
+                                            </label>
+                                            <input type="text" placeholder="Your last name" required
+                                                class="input-field p2 w-full border border-gray-100" />
+                                        </div>
+                                        <div>
+                                            <label class="input-label">Email
+                                                address <span class="text-primary">*</span>
+                                            </label>
+                                            <input type="email" placeholder="Your email address" required
+                                                class="input-field p2 w-full border border-gray-100" />
+                                        </div>
+                                        <div>
+                                            <label class="input-label">Your
+                                                Website <span class="text-primary">*</span>
+                                            </label>
+                                            <input type="url" placeholder="Enter your website" required
+                                                class="input-field p2 w-full border border-gray-100" />
+                                        </div>
+                                        <div class="sm:col-span-2">
+                                            <label class="input-label">Upload Image
+                                                <span class="text-primary">*</span>
+                                            </label>
+                                            <div class="relative">
+                                                <input type="file" accept="image/*" required
+                                                    class="input-field lg:px-2! px-1.5! 2xl:py-[7px] py-[5px] p2 w-full border border-gray-100 cursor-pointer file:mr-2 file:py-0.5 file:h-full file:px-4 file:rounded-full file:border-0 file:text-sm file:text-black hover:file:text-white file:bg-primary/40 hover:file:bg-primary file:transition-all file:ease-in-out" />
+                                            </div>
+                                        </div>
+                                        <div class="sm:col-span-2">
+                                            <label class="input-label">Your
+                                                Comment <span class="text-primary">*</span>
+                                            </label>
+                                            <textarea placeholder="Type your comment here..." required
+                                                class="w-full border border-gray-100 sm:min-h-[120px] min-h-25 h-full lg:px-[25px] px-[15px] xl:py-[19px] md:py-[15px] py-3 lg:rounded-3xl! md:rounded-[18px]! rounded-[12px]! p2 input-field"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <button onclick="submitReply(this)"
+                                        class="btn btn-primary all-btn rounded-full group 2xl:mt-7.5 1xl:mt-6 mt-5">
+                                        Leave Comment
+                                        <span class="btn btn-arrow rounded-full all-btn-arrow">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                                                viewBox="0 0 22 22" fill="none" class="1xl:size-5.5 xl:size-5 size-4">
+                                                <g clip-path="url(#clip0_421_92)">
+                                                    <path
+                                                        d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                                        fill="currentColor" />
+                                                </g>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </article>
+
+                    <!-- ════ STICKY TOC SIDEBAR ════ -->
+                    <aside
+                        class="hidden lg:block shrink-0 sticky 2xl:top-31 1xl:top-27 xl:top-25 top-23 overflow-auto 1xl:max-w-[24.5%] max-w-[26.5%] w-full h-full">
+                        <div class="self-start max-h-[calc(100vh-134px)] h-full">
+
+                            <!-- Label -->
+                            <div class="mb-5.5">
+                                <h6 class="flex items-center gap-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                        fill="none" class="2xl:size-5 size-4.5">
+                                        <path d="M5.5 3H19M5.5 10H19M5.5 17H19M1 3H2.125M1 10H2.125M1 17H2.125"
+                                            stroke="#08030E" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    On this page
+                                </h6>
+                            </div>
+
+                            <!-- TOC Nav -->
+                            <ul id="toc-nav" class="border-l-2 border-gray-100 list-target">
+                                <li class="toc-item">
+                                    <a href="#introduction" class="p2">Introduction</a>
+                                </li>
+                                <li class="toc-item">
+                                    <a href="#title-1" class="p2">The Evolving Nature of Cyber Threats</a>
+                                </li>
+                                <li class="toc-item">
+                                    <a href="#title-2" class="p2">Key Pillars of Modern Cybersecurity</a>
+                                    <ul class="space-y-0.5 sub-target">
+                                        <li class="toc-item">
+                                            <a href="#t2-sub-title-1" class="p2">- Zero Trust Architecture</a>
+                                        </li>
+                                        <li class="toc-item">
+                                            <a href="#t2-sub-title-2" class="p2">- Cloud and Infrastructure Security</a>
+                                        </li>
+                                        <li class="toc-item">
+                                            <a href="#t2-sub-title-3" class="p2">- Identity and Access Management</a>
+                                        </li>
+                                        <li class="toc-item">
+                                            <a href="#t2-sub-title-4" class="p2">- Threat Detection and Response</a>
+                                        </li>
+                                        <li class="toc-item">
+                                            <a href="#t2-sub-title-5" class="p2">- Data Protection and Encryption</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="toc-item">
+                                    <a href="#title-3" class="p2">Cybersecurity as a Business Enabler</a>
+                                </li>
+                                <li class="toc-item">
+                                    <a href="#title-4" class="p2">Strategic Approaches to Strengthening
+                                        Cybersecurity</a>
+                                </li>
+                                <li class="toc-item">
+                                    <a href="#conclusion" class="p2">Conclusion</a>
+                                </li>
+                                <li class="toc-item">
+                                    <a href="#faqs" class="p2">FAQs</a>
+                                </li>
+                            </ul>
+
+                            <!-- Social Icons -->
+                            <div class="flex items-center xl:gap-5 gap-4 2xl:mt-6 xl:mt-5 mt-3">
+                                <div>
+                                    <a target="_blank" href="https://www.linkedin.com/feed/"
+                                        class="dark-light border border-gray-100 2xl:size-12.5 1xl:size-12 xl:size-11 size-9.5 flex items-center justify-center rounded-full">
+                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                            class="1xl:size-5.5 xl:size-5 size-4.5" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.13949 3.63624C6.13924 4.14946 5.93631 4.64155 5.57536 5.00426C5.21441 5.36698 4.72499 5.57061 4.21478 5.57035C3.70457 5.57009 3.21536 5.36597 2.85477 5.0029C2.49417 4.63982 2.29174 4.14752 2.29199 3.63431C2.29225 3.12109 2.49517 2.629 2.85613 2.26628C3.21708 1.90357 3.70649 1.69994 4.2167 1.7002C4.72691 1.70045 5.21613 1.90457 5.57672 2.26765C5.93731 2.63073 6.13975 3.12303 6.13949 3.63624ZM6.1972 7.00328H2.3497V19.1169H6.1972V7.00328ZM12.2763 7.00328H8.44799V19.1169H12.2378V12.7601C12.2378 9.21894 16.8259 8.88998 16.8259 12.7601V19.1169H20.6253V11.4443C20.6253 5.47456 13.8345 5.6971 12.2378 8.62874L12.2763 7.00328Z"
+                                                fill="currentColor" />
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a target="_blank" href="https://x.com/"
+                                        class="dark-light border border-gray-100 2xl:size-12.5 1xl:size-12 xl:size-11 size-9.5 flex items-center justify-center rounded-full">
+                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                            class="1xl:size-5.5 xl:size-5 size-4.5" xmlns="http://www.w3.org/2000/svg">
+                                            <g mask="url(#mask0_8420_72)">
+                                                <path
+                                                    d="M16.2705 2.69336H19.0821L12.9404 9.73074L20.1663 19.3086H14.5092L10.0752 13.5009L5.00729 19.3086H2.19313L8.7617 11.7788L1.83301 2.69467H7.6342L11.6361 8.00217L16.2705 2.69336ZM15.2818 17.6219H16.8402L6.78301 4.29229H5.11206L15.2818 17.6219Z"
+                                                    fill="currentColor" />
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a target="_blank" href="https://dribbble.com/"
+                                        class="dark-light border border-gray-100 2xl:size-12.5 1xl:size-12 xl:size-11 size-9.5 flex items-center justify-center rounded-full">
+                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                            class="1xl:size-5.5 xl:size-5 size-4.5" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M20.1664 11.0007C20.1678 12.208 19.9301 13.4038 19.4668 14.5187C19.0035 15.6337 18.3239 16.6458 17.4672 17.4966C16.6175 18.3448 15.6089 19.0172 14.4992 19.4755C13.3894 19.9337 12.2003 20.1688 10.9997 20.1673C5.93693 20.1673 1.83302 16.0634 1.83302 11.0007C1.82972 8.6502 2.73258 6.38893 4.35385 4.68712C5.20921 3.78441 6.2398 3.06577 7.38253 2.57518C8.52526 2.08459 9.7561 1.83238 10.9997 1.83399C12.2003 1.83251 13.3894 2.06761 14.4992 2.52587C15.6089 2.98412 16.6175 3.65653 17.4672 4.5047C18.3239 5.3555 19.0035 6.36762 19.4668 7.48259C19.9301 8.59756 20.1678 9.79327 20.1664 11.0007Z"
+                                                stroke="currentColor" stroke-width="1.55833" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M20.1669 10.9999C18.8295 10.9999 15.1399 10.4957 11.8376 11.9454C8.25021 13.5207 5.65284 15.9645 4.52075 17.4839"
+                                                stroke="currentColor" stroke-width="1.55833" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M7.5625 2.5C8.99708 3.82413 12.1275 7.19517 13.2917 10.5419C14.4558 13.8887 14.8867 18.0036 15.1525 19.1746"
+                                                stroke="currentColor" stroke-width="1.55833" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M1.9043 9.85457C3.63588 9.95907 8.21967 10.053 11.153 8.8004C14.0863 7.54778 16.6104 5.24374 17.4762 4.5127M2.52121 14.4897C3.32907 16.4448 4.7858 18.0619 6.64621 19.0689"
+                                                stroke="currentColor" stroke-width="1.55833" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M1.83302 11.0007C1.82972 8.6502 2.73258 6.38893 4.35385 4.68712C5.20921 3.78441 6.2398 3.06577 7.38253 2.57518C8.52526 2.08459 9.7561 1.83238 10.9997 1.83399M14.6664 2.59666C15.7105 3.05306 16.6603 3.70013 17.4672 4.5047C18.3239 5.3555 19.0035 6.36762 19.4668 7.48259C19.9301 8.59756 20.1678 9.79327 20.1664 11.0007C20.1664 12.1291 19.9624 13.2103 19.5889 14.209M10.9997 20.1673C12.2003 20.1688 13.3894 19.9337 14.4992 19.4755C15.6089 19.0172 16.6175 18.3448 17.4672 17.4966"
+                                                stroke="currentColor" stroke-width="1.55833" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a target="_blank" href="https://www.instagram.com/"
+                                        class="dark-light border border-gray-100 2xl:size-12.5 1xl:size-12 xl:size-11 size-9.5 flex items-center justify-center rounded-full">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" class="1xl:size-5.5 xl:size-5 size-4.5">
+                                            <g clip-path="url(#clip0_8420_91)">
+                                                <path
+                                                    d="M14.1713 1.66797H5.83573C3.53394 1.66797 1.66797 3.53394 1.66797 5.83573V14.1713C1.66797 16.4731 3.53394 18.339 5.83573 18.339H14.1713C16.4731 18.339 18.339 16.4731 18.339 14.1713V5.83573C18.339 3.53394 16.4731 1.66797 14.1713 1.66797Z"
+                                                    stroke="currentColor" stroke-width="1.85234" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M13.3365 9.47991C13.4393 10.1736 13.3208 10.8821 12.9978 11.5046C12.6748 12.1271 12.1638 12.6319 11.5373 12.9472C10.9109 13.2625 10.201 13.3723 9.50861 13.2609C8.81621 13.1494 8.17657 12.8225 7.68067 12.3266C7.18477 11.8307 6.85787 11.1911 6.74645 10.4987C6.63503 9.80629 6.74478 9.09639 7.06008 8.46995C7.37538 7.84352 7.88018 7.33246 8.50268 7.00946C9.12518 6.68646 9.83367 6.56796 10.5274 6.67083C11.235 6.77577 11.8901 7.1055 12.396 7.61134C12.9018 8.11717 13.2315 8.77229 13.3365 9.47991Z"
+                                                    stroke="currentColor" stroke-width="1.85234" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <ellipse cx="14.5866" cy="5.41635" rx="1.25062" ry="1.25033"
+                                                    fill="currentColor" />
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+
+                </div>
+                <!-- /page-wrapper -->
+            </div>
+        </section>
+
+        <!-- BUSINESS PLAN -->
+        <section class="relative">
+            <div class="2xl:h-[550px] xl:h-[440px] lg:h-[415px] md:h-[350px] sm:h-[300px] h-[270px]">
+                <div class="absolute inset-0 bg-[url('../image/about-us-bg.svg')] bg-cover bg-center z-0"></div>
+                <div class="container">
+                    <div class="business-plan-outer-box ">
+                        <div class="business-plan-inner-box">
+                            <h4>Let's make your business mate a new plan</h4>
+                            <a href="./contactUs.html"
+                                class="btn btn-primary p-1 1xl:ps-[27px] xl:ps-5 ps-3.5 1xl:gap-3 gap-2 rounded-full group">
+                                Learn More
+                                <span
+                                    class="btn btn-arrow rounded-full 3xl:w-[52px] 3xl:h-[52px] 1xl:w-12 1xl:h-12 xl:w-11 xl:h-11 w-9 h-9 ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                        fill="none" class="1xl:size-5.5 xl:size-5 size-4">
+                                        <g clip-path="url(#clip0_421_92)">
+                                            <path
+                                                d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                                fill="currentColor" />
+                                        </g>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer section -->
+        <footer class="bg-black">
+            <div class="container">
+                <div class="divide-y divide-white/15">
+                    <div
+                        class="flex items-center flex-wrap sm:gap-6 gap-3 justify-between w-full 3xl:pb-[60px] 2xl:pb-12.5 xl:pb-10 lg:pb-7 sm:pb-6 pb-5 3xl:pt-[90px] 2xl:pt-20 1xl:pt-[70px] xl:pt-[60px] lg:pt-12.5 md:pt-10 pt-[30px]">
+                        <h3 class="text-white">Want to start a project?</h3>
+                        <a href="./contactUs.html" class="btn btn-primary all-btn rounded-full group">
+                            Start a Project
+                            <span class="btn btn-arrow rounded-full all-btn-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                    fill="none" class="1xl:size-5.5 xl:size-5 size-4">
+                                    <g clip-path="url(#clip0_421_92)">
+                                        <path
+                                            d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                            fill="currentColor" />
+                                    </g>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="3xl:py-[35px] 2xl:py-7 py-5">
+                        <div class="footer-list">
+                            <div class="list">
+                                <h5 class="p2 list-title">Company </h5>
+                                <span class="dash block border border-primary"></span>
+                                <a href="./aboutUs.html" class="p2 list-link">About Us
+                                </a>
+                                <a href="./career.html" class="p2 list-link">Careers</a>
+                                <a href="./our-offices.html" class="p2 list-link">Offices</a>
+                                <a href="./contactUs.html" class="p2 list-link">Contact</a>
+                                <a href="./whyEnx.html" class="p2 list-link">Why ENX?</a>
+                            </div>
+                            <div class="list">
+                                <h5 class="p2 list-title">Quick Links</h5>
+                                <span class="dash block border border-primary"></span>
+                                <a href="./our-services.html" class="p2 list-link">Services</a>
+                                <a href="./caseStudy-1.html" class="p2 list-link">Case Studies</a>
+                                <a href="./insights-1.html" class="p2 list-link">Insights</a>
+                                <a href="./support.html" class="p2 list-link">Support</a>
+                                <a href="./faq.html" class="p2 list-link">FAQs</a>
+                            </div>
+                            <div class="list">
+                                <h5 class="p2 list-title">Solutions</h5>
+                                <span class="dash block border border-primary"></span>
+                                <a href="./aerospace.html" class="p2 list-link">Aerospace & Defense</a>
+                                <a href="./healthcare.html" class="p2 list-link">Healthcare & Life Sciences</a>
+                                <a href="./financial.hml" class="p2 list-link">Financial Services</a>
+                                <a href="./ecommerce.html" class="p2 list-link">Retail & E-Commerce</a>
+                                <a href="./manufacture.html" class="p2 list-link">Manufacturing & Industrial</a>
+                            </div>
+                            <div class="list">
+                                <h5 class="p2 list-title">Legal</h5>
+                                <span class="dash block border border-primary"></span>
+                                <a href="./privacyPolicy.html" class="p2 list-link">Privacy Policy</a>
+                                <a href="./terms-conditions.html" class="p2 list-link">Terms of Use</a>
+                                <a href="./cookie-policy.html" class="p2 list-link">Cookie Policy</a>
+                                <a href="./licensing.html" class="p2 list-link">Licensing</a>
+                                <a href="./data-protection.html" class="p2 list-link">Data Protection</a>
+                            </div>
+                            <div class="list">
+                                <h5 class="p2 list-title">Connect Us</h5>
+                                <span class="dash block border border-primary"></span>
+                                <a href="mailto:support@enxstudio.com" class="p2 list-link font-medium">
+                                    Email: support@enxstudio.com
+                                </a>
+                                <a href="tel:+12025550147" class="p2 list-link font-medium">
+                                    Phone: +1 202 555 0147
+                                </a>
+                                <a href="https://maps.app.goo.gl/D5hGpZESA22Eqw1H9" target="_blank"
+                                    rel="noopener noreferrer" class="p2 list-link font-medium">
+                                    Address: ENX Digital Studio New York, USA
+                                </a>
+                                <div class="flex items-center lg:gap-5 gap-4 lg:mt-[25px] mt-3">
+                                    <div>
+                                        <a target="_blank" href="https://www.linkedin.com/feed/"
+                                            class="dark-btn border 2xl:size-13 lg:size-12 size-11 flex items-center justify-center rounded-full">
+                                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                                class="1xl:size-5.5 xl:size-5 size-4"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M6.13949 3.63624C6.13924 4.14946 5.93631 4.64155 5.57536 5.00426C5.21441 5.36698 4.72499 5.57061 4.21478 5.57035C3.70457 5.57009 3.21536 5.36597 2.85477 5.0029C2.49417 4.63982 2.29174 4.14752 2.29199 3.63431C2.29225 3.12109 2.49517 2.629 2.85613 2.26628C3.21708 1.90357 3.70649 1.69994 4.2167 1.7002C4.72691 1.70045 5.21613 1.90457 5.57672 2.26765C5.93731 2.63073 6.13975 3.12303 6.13949 3.63624ZM6.1972 7.00328H2.3497V19.1169H6.1972V7.00328ZM12.2763 7.00328H8.44799V19.1169H12.2378V12.7601C12.2378 9.21894 16.8259 8.88998 16.8259 12.7601V19.1169H20.6253V11.4443C20.6253 5.47456 13.8345 5.6971 12.2378 8.62874L12.2763 7.00328Z"
+                                                    fill="currentColor" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a target="_blank" href="https://x.com/"
+                                            class="dark-btn border 2xl:size-13 lg:size-12 size-11 flex items-center justify-center rounded-full">
+                                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                                class="1xl:size-5.5 xl:size-5 size-4"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g mask="url(#mask0_8420_72)">
+                                                    <path
+                                                        d="M16.2705 2.69336H19.0821L12.9404 9.73074L20.1663 19.3086H14.5092L10.0752 13.5009L5.00729 19.3086H2.19313L8.7617 11.7788L1.83301 2.69467H7.6342L11.6361 8.00217L16.2705 2.69336ZM15.2818 17.6219H16.8402L6.78301 4.29229H5.11206L15.2818 17.6219Z"
+                                                        fill="currentColor" />
+                                                </g>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a target="_blank" href="https://dribbble.com/"
+                                            class="dark-btn border 2xl:size-13 lg:size-12 size-11 flex items-center justify-center rounded-full">
+                                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                                class="1xl:size-5.5 xl:size-5 size-4"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M20.1664 11.0007C20.1678 12.208 19.9301 13.4038 19.4668 14.5187C19.0035 15.6337 18.3239 16.6458 17.4672 17.4966C16.6175 18.3448 15.6089 19.0172 14.4992 19.4755C13.3894 19.9337 12.2003 20.1688 10.9997 20.1673C5.93693 20.1673 1.83302 16.0634 1.83302 11.0007C1.82972 8.6502 2.73258 6.38893 4.35385 4.68712C5.20921 3.78441 6.2398 3.06577 7.38253 2.57518C8.52526 2.08459 9.7561 1.83238 10.9997 1.83399C12.2003 1.83251 13.3894 2.06761 14.4992 2.52587C15.6089 2.98412 16.6175 3.65653 17.4672 4.5047C18.3239 5.3555 19.0035 6.36762 19.4668 7.48259C19.9301 8.59756 20.1678 9.79327 20.1664 11.0007Z"
+                                                    stroke="currentColor" stroke-width="1.55833" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M20.1669 10.9999C18.8295 10.9999 15.1399 10.4957 11.8376 11.9454C8.25021 13.5207 5.65284 15.9645 4.52075 17.4839"
+                                                    stroke="currentColor" stroke-width="1.55833" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M7.5625 2.5C8.99708 3.82413 12.1275 7.19517 13.2917 10.5419C14.4558 13.8887 14.8867 18.0036 15.1525 19.1746"
+                                                    stroke="currentColor" stroke-width="1.55833" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M1.9043 9.85457C3.63588 9.95907 8.21967 10.053 11.153 8.8004C14.0863 7.54778 16.6104 5.24374 17.4762 4.5127M2.52121 14.4897C3.32907 16.4448 4.7858 18.0619 6.64621 19.0689"
+                                                    stroke="currentColor" stroke-width="1.55833" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M1.83302 11.0007C1.82972 8.6502 2.73258 6.38893 4.35385 4.68712C5.20921 3.78441 6.2398 3.06577 7.38253 2.57518C8.52526 2.08459 9.7561 1.83238 10.9997 1.83399M14.6664 2.59666C15.7105 3.05306 16.6603 3.70013 17.4672 4.5047C18.3239 5.3555 19.0035 6.36762 19.4668 7.48259C19.9301 8.59756 20.1678 9.79327 20.1664 11.0007C20.1664 12.1291 19.9624 13.2103 19.5889 14.209M10.9997 20.1673C12.2003 20.1688 13.3894 19.9337 14.4992 19.4755C15.6089 19.0172 16.6175 18.3448 17.4672 17.4966"
+                                                    stroke="currentColor" stroke-width="1.55833" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a target="_blank" href="https://www.instagram.com/"
+                                            class="dark-btn border 2xl:size-13 lg:size-12 size-11 flex items-center justify-center rounded-full">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_8420_91)">
+                                                    <path
+                                                        d="M14.1713 1.66797H5.83573C3.53394 1.66797 1.66797 3.53394 1.66797 5.83573V14.1713C1.66797 16.4731 3.53394 18.339 5.83573 18.339H14.1713C16.4731 18.339 18.339 16.4731 18.339 14.1713V5.83573C18.339 3.53394 16.4731 1.66797 14.1713 1.66797Z"
+                                                        stroke="currentColor" stroke-width="1.85234"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path
+                                                        d="M13.3365 9.47991C13.4393 10.1736 13.3208 10.8821 12.9978 11.5046C12.6748 12.1271 12.1638 12.6319 11.5373 12.9472C10.9109 13.2625 10.201 13.3723 9.50861 13.2609C8.81621 13.1494 8.17657 12.8225 7.68067 12.3266C7.18477 11.8307 6.85787 11.1911 6.74645 10.4987C6.63503 9.80629 6.74478 9.09639 7.06008 8.46995C7.37538 7.84352 7.88018 7.33246 8.50268 7.00946C9.12518 6.68646 9.83367 6.56796 10.5274 6.67083C11.235 6.77577 11.8901 7.1055 12.396 7.61134C12.9018 8.11717 13.2315 8.77229 13.3365 9.47991Z"
+                                                        stroke="currentColor" stroke-width="1.85234"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                    <ellipse cx="14.5866" cy="5.41635" rx="1.25062" ry="1.25033"
+                                                        fill="currentColor" />
+                                                </g>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="newsletter-box">
+                            <h4 class="text-white md:w-1/2 w-full text-start">
+                                Sign up for our newsletter</h4>
+                            <div class="newsletter-input-box md:w-1/2 w-full">
+                                <input type="text" name="newsletter" placeholder="Enter email..."
+                                    class="newsletter-input p2">
+                                <button aria-label="Open Page" class="btn btn-primary all-btn rounded-full group">
+                                    Subscribe
+                                    <span
+                                        class="btn btn-arrow rounded-full 3xl:w-11 3xl:h-11 1xl:w-10 1xl:h-10 xl:w-9 xl:h-9 w-8 h-8">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                                            viewBox="0 0 22 22" fill="none"
+                                            class="1xl:w-5 1xl:h-5 xl:w-[19px] xl:h-[19px] lg:w-4 lg:h-4 w-3.5 h-3.5">
+                                            <g clip-path="url(#clip0_421_92)">
+                                                <path
+                                                    d="M3.37663 17.7995L15.6479 5.52821L5.12966 5.52821L5.03951 4.11577L18.0621 4.11577L18.0621 17.1383L16.6496 17.0482L16.6496 6.52995L4.37836 18.8012L3.37663 17.7995Z"
+                                                    fill="currentColor" />
+                                            </g>
+                                        </svg>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="copyright">
+                        <a href="./index.html">
+                            <img loading="lazy" src="../image/logo-white.svg" alt="main logo"
+                                class="2xl:w-[106px] xl:w-[100px] lg:w-[90px] sm:w-20 w-18 h-full object-cover" />
+                        </a>
+                        <p class="p2 text-white">Copyright © 2024 <span class="text-primary">ENX</span>. All rights
+                            reserved. </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--/ End Footer section -->
+    </div>
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 60,
+            once: true,
+        });
+    </script>
+    <!-- Custom JS -->
+    <script src="../js/custom.js"></script>
+
+</body>
+
+</html>
