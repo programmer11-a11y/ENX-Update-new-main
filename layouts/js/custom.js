@@ -10,6 +10,12 @@ function updateDropdownOverlay() {
   }
 }
 
+function getOffset() {
+  if (window.innerWidth < 1281) return 100;
+  if (window.innerWidth < 1442) return 110;
+  return 120;
+}
+
 // ==== DROPDOWN TOGLLE ====
 function toggleDropdown(button) {
   const menu = button.nextElementSibling; // ✅ ONLY this dropdown
@@ -1139,12 +1145,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       setActive(targetID.slice(1));
 
-      function getOffset() {
-        if (window.innerWidth < 1281) return 100;
-        if (window.innerWidth < 1442) return 110;
-        return 120;
-      }
-
       const offset = getOffset();
       const top = target.getBoundingClientRect().top + window.scrollY - offset;
 
@@ -1538,4 +1538,44 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   });
+
+  // Handle position card & support ticket clicks with offset
+  function handleScrollWithOffset(selector) {
+    const links = document.querySelectorAll(`a[href="${selector}"]`);
+
+    links.forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const target = document.querySelector(selector);
+        if (target) {
+          const offset = getOffset();
+          const top = target.getBoundingClientRect().top + window.scrollY - offset;
+
+          window.scrollTo({
+            top,
+            behavior: "smooth"
+          });
+        }
+      });
+    });
+  }
+
+  handleScrollWithOffset("#open-position-form");
+  handleScrollWithOffset("#support-ticket");
+
+});
+
+
+
+// file choose name toggle
+const fileInput = document.getElementById('fileUpload');
+const fileText = document.getElementById('fileText');
+
+fileInput.addEventListener('change', function () {
+  if (this.files.length > 0) {
+    fileText.textContent = this.files[0].name;
+  } else {
+    fileText.textContent = "No file selected";
+  }
 });
